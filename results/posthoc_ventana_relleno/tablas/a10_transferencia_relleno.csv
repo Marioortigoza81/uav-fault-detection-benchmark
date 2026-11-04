@@ -1,0 +1,7 @@
+par,variante,auroc,auroc_ic_inf,auroc_ic_sup,auprc,dif_auroc_vs_cero,dif_ic_inf,dif_ic_sup
+hil->real,cero,0.7381,0.7186,0.7591,0.7472,0,,
+hil->real,nan_indicador,0.7236,0.7036,0.7442,0.7344,-0.0146,-0.0195,-0.0095
+hil->real,nan_sin_indicador,0.7247,0.7053,0.7468,0.7336,-0.0135,-0.0181,-0.0086
+uav_sead->real,cero,0.6061,0.5841,0.63,0.6395,0,,
+uav_sead->real,nan_indicador,0.6124,0.5905,0.635,0.649,0.0063,-0.0002,0.0126
+uav_sead->real,nan_sin_indicador,0.5866,0.5635,0.6109,0.6262,-0.0195,-0.0264,-0.013

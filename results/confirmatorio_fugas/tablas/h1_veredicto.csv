@@ -1,0 +1,5 @@
+dataset,diferencia,cumple,auroc_p_ventana,auroc_p_grupo,ic95_inf,ic95_sup
+uav_sead,0.0782,True,0.955,0.8768,0.063,0.0946
+alfa,0.2554,True,0.9823,0.7269,0.0236,0.3879
+rflymad,0.0067,True,0.9886,0.982,0.0047,0.0087
+uav_fd,0.0502,True,0.9953,0.9451,0.0051,0.1245

@@ -1,0 +1,5 @@
+dataset,estimacion,ic95_inf,ic95_total_inf,supera_0_01_ic,supera_0_01_ic_total,p_0_01,p_0_01_total,supera_0_02_ic,supera_0_02_ic_total,p_0_02,p_0_02_total,supera_0_05_ic,supera_0_05_ic_total,p_0_05,p_0_05_total
+uav_sead,0.0782,0.063,0.0595718,True,True,0.000999001,0.000999001,True,True,0.000999001,0.000999001,True,True,0.000999001,0.0015033
+alfa,0.255394,0.0236291,0.0262039,True,True,0.003996,0.00599401,True,True,0.017982,0.012987,False,False,0.04995,0.0509491
+rflymad,0.0066638,0.00474017,0.00360473,False,False,0.997003,0.976024,False,False,1,1,False,False,1,1
+uav_fd,0.0502343,0.00513482,0.0047,False,False,0.0771543,0.0801603,False,False,0.198397,0.197395,False,False,0.564128,0.572144

@@ -1,0 +1,1441 @@
+{
+ "carga": {
+  "fallidos": {},
+  "n_fallidos": 0,
+  "rflymad": {
+   "cargados": 493
+  },
+  "uav_sead": {
+   "cargados": 1393
+  }
+ },
+ "entradas": {
+  "reposo_ventana_s": 3.0,
+  "rflymad_partes_cubiertas": [
+   "Real-NoFault",
+   "Real-Sensors",
+   "Real-Motor"
+  ],
+  "rflymad_ulg_en_zips": 493,
+  "uav_sead_anotados_en_mapping": 1396,
+  "uav_sead_ulg_en_disco": 1393,
+  "umbral_interseccion_pct": 95.0
+ },
+ "esquema": {
+  "campos_solo_rfly_en_topicos_comunes": 113,
+  "campos_solo_rfly_por_topico": {
+   "battery_status": 24,
+   "distance_sensor": 1,
+   "estimator_status": 14,
+   "manual_control_setpoint": 1,
+   "optical_flow": 1,
+   "position_setpoint_triplet": 3,
+   "sensor_combined": 1,
+   "system_power": 7,
+   "telemetry_status": 26,
+   "vehicle_air_data": 2,
+   "vehicle_attitude": 1,
+   "vehicle_land_detected": 5,
+   "vehicle_local_position": 5,
+   "vehicle_local_position_setpoint": 6,
+   "vehicle_magnetometer": 3,
+   "vehicle_status": 8,
+   "vehicle_status_flags": 5
+  },
+  "campos_solo_uav_en_topicos_comunes": 73,
+  "campos_solo_uav_por_topico": {
+   "battery_status": 2,
+   "estimator_status": 49,
+   "manual_control_setpoint": 14,
+   "system_power": 1,
+   "telemetry_status": 1,
+   "vehicle_attitude_setpoint": 1,
+   "vehicle_local_position": 2,
+   "vehicle_status_flags": 3
+  },
+  "estabilidad_de_la_interseccion_por_version": {
+   "rflymad": {
+    "campos_interseccion_inestables": 0,
+    "ejemplos": [],
+    "grupos_comparados": [
+     "1.12"
+    ]
+   },
+   "uav_sead": {
+    "campos_interseccion_inestables": 35,
+    "ejemplos": [
+     "battery_status.average_time_to_empty",
+     "battery_status.capacity",
+     "battery_status.cycle_count",
+     "battery_status.is_powering_off",
+     "battery_status.run_time_to_empty",
+     "battery_status.serial_number",
+     "battery_status.temperature",
+     "rate_ctrl_status.additional_integ1",
+     "rate_ctrl_status.pitchspeed_integ",
+     "rate_ctrl_status.rollspeed_integ",
+     "rate_ctrl_status.yawspeed_integ",
+     "vehicle_status_flags.circuit_breaker_engaged_airspd_check",
+     "vehicle_status_flags.circuit_breaker_engaged_enginefailure_check",
+     "vehicle_status_flags.circuit_breaker_engaged_posfailure_check",
+     "vehicle_status_flags.circuit_breaker_engaged_power_check"
+    ],
+    "grupos_comparados": [
+     "1.10",
+     "1.7",
+     "1.8"
+    ]
+   }
+  },
+  "por_version_menor_presencia_topicos_pct": {
+   "rflymad": {
+    "1.12": {
+     "topicos_pct": {
+      "actuator_controls_0": 100.0,
+      "actuator_motors": 0.0,
+      "actuator_outputs": 100.0,
+      "battery_status": 100.0,
+      "ekf2_innovations": 0.0,
+      "estimator_innovations": 100.0,
+      "estimator_status": 100.0,
+      "sensor_accel": 100.0,
+      "sensor_combined": 100.0,
+      "sensor_gps": 99.2,
+      "sensor_gyro": 100.0,
+      "vehicle_angular_velocity": 100.0,
+      "vehicle_attitude": 100.0,
+      "vehicle_gps_position": 99.2,
+      "vehicle_local_position": 100.0,
+      "vehicle_rates_setpoint": 100.0,
+      "vehicle_thrust_setpoint": 0.0
+     },
+     "vuelos": 493
+    }
+   },
+   "uav_sead": {
+    "1.10": {
+     "topicos_pct": {
+      "actuator_controls_0": 100.0,
+      "actuator_motors": 0.0,
+      "actuator_outputs": 100.0,
+      "battery_status": 100.0,
+      "ekf2_innovations": 100.0,
+      "estimator_innovations": 0.0,
+      "estimator_status": 100.0,
+      "sensor_accel": 0.0,
+      "sensor_combined": 100.0,
+      "sensor_gps": 0.0,
+      "sensor_gyro": 0.0,
+      "vehicle_angular_velocity": 100.0,
+      "vehicle_attitude": 100.0,
+      "vehicle_gps_position": 0.0,
+      "vehicle_local_position": 100.0,
+      "vehicle_rates_setpoint": 100.0,
+      "vehicle_thrust_setpoint": 0.0
+     },
+     "vuelos": 190
+    },
+    "1.7": {
+     "topicos_pct": {
+      "actuator_controls_0": 100.0,
+      "actuator_motors": 0.0,
+      "actuator_outputs": 100.0,
+      "battery_status": 100.0,
+      "ekf2_innovations": 95.4,
+      "estimator_innovations": 0.0,
+      "estimator_status": 96.9,
+      "sensor_accel": 72.3,
+      "sensor_combined": 100.0,
+      "sensor_gps": 0.0,
+      "sensor_gyro": 72.3,
+      "vehicle_angular_velocity": 0.0,
+      "vehicle_attitude": 98.5,
+      "vehicle_gps_position": 9.2,
+      "vehicle_local_position": 95.4,
+      "vehicle_rates_setpoint": 100.0,
+      "vehicle_thrust_setpoint": 0.0
+     },
+     "vuelos": 65
+    },
+    "1.8": {
+     "topicos_pct": {
+      "actuator_controls_0": 100.0,
+      "actuator_motors": 0.0,
+      "actuator_outputs": 100.0,
+      "battery_status": 100.0,
+      "ekf2_innovations": 98.6,
+      "estimator_innovations": 0.0,
+      "estimator_status": 100.0,
+      "sensor_accel": 40.8,
+      "sensor_combined": 100.0,
+      "sensor_gps": 0.0,
+      "sensor_gyro": 40.8,
+      "vehicle_angular_velocity": 0.0,
+      "vehicle_attitude": 98.6,
+      "vehicle_gps_position": 15.6,
+      "vehicle_local_position": 98.6,
+      "vehicle_rates_setpoint": 100.0,
+      "vehicle_thrust_setpoint": 0.0
+     },
+     "vuelos": 1137
+    }
+   }
+  },
+  "renombres_conocidos_presencia_pct": {
+   "actuator_controls_0 -> actuator_motors": {
+    "actuator_controls_0": {
+     "rflymad": 100.0,
+     "uav_sead": 100.0
+    },
+    "actuator_motors": {
+     "rflymad": 0.0,
+     "uav_sead": 0.0
+    }
+   },
+   "actuator_controls_0 -> vehicle_thrust_setpoint": {
+    "actuator_controls_0": {
+     "rflymad": 100.0,
+     "uav_sead": 100.0
+    },
+    "vehicle_thrust_setpoint": {
+     "rflymad": 0.0,
+     "uav_sead": 0.0
+    }
+   },
+   "actuator_controls_0 -> vehicle_torque_setpoint": {
+    "actuator_controls_0": {
+     "rflymad": 100.0,
+     "uav_sead": 100.0
+    },
+    "vehicle_torque_setpoint": {
+     "rflymad": 0.0,
+     "uav_sead": 0.0
+    }
+   },
+   "ekf2_innovations -> estimator_innovation_test_ratios": {
+    "ekf2_innovations": {
+     "rflymad": 0.0,
+     "uav_sead": 98.6
+    },
+    "estimator_innovation_test_ratios": {
+     "rflymad": 100.0,
+     "uav_sead": 0.1
+    }
+   },
+   "ekf2_innovations -> estimator_innovations": {
+    "ekf2_innovations": {
+     "rflymad": 0.0,
+     "uav_sead": 98.6
+    },
+    "estimator_innovations": {
+     "rflymad": 100.0,
+     "uav_sead": 0.1
+    }
+   },
+   "estimator_status -> estimator_status_flags": {
+    "estimator_status": {
+     "rflymad": 100.0,
+     "uav_sead": 99.9
+    },
+    "estimator_status_flags": {
+     "rflymad": 100.0,
+     "uav_sead": 0.1
+    }
+   },
+   "sensor_combined -> vehicle_acceleration": {
+    "sensor_combined": {
+     "rflymad": 100.0,
+     "uav_sead": 100.0
+    },
+    "vehicle_acceleration": {
+     "rflymad": 100.0,
+     "uav_sead": 0.1
+    }
+   },
+   "sensor_combined -> vehicle_angular_velocity": {
+    "sensor_combined": {
+     "rflymad": 100.0,
+     "uav_sead": 100.0
+    },
+    "vehicle_angular_velocity": {
+     "rflymad": 100.0,
+     "uav_sead": 13.7
+    }
+   },
+   "sensor_combined -> vehicle_imu": {
+    "sensor_combined": {
+     "rflymad": 100.0,
+     "uav_sead": 100.0
+    },
+    "vehicle_imu": {
+     "rflymad": 100.0,
+     "uav_sead": 0.1
+    }
+   },
+   "vehicle_attitude -> estimator_attitude": {
+    "estimator_attitude": {
+     "rflymad": 100.0,
+     "uav_sead": 0.1
+    },
+    "vehicle_attitude": {
+     "rflymad": 100.0,
+     "uav_sead": 98.8
+    }
+   },
+   "vehicle_gps_position -> sensor_gps": {
+    "sensor_gps": {
+     "rflymad": 99.2,
+     "uav_sead": 0.0
+    },
+    "vehicle_gps_position": {
+     "rflymad": 99.2,
+     "uav_sead": 13.1
+    }
+   },
+   "vehicle_vision_position -> vehicle_visual_odometry": {
+    "vehicle_vision_position": {
+     "rflymad": 0.0,
+     "uav_sead": 82.9
+    },
+    "vehicle_visual_odometry": {
+     "rflymad": 0.0,
+     "uav_sead": 12.9
+    }
+   }
+  },
+  "topicos_comunes_50pct": 27
+ },
+ "geometria": {
+  "rflymad": {
+   "canales_auxiliares_fijos": {
+    "2": 493
+   },
+   "canales_motor": {
+    "0123": 493
+   },
+   "empuje_ctrl_mediano": {
+    "max": 0.576989,
+    "min": 0.271461,
+    "n": 493,
+    "p05": 0.299484,
+    "p95": 0.357482,
+    "q50": 0.329238
+   },
+   "mav_type_por_hw": {
+    "DRONEYEE_ZYFC_H7": {
+     "2": 493
+    }
+   },
+   "motores_activos_actuator_motors": {},
+   "motores_activos_actuator_outputs": {
+    "4": 493
+   },
+   "motores_por_mav_type": {
+    "2": {
+     "4": 493
+    }
+   },
+   "noutputs_ultimo": {
+    "8": 493
+   },
+   "param_CA_AIRFRAME": {},
+   "param_CA_ROTOR_COUNT": {},
+   "param_MAV_TYPE": {
+    "2": 493
+   },
+   "param_PWM_MAX": {},
+   "param_PWM_MIN": {},
+   "param_SYS_AUTOSTART": {
+    "4011": 493
+   },
+   "vuelos_con_parametros": 493
+  },
+  "uav_sead": {
+   "canales_auxiliares_fijos": {
+    "0": 1181,
+    "1": 2,
+    "2": 190,
+    "6": 1,
+    "8": 18
+   },
+   "canales_motor": {
+    "": 19,
+    "0123": 190,
+    "01234567": 1181,
+    "0123467": 1,
+    "0124567": 1,
+    "14": 1
+   },
+   "empuje_ctrl_mediano": {
+    "max": 1.0,
+    "min": 0.0,
+    "n": 1393,
+    "p05": 0.4,
+    "p95": 0.835023,
+    "q50": 0.721184
+   },
+   "mav_type_por_hw": {
+    "PX4FMU_V2": {
+     "14": 1202
+    },
+    "PX4_FMU_V5": {
+     "2": 191
+    }
+   },
+   "motores_activos_actuator_motors": {},
+   "motores_activos_actuator_outputs": {
+    "0": 18,
+    "2": 1,
+    "4": 190,
+    "7": 2,
+    "8": 1181
+   },
+   "motores_por_mav_type": {
+    "14": {
+     "0": 18,
+     "2": 1,
+     "7": 2,
+     "8": 1181
+    },
+    "2": {
+     "4": 190
+    }
+   },
+   "noutputs_ultimo": {
+    "6": 11,
+    "8": 1381
+   },
+   "param_CA_AIRFRAME": {},
+   "param_CA_ROTOR_COUNT": {},
+   "param_MAV_TYPE": {
+    "14": 1202,
+    "2": 191
+   },
+   "param_PWM_MAX": {
+    "1950": 528,
+    "2000": 680,
+    "2100": 179,
+    "2120": 5
+   },
+   "param_PWM_MIN": {
+    "1000": 218,
+    "1075": 1169,
+    "800": 1,
+    "880": 4
+   },
+   "param_SYS_AUTOSTART": {
+    "10015": 11,
+    "12001": 1202,
+    "4014": 180
+   },
+   "vuelos_con_parametros": 1393
+  }
+ },
+ "interseccion": {
+  "campos_cerca": {
+   "rfly_95_uav_entre_50_y_95": 135,
+   "uav_95_rfly_entre_50_y_95": 0
+  },
+  "campos_total": 232,
+  "campos_total_multi_id": 232,
+  "por_familia": {
+   "actitud": {
+    "campos_interseccion": 9,
+    "campos_interseccion_multi_id": 9,
+    "campos_interseccion_por_topico": {
+     "vehicle_attitude": 9
+    },
+    "campos_rfly_95": 20,
+    "campos_uav_95": 9,
+    "campos_vistos": 23,
+    "topicos_con_campos_en_interseccion": [
+     "vehicle_attitude"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "estimator_attitude",
+     "vehicle_attitude"
+    ]
+   },
+   "actuadores": {
+    "campos_interseccion": 26,
+    "campos_interseccion_multi_id": 26,
+    "campos_interseccion_por_topico": {
+     "actuator_controls_0": 9,
+     "actuator_outputs": 17
+    },
+    "campos_rfly_95": 169,
+    "campos_uav_95": 26,
+    "campos_vistos": 169,
+    "topicos_con_campos_en_interseccion": [
+     "actuator_controls_0",
+     "actuator_outputs"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "actuator_armed",
+     "actuator_controls_0",
+     "actuator_controls_3",
+     "actuator_outputs"
+    ]
+   },
+   "bateria": {
+    "campos_interseccion": 18,
+    "campos_interseccion_multi_id": 18,
+    "campos_interseccion_por_topico": {
+     "battery_status": 18
+    },
+    "campos_rfly_95": 47,
+    "campos_uav_95": 20,
+    "campos_vistos": 56,
+    "topicos_con_campos_en_interseccion": [
+     "battery_status"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "battery_status"
+    ]
+   },
+   "estimador": {
+    "campos_interseccion": 20,
+    "campos_interseccion_multi_id": 20,
+    "campos_interseccion_por_topico": {
+     "estimator_status": 20
+    },
+    "campos_rfly_95": 265,
+    "campos_uav_95": 106,
+    "campos_vistos": 366,
+    "topicos_con_campos_en_interseccion": [
+     "estimator_status"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "estimator_innovation_test_ratios",
+     "estimator_innovation_variances",
+     "estimator_innovations",
+     "estimator_sensor_bias",
+     "estimator_states",
+     "estimator_status",
+     "estimator_status_flags"
+    ]
+   },
+   "gps": {
+    "campos_interseccion": 0,
+    "campos_interseccion_multi_id": 0,
+    "campos_interseccion_por_topico": {},
+    "campos_rfly_95": 53,
+    "campos_uav_95": 0,
+    "campos_vistos": 53,
+    "topicos_con_campos_en_interseccion": [],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "vehicle_gps_position"
+    ]
+   },
+   "imu_cruda": {
+    "campos_interseccion": 9,
+    "campos_interseccion_multi_id": 9,
+    "campos_interseccion_por_topico": {
+     "sensor_combined": 9
+    },
+    "campos_rfly_95": 68,
+    "campos_uav_95": 9,
+    "campos_vistos": 106,
+    "topicos_con_campos_en_interseccion": [
+     "sensor_combined"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "sensor_accel",
+     "sensor_combined",
+     "sensor_gyro",
+     "vehicle_acceleration",
+     "vehicle_imu",
+     "vehicle_imu_status"
+    ]
+   },
+   "mag_baro": {
+    "campos_interseccion": 0,
+    "campos_interseccion_multi_id": 0,
+    "campos_interseccion_por_topico": {},
+    "campos_rfly_95": 25,
+    "campos_uav_95": 0,
+    "campos_vistos": 32,
+    "topicos_con_campos_en_interseccion": [],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "sensor_baro",
+     "sensor_mag",
+     "vehicle_air_data",
+     "vehicle_magnetometer"
+    ]
+   },
+   "otros": {
+    "campos_interseccion": 94,
+    "campos_interseccion_multi_id": 94,
+    "campos_interseccion_por_topico": {
+     "cpuload": 2,
+     "input_rc": 27,
+     "manual_control_setpoint": 11,
+     "system_power": 4,
+     "telemetry_status": 1,
+     "vehicle_land_detected": 5,
+     "vehicle_status": 20,
+     "vehicle_status_flags": 24
+    },
+    "campos_rfly_95": 519,
+    "campos_uav_95": 115,
+    "campos_vistos": 956,
+    "topicos_con_campos_en_interseccion": [
+     "cpuload",
+     "input_rc",
+     "manual_control_setpoint",
+     "system_power",
+     "telemetry_status",
+     "vehicle_land_detected",
+     "vehicle_status",
+     "vehicle_status_flags"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "commander_state",
+     "cpuload",
+     "distance_sensor",
+     "ekf2_timestamps",
+     "estimator_event_flags",
+     "estimator_selector_status",
+     "home_position",
+     "hover_thrust_estimate",
+     "input_rc",
+     "manual_control_setpoint",
+     "manual_control_switches",
+     "mission_result",
+     "offboard_control_mode",
+     "optical_flow",
+     "sensor_gyro_fft",
+     "sensor_selection",
+     "sensors_status_imu",
+     "system_power",
+     "takeoff_status",
+     "telemetry_status",
+     "vehicle_command",
+     "vehicle_constraints",
+     "vehicle_control_mode",
+     "vehicle_land_detected",
+     "vehicle_status",
+     "vehicle_status_flags"
+    ]
+   },
+   "posicion_local": {
+    "campos_interseccion": 36,
+    "campos_interseccion_multi_id": 36,
+    "campos_interseccion_por_topico": {
+     "vehicle_local_position": 36
+    },
+    "campos_rfly_95": 116,
+    "campos_uav_95": 38,
+    "campos_vistos": 124,
+    "topicos_con_campos_en_interseccion": [
+     "vehicle_local_position"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "estimator_local_position",
+     "vehicle_global_position",
+     "vehicle_local_position"
+    ]
+   },
+   "setpoints": {
+    "campos_interseccion": 20,
+    "campos_interseccion_multi_id": 20,
+    "campos_interseccion_por_topico": {
+     "rate_ctrl_status": 4,
+     "vehicle_attitude_setpoint": 13,
+     "vehicle_rates_setpoint": 3
+    },
+    "campos_rfly_95": 147,
+    "campos_uav_95": 21,
+    "campos_vistos": 203,
+    "topicos_con_campos_en_interseccion": [
+     "rate_ctrl_status",
+     "vehicle_attitude_setpoint",
+     "vehicle_rates_setpoint"
+    ],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "position_setpoint_triplet",
+     "rate_ctrl_status",
+     "trajectory_setpoint",
+     "vehicle_attitude_setpoint",
+     "vehicle_local_position_setpoint",
+     "vehicle_rates_setpoint"
+    ]
+   },
+   "tasas": {
+    "campos_interseccion": 0,
+    "campos_interseccion_multi_id": 0,
+    "campos_interseccion_por_topico": {},
+    "campos_rfly_95": 8,
+    "campos_uav_95": 0,
+    "campos_vistos": 8,
+    "topicos_con_campos_en_interseccion": [],
+    "topicos_de_la_familia_en_ambos_datasets": [
+     "vehicle_angular_acceleration",
+     "vehicle_angular_velocity"
+    ]
+   }
+  },
+  "topicos_con_campos": 18
+ },
+ "meta": {
+  "familias": {
+   "actitud": [
+    "vehicle_attitude",
+    "estimator_attitude"
+   ],
+   "actuadores": [
+    "actuator_outputs",
+    "actuator_motors",
+    "actuator_controls_0",
+    "actuator_controls_1",
+    "actuator_controls_2",
+    "actuator_controls_3",
+    "esc_status",
+    "actuator_armed",
+    "actuator_outputs_real"
+   ],
+   "bateria": [
+    "battery_status"
+   ],
+   "estimador": [
+    "estimator_status",
+    "ekf2_innovations",
+    "estimator_innovations",
+    "estimator_innovation_test_ratios",
+    "estimator_innovation_variances",
+    "estimator_sensor_bias",
+    "estimator_states",
+    "estimator_status_flags"
+   ],
+   "gps": [
+    "vehicle_gps_position",
+    "sensor_gps"
+   ],
+   "imu_cruda": [
+    "sensor_combined",
+    "sensor_accel",
+    "sensor_gyro",
+    "vehicle_imu",
+    "vehicle_imu_status",
+    "vehicle_acceleration"
+   ],
+   "mag_baro": [
+    "sensor_mag",
+    "sensor_baro",
+    "vehicle_magnetometer",
+    "vehicle_air_data"
+   ],
+   "posicion_local": [
+    "vehicle_local_position",
+    "estimator_local_position",
+    "vehicle_global_position",
+    "estimator_global_position"
+   ],
+   "setpoints": [
+    "vehicle_attitude_setpoint",
+    "vehicle_rates_setpoint",
+    "vehicle_local_position_setpoint",
+    "position_setpoint_triplet",
+    "trajectory_setpoint",
+    "vehicle_thrust_setpoint",
+    "vehicle_torque_setpoint",
+    "rate_ctrl_status"
+   ],
+   "tasas": [
+    "vehicle_angular_velocity",
+    "vehicle_angular_acceleration"
+   ]
+  },
+  "min_grupo_version": 20,
+  "renombres_probados": [
+   [
+    "ekf2_innovations",
+    "estimator_innovations"
+   ],
+   [
+    "vehicle_gps_position",
+    "sensor_gps"
+   ],
+   [
+    "actuator_controls_0",
+    "actuator_motors"
+   ],
+   [
+    "actuator_controls_0",
+    "vehicle_torque_setpoint"
+   ],
+   [
+    "actuator_controls_0",
+    "vehicle_thrust_setpoint"
+   ],
+   [
+    "sensor_combined",
+    "vehicle_imu"
+   ],
+   [
+    "sensor_combined",
+    "vehicle_angular_velocity"
+   ],
+   [
+    "sensor_combined",
+    "vehicle_acceleration"
+   ],
+   [
+    "ekf2_innovations",
+    "estimator_innovation_test_ratios"
+   ],
+   [
+    "estimator_status",
+    "estimator_status_flags"
+   ],
+   [
+    "vehicle_vision_position",
+    "vehicle_visual_odometry"
+   ],
+   [
+    "vehicle_attitude",
+    "estimator_attitude"
+   ]
+  ],
+  "script": "09_inventariar_topicos_px4.py",
+  "umbral_pct": 95.0
+ },
+ "presencia": {
+  "rflymad": {
+   "campos_en_95pct": 1437,
+   "campos_multi_id_distintos": 1454,
+   "campos_por_vuelo": {
+    "max": 1454.0,
+    "min": 1311.0,
+    "n": 493,
+    "p05": 1454.0,
+    "p95": 1454.0,
+    "q50": 1454.0
+   },
+   "campos_topico_distintos": 1437,
+   "instancias_distintas": 79,
+   "instancias_por_vuelo": {
+    "max": 79.0,
+    "min": 71.0,
+    "n": 493,
+    "p05": 79.0,
+    "p95": 79.0,
+    "q50": 79.0
+   },
+   "topicos_distintos": 78,
+   "topicos_en_100pct": 64,
+   "topicos_en_95pct": 78
+  },
+  "topicos_95pct_en_ambos": 18,
+  "topicos_95pct_en_ambos_lista": [
+   "actuator_controls_0",
+   "actuator_outputs",
+   "battery_status",
+   "cpuload",
+   "estimator_status",
+   "input_rc",
+   "manual_control_setpoint",
+   "rate_ctrl_status",
+   "sensor_combined",
+   "system_power",
+   "telemetry_status",
+   "vehicle_attitude",
+   "vehicle_attitude_setpoint",
+   "vehicle_land_detected",
+   "vehicle_local_position",
+   "vehicle_rates_setpoint",
+   "vehicle_status",
+   "vehicle_status_flags"
+  ],
+  "topicos_en_ambos": 62,
+  "topicos_solo_rflymad": 16,
+  "topicos_solo_uav_sead": 17,
+  "uav_sead": {
+   "campos_en_95pct": 344,
+   "campos_multi_id_distintos": 2428,
+   "campos_por_vuelo": {
+    "max": 1820.0,
+    "min": 319.0,
+    "n": 1393,
+    "p05": 486.0,
+    "p95": 766.0,
+    "q50": 626.0
+   },
+   "campos_topico_distintos": 1795,
+   "instancias_distintas": 103,
+   "instancias_por_vuelo": {
+    "max": 82.0,
+    "min": 22.0,
+    "n": 1393,
+    "p05": 29.0,
+    "p95": 45.0,
+    "q50": 34.0
+   },
+   "topicos_distintos": 79,
+   "topicos_en_100pct": 11,
+   "topicos_en_95pct": 20
+  }
+ },
+ "tasa": {
+  "definicion": "frecuencia de un tópico en un vuelo = 1e6 / mediana(diff(timestamp)); mediana entre vuelos; común = mínimo de las dos medianas",
+  "familias_nucleo": [
+   "imu_cruda",
+   "actitud",
+   "actuadores",
+   "posicion_local",
+   "bateria"
+  ],
+  "maximo_nucleo_hz": 249.875,
+  "minimo_global_interseccion_hz": 0.984,
+  "minimo_nucleo_hz": 1.984,
+  "por_familia": {
+   "actitud": {
+    "max_comun_mediana_hz": 31.265,
+    "min_comun_mediana_hz": 31.265,
+    "por_topico": {
+     "vehicle_attitude": {
+      "comun_mediana": 31.265,
+      "comun_p10": 18.943,
+      "rflymad_hz_mediana": 222.469,
+      "uav_sead_hz_mediana": 31.265
+     }
+    }
+   },
+   "actuadores": {
+    "max_comun_mediana_hz": 249.875,
+    "min_comun_mediana_hz": 9.572,
+    "por_topico": {
+     "actuator_controls_0": {
+      "comun_mediana": 249.875,
+      "comun_p10": 9.843,
+      "rflymad_hz_mediana": 667.557,
+      "uav_sead_hz_mediana": 249.875
+     },
+     "actuator_outputs": {
+      "comun_mediana": 9.572,
+      "comun_p10": 9.284,
+      "rflymad_hz_mediana": 667.557,
+      "uav_sead_hz_mediana": 9.572
+     }
+    }
+   },
+   "bateria": {
+    "max_comun_mediana_hz": 1.984,
+    "min_comun_mediana_hz": 1.984,
+    "por_topico": {
+     "battery_status": {
+      "comun_mediana": 1.984,
+      "comun_p10": 1.981,
+      "rflymad_hz_mediana": 5.0,
+      "uav_sead_hz_mediana": 1.984
+     }
+    }
+   },
+   "estimador": {
+    "max_comun_mediana_hz": 4.906,
+    "min_comun_mediana_hz": 4.906,
+    "por_topico": {
+     "estimator_status": {
+      "comun_mediana": 4.906,
+      "comun_p10": 4.904,
+      "rflymad_hz_mediana": 5.019,
+      "uav_sead_hz_mediana": 4.906
+     }
+    }
+   },
+   "gps": {
+    "max_comun_mediana_hz": null,
+    "min_comun_mediana_hz": null,
+    "por_topico": {}
+   },
+   "imu_cruda": {
+    "max_comun_mediana_hz": 222.42,
+    "min_comun_mediana_hz": 222.42,
+    "por_topico": {
+     "sensor_combined": {
+      "comun_mediana": 222.42,
+      "comun_p10": 221.926,
+      "rflymad_hz_mediana": 222.42,
+      "uav_sead_hz_mediana": 250.0
+     }
+    }
+   },
+   "mag_baro": {
+    "max_comun_mediana_hz": null,
+    "min_comun_mediana_hz": null,
+    "por_topico": {}
+   },
+   "otros": {
+    "max_comun_mediana_hz": 4.996,
+    "min_comun_mediana_hz": 0.984,
+    "por_topico": {
+     "cpuload": {
+      "comun_mediana": 0.998,
+      "comun_p10": 0.997,
+      "rflymad_hz_mediana": 2.0,
+      "uav_sead_hz_mediana": 0.998
+     },
+     "input_rc": {
+      "comun_mediana": 1.984,
+      "comun_p10": 1.984,
+      "rflymad_hz_mediana": 1.984,
+      "uav_sead_hz_mediana": 4.994
+     },
+     "manual_control_setpoint": {
+      "comun_mediana": 4.996,
+      "comun_p10": 3.247,
+      "rflymad_hz_mediana": 35.461,
+      "uav_sead_hz_mediana": 4.996
+     },
+     "system_power": {
+      "comun_mediana": 2.0,
+      "comun_p10": 2.0,
+      "rflymad_hz_mediana": 2.0,
+      "uav_sead_hz_mediana": 2.0
+     },
+     "telemetry_status": {
+      "comun_mediana": 1.0,
+      "comun_p10": 0.999,
+      "rflymad_hz_mediana": 1.0,
+      "uav_sead_hz_mediana": 1.0
+     },
+     "vehicle_land_detected": {
+      "comun_mediana": 0.984,
+      "comun_p10": 0.981,
+      "rflymad_hz_mediana": 0.996,
+      "uav_sead_hz_mediana": 0.984
+     },
+     "vehicle_status": {
+      "comun_mediana": 0.995,
+      "comun_p10": 0.993,
+      "rflymad_hz_mediana": 1.976,
+      "uav_sead_hz_mediana": 0.995
+     },
+     "vehicle_status_flags": {
+      "comun_mediana": 0.995,
+      "comun_p10": 0.993,
+      "rflymad_hz_mediana": 1.976,
+      "uav_sead_hz_mediana": 0.995
+     }
+    }
+   },
+   "posicion_local": {
+    "max_comun_mediana_hz": 9.962,
+    "min_comun_mediana_hz": 9.962,
+    "por_topico": {
+     "vehicle_local_position": {
+      "comun_mediana": 9.962,
+      "comun_p10": 9.843,
+      "rflymad_hz_mediana": 9.962,
+      "uav_sead_hz_mediana": 9.972
+     }
+    }
+   },
+   "setpoints": {
+    "max_comun_mediana_hz": 31.256,
+    "min_comun_mediana_hz": 9.969,
+    "por_topico": {
+     "rate_ctrl_status": {
+      "comun_mediana": 31.256,
+      "comun_p10": 4.939,
+      "rflymad_hz_mediana": 51.332,
+      "uav_sead_hz_mediana": 31.256
+     },
+     "vehicle_attitude_setpoint": {
+      "comun_mediana": 9.969,
+      "comun_p10": 9.92,
+      "rflymad_hz_mediana": 95.831,
+      "uav_sead_hz_mediana": 9.969
+     },
+     "vehicle_rates_setpoint": {
+      "comun_mediana": 31.255,
+      "comun_p10": 31.252,
+      "rflymad_hz_mediana": 222.469,
+      "uav_sead_hz_mediana": 31.255
+     }
+    }
+   },
+   "tasas": {
+    "max_comun_mediana_hz": null,
+    "min_comun_mediana_hz": null,
+    "por_topico": {}
+   }
+  }
+ },
+ "unidades": {
+  "rflymad": {
+   "acc_norma_mediana_vuelo": {
+    "max": 10.201201,
+    "min": 9.45429,
+    "n": 493,
+    "p05": 9.814923,
+    "p95": 10.018102,
+    "q50": 9.936908
+   },
+   "acc_norma_quieta": {
+    "max": 10.070841,
+    "min": 9.708998,
+    "n": 493,
+    "p05": 9.787932,
+    "p95": 9.94624,
+    "q50": 9.92454
+   },
+   "acc_norma_reposo_frac_8_8_a_10_8": null,
+   "acc_norma_reposo_m_s2": {
+    "n": 0
+   },
+   "bat_celdas": {
+    "6": 493
+   },
+   "bat_i_mediana_a": {
+    "max": 5.951843,
+    "min": 0.543823,
+    "n": 493,
+    "p05": 1.068069,
+    "p95": 4.910361,
+    "q50": 2.404907
+   },
+   "bat_i_valida_frac": {
+    "max": 1.0,
+    "min": 1.0,
+    "n": 493,
+    "p05": 1.0,
+    "p95": 1.0,
+    "q50": 1.0
+   },
+   "bat_v_mediana_v": {
+    "max": 25.123398,
+    "min": 22.229912,
+    "n": 493,
+    "p05": 22.428152,
+    "p95": 24.874769,
+    "q50": 23.507227
+   },
+   "gyr_norma_p99_vuelo_rad_s": {
+    "max": 11.547496,
+    "min": 0.456876,
+    "n": 493,
+    "p05": 0.872672,
+    "p95": 2.838036,
+    "q50": 1.824231
+   },
+   "gyr_norma_reposo_rad_s": {
+    "n": 0
+   },
+   "imu_fuente": {
+    "sensor_combined": 493
+   },
+   "landed_frac_3s_inicio": {
+    "max": 0.94484,
+    "min": 0.434188,
+    "n": 493,
+    "p05": 0.556479,
+    "p95": 0.649747,
+    "q50": 0.597315
+   },
+   "ned_acc_horizontal_reposo": {
+    "n": 0
+   },
+   "ned_acc_z_reposo": {
+    "n": 0
+   },
+   "ned_quieto_horizontal": {
+    "max": 0.494033,
+    "min": 0.000191,
+    "n": 493,
+    "p05": 0.008292,
+    "p95": 0.089745,
+    "q50": 0.033925
+   },
+   "ned_quieto_z": {
+    "max": -9.705126,
+    "min": -10.060833,
+    "n": 493,
+    "p05": -9.940241,
+    "p95": -9.78237,
+    "q50": -9.920204
+   },
+   "ned_vuelo_horizontal": {
+    "max": 0.226327,
+    "min": 0.003376,
+    "n": 493,
+    "p05": 0.009398,
+    "p95": 0.094857,
+    "q50": 0.038975
+   },
+   "ned_vuelo_z": {
+    "max": -9.321292,
+    "min": -10.05764,
+    "n": 493,
+    "p05": -9.941331,
+    "p95": -9.781881,
+    "q50": -9.912536
+   },
+   "pwm_max_us": {
+    "max": 1950.0,
+    "min": 1395.0,
+    "n": 493,
+    "p05": 1479.0,
+    "p95": 1950.0,
+    "q50": 1653.0
+   },
+   "pwm_mediana_us": {
+    "max": 1498.5,
+    "min": 1252.0,
+    "n": 493,
+    "p05": 1284.8,
+    "p95": 1344.0,
+    "q50": 1314.5
+   },
+   "q_desv_max_|q|-1": {
+    "max": 0.0,
+    "min": 0.0,
+    "n": 493,
+    "p05": 0.0,
+    "p95": 0.0,
+    "q50": 0.0
+   },
+   "q_norma_mediana": {
+    "max": 1.0,
+    "min": 1.0,
+    "n": 493,
+    "p05": 1.0,
+    "p95": 1.0,
+    "q50": 1.0
+   },
+   "vuelos_con_imu": 493,
+   "vuelos_con_muestras_quietas": 493,
+   "vuelos_con_reposo_inicial_aterrizado": 0
+  },
+  "uav_sead": {
+   "acc_norma_mediana_vuelo": {
+    "max": 12.314134,
+    "min": 9.717562,
+    "n": 1393,
+    "p05": 9.761408,
+    "p95": 10.594152,
+    "q50": 9.953713
+   },
+   "acc_norma_quieta": {
+    "max": 10.51484,
+    "min": 9.636215,
+    "n": 1355,
+    "p05": 9.760266,
+    "p95": 10.151094,
+    "q50": 9.821884
+   },
+   "acc_norma_reposo_frac_8_8_a_10_8": 1.0,
+   "acc_norma_reposo_m_s2": {
+    "max": 9.880635,
+    "min": 9.722705,
+    "n": 329,
+    "p05": 9.75984,
+    "p95": 9.840335,
+    "q50": 9.795583
+   },
+   "bat_celdas": {
+    "4": 16,
+    "5": 175,
+    "6": 1202
+   },
+   "bat_i_mediana_a": {
+    "max": 18.4512,
+    "min": 0.0248,
+    "n": 1381,
+    "p05": 0.1758,
+    "p95": 13.7392,
+    "q50": 12.0032
+   },
+   "bat_i_valida_frac": {
+    "max": 1.0,
+    "min": 0.0,
+    "n": 1393,
+    "p05": 0.274237,
+    "p95": 0.997335,
+    "q50": 0.935593
+   },
+   "bat_v_mediana_v": {
+    "max": 24.880033,
+    "min": 12.222383,
+    "n": 1393,
+    "p05": 16.874213,
+    "p95": 23.440483,
+    "q50": 21.388441
+   },
+   "gyr_norma_p99_vuelo_rad_s": {
+    "max": 4.826203,
+    "min": 0.005647,
+    "n": 1393,
+    "p05": 0.217942,
+    "p95": 1.245033,
+    "q50": 0.511786
+   },
+   "gyr_norma_reposo_rad_s": {
+    "max": 0.062718,
+    "min": 0.001827,
+    "n": 329,
+    "p05": 0.002518,
+    "p95": 0.032941,
+    "q50": 0.005998
+   },
+   "imu_fuente": {
+    "sensor_combined": 1393
+   },
+   "landed_frac_3s_inicio": {
+    "max": 1.0,
+    "min": 0.0,
+    "n": 1393,
+    "p05": 0.0,
+    "p95": 1.0,
+    "q50": 0.574497
+   },
+   "ned_acc_horizontal_reposo": {
+    "max": 0.169439,
+    "min": 0.000189,
+    "n": 321,
+    "p05": 0.001397,
+    "p95": 0.042636,
+    "q50": 0.00548
+   },
+   "ned_acc_z_reposo": {
+    "max": -9.722169,
+    "min": -9.880619,
+    "n": 321,
+    "p05": -9.839773,
+    "p95": -9.75884,
+    "q50": -9.79477
+   },
+   "ned_quieto_horizontal": {
+    "max": 2.191024,
+    "min": 0.000129,
+    "n": 1355,
+    "p05": 0.002784,
+    "p95": 0.255691,
+    "q50": 0.026664
+   },
+   "ned_quieto_z": {
+    "max": -9.465162,
+    "min": -9.909693,
+    "n": 1355,
+    "p05": -9.844011,
+    "p95": -9.731298,
+    "q50": -9.787588
+   },
+   "ned_vuelo_horizontal": {
+    "max": 2.159728,
+    "min": 0.000159,
+    "n": 1376,
+    "p05": 0.002283,
+    "p95": 0.217029,
+    "q50": 0.013708
+   },
+   "ned_vuelo_z": {
+    "max": -9.435416,
+    "min": -10.630274,
+    "n": 1376,
+    "p05": -9.851312,
+    "p95": -9.735141,
+    "q50": -9.784316
+   },
+   "pwm_max_us": {
+    "max": 2120.0,
+    "min": 1141.0,
+    "n": 1374,
+    "p05": 1712.65,
+    "p95": 1999.0,
+    "q50": 1949.0
+   },
+   "pwm_mediana_us": {
+    "max": 1891.0,
+    "min": 900.0,
+    "n": 1374,
+    "p05": 1306.7875,
+    "p95": 1836.675,
+    "q50": 1720.5
+   },
+   "q_desv_max_|q|-1": {
+    "max": 0.0,
+    "min": 0.0,
+    "n": 1376,
+    "p05": 0.0,
+    "p95": 0.0,
+    "q50": 0.0
+   },
+   "q_norma_mediana": {
+    "max": 1.0,
+    "min": 1.0,
+    "n": 1376,
+    "p05": 1.0,
+    "p95": 1.0,
+    "q50": 1.0
+   },
+   "vuelos_con_imu": 1393,
+   "vuelos_con_muestras_quietas": 1355,
+   "vuelos_con_reposo_inicial_aterrizado": 329
+  }
+ },
+ "versiones": {
+  "menores_comunes": [],
+  "rflymad": {
+   "px4_tipo_byte": {
+    "0": 493
+   },
+   "px4_version_completa": {
+    "1.12.3": 493
+   },
+   "px4_version_menor": {
+    "1.12": 493
+   },
+   "sys_name": {
+    "PX4": 493
+   },
+   "ver_data_format": {
+    "1": 493
+   },
+   "ver_hw": {
+    "DRONEYEE_ZYFC_H7": 493
+   },
+   "ver_sw_hash_distintos": 1,
+   "ver_sw_release_distintos": 1,
+   "vuelos_sin_version": 0
+  },
+  "uav_sead": {
+   "px4_tipo_byte": {
+    "0": 423,
+    "255": 970
+   },
+   "px4_version_completa": {
+    "1.10.1": 190,
+    "1.13.0": 1,
+    "1.7.3": 65,
+    "1.8.0": 496,
+    "1.8.1": 562,
+    "1.8.2": 79
+   },
+   "px4_version_menor": {
+    "1.10": 190,
+    "1.13": 1,
+    "1.7": 65,
+    "1.8": 1137
+   },
+   "sys_name": {
+    "PX4": 1393
+   },
+   "ver_data_format": {
+    "-1": 1392,
+    "1": 1
+   },
+   "ver_hw": {
+    "PX4FMU_V2": 1202,
+    "PX4_FMU_V5": 191
+   },
+   "ver_sw_hash_distintos": 7,
+   "ver_sw_release_distintos": 7,
+   "vuelos_sin_version": 0
+  },
+  "vuelos_en_menor_comun": {
+   "rflymad": 0,
+   "uav_sead": 0
+  }
+ }
+}

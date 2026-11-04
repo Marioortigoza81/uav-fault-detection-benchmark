@@ -1,0 +1,12 @@
+familia,campos_vistos,campos_uav_95,campos_rfly_95,campos_interseccion,campos_interseccion_multi_id
+imu_cruda,106,9,68,9,9
+actitud,23,9,20,9,9
+tasas,8,0,8,0,0
+setpoints,203,21,147,20,20
+actuadores,169,26,169,26,26
+bateria,56,20,47,18,18
+estimador,366,106,265,20,20
+posicion_local,124,38,116,36,36
+gps,53,0,53,0,0
+mag_baro,32,0,25,0,0
+otros,956,115,519,94,94

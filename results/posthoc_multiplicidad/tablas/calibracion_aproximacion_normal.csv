@@ -1,0 +1,7 @@
+contraste,p_bootstrap_exacto,p_aproximacion_normal,misma_decision_alfa_0_025
+H1 alfa,0.000999001,0.00299667,True
+H2 alfa,0.000999001,0.000999001,True
+H1 rflymad,0.000999001,0.000999001,True
+H2 rflymad,0.000999001,0.000999001,True
+H1 uav_fd,0.001002,0.0496684,False
+H2 uav_fd,0.212425,0.207488,True

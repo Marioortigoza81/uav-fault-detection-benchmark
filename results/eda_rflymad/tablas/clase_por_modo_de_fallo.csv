@@ -1,0 +1,14 @@
+clase,fault_modo,n
+Accelerometer,3,11
+Accelerometer,4,23
+Barometer,3,18
+Barometer,4,27
+GPS,3,16
+GPS,4,27
+Gyroscope,3,17
+Gyroscope,4,22
+Magnetometer,3,16
+Magnetometer,4,20
+Motor,-1,5
+Motor,1,139
+Motor,2,101

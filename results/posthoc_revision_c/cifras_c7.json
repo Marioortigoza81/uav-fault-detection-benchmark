@@ -1,0 +1,163 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión simulada C-7); no cambia los veredictos preregistrados",
+  "solape_en_e1": {
+   "uav_sead": {
+    "ventana_s": 5.0,
+    "paso_s": 2.5
+   },
+   "alfa": {
+    "ventana_s": 2.0,
+    "paso_s": 2.0
+   },
+   "rflymad": {
+    "ventana_s": 5.0,
+    "paso_s": 5.0
+   },
+   "uav_fd": {
+    "ventana_s": 1.0,
+    "paso_s": 1.0
+   }
+  },
+  "fuente_del_paso": "11_factibilidad_cruzada.py: VENT = 50, PASO = 25 compartimentos de 100 ms (UAV-SEAD); 10_factibilidad_fugas.py: ALFA, RflyMAD y UAV-FD con reshape en bloques contiguos (paso = ventana)",
+  "submuestreo": "índice de ventana k = t_inicio / paso; se conservan las de k par (paso efectivo = ventana = 5 s, sin solape); sensibilidad con k impar",
+  "modelo": "RF de 12, sin_atajos (17 canales × 3 estadísticos)",
+  "particiones": "las de 12 recalculadas sobre el subconjunto (P-ventana semilla 0; P-grupo por vuelo semillas 0-4)",
+  "bootstrap": "1000 réplicas de vuelos, semilla 20261103",
+  "n_jobs": 4,
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0"
+  },
+  "segundos": 806.2
+ },
+ "referencia_e1_con_solape": {
+  "diferencia": 0.0782,
+  "ic95": [
+   0.063,
+   0.0946
+  ],
+  "cumple": true,
+  "auroc_p_ventana": 0.955,
+  "auroc_p_grupo": 0.8768
+ },
+ "variantes": {
+  "pares": {
+   "n_ventanas": 29023,
+   "n_positivas": 1238,
+   "prevalencia": 0.0427,
+   "unidades_independientes": 1163,
+   "n_rasgos": 51,
+   "P-ventana": {
+    "auroc": 0.9252,
+    "auroc_ic95": [
+     0.9113,
+     0.9385
+    ],
+    "auprc": 0.4608,
+    "auprc_ic95": [
+     0.3931,
+     0.5341
+    ],
+    "auroc_por_asignacion": [
+     0.9252
+    ]
+   },
+   "P-grupo": {
+    "auroc": 0.8742,
+    "auroc_ic95": [
+     0.8527,
+     0.8963
+    ],
+    "auprc": 0.3137,
+    "auprc_ic95": [
+     0.2595,
+     0.3803
+    ],
+    "auroc_por_asignacion": [
+     0.8799,
+     0.8784,
+     0.8672,
+     0.8737,
+     0.8718
+    ]
+   },
+   "inflacion_auroc": {
+    "diferencia": 0.051,
+    "ic95": [
+     0.0368,
+     0.0672
+    ],
+    "ic_excluye_0": true
+   },
+   "inflacion_auprc": {
+    "diferencia": 0.147,
+    "ic95": [
+     0.112,
+     0.1766
+    ],
+    "ic_excluye_0": true
+   },
+   "segundos": 417.2
+  },
+  "impares": {
+   "n_ventanas": 28880,
+   "n_positivas": 1254,
+   "prevalencia": 0.0434,
+   "unidades_independientes": 1160,
+   "n_rasgos": 51,
+   "P-ventana": {
+    "auroc": 0.922,
+    "auroc_ic95": [
+     0.9072,
+     0.9344
+    ],
+    "auprc": 0.441,
+    "auprc_ic95": [
+     0.3665,
+     0.5094
+    ],
+    "auroc_por_asignacion": [
+     0.922
+    ]
+   },
+   "P-grupo": {
+    "auroc": 0.8652,
+    "auroc_ic95": [
+     0.8412,
+     0.8874
+    ],
+    "auprc": 0.2895,
+    "auprc_ic95": [
+     0.2299,
+     0.3508
+    ],
+    "auroc_por_asignacion": [
+     0.8626,
+     0.8629,
+     0.8648,
+     0.8731,
+     0.8625
+    ]
+   },
+   "inflacion_auroc": {
+    "diferencia": 0.0568,
+    "ic95": [
+     0.0402,
+     0.0732
+    ],
+    "ic_excluye_0": true
+   },
+   "inflacion_auprc": {
+    "diferencia": 0.1514,
+    "ic95": [
+     0.1156,
+     0.1837
+    ],
+    "ic_excluye_0": true
+   },
+   "segundos": 382.8
+  }
+ }
+}

@@ -1,0 +1,13 @@
+modelo,evaluacion,auroc,ic_lo,ic_hi
+rf,global,0.994186,0.992714,0.995387
+rf,estratificado,0.984039,0.980078,0.987335
+rf,solo_no_fault,0.965689,0.956909,0.972956
+rf,control_negativo,0.425225,0.39629,0.452373
+atajos,global,0.985486,0.982387,0.988245
+atajos,estratificado,0.95619,0.948312,0.963995
+atajos,solo_no_fault,0.920845,0.906165,0.934171
+atajos,control_negativo,0.231265,0.213967,0.250017
+solo_t_rel,global,0.934699,0.927742,0.941243
+solo_t_rel,estratificado,0.731343,0.717753,0.743945
+solo_t_rel,solo_no_fault,0.659139,0.635408,0.682377
+solo_t_rel,control_negativo,0.374652,0.362364,0.38702

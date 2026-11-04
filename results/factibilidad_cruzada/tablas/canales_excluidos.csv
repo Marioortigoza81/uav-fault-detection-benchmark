@@ -1,0 +1,8 @@
+excluido,motivo
+"GPS, magnetómetro, barómetro",presentes en < 95 % de UAV-SEAD
+actuator_outputs / actuator_controls_0,geometría octo (8 motores) frente a quad (4); PWM y empuje dependen del vehículo (inventario §7)
+battery_status,4-6 celdas frente a 6; corriente poco fiable en UAV-SEAD; además delataría el fallo Voltage de HIL
+estimator_status / innovaciones EKF2,sin campo común de innovaciones; test ratios con cálculo dependiente de la versión 1.7-1.13 frente a 1.12.3
+"guiñada, posición x,y,z, dirección de vx,vy",origen y rumbo arbitrarios por vuelo
+"rfly_ctrl_lxl, TestInfo, nombre de carpeta",contienen la etiqueta; solo se usan para etiquetar
+vehicle_local_position_setpoint (consigna de velocidad),no está en la intersección >= 95 % del inventario

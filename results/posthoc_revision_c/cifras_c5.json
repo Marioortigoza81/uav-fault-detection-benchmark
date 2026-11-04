@@ -1,0 +1,191 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión simulada C-5); no cambia los veredictos preregistrados",
+  "n_jobs": 4,
+  "modelo": "RF de 13 (semilla de modelo de 13) sobre el conjunto base; «atajos» = modelo de 13 con solo (t, t_rel, duración); «solo_t_rel» = el mismo RF con solo t_rel",
+  "particiones": "StratifiedGroupKFold(5) por TestCase, semillas de asignación [20261103, 20261104, 20261105, 20261106, 20261107] (como el P-grupo interno de 13)",
+  "evaluacion": "como el M2 de 16: global; estratificado por decil de t_rel (pesos P_k·N_k); solo_no_fault; control_negativo",
+  "bootstrap": "1000 réplicas de grupos HIL, semilla 20262103 (convención de 16)",
+  "datos_e2": {
+   "pickles_en_cache": 4800,
+   "ventanas": 165494,
+   "huella_extraccion_e2": "a0ca247dfb2741fa"
+  },
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0"
+  },
+  "segundos": 720.1
+ },
+ "datos_hil": {
+  "ventanas": 94177,
+  "ventanas_con_fallo": 67552,
+  "grupos": 2973,
+  "ventanas_no_fault": 4628,
+  "vuelos_no_fault": 240,
+  "ventanas_previas_inyeccion": 21957,
+  "t_rel_ventanas_con_fallo_percentiles_5_50_95": [
+   0.3145,
+   0.6349,
+   0.9137
+  ],
+  "t_rel_ventanas_normales_percentiles_5_50_95": [
+   0.1064,
+   0.2375,
+   0.6989
+  ],
+  "clases": {
+   "Accelerometer": 4249,
+   "Barometer": 3603,
+   "GPS": 4321,
+   "Gyroscope": 4277,
+   "Load": 9816,
+   "Magnetometer": 4314,
+   "Motor": 31318,
+   "No Fault": 4628,
+   "Prop": 12735,
+   "Voltage": 1103,
+   "Wind": 13813
+  }
+ },
+ "estratos_validos": {
+  "global": 1,
+  "estratificado": 9,
+  "solo_no_fault": 9,
+  "control_negativo": 6
+ },
+ "resultados": {
+  "rf": {
+   "global": {
+    "auroc": 0.9942,
+    "ic95": [
+     0.9927,
+     0.9954
+    ]
+   },
+   "estratificado": {
+    "auroc": 0.984,
+    "ic95": [
+     0.9801,
+     0.9873
+    ]
+   },
+   "solo_no_fault": {
+    "auroc": 0.9657,
+    "ic95": [
+     0.9569,
+     0.973
+    ]
+   },
+   "control_negativo": {
+    "auroc": 0.4252,
+    "ic95": [
+     0.3963,
+     0.4524
+    ]
+   }
+  },
+  "atajos": {
+   "global": {
+    "auroc": 0.9855,
+    "ic95": [
+     0.9824,
+     0.9882
+    ]
+   },
+   "estratificado": {
+    "auroc": 0.9562,
+    "ic95": [
+     0.9483,
+     0.964
+    ]
+   },
+   "solo_no_fault": {
+    "auroc": 0.9208,
+    "ic95": [
+     0.9062,
+     0.9342
+    ]
+   },
+   "control_negativo": {
+    "auroc": 0.2313,
+    "ic95": [
+     0.214,
+     0.25
+    ]
+   }
+  },
+  "solo_t_rel": {
+   "global": {
+    "auroc": 0.9347,
+    "ic95": [
+     0.9277,
+     0.9412
+    ]
+   },
+   "estratificado": {
+    "auroc": 0.7313,
+    "ic95": [
+     0.7178,
+     0.7439
+    ]
+   },
+   "solo_no_fault": {
+    "auroc": 0.6591,
+    "ic95": [
+     0.6354,
+     0.6824
+    ]
+   },
+   "control_negativo": {
+    "auroc": 0.3747,
+    "ic95": [
+     0.3624,
+     0.387
+    ]
+   }
+  }
+ },
+ "diferencias": {
+  "rf_global_menos_rf_estratificado": {
+   "punto": 0.0101,
+   "ic95": [
+    0.008,
+    0.0127
+   ]
+  },
+  "rf_global_menos_rf_solo_no_fault": {
+   "punto": 0.0285,
+   "ic95": [
+    0.0223,
+    0.0363
+   ]
+  },
+  "rf_estratificado_menos_atajos_estratificado": {
+   "punto": 0.0278,
+   "ic95": [
+    0.0193,
+    0.0366
+   ]
+  }
+ },
+ "control_frente_a_e2": {
+  "rf_global": -0.0,
+  "atajos_global": -0.0,
+  "e2_rf": 0.9942,
+  "e2_atajos": 0.9855
+ },
+ "sensibilidad_n_estratos": {
+  "5_estratos": {
+   "rf": 0.9849,
+   "atajos": 0.96,
+   "solo_t_rel": 0.7551
+  },
+  "20_estratos": {
+   "rf": 0.9838,
+   "atajos": 0.9547,
+   "solo_t_rel": 0.718
+  }
+ }
+}

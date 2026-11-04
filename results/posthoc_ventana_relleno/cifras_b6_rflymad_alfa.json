@@ -1,0 +1,385 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión simulada B-6); no cambia los veredictos preregistrados",
+  "criterio_h1": "AUROC(P-ventana) − AUROC(P-grupo) > 0 con IC 95 % (bootstrap pareado de unidades) que excluye 0, RF y rasgos físicos (sin_atajos), en al menos 3 de los 4 datasets evaluables",
+  "modelo": "RF de 12 (200 árboles, imputación por mediana)",
+  "rasgos": "sin_atajos (físicos)",
+  "paso": "igual a la ventana (sin solape), como en 10",
+  "bootstrap": "1000 réplicas de unidades independientes, semilla 20261103, por longitud",
+  "n_jobs": 2,
+  "reducidos": [
+   "rflymad"
+  ],
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0"
+  },
+  "datasets": [
+   "rflymad",
+   "alfa"
+  ],
+  "no_hecho": {
+   "uav_sead": "no evaluado: la caché de F2 guarda rasgos de ventanas de 5 s y otra longitud exige releer los 1.171 ULog (fuera del presupuesto de cómputo)",
+   "uav_fd": "no evaluado en esta ejecución"
+  },
+  "segundos": 829.6
+ },
+ "por_dataset": {
+  "rflymad": {
+   "constante_parcheada": "VENT_N = 10",
+   "longitudes": {
+    "2.5s": {
+     "ventana_s": 2.5,
+     "n_ventanas": 16361,
+     "n_positivas": 7317,
+     "prevalencia": 0.4472,
+     "unidades_independientes": 440,
+     "n_rasgos_fisicos": 222,
+     "semillas_p_grupo": [
+      0
+     ],
+     "P-ventana": {
+      "auroc": 0.9883,
+      "auroc_ic95": [
+       0.9861,
+       0.9905
+      ],
+      "auprc": 0.9861,
+      "auprc_ic95": [
+       0.9832,
+       0.9886
+      ],
+      "auroc_por_semilla": [
+       0.9883
+      ]
+     },
+     "P-grupo": {
+      "auroc": 0.9743,
+      "auroc_ic95": [
+       0.969,
+       0.9793
+      ],
+      "auprc": 0.9695,
+      "auprc_ic95": [
+       0.9626,
+       0.9757
+      ],
+      "auroc_por_semilla": [
+       0.9743
+      ]
+     },
+     "inflacion_auroc": {
+      "diferencia": 0.014,
+      "ic95": [
+       0.0106,
+       0.018
+      ],
+      "ic_excluye_0": true
+     },
+     "inflacion_auprc": {
+      "diferencia": 0.0165,
+      "ic95": [
+       0.0122,
+       0.0217
+      ],
+      "ic_excluye_0": true
+     },
+     "huella_cargador_parcheado": "8f94d8818b929315",
+     "es_la_usada_en_e1": false,
+     "segundos": 340.2
+    },
+    "10s": {
+     "ventana_s": 10.0,
+     "n_ventanas": 3563,
+     "n_positivas": 1465,
+     "prevalencia": 0.4112,
+     "unidades_independientes": 440,
+     "n_rasgos_fisicos": 222,
+     "semillas_p_grupo": [
+      0
+     ],
+     "P-ventana": {
+      "auroc": 0.9931,
+      "auroc_ic95": [
+       0.9907,
+       0.9953
+      ],
+      "auprc": 0.9899,
+      "auprc_ic95": [
+       0.9864,
+       0.9933
+      ],
+      "auroc_por_semilla": [
+       0.9931
+      ]
+     },
+     "P-grupo": {
+      "auroc": 0.9886,
+      "auroc_ic95": [
+       0.985,
+       0.9921
+      ],
+      "auprc": 0.9833,
+      "auprc_ic95": [
+       0.9777,
+       0.9884
+      ],
+      "auroc_por_semilla": [
+       0.9886
+      ]
+     },
+     "inflacion_auroc": {
+      "diferencia": 0.0044,
+      "ic95": [
+       0.0026,
+       0.0065
+      ],
+      "ic_excluye_0": true
+     },
+     "inflacion_auprc": {
+      "diferencia": 0.0067,
+      "ic95": [
+       0.0039,
+       0.0097
+      ],
+      "ic_excluye_0": true
+     },
+     "huella_cargador_parcheado": "467c02c84d5a5cda",
+     "es_la_usada_en_e1": false,
+     "segundos": 55.5
+    }
+   },
+   "reducido": {
+    "motivo": "presupuesto de cómputo (máquina compartida al 100 % de CPU): P-grupo con 1 semilla (0) de 5",
+    "referencia_e1_longitud_usada": {
+     "ventana_s": 5.0,
+     "auroc_p_ventana": 0.9886,
+     "auroc_p_grupo_semilla_0": 0.9833,
+     "inflacion_semilla_0": 0.0053,
+     "inflacion_media_5_semillas": 0.0067,
+     "ic95_media_5_semillas": [
+      0.0047,
+      0.0087
+     ]
+    }
+   },
+   "longitudes_con_inflacion_positiva_ic_excluye_0": "2/2"
+  },
+  "alfa": {
+   "constante_parcheada": "VENT_N = 20",
+   "longitudes": {
+    "1s": {
+     "ventana_s": 1.0,
+     "n_ventanas": 4637,
+     "n_positivas": 733,
+     "prevalencia": 0.1581,
+     "unidades_independientes": 30,
+     "n_rasgos_fisicos": 252,
+     "semillas_p_grupo": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "P-ventana": {
+      "auroc": 0.9925,
+      "auroc_ic95": [
+       0.9867,
+       0.9971
+      ],
+      "auprc": 0.9652,
+      "auprc_ic95": [
+       0.9444,
+       0.985
+      ],
+      "auroc_por_semilla": [
+       0.9925
+      ]
+     },
+     "P-grupo": {
+      "auroc": 0.7211,
+      "auroc_ic95": [
+       0.5708,
+       0.9653
+      ],
+      "auprc": 0.5953,
+      "auprc_ic95": [
+       0.4474,
+       0.8451
+      ],
+      "auroc_por_semilla": [
+       0.7281,
+       0.7315,
+       0.7228,
+       0.7076,
+       0.7153
+      ]
+     },
+     "inflacion_auroc": {
+      "diferencia": 0.2714,
+      "ic95": [
+       0.0316,
+       0.4166
+      ],
+      "ic_excluye_0": true
+     },
+     "inflacion_auprc": {
+      "diferencia": 0.3699,
+      "ic95": [
+       0.1419,
+       0.5041
+      ],
+      "ic_excluye_0": true
+     },
+     "huella_cargador_parcheado": "67350203cfe6b8f0",
+     "es_la_usada_en_e1": false,
+     "segundos": 252.0
+    },
+    "2s": {
+     "ventana_s": 2.0,
+     "n_ventanas": 2290,
+     "n_positivas": 351,
+     "prevalencia": 0.1533,
+     "unidades_independientes": 30,
+     "n_rasgos_fisicos": 252,
+     "semillas_p_grupo": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "P-ventana": {
+      "auroc": 0.9823,
+      "auroc_ic95": [
+       0.966,
+       0.9942
+      ],
+      "auprc": 0.9186,
+      "auprc_ic95": [
+       0.8662,
+       0.9689
+      ],
+      "auroc_por_semilla": [
+       0.9823
+      ]
+     },
+     "P-grupo": {
+      "auroc": 0.7269,
+      "auroc_ic95": [
+       0.5833,
+       0.9707
+      ],
+      "auprc": 0.595,
+      "auprc_ic95": [
+       0.4465,
+       0.8607
+      ],
+      "auroc_por_semilla": [
+       0.7333,
+       0.7201,
+       0.734,
+       0.7333,
+       0.7139
+      ]
+     },
+     "inflacion_auroc": {
+      "diferencia": 0.2554,
+      "ic95": [
+       0.0236,
+       0.3879
+      ],
+      "ic_excluye_0": true
+     },
+     "inflacion_auprc": {
+      "diferencia": 0.3237,
+      "ic95": [
+       0.1031,
+       0.4363
+      ],
+      "ic_excluye_0": true
+     },
+     "huella_cargador_parcheado": "7664e688b1ba9fca",
+     "es_la_usada_en_e1": true,
+     "segundos": 122.4,
+     "control_frente_a_e1": {
+      "dif_inflacion": -0.0,
+      "dif_auroc_p_ventana": 0.0,
+      "dif_auroc_p_grupo": 0.0
+     }
+    },
+    "4s": {
+     "ventana_s": 4.0,
+     "n_ventanas": 1120,
+     "n_positivas": 161,
+     "prevalencia": 0.1437,
+     "unidades_independientes": 30,
+     "n_rasgos_fisicos": 252,
+     "semillas_p_grupo": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "P-ventana": {
+      "auroc": 0.9657,
+      "auroc_ic95": [
+       0.9338,
+       0.9925
+      ],
+      "auprc": 0.8561,
+      "auprc_ic95": [
+       0.7697,
+       0.9512
+      ],
+      "auroc_por_semilla": [
+       0.9657
+      ]
+     },
+     "P-grupo": {
+      "auroc": 0.7615,
+      "auroc_ic95": [
+       0.6275,
+       0.9718
+      ],
+      "auprc": 0.5962,
+      "auprc_ic95": [
+       0.4537,
+       0.86
+      ],
+      "auroc_por_semilla": [
+       0.7534,
+       0.7757,
+       0.7457,
+       0.7569,
+       0.7757
+      ]
+     },
+     "inflacion_auroc": {
+      "diferencia": 0.2042,
+      "ic95": [
+       0.02,
+       0.3188
+      ],
+      "ic_excluye_0": true
+     },
+     "inflacion_auprc": {
+      "diferencia": 0.2599,
+      "ic95": [
+       0.0846,
+       0.3462
+      ],
+      "ic_excluye_0": true
+     },
+     "huella_cargador_parcheado": "4c35a121dde31add",
+     "es_la_usada_en_e1": false,
+     "segundos": 59.5
+    }
+   },
+   "longitudes_con_inflacion_positiva_ic_excluye_0": "3/3"
+  }
+ }
+}

@@ -1,0 +1,831 @@
+{
+ "sha256": {
+  "flights.csv": "117843be1846d4db353c8961b9f947ee7e6a30fdf3d78c8f8de92b477869f037",
+  "parameters.csv": "568dffaed11a4d335ef4f8a932b342c836907af2f4aa54da9b4a0e2ffef2108a",
+  "README.txt": "8601dd211d6c297c5411992dc34923bdb98b72cdc287517ed18e479f0e9540fd"
+ },
+ "estructura": {
+  "filas": 257896,
+  "columnas": 28,
+  "vuelos": 209,
+  "vuelos_en_parameters": 209,
+  "mismos_vuelos_flights_y_parameters": true,
+  "vuelos_con_filas_en_ficha": 209,
+  "vuelos_con_filas_iguales_a_la_ficha": 209,
+  "nulos_totales": 0,
+  "nulos_por_columna": {},
+  "filas_con_altitude_no_numerica": 2185,
+  "filas_duplicadas": 0,
+  "altitude_valores_no_numericos": [
+   "25-50-100-25"
+  ],
+  "vuelos_altitude_no_numerica": [
+   278,
+   279
+  ],
+  "ids_vuelo_min_max": [
+   1,
+   279
+  ],
+  "huecos_en_ids": 70,
+  "filas_por_vuelo": {
+   "count": 209.0,
+   "mean": 1234.0,
+   "std": 293.4,
+   "min": 391.0,
+   "25%": 1045.0,
+   "50%": 1207.0,
+   "75%": 1374.0,
+   "max": 2856.0
+  },
+  "vuelo_mas_largo": [
+   272,
+   2856
+  ],
+  "vuelo_mas_corto": [
+   215,
+   391
+  ],
+  "payload_valores_en_filas": {
+   "0.0": 95401,
+   "250.0": 78065,
+   "500.0": 82808,
+   "750.0": 1622
+  }
+ },
+ "muestreo": {
+  "vuelos_con_tiempo_monotono": 209,
+  "paso_mediano_s": 0.12,
+  "frecuencia_media_hz": 6.661,
+  "pasos_mas_frecuentes_s": {
+   "0.1": 89009,
+   "0.2": 87755,
+   "0.11": 21859,
+   "0.19": 21504,
+   "0.09": 16868,
+   "0.21": 16645
+  },
+  "pasos_mayores_0p5_s": 41,
+  "paso_maximo_s": 5.28,
+  "duracion_s": {
+   "count": 209.0,
+   "mean": 185.3,
+   "std": 44.1,
+   "min": 58.6,
+   "25%": 156.7,
+   "50%": 181.8,
+   "75%": 206.0,
+   "max": 428.3
+  },
+  "tiempo_inicial_distinto_de_cero": 0
+ },
+ "diseno": {
+  "ruta_recuento": {
+   "R1": 182,
+   "R6": 5,
+   "R5": 4,
+   "H": 4,
+   "A1": 3,
+   "A2": 3,
+   "A3": 3,
+   "R7": 2,
+   "R2": 1,
+   "R3": 1,
+   "R4": 1
+  },
+  "payload_recuento": {
+   "0.0": 80,
+   "250.0": 62,
+   "500.0": 66,
+   "750.0": 1
+  },
+  "velocidad_recuento": {
+   "0.0": 13,
+   "4.0": 41,
+   "6.0": 38,
+   "8.0": 36,
+   "10.0": 43,
+   "12.0": 38
+  },
+  "altitud_recuento": {
+   "25": 54,
+   "50": 48,
+   "75": 47,
+   "100": 45,
+   "0": 9,
+   "3": 4,
+   "25-50-100-25": 2
+  },
+  "fechas_distintas": 18,
+  "fecha_min": "2019-04-07",
+  "fecha_max": "2019-10-24",
+  "combinaciones_speed_payload_altitude": 65,
+  "payload_750_vuelos": [
+   76
+  ],
+  "vuelos_speed_cero": [
+   211,
+   212,
+   213,
+   214,
+   215,
+   216,
+   217,
+   218,
+   219,
+   221,
+   222,
+   223,
+   224
+  ],
+  "R_vuelos": 196,
+  "R_celdas_speed_x_payload_vacias": 4,
+  "R_celdas_speed_x_payload": 20,
+  "R_celdas_vacias_fuera_de_la_columna_750g": 0,
+  "R_vuelos_por_celda_0_250_500_min_max": [
+   12,
+   15
+  ],
+  "R_spearman_entre_parametros": {
+   "speed~payload": -0.004,
+   "speed~altitude_num": 0.024,
+   "payload~altitude_num": -0.015
+  },
+  "R_spearman_parametro_vs_dia": {
+   "speed": 0.005,
+   "payload": 0.159,
+   "altitude_num": 0.062
+  }
+ },
+ "calidad": {
+  "filas_en_min_max_por_variable_mayor_0p1pct": {
+   "wind_speed": {
+    "min": 566,
+    "max": 1
+   },
+   "wind_angle": {
+    "min": 828,
+    "max": 831
+   },
+   "position_x": {
+    "min": 1,
+    "max": 6501
+   },
+   "position_y": {
+    "min": 6501,
+    "max": 1
+   },
+   "position_z": {
+    "min": 6501,
+    "max": 1
+   },
+   "orientation_w": {
+    "min": 1,
+    "max": 6501
+   }
+  },
+  "filas_posicion_cero": 6501,
+  "vuelos_con_posicion_cero": 9,
+  "vuelos_con_posicion_cero_lista": [
+   211,
+   212,
+   213,
+   214,
+   215,
+   216,
+   217,
+   218,
+   219
+  ],
+  "corriente_negativa_filas": 29031,
+  "corriente_min_a": -0.326,
+  "norma_cuaternion_desv_max_global": 0.0,
+  "viento_angulo_fuera_0_360": 0,
+  "tension_ini_mediana_v": 24.364,
+  "fraccion_filas_z_robusto_mayor_6_intravuelo": {
+   "wind_speed": 0.00804,
+   "battery_voltage": 0.03123,
+   "battery_current": 0.06118,
+   "orientation_x": 0.04616,
+   "orientation_y": 0.03792,
+   "orientation_z": 0.13744,
+   "orientation_w": 0.06142,
+   "velocity_x": 0.04144,
+   "velocity_y": 0.27646,
+   "velocity_z": 0.03053,
+   "angular_x": 0.01496,
+   "angular_y": 0.03724,
+   "angular_z": 0.03907,
+   "linear_acceleration_x": 0.02412,
+   "linear_acceleration_y": 0.00164,
+   "linear_acceleration_z": 0.04088
+  }
+ },
+ "energia": {
+  "energia_wh": {
+   "count": 209.0,
+   "mean": 20.25,
+   "std": 6.37,
+   "min": -0.16,
+   "25%": 16.85,
+   "50%": 20.12,
+   "75%": 24.04,
+   "max": 37.75
+  },
+  "energia_wh_R": {
+   "count": 196.0,
+   "mean": 21.22,
+   "std": 4.89,
+   "min": 12.97,
+   "25%": 17.57,
+   "50%": 20.72,
+   "75%": 24.53,
+   "max": 37.75
+  },
+  "potencia_media_w_R": {
+   "count": 196.0,
+   "mean": 404.1,
+   "std": 48.9,
+   "min": 228.0,
+   "25%": 372.9,
+   "50%": 405.6,
+   "75%": 439.3,
+   "max": 496.0
+  },
+  "corriente_max_a": 47.19,
+  "tension_min_v": 18.811,
+  "tension_ini_v": {
+   "count": 209.0,
+   "mean": 24.381,
+   "std": 1.024,
+   "min": 20.833,
+   "25%": 23.57,
+   "50%": 24.364,
+   "75%": 25.433,
+   "max": 25.89
+  },
+  "tension_fin_v": {
+   "count": 209.0,
+   "mean": 23.356,
+   "std": 0.805,
+   "min": 21.346,
+   "25%": 22.678,
+   "50%": 23.198,
+   "75%": 24.009,
+   "max": 25.616
+  },
+  "tension_por_celda_si_6s_ini": 4.061,
+  "nota_6s": "la ficha no declara la química ni el número de celdas; V/6 es solo una referencia",
+  "corr_energia_duracion_R": 0.814,
+  "cruce_vuelos_con_cruce": 193,
+  "potencia_crucero_ols_R1": {
+   "n": 179,
+   "r2": 0.8093,
+   "r2_sin_viento": 0.8028,
+   "coef": {
+    "const": 492.375,
+    "v": -19.244,
+    "v2": 1.04,
+    "carga_kg": 178.905,
+    "altitud_m": 0.105,
+    "viento_ms": 4.365
+   },
+   "error_std": {
+    "const": 14.037,
+    "v": 4.151,
+    "v2": 0.234,
+    "carga_kg": 6.772,
+    "altitud_m": 0.051,
+    "viento_ms": 1.806
+   },
+   "p": {
+    "const": 0.0,
+    "v": 0.0,
+    "v2": 0.0,
+    "carga_kg": 0.0,
+    "altitud_m": 0.0398,
+    "viento_ms": 0.0167
+   },
+   "desv_residuo_w": 18.57
+  },
+  "wh_por_km_mediana_carga0_R1_por_velocidad": {
+   "4.0": 31.57,
+   "6.0": 21.28,
+   "8.0": 16.14,
+   "10.0": 12.77,
+   "12.0": 11.35
+  },
+  "velocidad_minima_wh_por_km_carga0": 12.0,
+  "wh_por_km_mediana_R1_todas_cargas_por_velocidad": {
+   "4.0": 35.63,
+   "6.0": 23.39,
+   "8.0": 17.8,
+   "10.0": 14.36,
+   "12.0": 12.64
+  }
+ },
+ "fisica": {
+  "hover_vuelos": 24,
+  "hover_por_carga_g": {
+   "0.0": {
+    "vuelos": 7,
+    "potencia_media_w": 491.4,
+    "desv_w": 11.8
+   },
+   "250.0": {
+    "vuelos": 10,
+    "potencia_media_w": 530.4,
+    "desv_w": 21.3
+   },
+   "500.0": {
+    "vuelos": 7,
+    "potencia_media_w": 575.7,
+    "desv_w": 19.9
+   }
+  },
+  "hover_muestras_por_vuelo_mediana": 33.0,
+  "hover_accz_media_ms2": -9.8556,
+  "g_estandar": 9.80665,
+  "ajuste_m15": {
+   "k": 51.657,
+   "m0_kg": 4.483,
+   "error_std_m0_kg": 0.551,
+   "r2": 0.7716,
+   "rmse_w": 17.5
+  },
+  "ajuste_lineal": {
+   "pendiente_w_por_kg": 168.44,
+   "ordenada_w": 490.13,
+   "r2": 0.771,
+   "rmse_w": 17.53
+  },
+  "cociente_potencia_500g_sobre_0g": {
+   "observado": 1.1714,
+   "modelo_m15": 1.1719
+  },
+  "pendiente_log_log_hover_vs_masa_total_m0_ajustada": 1.5,
+  "masa_max_despegue_ficha_kg": 3.6,
+  "m0_ajustada_supera_masa_max_despegue": true,
+  "cociente_500_sobre_0_si_m0_fuera_3p1_kg": 1.2514,
+  "corr_hover_potencia_tension": 0.098,
+  "accz_hover_vs_g": -0.0489,
+  "viento_medio_vuelo_ms": {
+   "count": 209.0,
+   "mean": 4.31,
+   "std": 1.24,
+   "min": 0.09,
+   "25%": 3.85,
+   "50%": 4.32,
+   "75%": 5.05,
+   "max": 6.67
+  },
+  "viento_max_global_ms": 18.1,
+  "corr_viento_vh_en_crucero_mediana": 0.085,
+  "corr_residuo_potencia_vs_viento_spearman": 0.001,
+  "viento_hover_ms_mediana": 2.25
+ },
+ "bateria": {
+  "vuelos_estimables": 201,
+  "vuelos_totales": 209,
+  "r_estatica_mohm": {
+   "count": 201.0,
+   "mean": 74.98,
+   "std": 19.41,
+   "min": 44.07,
+   "25%": 60.71,
+   "50%": 69.35,
+   "75%": 84.31,
+   "max": 144.43
+  },
+  "r_dinamica_mohm": {
+   "count": 201.0,
+   "mean": 56.49,
+   "std": 14.3,
+   "min": 37.56,
+   "25%": 46.21,
+   "50%": 53.43,
+   "75%": 62.61,
+   "max": 136.84
+  },
+  "cv_r_estatica": 0.259,
+  "r_estatica_negativas": 0,
+  "corr_r_estatica_dinamica_spearman": 0.963,
+  "r2_modelo": {
+   "count": 201.0,
+   "mean": 0.9722,
+   "std": 0.0205,
+   "min": 0.8394,
+   "25%": 0.9697,
+   "50%": 0.9795,
+   "75%": 0.9832,
+   "max": 0.9918
+  },
+  "corr_r_estatica_vs_dia": -0.033,
+  "p_r_estatica_vs_dia": 0.6444,
+  "corr_r_dinamica_vs_dia": -0.071,
+  "corr_r_estatica_vs_vuelo_id": -0.041,
+  "corr_r_estatica_vs_carga": -0.054,
+  "corr_r_estatica_vs_corriente_media": -0.136,
+  "tension_ini_vs_dia_spearman": 0.062,
+  "tension_ini_min_max": [
+   20.833,
+   25.89
+  ],
+  "dv_dq_v_por_ah": {
+   "count": 201.0,
+   "mean": -1.0,
+   "std": 0.328,
+   "min": -2.578,
+   "25%": -1.21,
+   "50%": -1.037,
+   "75%": -0.868,
+   "max": 1.033
+  },
+  "dias_con_vuelos_estimables": 18,
+  "kruskal_r_por_dia": {
+   "dias": 18,
+   "H": 46.51,
+   "p": 0.00014
+  },
+  "nota": "la ficha no declara el pack ni sus cambios entre vuelos: la variación de R con la fecha mezcla envejecimiento, cambio de pack, temperatura y estado de carga; sin temperatura ni número de ciclos no se separa"
+ },
+ "atipicos": {
+  "vuelos_R1": 182,
+  "top10": [
+   {
+    "vuelo": 113,
+    "z_max": 25.3,
+    "variable": "paso_max_s",
+    "filas": 1331
+   },
+   {
+    "vuelo": 110,
+    "z_max": 23.6,
+    "variable": "paso_max_s",
+    "filas": 1628
+   },
+   {
+    "vuelo": 108,
+    "z_max": 18.5,
+    "variable": "paso_max_s",
+    "filas": 1073
+   },
+   {
+    "vuelo": 277,
+    "z_max": 16.9,
+    "variable": "paso_max_s",
+    "filas": 860
+   },
+   {
+    "vuelo": 147,
+    "z_max": 14.7,
+    "variable": "pitch_max_abs_deg",
+    "filas": 1629
+   },
+   {
+    "vuelo": 140,
+    "z_max": 13.5,
+    "variable": "paso_max_s",
+    "filas": 1320
+   },
+   {
+    "vuelo": 109,
+    "z_max": 13.5,
+    "variable": "paso_max_s",
+    "filas": 1691
+   },
+   {
+    "vuelo": 126,
+    "z_max": 11.8,
+    "variable": "paso_max_s",
+    "filas": 1719
+   },
+   {
+    "vuelo": 125,
+    "z_max": 11.8,
+    "variable": "paso_max_s",
+    "filas": 1523
+   },
+   {
+    "vuelo": 112,
+    "z_max": 10.1,
+    "variable": "paso_max_s",
+    "filas": 1342
+   }
+  ],
+  "vuelos_con_z_robusto_mayor_6": 25,
+  "energia_ols_diseno_R1": {
+   "n": 182,
+   "r2": 0.9723,
+   "desv_residuo_wh": 0.81
+  },
+  "vuelos_residuo_energia_z_mayor_4": [
+   {
+    "vuelo": 126,
+    "z": 4.25
+   }
+  ],
+  "vuelos_no_R1": {
+   "1": {
+    "route": "R5",
+    "speed": 4.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1339
+   },
+   "2": {
+    "route": "R5",
+    "speed": 4.0,
+    "payload": 0.0,
+    "altitude": "50.0",
+    "filas": 1809
+   },
+   "3": {
+    "route": "R5",
+    "speed": 6.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1201
+   },
+   "4": {
+    "route": "R5",
+    "speed": 8.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1141
+   },
+   "5": {
+    "route": "R2",
+    "speed": 4.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1445
+   },
+   "6": {
+    "route": "R3",
+    "speed": 4.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1364
+   },
+   "7": {
+    "route": "R4",
+    "speed": 4.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1197
+   },
+   "211": {
+    "route": "A1",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 881
+   },
+   "212": {
+    "route": "A1",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 805
+   },
+   "213": {
+    "route": "A1",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 392
+   },
+   "214": {
+    "route": "A2",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 910
+   },
+   "215": {
+    "route": "A2",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 391
+   },
+   "216": {
+    "route": "A2",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 392
+   },
+   "217": {
+    "route": "A3",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 935
+   },
+   "218": {
+    "route": "A3",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 953
+   },
+   "219": {
+    "route": "A3",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "0.0",
+    "filas": 842
+   },
+   "221": {
+    "route": "H",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "3.0",
+    "filas": 809
+   },
+   "222": {
+    "route": "H",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "3.0",
+    "filas": 950
+   },
+   "223": {
+    "route": "H",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "3.0",
+    "filas": 857
+   },
+   "224": {
+    "route": "H",
+    "speed": 0.0,
+    "payload": 0.0,
+    "altitude": "3.0",
+    "filas": 1178
+   },
+   "268": {
+    "route": "R6",
+    "speed": 6.0,
+    "payload": 500.0,
+    "altitude": "25.0",
+    "filas": 1511
+   },
+   "269": {
+    "route": "R6",
+    "speed": 12.0,
+    "payload": 500.0,
+    "altitude": "25.0",
+    "filas": 1317
+   },
+   "270": {
+    "route": "R6",
+    "speed": 10.0,
+    "payload": 250.0,
+    "altitude": "75.0",
+    "filas": 1466
+   },
+   "271": {
+    "route": "R6",
+    "speed": 10.0,
+    "payload": 0.0,
+    "altitude": "25.0",
+    "filas": 1219
+   },
+   "272": {
+    "route": "R6",
+    "speed": 4.0,
+    "payload": 250.0,
+    "altitude": "50.0",
+    "filas": 2856
+   },
+   "278": {
+    "route": "R7",
+    "speed": 10.0,
+    "payload": 500.0,
+    "altitude": "nan",
+    "filas": 1197
+   },
+   "279": {
+    "route": "R7",
+    "speed": 10.0,
+    "payload": 0.0,
+    "altitude": "nan",
+    "filas": 988
+   }
+  },
+  "vuelos_tension_min_menor_19_5": [
+   5,
+   193,
+   204,
+   268,
+   277
+  ],
+  "vuelos_corriente_max_mayor_45": [
+   251
+  ],
+  "tension_baja_detalle_ini_fin_min_v": {
+   "5": [
+    24.36,
+    23.57,
+    18.92
+   ],
+   "193": [
+    25.32,
+    23.4,
+    19.09
+   ],
+   "204": [
+    24.81,
+    23.59,
+    18.81
+   ],
+   "268": [
+    25.07,
+    23.15,
+    19.42
+   ],
+   "277": [
+    25.49,
+    24.48,
+    19.35
+   ]
+  },
+  "vuelos_con_huecos_de_reloj_mayores_0p5_s": [
+   108,
+   109,
+   110,
+   112,
+   113,
+   114,
+   118,
+   120,
+   123,
+   125,
+   126,
+   128,
+   131,
+   140,
+   141,
+   267,
+   268,
+   269,
+   270,
+   275,
+   277,
+   278,
+   279
+  ],
+  "vuelos_menos_de_500_filas": [
+   213,
+   215,
+   216
+  ],
+  "vuelos_mas_de_2000_filas": [
+   148,
+   188,
+   272
+  ],
+  "etiquetas_de_fallo": "ninguna: ni parameters.csv ni flights.csv traen columna de fallo o anomalía"
+ },
+ "forense": {
+  "vuelos_auditados": 209,
+  "vuelos_sin_huellas": 51,
+  "huellas_por_tipo": {
+   "H02": 342,
+   "H04": 6
+  },
+  "vuelos_por_n_tipos": {
+   "0": 51,
+   "1": 156,
+   "2": 2
+  },
+  "vuelos_con_3_o_mas_tipos_de_generacion": 0,
+  "max_tipos_de_generacion_en_un_vuelo": 1,
+  "huellas_mas_frecuentes_tipo_variable": {
+   "H02:wind_angle": 163,
+   "H02:wind_speed": 159,
+   "H02:battery_voltage": 12,
+   "H02:battery_current": 7,
+   "H04:battery_voltage": 2,
+   "H04:linear_acceleration_y": 2,
+   "H04:wind_angle": 1,
+   "H04:battery_current": 1
+  },
+  "frases": {
+   "alguna huella aislada: revisar cada una antes de concluir": 158,
+   "sin huellas": 51
+  },
+  "vuelo_272": {
+   "tipos": "H04",
+   "detalle": "H04:linear_acceleration_y"
+  },
+  "umbrales": 0.003,
+  "nota": "huellas = indicios, no veredictos (README de forense.py)"
+ },
+ "figuras": {
+  "vuelo_representativo": 121
+ }
+}

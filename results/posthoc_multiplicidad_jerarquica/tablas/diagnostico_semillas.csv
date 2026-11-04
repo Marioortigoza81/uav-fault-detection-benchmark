@@ -1,0 +1,37 @@
+contraste,condicion,margen,estimacion,sd_bootstrap,sd_una_semilla,sd_de_la_estimacion_por_semillas,n_replicas_entre_margen_y_margen_mas_sd1,n_replicas_validas,p_sin_semillas,p_ruido_normal_21b,p_jerarquico,p_jerarquico_reescalado
+H1 uav_sead,inflación P-ventana − P-grupo,0,0.0782276,0.00866698,0.00501837,0.00224428,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H1 alfa,inflación P-ventana − P-grupo,0,0.255394,0.0928633,0.00931687,0.00416663,22,20000,4.99975e-05,0.0006,4.99975e-05,4.99975e-05
+H1 rflymad,inflación P-ventana − P-grupo,0,0.0066638,0.00108106,0.00120341,0.000538181,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H1 uav_fd,inflación P-ventana − P-grupo,0,0.0502343,0.0348188,0.00260029,0.00116289,242,19979,5.00501e-05,0.005305,5.00501e-05,5.00501e-05
+H2 uav_sead,cociente solo atajos / completo,0.9,0.906887,0.0130091,0.00518153,0.00231725,2906,20000,0.297785,0.311084,0.300835,0.302785
+H2 alfa,cociente solo atajos / completo,0.9,1.00034,0.000530774,0.000420914,0.000188238,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H2 rflymad,cociente solo atajos / completo,0.9,1,0,0,0,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H2 uav_fd,cociente solo atajos / completo,0.9,0.948093,0.0674473,0.00679551,0.00303904,533,19979,0.211161,0.211512,0.212212,0.211762
+H3 uav_sead->real,caída = interno P-grupo − transferencia,0.2,0.299506,0.0120417,0.00383587,0.00383587,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 uav_sead->real,AUROC de dominio (uav_sead_vs_real),0.95,0.997865,0.000603521,0.000104356,0.000104356,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 real->uav_sead,caída = interno P-grupo − transferencia,0.2,0.29901,0.0353368,0.00901221,0.00901221,51,20000,0.00144993,0.0021,0.00239988,0.00274986
+H3 real->uav_sead,AUROC de dominio (uav_sead_vs_real),0.95,0.997865,0.000603521,0.000104356,0.000104356,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 uav_sead->hil,caída = interno P-grupo − transferencia,0.2,0.542354,0.00485806,0.030546,0.030546,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 uav_sead->hil,AUROC de dominio (uav_sead_vs_hil),0.95,0.999994,5.86188e-06,5.62663e-07,5.62663e-07,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 hil->real,caída = interno P-grupo − transferencia,0.2,0.24084,0.0103576,0.0108815,0.0108815,46,20000,0.000149993,0.003,0.00104995,0.00144993
+H3 hil->real,AUROC de dominio (hil_vs_real),0.95,0.999901,9.64946e-05,3.00727e-05,3.00727e-05,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 real->hil,caída = interno P-grupo − transferencia,0.2,0.30933,0.00452299,0.00843392,0.00843392,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 real->hil,AUROC de dominio (hil_vs_real),0.95,0.999901,9.64946e-05,3.00727e-05,3.00727e-05,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 hil_prop->real_motor,caída = interno P-grupo − transferencia,0.2,0.23986,0.0143731,0.0069916,0.0069916,170,20000,0.00189991,0.00515,0.00439978,0.00559972
+H3 hil_prop->real_motor,AUROC de dominio (hil_vs_real),0.95,0.999901,9.64946e-05,3.00727e-05,3.00727e-05,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H3 hil_sensors->real_sensors,caída = interno P-grupo − transferencia,0.2,0.212766,0.0173179,0.0122751,0.0122751,5263,20000,0.226189,0.275036,0.278086,0.287136
+H3 hil_sensors->real_sensors,AUROC de dominio (hil_vs_real),0.95,0.999901,9.64946e-05,3.00727e-05,3.00727e-05,0,20000,4.99975e-05,5e-05,4.99975e-05,4.99975e-05
+H4 uav_sead->real,subida de transferencia (invariante − base),0.05,0.0352934,0.00684884,0.00619929,0.00619929,,20000,0.984051,0.944403,0.936353,0.923504
+H4 uav_sead->real,baja del AUROC de dominio (uav_sead_vs_real),0.05,-0.00030181,0.000484369,0.000232094,0.000232094,,20000,1,1,1,1
+H4 real->uav_sead,subida de transferencia (invariante − base),0.05,0.078436,0.0139234,0.0103069,0.0103069,1483,20000,0.020199,0.047748,0.0327484,0.0377481
+H4 real->uav_sead,baja del AUROC de dominio (uav_sead_vs_real),0.05,-0.00030181,0.000484369,0.000232094,0.000232094,,20000,1,1,1,1
+H4 uav_sead->hil,subida de transferencia (invariante − base),0.05,-0.0708687,0.00331461,0.0389668,0.0389668,,20000,1,0.99885,1,1
+H4 uav_sead->hil,baja del AUROC de dominio (uav_sead_vs_hil),0.05,1.44301e-06,3.26575e-06,1.66261e-06,1.66261e-06,,20000,1,1,1,1
+H4 hil->real,subida de transferencia (invariante − base),0.05,0.108622,0.0130763,0.00996696,0.00996696,1,20000,4.99975e-05,0.0003,4.99975e-05,4.99975e-05
+H4 hil->real,baja del AUROC de dominio (hil_vs_real),0.05,0.000498205,0.000296061,6.20578e-05,6.20578e-05,,20000,1,1,1,1
+H4 real->hil,subida de transferencia (invariante − base),0.05,0.0055068,0.0028852,0.0145812,0.0145812,,20000,1,0.9985,1,1
+H4 real->hil,baja del AUROC de dominio (hil_vs_real),0.05,0.000498205,0.000296061,6.20578e-05,6.20578e-05,,20000,1,1,1,1
+H4 hil_prop->real_motor,subida de transferencia (invariante − base),0.05,0.13373,0.0181674,0.0101954,0.0101954,1,20000,4.99975e-05,5e-05,9.9995e-05,0.000149993
+H4 hil_prop->real_motor,baja del AUROC de dominio (hil_vs_real),0.05,0.000498205,0.000296061,6.20578e-05,6.20578e-05,,20000,1,1,1,1
+H4 hil_sensors->real_sensors,subida de transferencia (invariante − base),0.05,0.0289605,0.01358,0.0123231,0.0123231,,20000,0.935003,0.868207,0.885956,0.868907
+H4 hil_sensors->real_sensors,baja del AUROC de dominio (hil_vs_real),0.05,0.000498205,0.000296061,6.20578e-05,6.20578e-05,,20000,1,1,1,1

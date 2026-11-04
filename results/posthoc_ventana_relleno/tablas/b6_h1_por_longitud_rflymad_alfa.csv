@@ -1,0 +1,6 @@
+dataset,ventana_s,usada_en_e1,n_ventanas,n_positivas,unidades,auroc_p_ventana,auroc_p_grupo,auroc_p_grupo_ic_inf,auroc_p_grupo_ic_sup,inflacion_auroc,inflacion_ic_inf,inflacion_ic_sup,ic_excluye_0,inflacion_auprc
+rflymad,2.5,False,16361,7317,440,0.9883,0.9743,0.969,0.9793,0.014,0.0106,0.018,True,0.0165
+rflymad,10,False,3563,1465,440,0.9931,0.9886,0.985,0.9921,0.0044,0.0026,0.0065,True,0.0067
+alfa,1,False,4637,733,30,0.9925,0.7211,0.5708,0.9653,0.2714,0.0316,0.4166,True,0.3699
+alfa,2,True,2290,351,30,0.9823,0.7269,0.5833,0.9707,0.2554,0.0236,0.3879,True,0.3237
+alfa,4,False,1120,161,30,0.9657,0.7615,0.6275,0.9718,0.2042,0.02,0.3188,True,0.2599

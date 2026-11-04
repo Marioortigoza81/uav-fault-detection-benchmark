@@ -1,0 +1,625 @@
+{
+ "meta": {
+  "semillas": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "semilla_bootstrap": 20261103,
+  "replicas_bootstrap": 1000,
+  "n_jobs": 2,
+  "versiones": {
+   "python": "3.14.6",
+   "numpy": "2.5.1",
+   "scikit_learn": "1.9.0",
+   "lightgbm": "4.6.0",
+   "pandas": "3.0.3"
+  },
+  "preregistro": "internal protocol of 2026-11-03"
+ },
+ "uav_fd_svm": {
+  "metodo": "SVM cuadrática (ECOC uno contra uno) sobre los 51 mejores rasgos ANOVA de la tabla de rasgos de main.m",
+  "publicado": {
+   "exactitud": 0.985,
+   "cita": "Leveraging a quadratic SVM classifier, their proposed features for asymmetrical damage detection achieved remarkable success, attaining a peak accuracy of 98.5% on the test set. This outstanding performance was realized through training on a selected feature set of the top 51 features determined via ANOVA",
+   "fuente": "preprint del trabajo publicado en T-RO 2025 (fichero 10_1109_tro_2025_3548536__uavfd; el texto leído lleva la marca «This work has been submitted to IEEE for possible publication», no es la versión publicada), sección 10 y Tabla 9, citando a Baldini et al., ICUAS 2023, pp. 998-1004 [23]; el PDF de ICUAS 2023 no está en el corpus: la cifra es de fuente secundaria"
+  },
+  "datos": {
+   "frames": 1327,
+   "columnas_feature_table": 577,
+   "columnas_de_cabecera": 4,
+   "rasgos_numericos": 573,
+   "vuelos": 18,
+   "frames_train": 929,
+   "frames_test": 398,
+   "nan_en_rasgos": 0,
+   "codigo_categorico_a_severidad": {
+    "1": 0,
+    "2": 5,
+    "3": 10
+   },
+   "vuelos_en_train_y_test_de_los_autores": 18,
+   "rasgos_excluidos": "EnsembleID_ (identificador), faultCode (respuesta), FRM_1/TimeStart y FRM_1/TimeEnd (duration)"
+  },
+  "p_autores": {
+   "exactitud": 0.9648,
+   "exactitud_ic95_bootstrap_vuelos": [
+    0.9231,
+    0.991
+   ],
+   "exactitud_equilibrada": 0.9645,
+   "particion": "la guardada por los autores (feature_Table_Train / feature_Table_Test)",
+   "rasgos_seleccionados_51": [
+    "FRM_1_vibe_y_stats_Mean",
+    "FRM_1_vibe_y_stats_RMS",
+    "FRM_1_vibe_y_stats_PeakValue",
+    "FRM_1_vibe_x_stats_PeakValue",
+    "FRM_1_vibe_x_stats_RMS",
+    "FRM_1_vibe_x_stats_Mean",
+    "FRM_1_vibe_y_ps_spec_BandPower",
+    "FRM_1_vibe_z_stats_PeakValue",
+    "FRM_1_vibe_z_stats_RMS",
+    "FRM_1_acc_y_ps_spec_PeakFreq1",
+    "FRM_1_vibe_z_stats_Mean",
+    "FRM_1_acc_z_ps_spec_PeakAmp2",
+    "FRM_1_acc_x_stats_Mean",
+    "FRM_1_vn_ps_spec_BandPower",
+    "FRM_1_pwm_5_stats_Std",
+    "FRM_1_pwm_5_stats_CrestFactor",
+    "FRM_1_pwm_5_stats_ImpulseFactor",
+    "FRM_1_pwm_5_stats_ClearanceFactor",
+    "FRM_1_pwm_1_stats_CrestFactor",
+    "FRM_1_pwm_1_stats_ImpulseFactor",
+    "FRM_1_pwm_1_stats_ClearanceFactor",
+    "FRM_1_acc_y_ps_spec_PeakAmp2",
+    "FRM_1_pwm_1_stats_Std",
+    "FRM_1_pwm_6_stats_Std",
+    "FRM_1_pwm_2_stats_Std",
+    "FRM_1_vibe_z_ps_spec_BandPower",
+    "FRM_1_pwm_6_stats_ClearanceFactor",
+    "FRM_1_pwm_6_stats_ImpulseFactor",
+    "FRM_1_pwm_6_stats_CrestFactor",
+    "FRM_1_pwm_2_stats_CrestFactor",
+    "FRM_1_pwm_2_stats_ImpulseFactor",
+    "FRM_1_pwm_2_stats_ClearanceFactor",
+    "FRM_1_pwm_5_stats_ShapeFactor",
+    "FRM_1_vibe_x_ps_spec_BandPower",
+    "FRM_1_acc_x_ps_spec_BandPower",
+    "FRM_1_gyr_y_ps_spec_BandPower",
+    "FRM_1_acc_y_ps_spec_BandPower",
+    "FRM_1_pwm_2_stats_PeakValue",
+    "FRM_1_acc_x_stats_PeakValue",
+    "FRM_1_acc_y_stats_SNR",
+    "FRM_1_acc_x_stats_RMS",
+    "FRM_1_pwm_6_stats_ShapeFactor",
+    "FRM_1_pwm_6_ps_spec_BandPower",
+    "FRM_1_pwm_6_stats_PeakValue",
+    "FRM_1_pwm_5_ps_spec_BandPower",
+    "FRM_1_vibe_y_stats_Std",
+    "FRM_1_acc_y_stats_SINAD",
+    "FRM_1_acc_z_ps_spec_PeakFreq2",
+    "FRM_1_gyr_z_ps_spec_PeakAmp2",
+    "FRM_1_yaw_stats_Mean",
+    "FRM_1_vibe_x_stats_Std"
+   ]
+  },
+  "p_autores_redibujado_python": {
+   "exactitud_por_semilla": [
+    0.9599,
+    0.9649,
+    0.9749,
+    0.9474,
+    0.9624
+   ],
+   "media": 0.9619
+  },
+  "p_grupo": {
+   "exactitud_media_semillas": 0.7608,
+   "exactitud_por_semilla": [
+    0.7566,
+    0.7566,
+    0.7581,
+    0.7664,
+    0.7664
+   ],
+   "exactitud_ic95_bootstrap_vuelos": [
+    0.6155,
+    0.8855
+   ],
+   "exactitud_equilibrada_media": 0.768,
+   "azar_tres_clases": 0.3333
+  },
+  "diferencia_p_autores_menos_p_grupo": {
+   "exactitud": 0.204,
+   "ic95_bootstrap_vuelos_pareado": [
+    0.0912,
+    0.3343
+   ]
+  },
+  "sensibilidad_escala_kernel": [
+   {
+    "escala_kernel": "auto",
+    "protocolo": "P-autores",
+    "exactitud": 0.9648
+   },
+   {
+    "escala_kernel": "auto",
+    "protocolo": "P-grupo",
+    "exactitud": 0.7608
+   },
+   {
+    "escala_kernel": "1.0",
+    "protocolo": "P-autores",
+    "exactitud": 0.9497
+   },
+   {
+    "escala_kernel": "raiz_p",
+    "protocolo": "P-autores",
+    "exactitud": 0.9673
+   },
+   {
+    "escala_kernel": "1.0",
+    "protocolo": "P-grupo",
+    "exactitud": 0.691
+   },
+   {
+    "escala_kernel": "raiz_p",
+    "protocolo": "P-grupo",
+    "exactitud": 0.7644
+   }
+  ]
+ },
+ "alfa_aerotsboost": {
+  "metodo": "AeroTSBoost: 18 descriptores por canal (L=96, paso 8, H=12) + LightGBM (1600 árboles, lr 0,025, 64 hojas, min_child 80, subsample 0,9, colsample 0,75, L1 0,2, L2 8, balanced, parada temprana 80 por AP)",
+  "publicado": {
+   "auroc": 0.9766,
+   "auroc_de": 0.0074,
+   "auprc": 0.9259,
+   "auprc_de": 0.0076,
+   "best_f1": 0.8736,
+   "best_f1_de": 0.0193,
+   "event_f1": 0.7692,
+   "event_f1_de": 0.1107,
+   "cita": "Table 4 reports the external ALFA leave-sequence-out validation. AeroTSBoost obtains the best AUROC, AUPRC, and diagnostic best F1, with 0.9259 ± 0.0076 AUPRC",
+   "fuente": "Wei et al. 2026, AeroTSBoost, arXiv 2605.25639, sección 6 y Tabla 4 (media ± DE sobre cinco semillas)"
+  },
+  "datos": {
+   "secuencias": 46,
+   "bags": 30,
+   "filas_10hz": 46903,
+   "canales_numericos_retenidos": 453,
+   "canales_numericos_distintos_antes_de_cobertura": 458,
+   "ventanas": 5267,
+   "ventanas_anomalas": 960,
+   "rasgos_por_ventana": 8154,
+   "secuencia_tipo": {
+    "carbonZ_2018-07-18-15-53-31_1_engine_failure": "motor",
+    "carbonZ_2018-07-18-15-53-31_2_engine_failure": "motor",
+    "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-07-18-16-37-39_1_no_failure": "sin_fallo",
+    "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-07-30-16-39-00_1_engine_failure": "motor",
+    "carbonZ_2018-07-30-16-39-00_2_engine_failure": "motor",
+    "carbonZ_2018-07-30-16-39-00_3_no_failure": "sin_fallo",
+    "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-09-11-11-56-30_engine_failure": "motor",
+    "carbonZ_2018-09-11-14-16-55_no_failure": "sin_fallo",
+    "carbonZ_2018-09-11-14-22-07_1_engine_failure": "motor",
+    "carbonZ_2018-09-11-14-22-07_2_engine_failure": "motor",
+    "carbonZ_2018-09-11-14-41-38_no_failure": "sin_fallo",
+    "carbonZ_2018-09-11-14-41-51_elevator_failure": "elevador",
+    "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure": "aleron",
+    "carbonZ_2018-09-11-15-05-11_1_elevator_failure": "elevador",
+    "carbonZ_2018-09-11-15-05-11_2_no_failure": "sin_fallo",
+    "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure": "timon",
+    "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure": "timon",
+    "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure": "timon",
+    "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure": "aleron",
+    "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure": "aleron",
+    "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure": "aleron",
+    "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure": "aleron",
+    "carbonZ_2018-10-05-14-34-20_1_no_failure": "sin_fallo",
+    "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj": "aleron",
+    "carbonZ_2018-10-05-14-37-22_1_no_failure": "sin_fallo",
+    "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure": "aleron",
+    "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure": "aleron",
+    "carbonZ_2018-10-05-15-52-12_1_no_failure": "sin_fallo",
+    "carbonZ_2018-10-05-15-52-12_2_no_failure": "sin_fallo",
+    "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj": "motor",
+    "carbonZ_2018-10-18-11-08-24_no_failure": "sin_fallo"
+   },
+   "publicado_en_el_articulo": {
+    "secuencias": 46,
+    "filas_10hz": 47138,
+    "canales": 443,
+    "ventanas": 5298,
+    "ventanas_anomalas": 968,
+    "rasgos": 7974
+   }
+  },
+  "protocolos": {
+   "P-autores": "leave-sequence-out: por semilla, secuencias 70/15/15 (entrenamiento/validación/prueba), estratificado por secuencia con o sin fallo",
+   "P-grupo": "StratifiedGroupKFold(5) por bag (vuelo físico), 5 semillas; validación interna por bags (1/6 del entrenamiento)",
+   "P-ventana": "StratifiedKFold(5) por ventana, 1 semilla (referencia)"
+  },
+  "resumen_por_protocolo": {
+   "P-autores": {
+    "auroc": {
+     "media": 0.9603,
+     "de": 0.033
+    },
+    "auprc": {
+     "media": 0.9065,
+     "de": 0.0613
+    },
+    "best_f1": {
+     "media": 0.8617,
+     "de": 0.0283
+    },
+    "event_f1": {
+     "media": 0.8373,
+     "de": 0.1571
+    }
+   },
+   "P-grupo": {
+    "auroc": {
+     "media": 0.8934,
+     "de": 0.0158
+    },
+    "auprc": {
+     "media": 0.765,
+     "de": 0.0442
+    },
+    "best_f1": {
+     "media": 0.7684,
+     "de": 0.0267
+    },
+    "event_f1": {
+     "media": 0.76,
+     "de": 0.0158
+    }
+   },
+   "P-ventana": {
+    "auroc": {
+     "media": 0.9976,
+     "de": null
+    },
+    "auprc": {
+     "media": 0.9934,
+     "de": null
+    },
+    "best_f1": {
+     "media": 0.9713,
+     "de": null
+    },
+    "event_f1": {
+     "media": 0.925,
+     "de": null
+    }
+   },
+   "P-bag-701515": {
+    "auroc": {
+     "media": 0.9731,
+     "de": 0.0225
+    },
+    "auprc": {
+     "media": 0.9364,
+     "de": 0.06
+    },
+    "best_f1": {
+     "media": 0.9296,
+     "de": 0.0447
+    },
+    "event_f1": {
+     "media": 0.9023,
+     "de": 0.1124
+    }
+   },
+   "P-grupo-300fijos": {
+    "auroc": {
+     "media": 0.9574,
+     "de": 0.0019
+    },
+    "auprc": {
+     "media": 0.8883,
+     "de": 0.0036
+    },
+    "best_f1": {
+     "media": 0.8354,
+     "de": 0.0048
+    },
+    "event_f1": {
+     "media": 0.792,
+     "de": 0.034
+    }
+   }
+  },
+  "ic95_bootstrap_bags": {
+   "P-autores|auroc": [
+    0.9437,
+    0.9787
+   ],
+   "P-autores|auprc": [
+    0.8595,
+    0.9532
+   ],
+   "P-grupo|auroc": [
+    0.8249,
+    0.9514
+   ],
+   "P-grupo|auprc": [
+    0.6218,
+    0.8941
+   ],
+   "P-ventana|auroc": [
+    0.9952,
+    0.999
+   ],
+   "P-ventana|auprc": [
+    0.9863,
+    0.9973
+   ],
+   "P-bag-701515|auroc": [
+    0.9627,
+    0.991
+   ],
+   "P-bag-701515|auprc": [
+    0.8999,
+    0.9737
+   ],
+   "P-grupo-300fijos|auroc": [
+    0.9191,
+    0.9859
+   ],
+   "P-grupo-300fijos|auprc": [
+    0.7905,
+    0.9624
+   ]
+  },
+  "diferencia_p_autores_menos_p_grupo": {
+   "auroc": {
+    "media": 0.0669,
+    "ic95_bootstrap_bags_pareado": [
+     0.0109,
+     0.1404
+    ]
+   },
+   "auprc": {
+    "media": 0.1415,
+    "ic95_bootstrap_bags_pareado": [
+     0.0072,
+     0.3102
+    ]
+   }
+  },
+  "diferencia_p_ventana_menos_p_grupo": {
+   "auroc": {
+    "media": 0.1042,
+    "ic95_bootstrap_bags_pareado": [
+     0.0469,
+     0.1728
+    ]
+   },
+   "auprc": {
+    "media": 0.2284,
+    "ic95_bootstrap_bags_pareado": [
+     0.0998,
+     0.3711
+    ]
+   }
+  },
+  "p_autores_secuencias_de_prueba_que_comparten_bag_con_entrenamiento": [
+   5,
+   5,
+   3,
+   3,
+   6
+  ],
+  "sensibilidad_p_bag_701515": {
+   "descripcion": "diseño de P-autores (70/15/15, 5 semillas) con la partición por bag en lugar de por secuencia",
+   "diferencia_p_autores_menos_p_bag": {
+    "auroc": {
+     "media": -0.0128,
+     "ic95_bootstrap_bags_pareado": [
+      -0.0365,
+      0.0054
+     ]
+    },
+    "auprc": {
+     "media": -0.0299,
+     "ic95_bootstrap_bags_pareado": [
+      -0.0945,
+      0.0269
+     ]
+    }
+   }
+  },
+  "sensibilidad_p_grupo_metrica_por_pliegue": {
+   "auroc_media": 0.9272,
+   "auprc_media": 0.8288,
+   "pliegues": 25
+  },
+  "revision_post_hoc_p_grupo_300_arboles_fijos": {
+   "descripcion": "P-grupo con 300 árboles fijos, sin validación interna ni parada temprana (corrección de la revisión independiente)",
+   "oof": {
+    "auroc": {
+     "media": 0.9574,
+     "de": 0.0019
+    },
+    "auprc": {
+     "media": 0.8883,
+     "de": 0.0036
+    },
+    "best_f1": {
+     "media": 0.8354,
+     "de": 0.0048
+    },
+    "event_f1": {
+     "media": 0.792,
+     "de": 0.034
+    }
+   },
+   "por_semilla_auroc": [
+    0.9597,
+    0.9592,
+    0.9561,
+    0.956,
+    0.9561
+   ],
+   "por_semilla_auprc": [
+    0.8913,
+    0.8928,
+    0.8847,
+    0.8852,
+    0.8875
+   ],
+   "metrica_por_pliegue": {
+    "auroc_media": 0.9486,
+    "auprc_media": 0.8681
+   },
+   "ic95_bootstrap_bags": {
+    "auroc": [
+     0.9191,
+     0.9859
+    ],
+    "auprc": [
+     0.7905,
+     0.9624
+    ]
+   },
+   "p_autores_menos_p_grupo_300fijos": {
+    "auroc": 0.0029,
+    "auprc": 0.0182
+   },
+   "ic95_p_autores_menos_p_grupo_300fijos_pareado": {
+    "auroc": [
+     -0.027,
+     0.0423
+    ],
+    "auprc": [
+     -0.0558,
+     0.1236
+    ]
+   }
+  },
+  "revision_validacion_interna_p_grupo_bags_por_pliegue": [
+   4,
+   5,
+   4,
+   2,
+   4,
+   4,
+   4,
+   3,
+   2,
+   4,
+   2,
+   5,
+   3,
+   2,
+   4,
+   2,
+   4,
+   2,
+   4,
+   4,
+   2,
+   5,
+   2,
+   4,
+   4
+  ],
+  "revision_confusion_bags_probados": {
+   "bags_probados_p_autores": [
+    0,
+    2,
+    4,
+    5,
+    8,
+    9,
+    11,
+    12,
+    17,
+    18,
+    19,
+    20,
+    21,
+    24,
+    25,
+    26,
+    28,
+    29
+   ],
+   "bags_probados_p_bag": [
+    0,
+    1,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    17,
+    20,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "n_bags_probados_p_autores_o_p_bag": 24,
+   "n_bags_total": 30,
+   "bags_nunca_probados_en_p_autores_ni_p_bag": [
+    6,
+    14,
+    15,
+    16,
+    22,
+    23
+   ],
+   "bags_con_timon_o_elevador_nunca_probados": {
+    "15": [
+     "elevador",
+     "sin_fallo"
+    ],
+    "16": [
+     "timon"
+    ]
+   },
+   "p_grupo_restringido_a_bags_de_prueba_de_p_bag": {
+    "auroc": 0.9098,
+    "auprc": 0.8506
+   },
+   "p_grupo_300fijos_restringido_a_bags_de_prueba_de_p_bag": {
+    "auroc": 0.9799,
+    "auprc": 0.9528
+   },
+   "p_grupo_sin_bags_de_timon_y_elevador": {
+    "auroc": 0.928,
+    "auprc": 0.8558
+   },
+   "p_grupo_300fijos_sin_bags_de_timon_y_elevador": {
+    "auroc": 0.9762,
+    "auprc": 0.9338
+   },
+   "nota": "métrica agregada OOF por semilla sobre las ventanas de los bags seleccionados, media de 5 semillas"
+  }
+ }
+}

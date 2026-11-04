@@ -1,0 +1,12 @@
+parte,params_hash,casos
+Real-Motor,3e1986d4,70
+Real-Motor,5195f0d8,79
+Real-Motor,6bff2da7,96
+Real-NoFault,3e1986d4,2
+Real-NoFault,5195f0d8,20
+Real-NoFault,6bff2da7,19
+Real-NoFault,9007f29a,10
+Real-Sensors,3e1986d4,51
+Real-Sensors,5195f0d8,81
+Real-Sensors,6bff2da7,51
+Real-Sensors,9007f29a,14

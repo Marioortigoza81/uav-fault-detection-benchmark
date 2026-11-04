@@ -1,0 +1,7 @@
+clase,casos_ulg,minimo_auroc_detectable
+Motor,245,0.625
+Accelerometer,34,0.68
+Gyroscope,39,0.673
+Magnetometer,36,0.677
+Barometer,45,0.666
+GPS,43,0.668

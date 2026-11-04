@@ -1,0 +1,652 @@
+{
+ "csv_sha256": "47d6b5cd3088d810d64f906f73a9a0cb12a3cc5418ad3944b190dff4ed2131e8",
+ "estructura": {
+  "filas": 10000,
+  "columnas": 15,
+  "nulos": 0,
+  "filas_duplicadas": 0,
+  "timestamps_duplicados": 0,
+  "paso_ms_valores": {
+   "100": 9999
+  },
+  "duracion_s": 1000.0,
+  "monotono": true
+ },
+ "valores_repetidos_en_extremo": {
+  "ground_speed_mps": {
+   "min": 0.0,
+   "max": 25.83,
+   "filas_en_min": 15,
+   "filas_en_max": 1
+  },
+  "roll_deg": {
+   "min": -18.0,
+   "max": 18.0,
+   "filas_en_min": 42,
+   "filas_en_max": 44
+  },
+  "battery_voltage_v": {
+   "min": 20.45,
+   "max": 24.85,
+   "filas_en_min": 9,
+   "filas_en_max": 4
+  },
+  "battery_current_a": {
+   "min": 13.0,
+   "max": 47.0,
+   "filas_en_min": 10,
+   "filas_en_max": 4
+  },
+  "gps_satellites": {
+   "min": 16.0,
+   "max": 19.0,
+   "filas_en_min": 2463,
+   "filas_en_max": 2543
+  },
+  "gps_hdop": {
+   "min": 0.7,
+   "max": 0.85,
+   "filas_en_min": 334,
+   "filas_en_max": 349
+  }
+ },
+ "decimales": {
+  "altitude_agl_m": 2,
+  "ground_speed_mps": 2,
+  "airspeed_mps": 2,
+  "roll_deg": 2,
+  "pitch_deg": 2,
+  "yaw_deg": 2,
+  "battery_voltage_v": 2,
+  "battery_current_a": 1,
+  "motor_rpm": 0,
+  "imu_accel_z_g": 3,
+  "gps_satellites": 0,
+  "gps_hdop": 2
+ },
+ "fases": {
+  "orden": [
+   "TAKEOFF",
+   "CLIMB",
+   "WAYPOINT_SURVEY",
+   "LOITER",
+   "DESCENT_LANDING"
+  ],
+  "transiciones": 4,
+  "instantes_transicion_s": [
+   30.0,
+   120.0,
+   700.0,
+   900.0
+  ],
+  "todas_en_segundos_enteros": true,
+  "filas": {
+   "TAKEOFF": 300,
+   "CLIMB": 900,
+   "WAYPOINT_SURVEY": 5800,
+   "LOITER": 2000,
+   "DESCENT_LANDING": 1000
+  }
+ },
+ "anomalias": {
+  "filas_positivas": 158,
+  "prevalencia": 0.0158,
+  "episodios": 3,
+  "episodios_detalle": [
+   {
+    "episodio": 1,
+    "fila_inicio": 3500,
+    "fila_fin_excl": 3561,
+    "inicio_s": 350.0,
+    "fin_s": 356.1,
+    "muestras": 61,
+    "duracion_s": 6.1,
+    "fase": "WAYPOINT_SURVEY"
+   },
+   {
+    "episodio": 2,
+    "fila_inicio": 6200,
+    "fila_fin_excl": 6246,
+    "inicio_s": 620.0,
+    "fin_s": 624.6,
+    "muestras": 46,
+    "duracion_s": 4.6,
+    "fase": "WAYPOINT_SURVEY"
+   },
+   {
+    "episodio": 3,
+    "fila_inicio": 8100,
+    "fila_fin_excl": 8151,
+    "inicio_s": 810.0,
+    "fin_s": 815.1,
+    "muestras": 51,
+    "duracion_s": 5.1,
+    "fase": "LOITER"
+   }
+  ],
+  "inicios_en_fila_multiplo_de_100": true
+ },
+ "firmas": {
+  "episodio_1": {
+   "battery_current_a": 13.41,
+   "motor_rpm": 12.27,
+   "imu_accel_z_g": 6.38
+  },
+  "episodio_2": {
+   "imu_accel_z_g": -4.0
+  },
+  "episodio_3": {
+   "battery_voltage_v": -48.7
+  }
+ },
+ "separabilidad": {
+  "imu_accel_z_g": {
+   "auroc_valor_sim": 0.56,
+   "auroc_desv_fase": 0.857
+  },
+  "battery_voltage_v": {
+   "auroc_valor_sim": 0.642,
+   "auroc_desv_fase": 0.741
+  },
+  "roll_deg": {
+   "auroc_valor_sim": 0.536,
+   "auroc_desv_fase": 0.664
+  },
+  "motor_rpm": {
+   "auroc_valor_sim": 0.704,
+   "auroc_desv_fase": 0.644
+  },
+  "battery_current_a": {
+   "auroc_valor_sim": 0.718,
+   "auroc_desv_fase": 0.634
+  },
+  "pitch_deg": {
+   "auroc_valor_sim": 0.561,
+   "auroc_desv_fase": 0.526
+  },
+  "gps_hdop": {
+   "auroc_valor_sim": 0.525,
+   "auroc_desv_fase": 0.496
+  },
+  "gps_satellites": {
+   "auroc_valor_sim": 0.52,
+   "auroc_desv_fase": 0.462
+  },
+  "ground_speed_mps": {
+   "auroc_valor_sim": 0.6,
+   "auroc_desv_fase": 0.429
+  },
+  "airspeed_mps": {
+   "auroc_valor_sim": 0.599,
+   "auroc_desv_fase": 0.429
+  },
+  "altitude_agl_m": {
+   "auroc_valor_sim": 0.761,
+   "auroc_desv_fase": 0.357
+  },
+  "_umbral_trivial": {
+   "variable": "imu_accel_z_g",
+   "umbral_max_nominal": 0.3075,
+   "positivos_por_encima": 91,
+   "positivos": 158,
+   "por_episodio": [
+    58,
+    33,
+    0
+   ],
+   "nota": "umbral = máxima desviación en filas nominales; ninguna fila nominal lo supera por construcción"
+  }
+ },
+ "ruido": {
+  "altitude_agl_m": {
+   "acf1_residuo": -0.015,
+   "acf1_diferencias": -0.465,
+   "acf1_serie": 0.999,
+   "curtosis_residuo": 5.008,
+   "prop_diferencias_cero": 0.01
+  },
+  "ground_speed_mps": {
+   "acf1_residuo": -0.005,
+   "acf1_diferencias": -0.491,
+   "acf1_serie": 0.993,
+   "curtosis_residuo": 1.294,
+   "prop_diferencias_cero": 0.007
+  },
+  "airspeed_mps": {
+   "acf1_residuo": -0.015,
+   "acf1_diferencias": -0.494,
+   "acf1_serie": 0.989,
+   "curtosis_residuo": 0.504,
+   "prop_diferencias_cero": 0.006
+  },
+  "roll_deg": {
+   "acf1_residuo": -0.003,
+   "acf1_diferencias": -0.42,
+   "acf1_serie": 0.995,
+   "curtosis_residuo": 2.294,
+   "prop_diferencias_cero": 0.016
+  },
+  "pitch_deg": {
+   "acf1_residuo": -0.002,
+   "acf1_diferencias": -0.497,
+   "acf1_serie": 0.921,
+   "curtosis_residuo": -0.34,
+   "prop_diferencias_cero": 0.003
+  },
+  "yaw_deg": {
+   "acf1_residuo": 0.812,
+   "acf1_diferencias": -0.003,
+   "acf1_serie": 0.996,
+   "curtosis_residuo": 111.056,
+   "prop_diferencias_cero": 0.22
+  },
+  "battery_voltage_v": {
+   "acf1_residuo": 0.043,
+   "acf1_diferencias": -0.11,
+   "acf1_serie": 0.999,
+   "curtosis_residuo": -0.186,
+   "prop_diferencias_cero": 0.311
+  },
+  "battery_current_a": {
+   "acf1_residuo": -0.011,
+   "acf1_diferencias": -0.486,
+   "acf1_serie": 0.972,
+   "curtosis_residuo": -0.23,
+   "prop_diferencias_cero": 0.03
+  },
+  "motor_rpm": {
+   "acf1_residuo": -0.02,
+   "acf1_diferencias": -0.491,
+   "acf1_serie": 0.969,
+   "curtosis_residuo": -0.138,
+   "prop_diferencias_cero": 0.004
+  },
+  "imu_accel_z_g": {
+   "acf1_residuo": -0.005,
+   "acf1_diferencias": -0.488,
+   "acf1_serie": 0.233,
+   "curtosis_residuo": 0.122,
+   "prop_diferencias_cero": 0.003
+  },
+  "gps_satellites": {
+   "acf1_residuo": 0.052,
+   "acf1_diferencias": -0.495,
+   "acf1_serie": 0.007,
+   "curtosis_residuo": -0.852,
+   "prop_diferencias_cero": 0.25
+  },
+  "gps_hdop": {
+   "acf1_residuo": 0.025,
+   "acf1_diferencias": -0.483,
+   "acf1_serie": 0.037,
+   "curtosis_residuo": -0.863,
+   "prop_diferencias_cero": 0.069
+  }
+ },
+ "planitud_espectral": {
+  "altitude_agl_m": 0.924,
+  "airspeed_mps": 0.959,
+  "roll_deg": 0.936,
+  "battery_current_a": 0.963,
+  "motor_rpm": 0.962,
+  "imu_accel_z_g": 0.965
+ },
+ "fisica": {
+  "corr_accelz_vs_d2h": -0.002955,
+  "corr_accelz_vs_inv_cos_roll_reconocimiento": 0.015761,
+  "accelz_media_por_fase_g": {
+   "CLIMB": 0.9993,
+   "DESCENT_LANDING": 1.0013,
+   "LOITER": 0.9973,
+   "TAKEOFF": 1.0084,
+   "WAYPOINT_SURVEY": 0.9995
+  },
+  "amplitud_d2h_sinusoide_ms2": 0.009362,
+  "desv_d2h_ms2": 2.021365,
+  "desv_accelz_ms2": 0.879212,
+  "corr_pitch_vs_angulo_trayectoria": 0.713202,
+  "corr_pitch_vs_angulo_trayectoria_por_fase": {
+   "TAKEOFF": 0.003,
+   "CLIMB": 0.022,
+   "WAYPOINT_SURVEY": -0.002,
+   "LOITER": -0.0,
+   "DESCENT_LANDING": -0.005
+  },
+  "pitch_mediana_por_fase": {
+   "CLIMB": 7.94,
+   "DESCENT_LANDING": -4.04,
+   "LOITER": 0.04,
+   "TAKEOFF": 12.08,
+   "WAYPOINT_SURVEY": 0.01
+  },
+  "vz_mediana_por_fase_ms": {
+   "CLIMB": 2.22,
+   "DESCENT_LANDING": -2.5,
+   "LOITER": 0.02,
+   "TAKEOFF": 1.66,
+   "WAYPOINT_SURVEY": -0.05
+  },
+  "viraje_coordinado_por_fase": {
+   "WAYPOINT_SURVEY": {
+    "tasa_obs_mediana_deg_s": 0.5,
+    "roll_mediana_deg": 1.16,
+    "corr_tasa_obs_vs_teo": 0.0,
+    "tasa_teo_con_v_aire_deg_s": 0.49,
+    "tasa_teo_con_v_suelo_deg_s": 0.52,
+    "v_aire": 23.13,
+    "v_suelo": 21.89
+   },
+   "LOITER": {
+    "tasa_obs_mediana_deg_s": 12.0,
+    "roll_mediana_deg": 14.94,
+    "corr_tasa_obs_vs_teo": 0.011,
+    "tasa_teo_con_v_aire_deg_s": 9.85,
+    "tasa_teo_con_v_suelo_deg_s": 10.7,
+    "v_aire": 15.22,
+    "v_suelo": 14.01
+   }
+  },
+  "yaw_saltos_mayores_90": 7,
+  "aire_menos_suelo_media": 1.206215,
+  "aire_menos_suelo_desv": 0.398996,
+  "viento_r2_rumbo": 0.000387,
+  "viento_amplitud_ms": 0.010946,
+  "corr_aire_suelo": 0.997652,
+  "carga_total_ah": 6.213378,
+  "energia_total_wh": 145.852914,
+  "v_inicio": 24.8298,
+  "v_fin": 21.6878,
+  "v_por_celda_6s_inicio": 4.1383,
+  "v_por_celda_6s_fin": 3.614633,
+  "bateria_modelo_lineal": {
+   "ocv0_v": 25.724437,
+   "pendiente_v_por_ah": -0.597579,
+   "r_interna_ohm": 0.015802,
+   "r2": 0.998267,
+   "desv_residuo_v": 0.039709,
+   "ocv0_por_celda_6s_v": 4.287406
+  },
+  "bateria_modelo_cuadratico_desv_residuo_v": 0.035054,
+  "corr_voltaje_tiempo": -0.998529,
+  "corr_corriente_rpm": 0.99819,
+  "corr_potencia_rpm3": 0.989052,
+  "corriente_mediana_por_fase": {
+   "CLIMB": 37.9,
+   "DESCENT_LANDING": 15.1,
+   "LOITER": 22.0,
+   "TAKEOFF": 45.1,
+   "WAYPOINT_SURVEY": 20.0
+  },
+  "rpm_mediana_por_fase": {
+   "CLIMB": 6632.0,
+   "DESCENT_LANDING": 4438.5,
+   "LOITER": 5109.0,
+   "TAKEOFF": 7330.5,
+   "WAYPOINT_SURVEY": 4921.0
+  },
+  "corr_satelites_hdop": -0.004854,
+  "satelites_valores": {
+   "16": 2463,
+   "17": 2515,
+   "18": 2479,
+   "19": 2543
+  },
+  "satelites_cambios_por_minuto": 450.12,
+  "hdop_valores": {
+   "0.70": 334,
+   "0.71": 673,
+   "0.72": 663,
+   "0.73": 656,
+   "0.74": 639,
+   "0.75": 678,
+   "0.76": 667,
+   "0.77": 639,
+   "0.78": 645,
+   "0.79": 647,
+   "0.80": 698,
+   "0.81": 662,
+   "0.82": 686,
+   "0.83": 697,
+   "0.84": 667,
+   "0.85": 349
+  },
+  "despegue_velocidad_suelo_mediana": 5.94,
+  "despegue_pitch_mediana": 12.08,
+  "ultima_fila": {
+   "altitude_agl_m": 0.56,
+   "ground_speed_mps": 0.0,
+   "airspeed_mps": 0.96
+  },
+  "primera_fila": {
+   "altitude_agl_m": 0.07,
+   "ground_speed_mps": 0.48,
+   "airspeed_mps": 1.3
+  },
+  "velocidad_suelo_filas_en_cero": 15,
+  "episodio1_delta_corriente_a": 17.9,
+  "episodio1_caida_v_esperada": 0.282849,
+  "episodio1_caida_v_observada": -0.002921,
+  "episodio1_delta_rpm": 1556.0
+ },
+ "forense": {
+  "desv_residuo_por_fase": {
+   "altitude_agl_m": {
+    "TAKEOFF": 0.2581,
+    "CLIMB": 0.1963,
+    "WAYPOINT_SURVEY": 0.2503,
+    "LOITER": 1.1906,
+    "DESCENT_LANDING": 0.2284
+   },
+   "ground_speed_mps": {
+    "TAKEOFF": 0.3063,
+    "CLIMB": 0.658,
+    "WAYPOINT_SURVEY": 0.2974,
+    "LOITER": 0.6512,
+    "DESCENT_LANDING": 0.2965
+   },
+   "airspeed_mps": {
+    "TAKEOFF": 0.4915,
+    "CLIMB": 0.7226,
+    "WAYPOINT_SURVEY": 0.4971,
+    "LOITER": 0.7665,
+    "DESCENT_LANDING": 0.4888
+   },
+   "roll_deg": {
+    "TAKEOFF": 0.8234,
+    "CLIMB": 1.169,
+    "WAYPOINT_SURVEY": 0.0711,
+    "LOITER": 1.1617,
+    "DESCENT_LANDING": 0.8686
+   },
+   "pitch_deg": {
+    "TAKEOFF": 0.5849,
+    "CLIMB": 0.8682,
+    "WAYPOINT_SURVEY": 1.1525,
+    "LOITER": 0.5791,
+    "DESCENT_LANDING": 0.5802
+   },
+   "yaw_deg": {
+    "TAKEOFF": 0.0,
+    "CLIMB": 0.0,
+    "WAYPOINT_SURVEY": 0.033,
+    "LOITER": 3.0276,
+    "DESCENT_LANDING": 0.0
+   },
+   "battery_voltage_v": {
+    "TAKEOFF": 0.0097,
+    "CLIMB": 0.0139,
+    "WAYPOINT_SURVEY": 0.0101,
+    "LOITER": 0.0064,
+    "DESCENT_LANDING": 0.0098
+   },
+   "battery_current_a": {
+    "TAKEOFF": 1.1307,
+    "CLIMB": 1.7168,
+    "WAYPOINT_SURVEY": 1.1547,
+    "LOITER": 0.5877,
+    "DESCENT_LANDING": 1.1373
+   },
+   "motor_rpm": {
+    "TAKEOFF": 113.1547,
+    "CLIMB": 168.5122,
+    "WAYPOINT_SURVEY": 117.3773,
+    "LOITER": 66.0379,
+    "DESCENT_LANDING": 117.3559
+   },
+   "imu_accel_z_g": {
+    "TAKEOFF": 0.077,
+    "CLIMB": 0.0811,
+    "WAYPOINT_SURVEY": 0.078,
+    "LOITER": 0.0773,
+    "DESCENT_LANDING": 0.08
+   },
+   "gps_satellites": {
+    "TAKEOFF": 1.2064,
+    "CLIMB": 1.1625,
+    "WAYPOINT_SURVEY": 1.1463,
+    "LOITER": 1.169,
+    "DESCENT_LANDING": 1.1687
+   },
+   "gps_hdop": {
+    "TAKEOFF": 0.0423,
+    "CLIMB": 0.0439,
+    "WAYPOINT_SURVEY": 0.0438,
+    "LOITER": 0.043,
+    "DESCENT_LANDING": 0.044
+   }
+  },
+  "sinusoides_reconocimiento": {
+   "altitude_agl_m": {
+    "r2": 0.99943,
+    "periodo_s": 251.31,
+    "amplitud": 14.99,
+    "media": 250.004
+   },
+   "ground_speed_mps": {
+    "r2": 0.98018,
+    "periodo_s": 188.42,
+    "amplitud": 2.999,
+    "media": 22.004
+   },
+   "airspeed_mps": {
+    "r2": 0.94651,
+    "periodo_s": 188.43,
+    "amplitud": 2.988,
+    "media": 23.211
+   },
+   "roll_deg": {
+    "r2": 1.0,
+    "periodo_s": 94.25,
+    "amplitud": 18.0,
+    "media": 0.0
+   }
+  },
+  "roll_reconocimiento_residuo_sinusoide_deg": 0.00438,
+  "episodio2_escalon_roll_deg": 24.494927,
+  "heterocedasticidad_max_min": {
+   "altitude_agl_m": 6.07,
+   "ground_speed_mps": 2.22,
+   "airspeed_mps": 1.57,
+   "roll_deg": 16.44,
+   "pitch_deg": 1.99,
+   "battery_voltage_v": 2.18,
+   "battery_current_a": 2.92,
+   "motor_rpm": 2.55,
+   "imu_accel_z_g": 1.05,
+   "gps_satellites": 1.05,
+   "gps_hdop": 1.04
+  },
+  "saltos_en_cambios_de_fase_mayores_4xp99": [
+   {
+    "fila": 1200,
+    "transicion": "CLIMB->WAYPOINT_SURVEY",
+    "variable": "roll_deg",
+    "antes": 0.53,
+    "despues": 17.81,
+    "salto": 17.28,
+    "p99_abs_dentro": 3.28,
+    "veces_p99": 5.268
+   },
+   {
+    "fila": 9000,
+    "transicion": "LOITER->DESCENT_LANDING",
+    "variable": "roll_deg",
+    "antes": 16.4,
+    "despues": -0.42,
+    "salto": -16.82,
+    "p99_abs_dentro": 3.28,
+    "veces_p99": 5.128
+   },
+   {
+    "fila": 1200,
+    "transicion": "CLIMB->WAYPOINT_SURVEY",
+    "variable": "yaw_deg",
+    "antes": 90.0,
+    "despues": 150.0,
+    "salto": 60.0,
+    "p99_abs_dentro": 1.2,
+    "veces_p99": 50.0
+   }
+  ],
+  "tasa_guinada_por_fase": {
+   "TAKEOFF": {
+    "mediana_deg_s": 0.0,
+    "desv_deg_s": 0.0
+   },
+   "CLIMB": {
+    "mediana_deg_s": 0.0,
+    "desv_deg_s": 0.0
+   },
+   "WAYPOINT_SURVEY": {
+    "mediana_deg_s": 0.5,
+    "desv_deg_s": 7.9448
+   },
+   "LOITER": {
+    "mediana_deg_s": 12.0,
+    "desv_deg_s": 0.0
+   },
+   "DESCENT_LANDING": {
+    "mediana_deg_s": 0.0,
+    "desv_deg_s": 0.0
+   }
+  },
+  "transiciones_fase_en_segundos_enteros": true,
+  "episodios_en_filas_multiplo_de_100": true
+ },
+ "correlaciones_fuertes_spearman": {
+  "ground_speed_mps~airspeed_mps": 0.994,
+  "battery_current_a~motor_rpm": 0.979,
+  "pitch_deg~battery_current_a": 0.522,
+  "pitch_deg~motor_rpm": 0.522,
+  "pitch_deg~battery_voltage_v": 0.515,
+  "airspeed_mps~battery_voltage_v": 0.474,
+  "ground_speed_mps~battery_voltage_v": 0.472,
+  "altitude_agl_m~ground_speed_mps": 0.398,
+  "altitude_agl_m~airspeed_mps": 0.396,
+  "yaw_deg~battery_current_a": -0.355,
+  "yaw_deg~motor_rpm": -0.354,
+  "pitch_deg~yaw_deg": -0.336
+ },
+ "max_corr_dentro_de_fase": {
+  "TAKEOFF": {
+   "abs_rho": 0.996,
+   "par": "altitude_agl_m~ground_speed_mps"
+  },
+  "CLIMB": {
+   "abs_rho": 0.988,
+   "par": "altitude_agl_m~battery_voltage_v"
+  },
+  "WAYPOINT_SURVEY": {
+   "abs_rho": 0.979,
+   "par": "ground_speed_mps~airspeed_mps"
+  },
+  "LOITER": {
+   "abs_rho": 0.861,
+   "par": "ground_speed_mps~airspeed_mps"
+  },
+  "DESCENT_LANDING": {
+   "abs_rho": 0.997,
+   "par": "altitude_agl_m~ground_speed_mps"
+  }
+ }
+}

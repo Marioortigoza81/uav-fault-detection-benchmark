@@ -1,0 +1,1015 @@
+{
+ "csv_sha256": "17ac9f12c84d75d32c0da5714134f297a0b6f1bf2401d936fd2be2305b634a1f",
+ "estructura": {
+  "filas": 249342,
+  "columnas": 42,
+  "uids": 38,
+  "filas_reales": 124671,
+  "filas_sinteticas": 124671,
+  "vuelos_reales": 19,
+  "vuelos_sinteticos": 19,
+  "nulos_totales": 0,
+  "filas_duplicadas_sin_seq_ni_uid": 0,
+  "seq_contigua_1_a_n": true,
+  "flight_uno_a_uno_con_uid": true,
+  "flight_reales_min_max": [
+   1,
+   19
+  ],
+  "flight_sinteticos_min_max": [
+   20,
+   38
+  ],
+  "flight_logic_state_valores": {
+   "Idle-Hover": 249342
+  },
+  "filas_por_vuelo_real": {
+   "count": 19.0,
+   "mean": 6561.6,
+   "std": 3350.6,
+   "min": 3059.0,
+   "25%": 3914.0,
+   "50%": 5489.0,
+   "75%": 7379.0,
+   "max": 14329.0
+  },
+  "duracion_real_total_h": 3.463,
+  "duracion_real_mediana_s": 548.9,
+  "duracion_real_min_max_s": [
+   305.9,
+   1432.9
+  ],
+  "misma_longitud_sintetico_y_real_emparejado": true
+ },
+ "tiempo": {
+  "timestamp_resolucion_s": 1,
+  "filas_por_segundo_mediana_real": 10.0,
+  "vuelos_reales_con_timestamp_no_monotono": 3,
+  "vuelos_sinteticos_con_timestamp_no_monotono": 3,
+  "vuelos_reales_con_salto_mayor_60_s": {
+   "7": 367.0,
+   "11": 269.0,
+   "12": 868.0,
+   "14": 1020.0,
+   "18": 790834.0
+  },
+  "vuelos_sinteticos_con_salto_mayor_60_s": {
+   "10.610": 285.0,
+   "11.667": 862.0,
+   "15.172": 1033.0,
+   "18.647": 751321.0,
+   "7.2761": 394.0
+  },
+  "reales_rango_ts_dividido_duracion_10hz_max": 551.91,
+  "fecha_utc_reales_min_max": [
+   "2025-02-28",
+   "2025-03-14"
+  ],
+  "fecha_utc_sinteticos_min_max": [
+   "2019-02-15",
+   "2029-12-30"
+  ],
+  "reales_dos_vuelos_con_mismo_ts_inicial": 2,
+  "nota": "el reloj es entero en segundos: el eje de tiempo a 10 Hz se reconstruye como fila/10; no hay marca sub-segundo"
+ },
+ "variables": {
+  "voltaje_real_min_max": [
+   42394.0,
+   51630.0
+  ],
+  "corriente_real_min_max": [
+   843.0,
+   28800.0
+  ],
+  "escVoltage_sobre_voltaje_bateria_mediana": 0.0992,
+  "wind_speed_real_min_max": [
+   -99.7,
+   99.83
+  ],
+  "wind_speed_real_filas_negativas": 118,
+  "wind_speed_real_filas_abs_mayor_99": 125,
+  "wind_speed_real_mediana": 9.53,
+  "payload_real_valores": [
+   1.299
+  ],
+  "altitude_igual_position_z_real_fraccion": 0.999968,
+  "kalmanZ_menos_position_z_real_abs_mediana_m": 0.063,
+  "lat_lon_real_mediana": [
+   35.1455,
+   33.4149
+  ],
+  "linear_acceleration_z_real_mediana": -2.6e-05,
+  "linear_acceleration_z_real_desv": 0.408,
+  "altura_real_max_m": 102.8,
+  "velocidad_horizontal_real_max_ms": 14.89,
+  "esc_filas_con_menos_de_4_valores_real": 64,
+  "esc_filas_con_menos_de_4_valores_sintetico": 64,
+  "esc_filas_vacias_real": 18,
+  "escSpeed_real_min_max": [
+   180.0,
+   4031.0
+  ],
+  "escSpeed_real_filas_en_180": 1868,
+  "voltaje_paso_minimo_real": 1.0,
+  "voltaje_valores_distintos_real": 6018,
+  "bateria_fraccion_de_filas_iguales_a_la_anterior_real": {
+   "battery_voltage": 0.509,
+   "battery_current": 0.903
+  }
+ },
+ "emparejamiento": {
+  "sinteticos": 19,
+  "reales_distintos_emparejados": 19,
+  "uno_a_uno": true,
+  "criterio": "misma longitud y mínima diferencia máxima absoluta de position_z",
+  "diferencia_max_position_z_emparejada": 5e-05,
+  "variables_identicas_en_los_19_tolerancia_2e-6_relativa": [
+   "position_x",
+   "position_y",
+   "position_z",
+   "escSpeed0",
+   "escSpeed1",
+   "escSpeed2",
+   "escSpeed3",
+   "escVoltage0",
+   "escVoltage1",
+   "escVoltage2",
+   "escVoltage3",
+   "IDLE_HOVER",
+   "ASCEND",
+   "TURN",
+   "HMSL",
+   "DESCEND"
+  ],
+  "variables_no_identicas_en_algun_vuelo": {
+   "wind_speed": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.022,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9578,
+     1.0963
+    ]
+   },
+   "wind_angle": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0064,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9639,
+     1.0784
+    ]
+   },
+   "battery_voltage": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9951,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9078,
+     1.0928
+    ]
+   },
+   "battery_current": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9768,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8672,
+     1.0258
+    ]
+   },
+   "altitude": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9996,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.9183,
+     1.073
+    ]
+   },
+   "orientation_x": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.016,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.9269,
+     1.0814
+    ]
+   },
+   "orientation_y": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9831,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8667,
+     1.1041
+    ]
+   },
+   "orientation_z": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0183,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9193,
+     1.1494
+    ]
+   },
+   "orientation_w": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0081,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9214,
+     1.0881
+    ]
+   },
+   "velocity_x": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0015,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8981,
+     1.1357
+    ]
+   },
+   "velocity_y": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0175,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.8998,
+     1.1249
+    ]
+   },
+   "velocity_z": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9968,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.884,
+     1.1139
+    ]
+   },
+   "angular_x": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0179,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.8978,
+     1.1302
+    ]
+   },
+   "angular_y": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9978,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.9032,
+     1.0625
+    ]
+   },
+   "angular_z": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9991,
+    "razon_std_intravuelo_mediana": 0.0001,
+    "razon_min_max": [
+     0.8808,
+     1.0584
+    ]
+   },
+   "linear_acceleration_x": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9943,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9086,
+     1.1562
+    ]
+   },
+   "linear_acceleration_y": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0191,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8739,
+     1.1135
+    ]
+   },
+   "linear_acceleration_z": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9979,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8907,
+     1.0281
+    ]
+   },
+   "payload": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": -1.0,
+    "razon_mediana": 0.9933,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8925,
+     1.0959
+    ]
+   },
+   "d_roll": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9631,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8673,
+     1.11
+    ]
+   },
+   "d_pitch": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0038,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9297,
+     1.1007
+    ]
+   },
+   "d_yaw": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 0.9981,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8494,
+     1.0773
+    ]
+   },
+   "heading": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.0191,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.9286,
+     1.1146
+    ]
+   },
+   "yaw": {
+    "identicas_en": 0,
+    "corr_mediana": 1.0,
+    "corr_min": 1.0,
+    "razon_mediana": 1.009,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     0.8767,
+     1.1176
+    ]
+   },
+   "kalmanLat": {
+    "identicas_en": 18,
+    "corr_mediana": 0.9999,
+    "corr_min": 0.9987,
+    "razon_mediana": 1.0,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     1.0,
+     1.0
+    ]
+   },
+   "kalmanLong": {
+    "identicas_en": 15,
+    "corr_mediana": 0.9999,
+    "corr_min": 0.9973,
+    "razon_mediana": 1.0,
+    "razon_std_intravuelo_mediana": 0.0,
+    "razon_min_max": [
+     1.0,
+     1.0
+    ]
+   },
+   "kalmanZ": {
+    "identicas_en": 0,
+    "corr_mediana": 0.9999,
+    "corr_min": 0.9996,
+    "razon_mediana": 0.9996,
+    "razon_std_intravuelo_mediana": 0.719,
+    "razon_min_max": [
+     0.9184,
+     1.0728
+    ]
+   }
+  },
+  "razon_V_sobre_real_min_max": [
+   0.9078,
+   1.0928
+  ],
+  "razon_V_std_intravuelo_max": 0.0,
+  "payload_sintetico_min_max": [
+   1.1594,
+   1.4236
+  ],
+  "payload_sintetico_constante_por_vuelo": true,
+  "payload_real": 1.299,
+  "valores_fuera_de_rango_fisico": {
+   "orientation_norma_max_real": 1.00156,
+   "orientation_norma_max_sintetico": 1.1493,
+   "orientation_norma_desv_max_real": 0.00156,
+   "orientation_norma_desv_max_sintetico": 0.1493,
+   "wind_angle_mayor_360_real": 0,
+   "wind_angle_mayor_360_sintetico": 1326,
+   "yaw_fuera_de_pi_real": 0,
+   "yaw_fuera_de_pi_sintetico": 1375,
+   "heading_fuera_de_180_real": 0,
+   "heading_fuera_de_180_sintetico": 9909,
+   "wind_speed_abs_mayor_100_sintetico": 121
+  },
+  "proporcionalidad_canal_a_canal": {
+   "wind_speed": {
+    "k_min_max": [
+     0.9578,
+     1.0963
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "wind_angle": {
+    "k_min_max": [
+     0.9639,
+     1.0784
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "battery_voltage": {
+    "k_min_max": [
+     0.9078,
+     1.0928
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "battery_current": {
+    "k_min_max": [
+     0.8672,
+     1.0258
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "altitude": {
+    "k_min_max": [
+     0.9183,
+     1.073
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "orientation_x": {
+    "k_min_max": [
+     0.9269,
+     1.0814
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "orientation_y": {
+    "k_min_max": [
+     0.8667,
+     1.1041
+    ],
+    "residuo_max_relativo": 1e-06
+   },
+   "orientation_z": {
+    "k_min_max": [
+     0.9193,
+     1.1494
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "orientation_w": {
+    "k_min_max": [
+     0.9214,
+     1.0881
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "velocity_x": {
+    "k_min_max": [
+     0.8981,
+     1.1357
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "velocity_y": {
+    "k_min_max": [
+     0.8998,
+     1.1249
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "velocity_z": {
+    "k_min_max": [
+     0.884,
+     1.1139
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "angular_x": {
+    "k_min_max": [
+     0.8978,
+     1.1302
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "angular_y": {
+    "k_min_max": [
+     0.9032,
+     1.0625
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "angular_z": {
+    "k_min_max": [
+     0.8808,
+     1.0584
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "linear_acceleration_x": {
+    "k_min_max": [
+     0.9086,
+     1.1562
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "linear_acceleration_y": {
+    "k_min_max": [
+     0.8739,
+     1.1135
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "linear_acceleration_z": {
+    "k_min_max": [
+     0.8907,
+     1.0281
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "d_roll": {
+    "k_min_max": [
+     0.8673,
+     1.11
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "d_pitch": {
+    "k_min_max": [
+     0.9297,
+     1.1007
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "d_yaw": {
+    "k_min_max": [
+     0.8494,
+     1.0773
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "heading": {
+    "k_min_max": [
+     0.9286,
+     1.1146
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "yaw": {
+    "k_min_max": [
+     0.8767,
+     1.1176
+    ],
+    "residuo_max_relativo": 0.0
+   },
+   "kalmanLat": {
+    "k_min_max": [
+     1.0,
+     1.0
+    ],
+    "residuo_max_relativo": 2e-06
+   },
+   "kalmanLong": {
+    "k_min_max": [
+     1.0,
+     1.0
+    ],
+    "residuo_max_relativo": 4e-06
+   },
+   "kalmanZ": {
+    "k_min_max": [
+     0.9185,
+     1.0718
+    ],
+    "residuo_max_relativo": 0.034186
+   },
+   "timestamp": {
+    "k_min_max": [
+     0.8899,
+     1.0877
+    ],
+    "residuo_max_relativo": 0.0
+   }
+  },
+  "uid_sintetico_sobre_uid_real_min_max": [
+   0.9395,
+   1.1046
+  ],
+  "factores_entre_canales_corr_abs_max_y_mediana": [
+   0.647,
+   0.175
+  ]
+ },
+ "fases": {
+  "filas_por_fase_real": {
+   "IDLE_HOVER": 39983,
+   "ASCEND": 5336,
+   "TURN": 15061,
+   "HMSL": 67445,
+   "DESCEND": 9769
+  },
+  "fases_activas_por_fila_real": {
+   "1": 112166,
+   "2": 12087,
+   "3": 418
+  },
+  "filas_sin_fase": 0,
+  "etiquetas_sinteticas_identicas_a_las_del_real": true,
+  "combinaciones_en_filas_reales": {
+   "HMSL": 55024,
+   "IDLE_HOVER": 39983,
+   "TURN": 7535,
+   "TURN+HMSL": 7024,
+   "DESCEND": 5181,
+   "ASCEND": 4443,
+   "HMSL+DESCEND": 4233,
+   "ASCEND+HMSL": 746,
+   "TURN+HMSL+DESCEND": 300,
+   "ASCEND+TURN+HMSL": 118,
+   "TURN+DESCEND": 55,
+   "ASCEND+TURN": 29
+  },
+  "cambios_de_estado_por_1000_filas_real": {
+   "count": 19.0,
+   "mean": 222.2,
+   "std": 104.6,
+   "min": 82.3,
+   "25%": 146.3,
+   "50%": 184.0,
+   "75%": 297.6,
+   "max": 407.7
+  },
+  "segmentos_por_vuelo_real": {
+   "count": 19.0,
+   "mean": 1524.8,
+   "std": 1113.6,
+   "min": 275.0,
+   "25%": 692.5,
+   "50%": 1375.0,
+   "75%": 2074.0,
+   "max": 4514.0
+  },
+  "secuencias_de_estado_distintas_en_los_19_reales": 19,
+  "primer_estado_reales": {
+   "IDLE_HOVER": 19
+  },
+  "segmentos_de_menos_de_1_s": 26571,
+  "segmentos_totales": 28972,
+  "duracion_segmento_mediana_s": 0.1,
+  "fisica_por_fase_real_filas_de_una_sola_fase": {
+   "IDLE_HOVER": {
+    "filas_puras": 39983,
+    "vz_mediana": -0.0,
+    "vh_mediana": 0.093,
+    "abs_angular_z_mediana": 0.019,
+    "corriente_mediana_A": 20.24,
+    "altura_mediana_m": 60.0
+   },
+   "ASCEND": {
+    "filas_puras": 4443,
+    "vz_mediana": 3.017,
+    "vh_mediana": 0.05,
+    "abs_angular_z_mediana": 0.0276,
+    "corriente_mediana_A": 22.27,
+    "altura_mediana_m": 40.6
+   },
+   "TURN": {
+    "filas_puras": 7535,
+    "vz_mediana": 0.002,
+    "vh_mediana": 0.262,
+    "abs_angular_z_mediana": 1.2177,
+    "corriente_mediana_A": 20.74,
+    "altura_mediana_m": 70.0
+   },
+   "HMSL": {
+    "filas_puras": 55024,
+    "vz_mediana": 0.002,
+    "vh_mediana": 4.007,
+    "abs_angular_z_mediana": 0.0363,
+    "corriente_mediana_A": 20.8,
+    "altura_mediana_m": 70.0
+   },
+   "DESCEND": {
+    "filas_puras": 5181,
+    "vz_mediana": -2.233,
+    "vh_mediana": 0.072,
+    "abs_angular_z_mediana": 0.0311,
+    "corriente_mediana_A": 20.34,
+    "altura_mediana_m": 32.6
+   }
+  },
+  "acuerdo_etiqueta_con_fisica": {
+   "ASCEND_con_vz_mayor_0p5": 1.0,
+   "DESCEND_con_vz_menor_menos_0p5": 0.993,
+   "HMSL_con_abs_vz_menor_0p5": 0.926,
+   "IDLE_HOVER_con_vh_menor_0p5": 0.625,
+   "TURN_con_abs_angular_z_mayor_0p05": 0.912
+  }
+ },
+ "fisica": {
+  "potencia_media_w_por_fase": {
+   "IDLE_HOVER": 713.1,
+   "ASCEND": 952.1,
+   "TURN": 937.5,
+   "HMSL": 936.2,
+   "DESCEND": 884.7
+  },
+  "potencia_media_global_w": 861.5,
+  "corr_P_vs_esc_media_global": 0.367,
+  "corr_P_vs_esc3_global": 0.294,
+  "pendiente_logP_vs_log_esc": 1.25,
+  "corr_P_esc3_por_vuelo_mediana": 0.815,
+  "corr_P_esc_por_vuelo_mediana": 0.867,
+  "corr_vz_gps_vs_velocity_z_mediana": 0.999,
+  "corr_vh_gps_vs_velocity_xy_mediana": 0.997,
+  "razon_vh_gps_sobre_velocity_xy_mediana": 0.996,
+  "corr_cos_yaw_cuaternion_vs_yaw_mediana": 1.0,
+  "yaw_menos_heading_rad_a_deg_abs_mediana": 32.92,
+  "energia_wh": {
+   "count": 19.0,
+   "mean": 157.02,
+   "std": 89.83,
+   "min": 63.8,
+   "25%": 87.87,
+   "50%": 138.82,
+   "75%": 186.71,
+   "max": 364.78
+  },
+  "potencia_media_vuelo_w": {
+   "count": 19.0,
+   "mean": 837.1,
+   "std": 91.2,
+   "min": 656.8,
+   "25%": 756.4,
+   "50%": 880.5,
+   "75%": 906.3,
+   "max": 935.2
+  },
+  "corr_energia_duracion": 0.994,
+  "tension_ini_v": {
+   "count": 19.0,
+   "mean": 48.59,
+   "std": 2.32,
+   "min": 45.57,
+   "25%": 46.44,
+   "50%": 49.4,
+   "75%": 50.86,
+   "max": 51.49
+  },
+  "tension_fin_v": {
+   "count": 19.0,
+   "mean": 45.43,
+   "std": 1.82,
+   "min": 43.24,
+   "25%": 44.64,
+   "50%": 45.23,
+   "75%": 45.97,
+   "max": 51.13
+  },
+  "tension_min_global_v": 42.39,
+  "corriente_max_global_a": 28.8,
+  "tension_por_celda_si_12s_ini_mediana": 4.116,
+  "nota_celdas": "la ficha no declara el pack; V/12 es solo una referencia"
+ },
+ "bateria": {
+  "r_estatica_mohm": {
+   "count": 19.0,
+   "mean": 127.5,
+   "std": 45.7,
+   "min": 60.0,
+   "25%": 89.2,
+   "50%": 124.2,
+   "75%": 169.6,
+   "max": 195.5
+  },
+  "r_dinamica_1s_mohm": {
+   "count": 19.0,
+   "mean": 81.6,
+   "std": 32.9,
+   "min": 45.0,
+   "25%": 53.6,
+   "50%": 71.2,
+   "75%": 100.7,
+   "max": 147.5
+  },
+  "r_estatica_negativas": 0,
+  "r2_modelo": {
+   "count": 19.0,
+   "mean": 0.902,
+   "std": 0.086,
+   "min": 0.691,
+   "25%": 0.861,
+   "50%": 0.944,
+   "75%": 0.957,
+   "max": 0.99
+  },
+  "corr_r_estatica_vs_dinamica": 0.649,
+  "corr_r_estatica_vs_ts_inicial": 0.089,
+  "p_r_estatica_vs_ts_inicial": 0.7182,
+  "por_tension_inicial_mayor_50v": {
+   "vuelos": 8,
+   "r_estatica_mediana_mohm": 169.6
+  },
+  "por_tension_inicial_menor_50v": {
+   "vuelos": 11,
+   "r_estatica_mediana_mohm": 89.5
+  },
+  "mann_whitney_r_estatica_entre_grupos_p": 0.0008,
+  "vuelos_con_r_estatica_menor_10_mohm_o_negativa": 0,
+  "fechas_distintas_reales": 4,
+  "nota": "voltaje con paso mínimo de 1 unidad (inferida mV) y corriente en mA; sin temperatura, ciclos ni identidad del pack no se separa envejecimiento"
+ },
+ "calidad": {
+  "saltos_de_posicion_mayores_5m_en_0p1s_real": 6,
+  "salto_de_posicion_max_m_real": 28.772,
+  "velocidad_horizontal_real_percentil_999_ms": 13.91,
+  "fraccion_filas_z_robusto_mayor_6_intravuelo_real": {
+   "wind_speed": 0.01486,
+   "battery_voltage": 0.01129,
+   "battery_current": 0.07977,
+   "velocity_x": 0.09268,
+   "velocity_y": 0.08245,
+   "velocity_z": 0.10155,
+   "angular_x": 0.02458,
+   "angular_y": 0.03582,
+   "angular_z": 0.05713,
+   "linear_acceleration_x": 0.07593,
+   "linear_acceleration_y": 0.05651,
+   "linear_acceleration_z": 0.03922,
+   "d_roll": 0.00557,
+   "d_pitch": 0.00557
+  },
+  "esc_valores_perdidos_por_columna_real": {
+   "escSpeed0": 18,
+   "escSpeed1": 33,
+   "escSpeed2": 42,
+   "escSpeed3": 64,
+   "escVoltage0": 20,
+   "escVoltage1": 35,
+   "escVoltage2": 47,
+   "escVoltage3": 66
+  },
+  "esc_filas_con_algun_valor_perdido_en_ambos_grupos": 128,
+  "vuelos_reales_con_z_robusto_mayor_3_en_resumen": {
+   "1": {
+    "altura_max_m": -65.31
+   },
+   "6": {
+    "potencia_media_w": -4.02,
+    "altura_max_m": -65.71
+   },
+   "7": {
+    "altura_max_m": 202.5
+   },
+   "9": {
+    "potencia_media_w": -3.06,
+    "tension_min_v": 3.2
+   },
+   "11": {
+    "altura_max_m": 201.81
+   },
+   "12": {
+    "potencia_media_w": -3.46,
+    "altura_max_m": 201.53
+   },
+   "15": {
+    "tension_min_v": 4.43
+   },
+   "17": {
+    "duracion_s": 3.04,
+    "altura_max_m": -63.2
+   },
+   "18": {
+    "duracion_s": 3.31,
+    "energia_wh": 3.15,
+    "altura_max_m": 201.49
+   }
+  }
+ },
+ "forense": {
+  "parametros": "auditar(df) sin fase, sin tiempo y sin etiqueta: el reloj es entero en segundos, no hay anomalías y la etiqueta de fase parpadea (H06/H07 por fase no se evaluaron)",
+  "real": {
+   "vuelos": 19,
+   "huellas_por_tipo": {
+    "H02": 138
+   },
+   "vuelos_por_n_tipos": {
+    "1": 19
+   },
+   "media_tipos_por_vuelo": 1.0,
+   "vuelos_con_3_o_mas_tipos_generacion": 0,
+   "frases": {
+    "alguna huella aislada: revisar cada una antes de concluir": 19
+   }
+  },
+  "sintetico": {
+   "vuelos": 19,
+   "huellas_por_tipo": {
+    "H02": 138
+   },
+   "vuelos_por_n_tipos": {
+    "1": 19
+   },
+   "media_tipos_por_vuelo": 1.0,
+   "vuelos_con_3_o_mas_tipos_generacion": 0,
+   "frases": {
+    "alguna huella aislada: revisar cada una antes de concluir": 19
+   }
+  },
+  "huellas_mas_frecuentes_real": {
+   "H02:position_y": 24,
+   "H02:position_x": 22,
+   "H02:escSpeed0": 18,
+   "H02:escSpeed1": 18,
+   "H02:escSpeed2": 18,
+   "H02:escSpeed3": 18
+  },
+  "huellas_mas_frecuentes_sintetico": {
+   "H02:position_y": 24,
+   "H02:position_x": 22,
+   "H02:escSpeed0": 18,
+   "H02:escSpeed1": 18,
+   "H02:escSpeed2": 18,
+   "H02:escSpeed3": 18
+  },
+  "mann_whitney_n_tipos_p": null
+ },
+ "etiquetas": {
+  "columnas_de_anomalia_o_fallo": [],
+  "etiquetas_disponibles": [
+   "IDLE_HOVER",
+   "ASCEND",
+   "TURN",
+   "HMSL",
+   "DESCEND",
+   "flight_logic_state (constante)"
+  ],
+  "episodios_de_anomalia": 0,
+  "fallos_inyectados_en_la_ficha": false,
+  "nota": "las etiquetas describen la fase de vuelo, no un fallo; sin fallos no hay evaluación de detección de anomalías supervisada"
+ }
+}

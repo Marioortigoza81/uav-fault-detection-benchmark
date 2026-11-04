@@ -1,0 +1,9 @@
+categoria_oficial,oficial,observado_directorios,observado_ids_unicos
+Motor,231,245,218
+Sensors' Noise,82,,
+Accelerometer,20,34,28
+Gyroscope,20,39,36
+Magnetometer,20,36,36
+Barometer,20,45,36
+GPS,20,43,36
+No Fault,84,51,50

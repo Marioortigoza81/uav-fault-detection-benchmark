@@ -1,0 +1,213 @@
+clase,variable,n_pos,n_neg,auroc,auroc_sim
+Mechanical,dur_s,47,898,0.530446,0.530446
+Mechanical,t_aire_s,47,898,0.527816,0.527816
+Mechanical,size_mb,47,898,0.577998,0.577998
+Mechanical,n_topicos,47,898,0.496636,0.503364
+Mechanical,n_msgs,47,898,0.569232,0.569232
+Mechanical,n_params,47,898,0.475158,0.524842
+Mechanical,bat_v_ini,47,898,0.431574,0.568426
+Mechanical,bat_v_fin,47,898,0.423115,0.576885
+Mechanical,bat_i_media,47,898,0.771099,0.771099
+Mechanical,bat_i_max,47,898,0.626795,0.626795
+Mechanical,bat_descargado_mah,47,898,0.653983,0.653983
+Mechanical,bat_r_mohm,47,898,0.404313,0.595687
+Mechanical,cpuload_media,47,898,0.597332,0.597332
+Mechanical,dropouts_n,47,898,0.582867,0.582867
+Mechanical,msgs_log_error_warn,47,898,0.612294,0.612294
+Mechanical,gaps_10x_sensor_combined,47,898,0.571921,0.571921
+Mechanical,gap_max_s_vehicle_attitude,47,898,0.526631,0.526631
+Mechanical,anyo,47,898,0.392713,0.607287
+Mechanical,mes,47,898,0.525237,0.525237
+Mechanical,ver_sw_release,47,898,0.392977,0.607023
+Mechanical,acc_norm_mediana,47,898,0.395536,0.604464
+Mechanical,fis_rho_thrust_menos_az,47,898,0.294503,0.705497
+Mechanical,fis_acc_norma_suelo,47,898,0.791221,0.791221
+Mechanical,med_acc_n_mean,47,898,0.409728,0.590272
+Mechanical,med_acc_n_std,47,898,0.449818,0.550182
+Mechanical,med_gyr_n_mean,47,898,0.425508,0.574492
+Mechanical,med_gyr_n_std,47,898,0.402336,0.597664
+Mechanical,med_roll_abs,47,898,0.567099,0.567099
+Mechanical,med_pitch_abs,47,898,0.503838,0.503838
+Mechanical,med_att_std,47,898,0.554613,0.554613
+Mechanical,med_vh,47,898,0.482206,0.517794
+Mechanical,med_vz_abs,47,898,0.516325,0.516325
+Mechanical,med_alt_m,47,898,0.587405,0.587405
+Mechanical,med_eph,47,898,0.355992,0.644008
+Mechanical,med_epv,47,898,0.51155,0.51155
+Mechanical,med_dist_bottom,47,898,0.537127,0.537127
+Mechanical,med_pos_test_ratio,47,898,0.634531,0.634531
+Mechanical,med_vel_test_ratio,47,898,0.545056,0.545056
+Mechanical,med_hgt_test_ratio,47,898,0.532507,0.532507
+Mechanical,med_vibe0,47,898,0.507128,0.507128
+Mechanical,med_vibe1,47,898,0.386181,0.613819
+Mechanical,med_vibe2,47,898,0.451813,0.548187
+Mechanical,med_innov_vel,47,898,0.540146,0.540146
+Mechanical,med_innov_pos,47,898,0.564696,0.564696
+Mechanical,med_innov_head,47,898,0.608364,0.608364
+Mechanical,med_bat_v,47,898,0.400559,0.599441
+Mechanical,med_bat_i,47,898,0.747169,0.747169
+Mechanical,med_dist_sensor,47,898,0.554395,0.554395
+Mechanical,med_thrust,47,898,0.813652,0.813652
+Mechanical,med_thrust_std,47,898,0.594584,0.594584
+Mechanical,med_ctrl_rp_std,47,898,0.390845,0.609155
+Mechanical,med_out_mean,47,898,0.789177,0.789177
+Mechanical,med_out_imbalance,47,898,0.6224,0.6224
+External Position,dur_s,197,898,0.308458,0.691542
+External Position,t_aire_s,197,898,0.301672,0.698328
+External Position,size_mb,197,898,0.334279,0.665721
+External Position,n_topicos,197,898,0.517043,0.517043
+External Position,n_msgs,197,898,0.344002,0.655998
+External Position,n_params,197,898,0.253327,0.746673
+External Position,bat_v_ini,197,898,0.673131,0.673131
+External Position,bat_v_fin,197,898,0.639868,0.639868
+External Position,bat_i_media,197,898,0.476208,0.523792
+External Position,bat_i_max,197,898,0.458902,0.541098
+External Position,bat_descargado_mah,197,898,0.422456,0.577544
+External Position,bat_r_mohm,197,898,0.588928,0.588928
+External Position,cpuload_media,197,898,0.616062,0.616062
+External Position,dropouts_n,197,898,0.515528,0.515528
+External Position,msgs_log_error_warn,197,898,0.655249,0.655249
+External Position,gaps_10x_sensor_combined,197,898,0.531737,0.531737
+External Position,gap_max_s_vehicle_attitude,197,898,0.558523,0.558523
+External Position,anyo,197,898,0.277075,0.722925
+External Position,mes,197,898,0.5844,0.5844
+External Position,ver_sw_release,197,898,0.277023,0.722977
+External Position,acc_norm_mediana,197,898,0.562219,0.562219
+External Position,fis_rho_thrust_menos_az,197,898,0.641441,0.641441
+External Position,fis_acc_norma_suelo,197,898,0.53159,0.53159
+External Position,med_acc_n_mean,197,898,0.715114,0.715114
+External Position,med_acc_n_std,197,898,0.752292,0.752292
+External Position,med_gyr_n_mean,197,898,0.70265,0.70265
+External Position,med_gyr_n_std,197,898,0.75725,0.75725
+External Position,med_roll_abs,197,898,0.718619,0.718619
+External Position,med_pitch_abs,197,898,0.762128,0.762128
+External Position,med_att_std,197,898,0.78553,0.78553
+External Position,med_vh,197,898,0.721801,0.721801
+External Position,med_vz_abs,197,898,0.808011,0.808011
+External Position,med_alt_m,197,898,0.365951,0.634049
+External Position,med_eph,197,898,0.578183,0.578183
+External Position,med_epv,197,898,0.627336,0.627336
+External Position,med_dist_bottom,197,898,0.385979,0.614021
+External Position,med_pos_test_ratio,197,898,0.649599,0.649599
+External Position,med_vel_test_ratio,197,898,0.546022,0.546022
+External Position,med_hgt_test_ratio,197,898,0.585876,0.585876
+External Position,med_vibe0,197,898,0.590734,0.590734
+External Position,med_vibe1,197,898,0.541998,0.541998
+External Position,med_vibe2,197,898,0.576003,0.576003
+External Position,med_innov_vel,197,898,0.562246,0.562246
+External Position,med_innov_pos,197,898,0.700836,0.700836
+External Position,med_innov_head,197,898,0.644461,0.644461
+External Position,med_bat_v,197,898,0.631652,0.631652
+External Position,med_bat_i,197,898,0.534255,0.534255
+External Position,med_dist_sensor,197,898,0.39231,0.60769
+External Position,med_thrust,197,898,0.35994,0.64006
+External Position,med_thrust_std,197,898,0.75704,0.75704
+External Position,med_ctrl_rp_std,197,898,0.689739,0.689739
+External Position,med_out_mean,197,898,0.331908,0.668092
+External Position,med_out_imbalance,197,898,0.697916,0.697916
+Global Position,dur_s,41,898,0.45456,0.54544
+Global Position,t_aire_s,41,898,0.457901,0.542099
+Global Position,size_mb,41,898,0.378673,0.621327
+Global Position,n_topicos,41,898,0.503572,0.503572
+Global Position,n_msgs,41,898,0.358276,0.641724
+Global Position,n_params,41,898,0.37942,0.62058
+Global Position,bat_v_ini,41,898,0.444076,0.555924
+Global Position,bat_v_fin,41,898,0.530501,0.530501
+Global Position,bat_i_media,41,898,0.653403,0.653403
+Global Position,bat_i_max,41,898,0.670419,0.670419
+Global Position,bat_descargado_mah,41,898,0.538052,0.538052
+Global Position,bat_r_mohm,41,898,0.405286,0.594714
+Global Position,cpuload_media,41,898,0.708023,0.708023
+Global Position,dropouts_n,41,898,0.392525,0.607475
+Global Position,msgs_log_error_warn,41,898,0.41549,0.58451
+Global Position,gaps_10x_sensor_combined,41,898,0.319925,0.680075
+Global Position,gap_max_s_vehicle_attitude,41,898,0.558056,0.558056
+Global Position,anyo,41,898,0.517318,0.517318
+Global Position,mes,41,898,0.225072,0.774928
+Global Position,ver_sw_release,41,898,0.525653,0.525653
+Global Position,acc_norm_mediana,41,898,0.467271,0.532729
+Global Position,fis_rho_thrust_menos_az,41,898,0.458754,0.541246
+Global Position,fis_acc_norma_suelo,41,898,0.834105,0.834105
+Global Position,med_acc_n_mean,41,898,0.458308,0.541692
+Global Position,med_acc_n_std,41,898,0.375985,0.624015
+Global Position,med_gyr_n_mean,41,898,0.414661,0.585339
+Global Position,med_gyr_n_std,41,898,0.392851,0.607149
+Global Position,med_roll_abs,41,898,0.316041,0.683959
+Global Position,med_pitch_abs,41,898,0.636699,0.636699
+Global Position,med_att_std,41,898,0.476316,0.523684
+Global Position,med_vh,41,898,0.467842,0.532158
+Global Position,med_vz_abs,41,898,0.530474,0.530474
+Global Position,med_alt_m,41,898,0.493753,0.506247
+Global Position,med_eph,41,898,0.310066,0.689934
+Global Position,med_epv,41,898,0.52511,0.52511
+Global Position,med_dist_bottom,41,898,0.476751,0.523249
+Global Position,med_pos_test_ratio,41,898,0.531941,0.531941
+Global Position,med_vel_test_ratio,41,898,0.529271,0.529271
+Global Position,med_hgt_test_ratio,41,898,0.350617,0.649383
+Global Position,med_vibe0,41,898,0.497566,0.502434
+Global Position,med_vibe1,41,898,0.459173,0.540827
+Global Position,med_vibe2,41,898,0.444272,0.555728
+Global Position,med_innov_vel,41,898,0.524785,0.524785
+Global Position,med_innov_pos,41,898,0.559589,0.559589
+Global Position,med_innov_head,41,898,0.666422,0.666422
+Global Position,med_bat_v,41,898,0.550274,0.550274
+Global Position,med_bat_i,41,898,0.621068,0.621068
+Global Position,med_dist_sensor,41,898,0.470407,0.529593
+Global Position,med_thrust,41,898,0.73187,0.73187
+Global Position,med_thrust_std,41,898,0.550492,0.550492
+Global Position,med_ctrl_rp_std,41,898,0.337308,0.662692
+Global Position,med_out_mean,41,898,0.693044,0.693044
+Global Position,med_out_imbalance,41,898,0.362689,0.637311
+Altitude,dur_s,77,898,0.406068,0.593932
+Altitude,t_aire_s,77,898,0.408042,0.591958
+Altitude,size_mb,77,898,0.441457,0.558543
+Altitude,n_topicos,77,898,0.430661,0.569339
+Altitude,n_msgs,77,898,0.440459,0.559541
+Altitude,n_params,77,898,0.463606,0.536394
+Altitude,bat_v_ini,77,898,0.535418,0.535418
+Altitude,bat_v_fin,77,898,0.489587,0.510413
+Altitude,bat_i_media,77,898,0.517485,0.517485
+Altitude,bat_i_max,77,898,0.44696,0.55304
+Altitude,bat_descargado_mah,77,898,0.500318,0.500318
+Altitude,bat_r_mohm,77,898,0.520877,0.520877
+Altitude,cpuload_media,77,898,0.478104,0.521896
+Altitude,dropouts_n,77,898,0.510478,0.510478
+Altitude,msgs_log_error_warn,77,898,0.519683,0.519683
+Altitude,gaps_10x_sensor_combined,77,898,0.499711,0.500289
+Altitude,gap_max_s_vehicle_attitude,77,898,0.460027,0.539973
+Altitude,anyo,77,898,0.478617,0.521383
+Altitude,mes,77,898,0.534019,0.534019
+Altitude,ver_sw_release,77,898,0.468545,0.531455
+Altitude,acc_norm_mediana,77,898,0.531846,0.531846
+Altitude,fis_rho_thrust_menos_az,77,898,0.541716,0.541716
+Altitude,fis_acc_norma_suelo,77,898,0.461745,0.538255
+Altitude,med_acc_n_mean,77,898,0.561594,0.561594
+Altitude,med_acc_n_std,77,898,0.534984,0.534984
+Altitude,med_gyr_n_mean,77,898,0.579672,0.579672
+Altitude,med_gyr_n_std,77,898,0.5855,0.5855
+Altitude,med_roll_abs,77,898,0.501519,0.501519
+Altitude,med_pitch_abs,77,898,0.478827,0.521173
+Altitude,med_att_std,77,898,0.562231,0.562231
+Altitude,med_vh,77,898,0.520507,0.520507
+Altitude,med_vz_abs,77,898,0.606253,0.606253
+Altitude,med_alt_m,77,898,0.45242,0.54758
+Altitude,med_eph,77,898,0.56936,0.56936
+Altitude,med_epv,77,898,0.648006,0.648006
+Altitude,med_dist_bottom,77,898,0.485856,0.514144
+Altitude,med_pos_test_ratio,77,898,0.517253,0.517253
+Altitude,med_vel_test_ratio,77,898,0.498777,0.501223
+Altitude,med_hgt_test_ratio,77,898,0.692621,0.692621
+Altitude,med_vibe0,77,898,0.628763,0.628763
+Altitude,med_vibe1,77,898,0.591177,0.591177
+Altitude,med_vibe2,77,898,0.593146,0.593146
+Altitude,med_innov_vel,77,898,0.494303,0.505697
+Altitude,med_innov_pos,77,898,0.678235,0.678235
+Altitude,med_innov_head,77,898,0.609159,0.609159
+Altitude,med_bat_v,77,898,0.474821,0.525179
+Altitude,med_bat_i,77,898,0.550603,0.550603
+Altitude,med_dist_sensor,77,898,0.485917,0.514083
+Altitude,med_thrust,77,898,0.508236,0.508236
+Altitude,med_thrust_std,77,898,0.61736,0.61736
+Altitude,med_ctrl_rp_std,77,898,0.573786,0.573786
+Altitude,med_out_mean,77,898,0.498171,0.501829
+Altitude,med_out_imbalance,77,898,0.497303,0.502697

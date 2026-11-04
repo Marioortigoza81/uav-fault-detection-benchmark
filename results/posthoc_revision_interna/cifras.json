@@ -1,0 +1,2164 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión interna del Paper 1: M1, M2, M7); no cambia los veredictos preregistrados",
+  "semillas_modelo_m7": [
+   20261103,
+   1,
+   2,
+   3,
+   4
+  ],
+  "semillas_particion_pgrupo": [
+   20261103,
+   20261104,
+   20261105,
+   20261106,
+   20261107
+  ],
+  "bootstrap_reps": 1000,
+  "n_estratos_posicion": 10,
+  "n_estratos_sensibilidad": [
+   5,
+   20
+  ],
+  "procesos": 4,
+  "huella_relectura_real": "c8c9b4c59b6e52d6",
+  "parche_f2": "extraer de 11 sin el filtro de recuperación (Wr) y con marca en_recuperacion y dur_s; resto idéntico",
+  "parche_f1": "construir_rflymad de 10 con las ventanas posteriores al fallo en y = 0 y marcadas; resto idéntico",
+  "datos_e2": {
+   "pickles_en_cache": 4800,
+   "ventanas": 165494,
+   "huella_extraccion_e2": "a0ca247dfb2741fa"
+  }
+ },
+ "m1_recuperacion": {
+  "datos": {
+   "vuelos_releidos": 493,
+   "vuelos_con_ventanas": 493,
+   "vuelos_desde_cache_propia": 493,
+   "ventanas": 17787,
+   "ventanas_recuperacion_incluidas": 4407,
+   "ventanas_recuperacion_y1_por_solape_mayoritario_con_el_fallo": 386,
+   "ventanas_recuperacion_candidatas": 4794,
+   "ventanas_recuperacion_ambiguas_excluidas": 387,
+   "ventanas_recuperacion_no_finitas_excluidas": 0,
+   "prevalencia_sin_recuperacion": 0.5474,
+   "prevalencia_con_recuperacion": 0.4335,
+   "por_destino": {
+    "real": {
+     "ventanas": 17787,
+     "recuperacion": 4407,
+     "prevalencia": 0.4335
+    },
+    "real_motor": {
+     "ventanas": 11154,
+     "recuperacion": 2469,
+     "prevalencia": 0.4092
+    },
+    "real_sensors": {
+     "ventanas": 8310,
+     "recuperacion": 1938,
+     "prevalencia": 0.3786
+    }
+   },
+   "control_frente_a_e2": {
+    "ventanas_sin_recuperacion": 13380,
+    "ventanas_real_e2": 13380,
+    "rasgos_identicos": true,
+    "etiquetas_identicas": true,
+    "grupos_identicos": true,
+    "atajos_max_dif_abs": 0.0
+   },
+   "nota": "la recuperación solo se añade donde la ventana es finita en los rasgos de base; las ventanas sin recuperación son exactamente las de E2, que además exigían finitud en las familias invariantes"
+  },
+  "interno": {
+   "real": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.9058,
+      "ic95": [
+       0.8956,
+       0.9153
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.8703,
+      "ic95": [
+       0.8565,
+       0.8846
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.959,
+      "ic95": [
+       0.9477,
+       0.9692
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.9713,
+      "ic95": [
+       0.959,
+       0.9818
+      ]
+     }
+    }
+   },
+   "real_motor": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.9242,
+      "ic95": [
+       0.9125,
+       0.9355
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.8943,
+      "ic95": [
+       0.8764,
+       0.9116
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.9712,
+      "ic95": [
+       0.9604,
+       0.9807
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.9786,
+      "ic95": [
+       0.9658,
+       0.9882
+      ]
+     }
+    }
+   },
+   "real_sensors": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.895,
+      "ic95": [
+       0.8774,
+       0.9145
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.8732,
+      "ic95": [
+       0.8504,
+       0.8953
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.9467,
+      "ic95": [
+       0.9259,
+       0.9665
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.9563,
+      "ic95": [
+       0.9314,
+       0.9764
+      ]
+     }
+    }
+   }
+  },
+  "transferencia": {
+   "uav_sead->real": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.5192,
+      "ic95": [
+       0.4967,
+       0.5437
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.5708,
+      "ic95": [
+       0.5474,
+       0.5951
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.5475,
+      "ic95": [
+       0.5274,
+       0.5684
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.6529,
+      "ic95": [
+       0.628,
+       0.6769
+      ]
+     }
+    }
+   },
+   "hil->real": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.6739,
+      "ic95": [
+       0.6581,
+       0.6899
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.6295,
+      "ic95": [
+       0.6067,
+       0.6546
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.7163,
+      "ic95": [
+       0.6982,
+       0.7333
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.871,
+      "ic95": [
+       0.8393,
+       0.9027
+      ]
+     }
+    }
+   },
+   "hil_prop->real_motor": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.6041,
+      "ic95": [
+       0.573,
+       0.6356
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.6544,
+      "ic95": [
+       0.6249,
+       0.6875
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.7114,
+      "ic95": [
+       0.6857,
+       0.7376
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.8089,
+      "ic95": [
+       0.7698,
+       0.8475
+      ]
+     }
+    }
+   },
+   "hil_motor->real_motor": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.6262,
+      "ic95": [
+       0.5969,
+       0.6564
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.6457,
+      "ic95": [
+       0.6137,
+       0.681
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.733,
+      "ic95": [
+       0.7113,
+       0.7543
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.8419,
+      "ic95": [
+       0.8062,
+       0.88
+      ]
+     }
+    }
+   },
+   "hil_sensors->real_sensors": {
+    "rf": {
+     "con_recuperacion": {
+      "auroc": 0.6566,
+      "ic95": [
+       0.6257,
+       0.6877
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.6604,
+      "ic95": [
+       0.6204,
+       0.6968
+      ]
+     }
+    },
+    "atajos": {
+     "con_recuperacion": {
+      "auroc": 0.608,
+      "ic95": [
+       0.5778,
+       0.638
+      ]
+     },
+     "sin_recuperacion_e2": {
+      "auroc": 0.7635,
+      "ic95": [
+       0.7068,
+       0.8203
+      ]
+     }
+    }
+   }
+  },
+  "caida_h3": {
+   "uav_sead->real": {
+    "con_recuperacion": {
+     "punto": 0.3865,
+     "ic95": [
+      0.3622,
+      0.4091
+     ]
+    },
+    "sin_recuperacion_e2": {
+     "punto": 0.2995,
+     "ic95": [
+      0.2771,
+      0.3227
+     ]
+    }
+   },
+   "hil->real": {
+    "con_recuperacion": {
+     "punto": 0.2318,
+     "ic95": [
+      0.2167,
+      0.2477
+     ]
+    },
+    "sin_recuperacion_e2": {
+     "punto": 0.2408,
+     "ic95": [
+      0.2191,
+      0.2619
+     ]
+    }
+   },
+   "hil_prop->real_motor": {
+    "con_recuperacion": {
+     "punto": 0.3202,
+     "ic95": [
+      0.2919,
+      0.3478
+     ]
+    },
+    "sin_recuperacion_e2": {
+     "punto": 0.2399,
+     "ic95": [
+      0.2121,
+      0.2671
+     ]
+    }
+   },
+   "hil_motor->real_motor": {
+    "con_recuperacion": {
+     "punto": 0.298,
+     "ic95": [
+      0.2729,
+      0.3223
+     ]
+    },
+    "sin_recuperacion_e2": {
+     "punto": 0.2486,
+     "ic95": [
+      0.2218,
+      0.275
+     ]
+    }
+   },
+   "hil_sensors->real_sensors": {
+    "con_recuperacion": {
+     "punto": 0.2384,
+     "ic95": [
+      0.2086,
+      0.2677
+     ]
+    },
+    "sin_recuperacion_e2": {
+     "punto": 0.2128,
+     "ic95": [
+      0.1814,
+      0.2473
+     ]
+    }
+   }
+  }
+ },
+ "t2_solo_posicion": {
+  "uav_sead->real": {
+   "par": "uav_sead->real",
+   "adicional": false,
+   "auroc_solo_posicion": 0.6529,
+   "ic_lo": 0.628,
+   "ic_hi": 0.6769,
+   "auroc_rf_base": 0.5708,
+   "auroc_rf_invariante": 0.6061,
+   "interno_destino_rf_base": 0.8703,
+   "interno_destino_solo_posicion": 0.9713
+  },
+  "real->uav_sead": {
+   "par": "real->uav_sead",
+   "adicional": false,
+   "auroc_solo_posicion": 0.5278,
+   "ic_lo": 0.4909,
+   "ic_hi": 0.5627,
+   "auroc_rf_base": 0.5703,
+   "auroc_rf_invariante": 0.6488,
+   "interno_destino_rf_base": 0.8694,
+   "interno_destino_solo_posicion": 0.6371
+  },
+  "uav_sead->hil": {
+   "par": "uav_sead->hil",
+   "adicional": false,
+   "auroc_solo_posicion": 0.8483,
+   "ic_lo": 0.8406,
+   "ic_hi": 0.8562,
+   "auroc_rf_base": 0.4518,
+   "auroc_rf_invariante": 0.381,
+   "interno_destino_rf_base": 0.9942,
+   "interno_destino_solo_posicion": 0.9855
+  },
+  "hil->real": {
+   "par": "hil->real",
+   "adicional": false,
+   "auroc_solo_posicion": 0.871,
+   "ic_lo": 0.8393,
+   "ic_hi": 0.9027,
+   "auroc_rf_base": 0.6295,
+   "auroc_rf_invariante": 0.7381,
+   "interno_destino_rf_base": 0.8703,
+   "interno_destino_solo_posicion": 0.9713
+  },
+  "real->hil": {
+   "par": "real->hil",
+   "adicional": false,
+   "auroc_solo_posicion": 0.796,
+   "ic_lo": 0.7855,
+   "ic_hi": 0.8062,
+   "auroc_rf_base": 0.6849,
+   "auroc_rf_invariante": 0.6904,
+   "interno_destino_rf_base": 0.9942,
+   "interno_destino_solo_posicion": 0.9855
+  },
+  "hil_prop->real_motor": {
+   "par": "hil_prop->real_motor",
+   "adicional": false,
+   "auroc_solo_posicion": 0.8089,
+   "ic_lo": 0.7698,
+   "ic_hi": 0.8475,
+   "auroc_rf_base": 0.6544,
+   "auroc_rf_invariante": 0.7882,
+   "interno_destino_rf_base": 0.8943,
+   "interno_destino_solo_posicion": 0.9786
+  },
+  "hil_sensors->real_sensors": {
+   "par": "hil_sensors->real_sensors",
+   "adicional": false,
+   "auroc_solo_posicion": 0.7635,
+   "ic_lo": 0.7068,
+   "ic_hi": 0.8203,
+   "auroc_rf_base": 0.6604,
+   "auroc_rf_invariante": 0.6894,
+   "interno_destino_rf_base": 0.8732,
+   "interno_destino_solo_posicion": 0.9563
+  },
+  "hil_motor->real_motor": {
+   "par": "hil_motor->real_motor",
+   "adicional": true,
+   "auroc_solo_posicion": 0.8419,
+   "ic_lo": 0.8062,
+   "ic_hi": 0.88,
+   "auroc_rf_base": 0.6457,
+   "auroc_rf_invariante": 0.8141,
+   "interno_destino_rf_base": 0.8943,
+   "interno_destino_solo_posicion": 0.9786
+  }
+ },
+ "m1_h2_e1_con_recuperacion": {
+  "ventanas": {
+   "con_recuperacion": 9976,
+   "recuperacion": 2140,
+   "prevalencia_con": 0.3371,
+   "prevalencia_sin": 0.4292
+  },
+  "rasgos_retirados": [
+   "rfly_ctrl_activo_frac",
+   "inyeccion_testinfo_s"
+  ],
+  "sin_recuperacion": {
+   "n_ventanas": 7836,
+   "grupos": 440,
+   "auroc_rf_p_grupo": {
+    "sin_atajos": {
+     "auroc": 0.982,
+     "ic95": [
+      0.9777,
+      0.986
+     ],
+     "por_semilla": [
+      0.9833,
+      0.9809,
+      0.9822,
+      0.9805,
+      0.9829
+     ],
+     "posthoc_e1": 0.982
+    },
+    "completo_informativo": {
+     "auroc": 0.9984,
+     "ic95": [
+      0.9974,
+      0.9992
+     ],
+     "por_semilla": [
+      0.9985,
+      0.9983,
+      0.9983,
+      0.9982,
+      0.9985
+     ],
+     "posthoc_e1": 0.9984
+    },
+    "solo_atajos_informativo": {
+     "auroc": 0.9965,
+     "ic95": [
+      0.994,
+      0.9987
+     ],
+     "por_semilla": [
+      0.9962,
+      0.9964,
+      0.9963,
+      0.9968,
+      0.9969
+     ],
+     "posthoc_e1": 0.9965
+    },
+    "solo_posicion": {
+     "auroc": 0.9724,
+     "ic95": [
+      0.9616,
+      0.9818
+     ],
+     "por_semilla": [
+      0.9734,
+      0.9712,
+      0.9723,
+      0.9717,
+      0.9734
+     ]
+    }
+   },
+   "cocientes": {
+    "solo_atajos_informativo_entre_completo_informativo": {
+     "cociente": 0.9981,
+     "ic95": [
+      0.9958,
+      1.0
+     ],
+     "supera_0_9": true,
+     "limite_inferior_supera_0_9": true
+    },
+    "solo_atajos_informativo_entre_sin_atajos": {
+     "cociente": 1.0148,
+     "ic95": [
+      1.0101,
+      1.0197
+     ],
+     "supera_0_9": true,
+     "limite_inferior_supera_0_9": true
+    },
+    "solo_posicion_entre_sin_atajos": {
+     "cociente": 0.9902,
+     "ic95": [
+      0.9787,
+      1.0007
+     ],
+     "supera_0_9": true,
+     "limite_inferior_supera_0_9": true
+    }
+   }
+  },
+  "con_recuperacion": {
+   "n_ventanas": 9976,
+   "grupos": 440,
+   "auroc_rf_p_grupo": {
+    "sin_atajos": {
+     "auroc": 0.9835,
+     "ic95": [
+      0.9798,
+      0.9867
+     ],
+     "por_semilla": [
+      0.9835,
+      0.9828,
+      0.9838,
+      0.9839,
+      0.9833
+     ]
+    },
+    "completo_informativo": {
+     "auroc": 0.9971,
+     "ic95": [
+      0.996,
+      0.9982
+     ],
+     "por_semilla": [
+      0.9974,
+      0.9964,
+      0.9973,
+      0.9969,
+      0.9975
+     ]
+    },
+    "solo_atajos_informativo": {
+     "auroc": 0.9909,
+     "ic95": [
+      0.9868,
+      0.994
+     ],
+     "por_semilla": [
+      0.991,
+      0.9916,
+      0.991,
+      0.9894,
+      0.9915
+     ]
+    },
+    "solo_posicion": {
+     "auroc": 0.9613,
+     "ic95": [
+      0.9507,
+      0.9709
+     ],
+     "por_semilla": [
+      0.96,
+      0.9603,
+      0.963,
+      0.963,
+      0.9601
+     ]
+    }
+   },
+   "cocientes": {
+    "solo_atajos_informativo_entre_completo_informativo": {
+     "cociente": 0.9938,
+     "ic95": [
+      0.9904,
+      0.9965
+     ],
+     "supera_0_9": true,
+     "limite_inferior_supera_0_9": true
+    },
+    "solo_atajos_informativo_entre_sin_atajos": {
+     "cociente": 1.0076,
+     "ic95": [
+      1.0029,
+      1.012
+     ],
+     "supera_0_9": true,
+     "limite_inferior_supera_0_9": true
+    },
+    "solo_posicion_entre_sin_atajos": {
+     "cociente": 0.9775,
+     "ic95": [
+      0.9667,
+      0.9872
+     ],
+     "supera_0_9": true,
+     "limite_inferior_supera_0_9": true
+    }
+   }
+  },
+  "control_sin_recuperacion_frente_a_posthoc_e1_max_dif": 0.0
+ },
+ "m7_semillas": {
+  "resumen": {
+   "transferencia_rf_base": {
+    "uav_sead->real": {
+     "media": 0.5666,
+     "min": 0.5603,
+     "max": 0.5708,
+     "por_semilla": [
+      0.5708,
+      0.5679,
+      0.5676,
+      0.5603,
+      0.5665
+     ]
+    },
+    "real->uav_sead": {
+     "media": 0.5611,
+     "min": 0.5472,
+     "max": 0.5703,
+     "por_semilla": [
+      0.5703,
+      0.5647,
+      0.5582,
+      0.5652,
+      0.5472
+     ]
+    },
+    "uav_sead->hil": {
+     "media": 0.3979,
+     "min": 0.3795,
+     "max": 0.4518,
+     "por_semilla": [
+      0.4518,
+      0.3921,
+      0.3795,
+      0.3845,
+      0.3815
+     ]
+    },
+    "hil->real": {
+     "media": 0.6323,
+     "min": 0.6188,
+     "max": 0.6449,
+     "por_semilla": [
+      0.6295,
+      0.6416,
+      0.6266,
+      0.6449,
+      0.6188
+     ]
+    },
+    "real->hil": {
+     "media": 0.689,
+     "min": 0.6785,
+     "max": 0.6979,
+     "por_semilla": [
+      0.6849,
+      0.6979,
+      0.6785,
+      0.6865,
+      0.6974
+     ]
+    },
+    "hil_prop->real_motor": {
+     "media": 0.6621,
+     "min": 0.6544,
+     "max": 0.6699,
+     "por_semilla": [
+      0.6544,
+      0.6551,
+      0.6699,
+      0.6649,
+      0.6663
+     ]
+    },
+    "hil_sensors->real_sensors": {
+     "media": 0.6547,
+     "min": 0.6336,
+     "max": 0.6654,
+     "por_semilla": [
+      0.6604,
+      0.6625,
+      0.6654,
+      0.6517,
+      0.6336
+     ]
+    },
+    "hil_motor->real_motor": {
+     "media": 0.6464,
+     "min": 0.6382,
+     "max": 0.6554,
+     "por_semilla": [
+      0.6457,
+      0.6514,
+      0.6414,
+      0.6554,
+      0.6382
+     ]
+    }
+   },
+   "transferencia_rf_invariante": {
+    "uav_sead->real": {
+     "media": 0.6022,
+     "min": 0.596,
+     "max": 0.6133,
+     "por_semilla": [
+      0.6061,
+      0.6133,
+      0.5989,
+      0.5966,
+      0.596
+     ]
+    },
+    "real->uav_sead": {
+     "media": 0.6451,
+     "min": 0.6401,
+     "max": 0.6488,
+     "por_semilla": [
+      0.6488,
+      0.6454,
+      0.6428,
+      0.6401,
+      0.6486
+     ]
+    },
+    "uav_sead->hil": {
+     "media": 0.3966,
+     "min": 0.381,
+     "max": 0.4072,
+     "por_semilla": [
+      0.381,
+      0.4072,
+      0.3963,
+      0.4032,
+      0.3954
+     ]
+    },
+    "hil->real": {
+     "media": 0.7375,
+     "min": 0.7325,
+     "max": 0.7395,
+     "por_semilla": [
+      0.7381,
+      0.7388,
+      0.7325,
+      0.7395,
+      0.7384
+     ]
+    },
+    "real->hil": {
+     "media": 0.6881,
+     "min": 0.6737,
+     "max": 0.7054,
+     "por_semilla": [
+      0.6904,
+      0.6737,
+      0.6905,
+      0.6807,
+      0.7054
+     ]
+    },
+    "hil_prop->real_motor": {
+     "media": 0.7891,
+     "min": 0.7803,
+     "max": 0.8,
+     "por_semilla": [
+      0.7882,
+      0.7866,
+      0.7803,
+      0.8,
+      0.7904
+     ]
+    },
+    "hil_sensors->real_sensors": {
+     "media": 0.6733,
+     "min": 0.6618,
+     "max": 0.6894,
+     "por_semilla": [
+      0.6894,
+      0.6659,
+      0.6835,
+      0.6618,
+      0.6662
+     ]
+    },
+    "hil_motor->real_motor": {
+     "media": 0.8056,
+     "min": 0.7962,
+     "max": 0.8141,
+     "por_semilla": [
+      0.8141,
+      0.8053,
+      0.7962,
+      0.8048,
+      0.8079
+     ]
+    }
+   },
+   "caida_h3": {
+    "uav_sead->real": {
+     "media": 0.3035,
+     "min": 0.2995,
+     "max": 0.3098,
+     "por_semilla": [
+      0.2995,
+      0.3021,
+      0.3024,
+      0.3098,
+      0.3037
+     ]
+    },
+    "real->uav_sead": {
+     "media": 0.309,
+     "min": 0.299,
+     "max": 0.3228,
+     "por_semilla": [
+      0.299,
+      0.3056,
+      0.3121,
+      0.3053,
+      0.3228
+     ]
+    },
+    "uav_sead->hil": {
+     "media": 0.5963,
+     "min": 0.5424,
+     "max": 0.6147,
+     "por_semilla": [
+      0.5424,
+      0.6021,
+      0.6147,
+      0.6097,
+      0.6127
+     ]
+    },
+    "hil->real": {
+     "media": 0.2378,
+     "min": 0.2252,
+     "max": 0.2513,
+     "por_semilla": [
+      0.2408,
+      0.2283,
+      0.2434,
+      0.2252,
+      0.2513
+     ]
+    },
+    "real->hil": {
+     "media": 0.3052,
+     "min": 0.2963,
+     "max": 0.3158,
+     "por_semilla": [
+      0.3093,
+      0.2963,
+      0.3158,
+      0.3077,
+      0.2968
+     ]
+    },
+    "hil_prop->real_motor": {
+     "media": 0.2316,
+     "min": 0.2237,
+     "max": 0.2399,
+     "por_semilla": [
+      0.2399,
+      0.238,
+      0.2237,
+      0.2289,
+      0.2275
+     ]
+    },
+    "hil_sensors->real_sensors": {
+     "media": 0.218,
+     "min": 0.2077,
+     "max": 0.2381,
+     "por_semilla": [
+      0.2128,
+      0.2104,
+      0.2077,
+      0.221,
+      0.2381
+     ]
+    },
+    "hil_motor->real_motor": {
+     "media": 0.2473,
+     "min": 0.2384,
+     "max": 0.2556,
+     "por_semilla": [
+      0.2486,
+      0.2416,
+      0.2522,
+      0.2384,
+      0.2556
+     ]
+    }
+   },
+   "sube_h4_invariante": {
+    "uav_sead->real": {
+     "media": 0.0356,
+     "min": 0.0295,
+     "max": 0.0455,
+     "por_semilla": [
+      0.0353,
+      0.0455,
+      0.0313,
+      0.0363,
+      0.0295
+     ]
+    },
+    "real->uav_sead": {
+     "media": 0.084,
+     "min": 0.0749,
+     "max": 0.1013,
+     "por_semilla": [
+      0.0784,
+      0.0807,
+      0.0847,
+      0.0749,
+      0.1013
+     ]
+    },
+    "uav_sead->hil": {
+     "media": -0.0012,
+     "min": -0.0709,
+     "max": 0.0188,
+     "por_semilla": [
+      -0.0709,
+      0.0151,
+      0.0168,
+      0.0188,
+      0.014
+     ]
+    },
+    "hil->real": {
+     "media": 0.1052,
+     "min": 0.0946,
+     "max": 0.1196,
+     "por_semilla": [
+      0.1086,
+      0.0971,
+      0.1059,
+      0.0946,
+      0.1196
+     ]
+    },
+    "real->hil": {
+     "media": -0.0009,
+     "min": -0.0242,
+     "max": 0.012,
+     "por_semilla": [
+      0.0055,
+      -0.0242,
+      0.012,
+      -0.0058,
+      0.008
+     ]
+    },
+    "hil_prop->real_motor": {
+     "media": 0.127,
+     "min": 0.1104,
+     "max": 0.1351,
+     "por_semilla": [
+      0.1337,
+      0.1316,
+      0.1104,
+      0.1351,
+      0.1241
+     ]
+    },
+    "hil_sensors->real_sensors": {
+     "media": 0.0186,
+     "min": 0.0033,
+     "max": 0.0325,
+     "por_semilla": [
+      0.029,
+      0.0033,
+      0.0182,
+      0.0101,
+      0.0325
+     ]
+    },
+    "hil_motor->real_motor": {
+     "media": 0.1592,
+     "min": 0.1493,
+     "max": 0.1698,
+     "por_semilla": [
+      0.1684,
+      0.1539,
+      0.1547,
+      0.1493,
+      0.1698
+     ]
+    }
+   },
+   "baja_dominio_h4_invariante": {
+    "uav_sead->real": {
+     "media": -0.0002,
+     "min": -0.0005,
+     "max": 0.0001,
+     "por_semilla": [
+      -0.0003,
+      -0.0002,
+      -0.0005,
+      0.0001,
+      -0.0
+     ]
+    },
+    "real->uav_sead": {
+     "media": -0.0002,
+     "min": -0.0005,
+     "max": 0.0001,
+     "por_semilla": [
+      -0.0003,
+      -0.0002,
+      -0.0005,
+      0.0001,
+      -0.0
+     ]
+    },
+    "uav_sead->hil": {
+     "media": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "por_semilla": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "hil->real": {
+     "media": 0.0004,
+     "min": 0.0003,
+     "max": 0.0005,
+     "por_semilla": [
+      0.0005,
+      0.0004,
+      0.0003,
+      0.0004,
+      0.0004
+     ]
+    },
+    "real->hil": {
+     "media": 0.0004,
+     "min": 0.0003,
+     "max": 0.0005,
+     "por_semilla": [
+      0.0005,
+      0.0004,
+      0.0003,
+      0.0004,
+      0.0004
+     ]
+    },
+    "hil_prop->real_motor": {
+     "media": 0.0004,
+     "min": 0.0003,
+     "max": 0.0005,
+     "por_semilla": [
+      0.0005,
+      0.0004,
+      0.0003,
+      0.0004,
+      0.0004
+     ]
+    },
+    "hil_sensors->real_sensors": {
+     "media": 0.0004,
+     "min": 0.0003,
+     "max": 0.0005,
+     "por_semilla": [
+      0.0005,
+      0.0004,
+      0.0003,
+      0.0004,
+      0.0004
+     ]
+    },
+    "hil_motor->real_motor": {
+     "media": 0.0004,
+     "min": 0.0003,
+     "max": 0.0005,
+     "por_semilla": [
+      0.0005,
+      0.0004,
+      0.0003,
+      0.0004,
+      0.0004
+     ]
+    }
+   },
+   "interno_rf_base": {
+    "hil": {
+     "media": 0.9942,
+     "min": 0.9942,
+     "max": 0.9942,
+     "por_semilla": [
+      0.9942,
+      0.9942,
+      0.9942,
+      0.9942,
+      0.9942
+     ]
+    },
+    "real": {
+     "media": 0.8701,
+     "min": 0.8699,
+     "max": 0.8703,
+     "por_semilla": [
+      0.8703,
+      0.8699,
+      0.87,
+      0.8701,
+      0.8701
+     ]
+    },
+    "real_motor": {
+     "media": 0.8937,
+     "min": 0.893,
+     "max": 0.8943,
+     "por_semilla": [
+      0.8943,
+      0.893,
+      0.8936,
+      0.8938,
+      0.8937
+     ]
+    },
+    "real_sensors": {
+     "media": 0.8727,
+     "min": 0.8717,
+     "max": 0.8732,
+     "por_semilla": [
+      0.8732,
+      0.873,
+      0.8731,
+      0.8726,
+      0.8717
+     ]
+    },
+    "uav_sead": {
+     "media": 0.8701,
+     "min": 0.8694,
+     "max": 0.8705,
+     "por_semilla": [
+      0.8694,
+      0.8703,
+      0.8703,
+      0.8705,
+      0.87
+     ]
+    }
+   },
+   "dominio": {
+    "uav_sead_vs_real|base": {
+     "media": 0.9978,
+     "min": 0.9976,
+     "max": 0.9979,
+     "por_semilla": [
+      0.9979,
+      0.9978,
+      0.9976,
+      0.9979,
+      0.9978
+     ]
+    },
+    "uav_sead_vs_real|invariante": {
+     "media": 0.998,
+     "min": 0.9978,
+     "max": 0.9982,
+     "por_semilla": [
+      0.9982,
+      0.998,
+      0.9981,
+      0.9978,
+      0.9979
+     ]
+    },
+    "uav_sead_vs_hil|base": {
+     "media": 1.0,
+     "min": 1.0,
+     "max": 1.0,
+     "por_semilla": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    "uav_sead_vs_hil|invariante": {
+     "media": 1.0,
+     "min": 1.0,
+     "max": 1.0,
+     "por_semilla": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    "hil_vs_real|base": {
+     "media": 0.9999,
+     "min": 0.9998,
+     "max": 0.9999,
+     "por_semilla": [
+      0.9999,
+      0.9999,
+      0.9998,
+      0.9999,
+      0.9999
+     ]
+    },
+    "hil_vs_real|invariante": {
+     "media": 0.9995,
+     "min": 0.9994,
+     "max": 0.9995,
+     "por_semilla": [
+      0.9994,
+      0.9995,
+      0.9995,
+      0.9995,
+      0.9995
+     ]
+    }
+   }
+  },
+  "veredictos_por_semilla": [
+   {
+    "semilla_modelo": 20261103,
+    "h3_pares_que_cumplen": 7,
+    "h3_veredicto": "se cumple",
+    "h4_pares_que_cumplen": 0,
+    "h4_veredicto": "no se cumple",
+    "h3_pares_que_no_cumplen": "",
+    "h4_pares_que_cumplen_lista": ""
+   },
+   {
+    "semilla_modelo": 1,
+    "h3_pares_que_cumplen": 7,
+    "h3_veredicto": "se cumple",
+    "h4_pares_que_cumplen": 0,
+    "h4_veredicto": "no se cumple",
+    "h3_pares_que_no_cumplen": "",
+    "h4_pares_que_cumplen_lista": ""
+   },
+   {
+    "semilla_modelo": 2,
+    "h3_pares_que_cumplen": 7,
+    "h3_veredicto": "se cumple",
+    "h4_pares_que_cumplen": 0,
+    "h4_veredicto": "no se cumple",
+    "h3_pares_que_no_cumplen": "",
+    "h4_pares_que_cumplen_lista": ""
+   },
+   {
+    "semilla_modelo": 3,
+    "h3_pares_que_cumplen": 7,
+    "h3_veredicto": "se cumple",
+    "h4_pares_que_cumplen": 0,
+    "h4_veredicto": "no se cumple",
+    "h3_pares_que_no_cumplen": "",
+    "h4_pares_que_cumplen_lista": ""
+   },
+   {
+    "semilla_modelo": 4,
+    "h3_pares_que_cumplen": 7,
+    "h3_veredicto": "se cumple",
+    "h4_pares_que_cumplen": 0,
+    "h4_veredicto": "no se cumple",
+    "h3_pares_que_no_cumplen": "",
+    "h4_pares_que_cumplen_lista": ""
+   }
+  ],
+  "algun_veredicto_cambia": false,
+  "control_semilla_confirmatorio_frente_a_e2": {
+   "max_dif_transferencia": 0.0,
+   "max_dif_interno": 0.0,
+   "max_dif_dominio": 0.0
+  },
+  "nota": "solo cambia random_state del RF; particiones, umbrales y submuestreo del dominio fijos; estimación puntual"
+ },
+ "m2_referencia_sin_atajo": {
+  "diseño": {
+   "estratificado": "AUROC dentro de cada decil de posición relativa t_rel = inicio de ventana / duración del log, combinado con pesos P_k·N_k: probabilidad de que una ventana con fallo puntúe más que una nominal en la misma posición",
+   "solo_no_fault": "positivas = ventanas con fallo; negativas = solo ventanas de vuelos No Fault (se quitan las previas a la inyección), dentro del mismo decil",
+   "control_negativo": "ventanas previas a la inyección de vuelos con fallo (como 1) frente a ventanas de vuelos No Fault (0), dentro del mismo decil; ninguna tiene fallo, así que lo esperado sin fuga de vuelo es 0,5",
+   "puntuaciones": "las mismas OOF del P-grupo interno de E2 (5 asignaciones) y las mismas de transferencia; solo cambia la evaluación",
+   "bootstrap": "réplicas de grupos de 13 para el mismo destino (pareadas con E2)"
+  },
+  "por_destino": {
+   "real": {
+    "ventanas": 13380,
+    "ventanas_con_fallo": 7324,
+    "ventanas_previas_inyeccion": 4254,
+    "ventanas_no_fault": 1677,
+    "vuelos_no_fault": 51,
+    "vuelos_con_fallo": 437,
+    "ventanas_excluidas_de_m2b_y_control": 125,
+    "estratos_validos": {
+     "global": 1,
+     "estratificado": 9,
+     "solo_no_fault": 9,
+     "control_negativo": 8
+    },
+    "interno": {
+     "rf": {
+      "global": {
+       "auroc": 0.8703,
+       "ic95": [
+        0.8565,
+        0.8846
+       ]
+      },
+      "estratificado": {
+       "auroc": 0.8719,
+       "ic95": [
+        0.8498,
+        0.8913
+       ]
+      },
+      "solo_no_fault": {
+       "auroc": 0.9102,
+       "ic95": [
+        0.8827,
+        0.9353
+       ]
+      },
+      "control_negativo": {
+       "auroc": 0.7149,
+       "ic95": [
+        0.6636,
+        0.7681
+       ]
+      }
+     },
+     "atajos": {
+      "global": {
+       "auroc": 0.9713,
+       "ic95": [
+        0.959,
+        0.9818
+       ]
+      },
+      "estratificado": {
+       "auroc": 0.9256,
+       "ic95": [
+        0.8927,
+        0.9538
+       ]
+      },
+      "solo_no_fault": {
+       "auroc": 0.9463,
+       "ic95": [
+        0.9213,
+        0.9667
+       ]
+      },
+      "control_negativo": {
+       "auroc": 0.3016,
+       "ic95": [
+        0.2425,
+        0.3576
+       ]
+      }
+     }
+    },
+    "transferencia": {
+     "uav_sead->real": {
+      "rf": {
+       "global": {
+        "auroc": 0.5708,
+        "ic95": [
+         0.5474,
+         0.5951
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.5075,
+        "ic95": [
+         0.4671,
+         0.5487
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.6433,
+        "ic95": [
+         0.5958,
+         0.6914
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.681,
+        "ic95": [
+         0.6365,
+         0.731
+        ]
+       }
+      },
+      "atajos": {
+       "global": {
+        "auroc": 0.6529,
+        "ic95": [
+         0.628,
+         0.6769
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.5057,
+        "ic95": [
+         0.4629,
+         0.5458
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.5046,
+        "ic95": [
+         0.4279,
+         0.5746
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.5222,
+        "ic95": [
+         0.4495,
+         0.5995
+        ]
+       }
+      }
+     },
+     "hil->real": {
+      "rf": {
+       "global": {
+        "auroc": 0.6295,
+        "ic95": [
+         0.6067,
+         0.6546
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.6163,
+        "ic95": [
+         0.5781,
+         0.6548
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.7652,
+        "ic95": [
+         0.7129,
+         0.8121
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.748,
+        "ic95": [
+         0.6862,
+         0.8045
+        ]
+       }
+      },
+      "atajos": {
+       "global": {
+        "auroc": 0.871,
+        "ic95": [
+         0.8393,
+         0.9027
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.6932,
+        "ic95": [
+         0.646,
+         0.7409
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.6167,
+        "ic95": [
+         0.5528,
+         0.6932
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.4159,
+        "ic95": [
+         0.3128,
+         0.5285
+        ]
+       }
+      }
+     }
+    },
+    "control_global_frente_a_e2": {
+     "interno_rf": 0.0,
+     "interno_solo_posicion": 0.0
+    }
+   },
+   "real_motor": {
+    "ventanas": 8685,
+    "ventanas_con_fallo": 4347,
+    "ventanas_previas_inyeccion": 2536,
+    "ventanas_no_fault": 1677,
+    "vuelos_no_fault": 51,
+    "vuelos_con_fallo": 240,
+    "ventanas_excluidas_de_m2b_y_control": 125,
+    "estratos_validos": {
+     "global": 1,
+     "estratificado": 9,
+     "solo_no_fault": 9,
+     "control_negativo": 8
+    },
+    "interno": {
+     "rf": {
+      "global": {
+       "auroc": 0.8943,
+       "ic95": [
+        0.8764,
+        0.9116
+       ]
+      },
+      "estratificado": {
+       "auroc": 0.9038,
+       "ic95": [
+        0.8809,
+        0.924
+       ]
+      },
+      "solo_no_fault": {
+       "auroc": 0.9525,
+       "ic95": [
+        0.9391,
+        0.9649
+       ]
+      },
+      "control_negativo": {
+       "auroc": 0.8071,
+       "ic95": [
+        0.77,
+        0.8448
+       ]
+      }
+     },
+     "atajos": {
+      "global": {
+       "auroc": 0.9786,
+       "ic95": [
+        0.9658,
+        0.9882
+       ]
+      },
+      "estratificado": {
+       "auroc": 0.9548,
+       "ic95": [
+        0.9285,
+        0.9743
+       ]
+      },
+      "solo_no_fault": {
+       "auroc": 0.9603,
+       "ic95": [
+        0.9349,
+        0.9789
+       ]
+      },
+      "control_negativo": {
+       "auroc": 0.3256,
+       "ic95": [
+        0.258,
+        0.3842
+       ]
+      }
+     }
+    },
+    "transferencia": {
+     "hil_prop->real_motor": {
+      "rf": {
+       "global": {
+        "auroc": 0.6544,
+        "ic95": [
+         0.6249,
+         0.6875
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.6124,
+        "ic95": [
+         0.5623,
+         0.6609
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.7151,
+        "ic95": [
+         0.6547,
+         0.7691
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.7471,
+        "ic95": [
+         0.6818,
+         0.8103
+        ]
+       }
+      },
+      "atajos": {
+       "global": {
+        "auroc": 0.8089,
+        "ic95": [
+         0.7698,
+         0.8475
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.5691,
+        "ic95": [
+         0.5157,
+         0.6209
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.6049,
+        "ic95": [
+         0.5389,
+         0.6795
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.4924,
+        "ic95": [
+         0.4118,
+         0.5808
+        ]
+       }
+      }
+     },
+     "hil_motor->real_motor": {
+      "rf": {
+       "global": {
+        "auroc": 0.6457,
+        "ic95": [
+         0.6137,
+         0.681
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.631,
+        "ic95": [
+         0.5855,
+         0.6794
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.7072,
+        "ic95": [
+         0.653,
+         0.7608
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.7095,
+        "ic95": [
+         0.641,
+         0.7734
+        ]
+       }
+      },
+      "atajos": {
+       "global": {
+        "auroc": 0.8419,
+        "ic95": [
+         0.8062,
+         0.88
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.6648,
+        "ic95": [
+         0.6164,
+         0.716
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.6251,
+        "ic95": [
+         0.5665,
+         0.6959
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.4783,
+        "ic95": [
+         0.4105,
+         0.5476
+        ]
+       }
+      }
+     }
+    },
+    "control_global_frente_a_e2": {
+     "interno_rf": 0.0,
+     "interno_solo_posicion": 0.0
+    }
+   },
+   "real_sensors": {
+    "ventanas": 6372,
+    "ventanas_con_fallo": 2977,
+    "ventanas_previas_inyeccion": 1718,
+    "ventanas_no_fault": 1677,
+    "vuelos_no_fault": 51,
+    "vuelos_con_fallo": 197,
+    "ventanas_excluidas_de_m2b_y_control": 0,
+    "estratos_validos": {
+     "global": 1,
+     "estratificado": 9,
+     "solo_no_fault": 9,
+     "control_negativo": 8
+    },
+    "interno": {
+     "rf": {
+      "global": {
+       "auroc": 0.8732,
+       "ic95": [
+        0.8504,
+        0.8953
+       ]
+      },
+      "estratificado": {
+       "auroc": 0.8829,
+       "ic95": [
+        0.8476,
+        0.9144
+       ]
+      },
+      "solo_no_fault": {
+       "auroc": 0.915,
+       "ic95": [
+        0.8699,
+        0.9517
+       ]
+      },
+      "control_negativo": {
+       "auroc": 0.7482,
+       "ic95": [
+        0.682,
+        0.8032
+       ]
+      }
+     },
+     "atajos": {
+      "global": {
+       "auroc": 0.9563,
+       "ic95": [
+        0.9314,
+        0.9764
+       ]
+      },
+      "estratificado": {
+       "auroc": 0.9145,
+       "ic95": [
+        0.8621,
+        0.955
+       ]
+      },
+      "solo_no_fault": {
+       "auroc": 0.9283,
+       "ic95": [
+        0.893,
+        0.957
+       ]
+      },
+      "control_negativo": {
+       "auroc": 0.343,
+       "ic95": [
+        0.2596,
+        0.4182
+       ]
+      }
+     }
+    },
+    "transferencia": {
+     "hil_sensors->real_sensors": {
+      "rf": {
+       "global": {
+        "auroc": 0.6604,
+        "ic95": [
+         0.6204,
+         0.6968
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.6408,
+        "ic95": [
+         0.5852,
+         0.6921
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.7015,
+        "ic95": [
+         0.6353,
+         0.7645
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.6963,
+        "ic95": [
+         0.6315,
+         0.7535
+        ]
+       }
+      },
+      "atajos": {
+       "global": {
+        "auroc": 0.7635,
+        "ic95": [
+         0.7068,
+         0.8203
+        ]
+       },
+       "estratificado": {
+        "auroc": 0.6032,
+        "ic95": [
+         0.542,
+         0.6667
+        ]
+       },
+       "solo_no_fault": {
+        "auroc": 0.5151,
+        "ic95": [
+         0.451,
+         0.5917
+        ]
+       },
+       "control_negativo": {
+        "auroc": 0.3733,
+        "ic95": [
+         0.3249,
+         0.4161
+        ]
+       }
+      }
+     }
+    },
+    "control_global_frente_a_e2": {
+     "interno_rf": 0.0,
+     "interno_solo_posicion": 0.0
+    }
+   }
+  },
+  "caida_h3": {
+   "uav_sead->real": {
+    "global": {
+     "punto": 0.2995,
+     "ic95": [
+      0.2771,
+      0.3227
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "estratificado": {
+     "punto": 0.3644,
+     "ic95": [
+      0.3262,
+      0.4032
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "solo_no_fault": {
+     "punto": 0.2669,
+     "ic95": [
+      0.2247,
+      0.3109
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    }
+   },
+   "hil->real": {
+    "global": {
+     "punto": 0.2408,
+     "ic95": [
+      0.2191,
+      0.2619
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "estratificado": {
+     "punto": 0.2556,
+     "ic95": [
+      0.2218,
+      0.2906
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "solo_no_fault": {
+     "punto": 0.145,
+     "ic95": [
+      0.1105,
+      0.1838
+     ],
+     "cumple_0_2": false,
+     "cumple_0_2_con_ic": false
+    }
+   },
+   "hil_prop->real_motor": {
+    "global": {
+     "punto": 0.2399,
+     "ic95": [
+      0.2121,
+      0.2671
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "estratificado": {
+     "punto": 0.2914,
+     "ic95": [
+      0.2484,
+      0.3378
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "solo_no_fault": {
+     "punto": 0.2374,
+     "ic95": [
+      0.1898,
+      0.2907
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": false
+    }
+   },
+   "hil_motor->real_motor": {
+    "global": {
+     "punto": 0.2486,
+     "ic95": [
+      0.2218,
+      0.275
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "estratificado": {
+     "punto": 0.2728,
+     "ic95": [
+      0.2334,
+      0.3123
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "solo_no_fault": {
+     "punto": 0.2453,
+     "ic95": [
+      0.199,
+      0.2946
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": false
+    }
+   },
+   "hil_sensors->real_sensors": {
+    "global": {
+     "punto": 0.2128,
+     "ic95": [
+      0.1814,
+      0.2473
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": false
+    },
+    "estratificado": {
+     "punto": 0.2421,
+     "ic95": [
+      0.2003,
+      0.287
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": true
+    },
+    "solo_no_fault": {
+     "punto": 0.2136,
+     "ic95": [
+      0.1642,
+      0.2678
+     ],
+     "cumple_0_2": true,
+     "cumple_0_2_con_ic": false
+    }
+   }
+  },
+  "sensibilidad_n_estratos": {
+   "real": {
+    "5": {
+     "interno_rf": 0.8663,
+     "interno_solo_posicion": 0.9394,
+     "transferencia_rf|uav_sead": 0.5103,
+     "transferencia_rf|hil": 0.6173
+    },
+    "20": {
+     "interno_rf": 0.8741,
+     "interno_solo_posicion": 0.9196,
+     "transferencia_rf|uav_sead": 0.5059,
+     "transferencia_rf|hil": 0.6209
+    }
+   },
+   "real_motor": {
+    "5": {
+     "interno_rf": 0.9009,
+     "interno_solo_posicion": 0.9595,
+     "transferencia_rf|hil_prop": 0.6226,
+     "transferencia_rf|hil_motor": 0.6402
+    },
+    "20": {
+     "interno_rf": 0.9068,
+     "interno_solo_posicion": 0.9521,
+     "transferencia_rf|hil_prop": 0.6122,
+     "transferencia_rf|hil_motor": 0.6322
+    }
+   },
+   "real_sensors": {
+    "5": {
+     "interno_rf": 0.8753,
+     "interno_solo_posicion": 0.9304,
+     "transferencia_rf|hil_sensors": 0.6458
+    },
+    "20": {
+     "interno_rf": 0.8855,
+     "interno_solo_posicion": 0.9089,
+     "transferencia_rf|hil_sensors": 0.642
+    }
+   }
+  }
+ }
+}

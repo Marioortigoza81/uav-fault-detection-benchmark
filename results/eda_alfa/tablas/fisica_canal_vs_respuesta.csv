@@ -1,0 +1,14 @@
+secuencia,tipo,canal,respuesta,corr_pre,lag_pre,n_pre,std_canal_pre,corr_post,lag_post,n_post,std_canal_post,codigo_aleron,std_c4_post,std_c5_post
+carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure,aleron,rcout_c4,gyro_x,0.922396,1,89,28.2322,,0,44,0,2,0,50.5024
+carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure,aleron,rcout_c4,gyro_x,0.868553,1,90,29.5741,,0,45,0,2,0,90.5049
+carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure,aleron,rcout_c4,gyro_x,0.896073,1,88,26.126,,0,46,0,3,0,0
+carbonZ_2018-09-11-17-55-30_1_right_aileron_failure,aleron,rcout_c4,gyro_x,0.916781,1,90,26.9511,0.87156,1,45,28.0116,1,28.0116,0
+carbonZ_2018-09-11-17-55-30_2_left_aileron_failure,aleron,rcout_c4,gyro_x,0.876638,1,87,26.071,,0,45,0,2,0,40.4303
+carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj,aleron,rcout_c4,gyro_x,0.692745,1,89,28.6687,0.643181,1,31,38.2002,1,38.2002,0
+carbonZ_2018-10-05-14-37-22_2_right_aileron_failure,aleron,rcout_c4,gyro_x,0.847596,1,88,26.6878,0.934157,1,44,85.2777,1,85.2777,0
+carbonZ_2018-10-05-14-37-22_3_left_aileron_failure,aleron,rcout_c4,gyro_x,0.844612,1,90,27.033,,0,46,0,2,0,67.8652
+carbonZ_2018-09-11-14-41-51_elevator_failure,elevador,rcout_c1,gyro_y,0.974747,1,91,21.5046,,0,32,0,,,
+carbonZ_2018-09-11-15-05-11_1_elevator_failure,elevador,rcout_c1,gyro_y,0.953122,1,90,29.3496,,0,40,0,,,
+carbonZ_2018-09-11-15-06-34_1_rudder_right_failure,timon,rcout_c3,gyro_z,-0.353906,3,89,14.1184,,0,44,0,,,
+carbonZ_2018-09-11-15-06-34_2_rudder_right_failure,timon,rcout_c3,gyro_z,-0.330656,3,91,12.9881,,0,46,0,,,
+carbonZ_2018-09-11-15-06-34_3_rudder_left_failure,timon,rcout_c3,gyro_z,-0.153606,3,90,3.08401,,0,28,0,,,

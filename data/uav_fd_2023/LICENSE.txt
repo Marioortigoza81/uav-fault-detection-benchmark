@@ -1,0 +1,4 @@
+This dataset is redistributed unchanged under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0): https://creativecommons.org/licenses/by/4.0/legalcode
+Original record: https://doi.org/10.5281/zenodo.7648996
+Authors: Baldini Alessandro; D'Alleva Lorenzo; Felicetti Riccardo; Ferracuti Francesco; Freddi Alessandro; Monteriù Andrea

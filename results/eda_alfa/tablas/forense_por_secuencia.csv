@@ -1,0 +1,15 @@
+secuencia,fuente,filas,tipos,n_huellas,frase,pasos_distintos,H01,H02,H03,H04,H05,H06,H07,H08,H09,H10,detalle
+carbonZ_2018-07-18-15-53-31_1_engine_failure,nav_info_roll,2531,"H02,H09",2,alguna huella aislada: revisar cada una antes de concluir,2530,0,1,0,0,0,0,0,0,1,0,H02:field.measured
+carbonZ_2018-07-18-15-53-31_1_engine_failure,imu_data_raw,1324,H09,1,alguna huella aislada: revisar cada una antes de concluir,1323,0,0,0,0,0,0,0,0,1,0,
+carbonZ_2018-07-18-15-53-31_2_engine_failure,nav_info_roll,1698,"H02,H09",3,alguna huella aislada: revisar cada una antes de concluir,1697,0,2,0,0,0,0,0,0,1,0,H02:field.commanded; H02:field.measured
+carbonZ_2018-07-18-15-53-31_2_engine_failure,imu_data_raw,889,H09,1,alguna huella aislada: revisar cada una antes de concluir,888,0,0,0,0,0,0,0,0,1,0,
+carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure,nav_info_roll,4441,H09,1,alguna huella aislada: revisar cada una antes de concluir,4437,0,0,0,0,0,0,0,0,1,0,
+carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure,imu_data_raw,2334,"H08,H09",2,alguna huella aislada: revisar cada una antes de concluir,2333,0,0,0,0,0,0,0,1,1,0,H08:post
+carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure,nav_info_roll,2821,"H08,H09",2,alguna huella aislada: revisar cada una antes de concluir,2819,0,0,0,0,0,0,0,1,1,0,H08:post
+carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure,imu_data_raw,1435,"H08,H09",2,alguna huella aislada: revisar cada una antes de concluir,1433,0,0,0,0,0,0,0,1,1,0,H08:post
+carbonZ_2018-09-11-15-06-34_1_rudder_right_failure,nav_info_roll,1367,"H02,H08,H09",4,alguna huella aislada: revisar cada una antes de concluir,1365,0,2,0,0,0,0,0,1,1,0,H02:field.measured; H02:field.measured; H08:post
+carbonZ_2018-09-11-15-06-34_1_rudder_right_failure,imu_data_raw,703,"H08,H09",2,alguna huella aislada: revisar cada una antes de concluir,702,0,0,0,0,0,0,0,1,1,0,H08:post
+carbonZ_2018-09-11-14-41-51_elevator_failure,nav_info_roll,2506,"H02,H09",4,alguna huella aislada: revisar cada una antes de concluir,2503,0,3,0,0,0,0,0,0,1,0,H02:field.commanded; H02:field.measured; H02:field.measured
+carbonZ_2018-09-11-14-41-51_elevator_failure,imu_data_raw,1285,"H08,H09",2,alguna huella aislada: revisar cada una antes de concluir,1284,0,0,0,0,0,0,0,1,1,0,H08:post
+carbonZ_2018-07-18-16-37-39_1_no_failure,nav_info_roll,590,H02,2,alguna huella aislada: revisar cada una antes de concluir,589,0,2,0,0,0,0,0,0,0,0,H02:field.commanded; H02:field.commanded
+carbonZ_2018-07-18-16-37-39_1_no_failure,imu_data_raw,304,H02,12,alguna huella aislada: revisar cada una antes de concluir,303,0,12,0,0,0,0,0,0,0,0,H02:field.angular_velocity.x; H02:field.angular_velocity.x; H02:field.angular_velocity.y; H02:field.angular_velocity.y; H02:field.angular_velocity.z; H02:field.angular_velocity.z; H02:field.linear_acceleration.x; H02:field.linear_acceleration.x; H02:field.linear_acceleration.y; H02:field.linear_acceleration.y; H02:field.linear_acceleration.z; H02:field.linear_acceleration.z

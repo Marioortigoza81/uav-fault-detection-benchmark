@@ -1,0 +1,49 @@
+variante,experimento,tipo,modelo,auroc,auprc,bacc,entrenamiento,prueba,umbral,vuelos_prueba,ventanas_prueba,prevalencia_prueba,auroc_ic_lo,auroc_ic_hi,auprc_ic_lo,auprc_ic_hi,bacc_ic_lo,bacc_ic_hi
+crudo,uav_sead->uav_sead,dentro,iforest,0.7161,0.1417,0.6075,uav_sead,uav_sead,p95 normales de cada pliegue,1165,57903,0.0430,0.6538,0.7833,0.1047,0.1852,0.5759,0.6414
+crudo,uav_sead->uav_sead,dentro,rf,0.8785,0.2772,0.5783,uav_sead,uav_sead,0.5,1165,57903,0.0430,0.8529,0.9010,0.2027,0.3438,0.5547,0.6012
+crudo,real->real,dentro,iforest,0.5857,0.6509,0.5499,real,real,p95 normales de cada pliegue,440,13380,0.5474,0.5626,0.6100,0.6198,0.6844,0.5364,0.5641
+crudo,real->real,dentro,rf,0.8863,0.9015,0.7899,real,real,0.5,440,13380,0.5474,0.8743,0.8996,0.8872,0.9146,0.7758,0.8061
+crudo,hil->hil,dentro,iforest,0.6033,0.7900,0.5716,hil,hil,p95 normales de cada pliegue,1445,42531,0.6956,0.5882,0.6184,0.7765,0.8024,0.5622,0.5806
+crudo,hil->hil,dentro,rf,0.9962,0.9975,0.9694,hil,hil,0.5,1445,42531,0.6956,0.9936,0.9978,0.9945,0.9990,0.9644,0.9742
+crudo,uav_sead->real,entre,iforest,0.5824,0.6420,0.5364,uav_sead,real,0.5440,440,13380,0.5474,0.5614,0.6061,0.6161,0.6702,0.5197,0.5545
+crudo,uav_sead->real,entre,rf,0.5656,0.6114,0.5133,uav_sead,real,0.5,440,13380,0.5474,0.5406,0.5892,0.5855,0.6366,0.5090,0.5172
+crudo,real->uav_sead,entre,iforest,0.6001,0.0963,0.5122,real,uav_sead,0.5211,1165,57903,0.0430,0.5526,0.6442,0.0697,0.1312,0.5056,0.5212
+crudo,real->uav_sead,entre,rf,0.5509,0.0579,0.5333,real,uav_sead,0.5,1165,57903,0.0430,0.4811,0.6194,0.0447,0.0747,0.5178,0.5501
+crudo,uav_sead->hil,entre,iforest,0.4856,0.7236,0.5086,uav_sead,hil,0.5440,1445,42531,0.6956,0.4671,0.5028,0.7102,0.7370,0.4968,0.5191
+crudo,uav_sead->hil,entre,rf,0.4593,0.6908,0.5089,uav_sead,hil,0.5,1445,42531,0.6956,0.4438,0.4765,0.6763,0.7035,0.5074,0.5102
+crudo,hil->real,hil_real,iforest,0.6237,0.6715,0.5832,hil,real,0.5652,440,13380,0.5474,0.6012,0.6472,0.6408,0.6974,0.5671,0.6011
+crudo,hil->real,hil_real,rf,0.6417,0.6487,0.5000,hil,real,0.5,440,13380,0.5474,0.6153,0.6683,0.6309,0.6677,0.5000,0.5000
+crudo,real->hil,hil_real,iforest,0.5971,0.7642,0.5356,real,hil,0.5211,1445,42531,0.6956,0.5804,0.6146,0.7495,0.7768,0.5266,0.5450
+crudo,real->hil,hil_real,rf,0.7206,0.8582,0.6323,real,hil,0.5,1445,42531,0.6956,0.7067,0.7371,0.8478,0.8694,0.6208,0.6434
+crudo,hil_prop->hil_prop,dentro,iforest,0.4724,0.5678,0.5259,hil_prop,hil_prop,p95 normales de cada pliegue,675,17550,0.5533,0.4503,0.4910,0.5396,0.5938,0.5186,0.5319
+crudo,hil_prop->hil_prop,dentro,rf,0.9986,0.9988,0.9859,hil_prop,hil_prop,0.5,675,17550,0.5533,0.9975,0.9993,0.9977,0.9995,0.9810,0.9900
+crudo,real_motor->real_motor,dentro,iforest,0.6425,0.6545,0.5686,real_motor,real_motor,p95 normales de cada pliegue,268,8685,0.5005,0.6079,0.6741,0.6120,0.6954,0.5478,0.5908
+crudo,real_motor->real_motor,dentro,rf,0.9114,0.9125,0.8237,real_motor,real_motor,0.5,268,8685,0.5005,0.8946,0.9265,0.8940,0.9288,0.8015,0.8427
+crudo,hil_prop->real_motor,hil_real,iforest,0.6667,0.6702,0.6142,hil_prop,real_motor,0.5751,268,8685,0.5005,0.6363,0.6965,0.6298,0.7092,0.5897,0.6390
+crudo,hil_prop->real_motor,hil_real,rf,0.6538,0.6449,0.5921,hil_prop,real_motor,0.5,268,8685,0.5005,0.6223,0.6896,0.6033,0.6849,0.5676,0.6188
+crudo,real_motor->hil_prop,hil_real,iforest,0.5444,0.5662,0.4887,real_motor,hil_prop,0.5182,675,17550,0.5533,0.5204,0.5692,0.5370,0.5926,0.4840,0.4935
+crudo,real_motor->hil_prop,hil_real,rf,0.6449,0.6712,0.5236,real_motor,hil_prop,0.5,675,17550,0.5533,0.6256,0.6659,0.6458,0.6979,0.5193,0.5276
+norm_vuelo,uav_sead->uav_sead,dentro,iforest,0.6975,0.1228,0.5780,uav_sead,uav_sead,p95 normales de cada pliegue,1165,57903,0.0430,0.6398,0.7598,0.0969,0.1583,0.5537,0.6073
+norm_vuelo,uav_sead->uav_sead,dentro,rf,0.8492,0.2126,0.5261,uav_sead,uav_sead,0.5,1165,57903,0.0430,0.8227,0.8750,0.1693,0.2611,0.5188,0.5361
+norm_vuelo,real->real,dentro,iforest,0.5703,0.6138,0.5174,real,real,p95 normales de cada pliegue,440,13380,0.5474,0.5455,0.5945,0.5745,0.6545,0.5054,0.5307
+norm_vuelo,real->real,dentro,rf,0.8668,0.8787,0.7741,real,real,0.5,440,13380,0.5474,0.8520,0.8810,0.8595,0.8954,0.7593,0.7891
+norm_vuelo,hil->hil,dentro,iforest,0.6005,0.7884,0.5693,hil,hil,p95 normales de cada pliegue,1445,42531,0.6956,0.5847,0.6139,0.7774,0.8007,0.5611,0.5772
+norm_vuelo,hil->hil,dentro,rf,0.9963,0.9976,0.9688,hil,hil,0.5,1445,42531,0.6956,0.9937,0.9981,0.9950,0.9991,0.9635,0.9739
+norm_vuelo,uav_sead->real,entre,iforest,0.5381,0.5980,0.5168,uav_sead,real,0.4991,440,13380,0.5474,0.5114,0.5646,0.5645,0.6317,0.4979,0.5385
+norm_vuelo,uav_sead->real,entre,rf,0.5257,0.5818,0.5206,uav_sead,real,0.5,440,13380,0.5474,0.5007,0.5531,0.5499,0.6135,0.5113,0.5315
+norm_vuelo,real->uav_sead,entre,iforest,0.6044,0.0879,0.5141,real,uav_sead,0.5336,1165,57903,0.0430,0.5648,0.6474,0.0673,0.1151,0.5072,0.5239
+norm_vuelo,real->uav_sead,entre,rf,0.4800,0.0397,0.4722,real,uav_sead,0.5,1165,57903,0.0430,0.4455,0.5199,0.0322,0.0496,0.4493,0.4993
+norm_vuelo,uav_sead->hil,entre,iforest,0.5188,0.7336,0.5061,uav_sead,hil,0.4991,1445,42531,0.6956,0.5012,0.5360,0.7217,0.7455,0.4936,0.5166
+norm_vuelo,uav_sead->hil,entre,rf,0.4541,0.6999,0.5206,uav_sead,hil,0.5,1445,42531,0.6956,0.4391,0.4706,0.6865,0.7130,0.5163,0.5254
+norm_vuelo,hil->real,hil_real,iforest,0.5817,0.6240,0.5376,hil,real,0.5667,440,13380,0.5474,0.5574,0.6057,0.5828,0.6633,0.5238,0.5525
+norm_vuelo,hil->real,hil_real,rf,0.6066,0.6362,0.5018,hil,real,0.5,440,13380,0.5474,0.5838,0.6303,0.6106,0.6616,0.5010,0.5029
+norm_vuelo,real->hil,hil_real,iforest,0.5730,0.7536,0.5328,real,hil,0.5336,1445,42531,0.6956,0.5573,0.5874,0.7397,0.7668,0.5232,0.5426
+norm_vuelo,real->hil,hil_real,rf,0.6402,0.7895,0.5766,real,hil,0.5,1445,42531,0.6956,0.6235,0.6563,0.7694,0.8100,0.5680,0.5850
+norm_vuelo,hil_prop->hil_prop,dentro,iforest,0.4692,0.5665,0.5255,hil_prop,hil_prop,p95 normales de cada pliegue,675,17550,0.5533,0.4478,0.4914,0.5409,0.5939,0.5192,0.5319
+norm_vuelo,hil_prop->hil_prop,dentro,rf,0.9985,0.9986,0.9850,hil_prop,hil_prop,0.5,675,17550,0.5533,0.9973,0.9993,0.9974,0.9994,0.9796,0.9890
+norm_vuelo,real_motor->real_motor,dentro,iforest,0.5994,0.5913,0.5236,real_motor,real_motor,p95 normales de cada pliegue,268,8685,0.5005,0.5681,0.6313,0.5415,0.6502,0.5053,0.5429
+norm_vuelo,real_motor->real_motor,dentro,rf,0.8782,0.8765,0.7873,real_motor,real_motor,0.5,268,8685,0.5005,0.8553,0.8960,0.8513,0.8969,0.7642,0.8075
+norm_vuelo,hil_prop->real_motor,hil_real,iforest,0.6107,0.6031,0.5460,hil_prop,real_motor,0.5770,268,8685,0.5005,0.5810,0.6446,0.5519,0.6533,0.5263,0.5684
+norm_vuelo,hil_prop->real_motor,hil_real,rf,0.6384,0.6433,0.5818,hil_prop,real_motor,0.5,268,8685,0.5005,0.6054,0.6731,0.5921,0.6936,0.5624,0.6035
+norm_vuelo,real_motor->hil_prop,hil_real,iforest,0.5284,0.5613,0.4928,real_motor,hil_prop,0.5366,675,17550,0.5533,0.5016,0.5508,0.5350,0.5884,0.4855,0.5003
+norm_vuelo,real_motor->hil_prop,hil_real,rf,0.6393,0.6720,0.5747,real_motor,hil_prop,0.5,675,17550,0.5533,0.6258,0.6550,0.6444,0.6990,0.5614,0.5899

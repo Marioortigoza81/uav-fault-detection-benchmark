@@ -1,0 +1,1108 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión simulada del Paper 1: A-13, B-9, A-9); no cambia los veredictos preregistrados",
+  "modelo": "RF de E1 (12), rasgos físicos (sin atajos), umbral de máxima balanced accuracy en validación interna",
+  "n_jobs": 2,
+  "semillas_p_grupo": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "bootstrap_reps": 1000,
+  "bootstrap_semilla": 20261103,
+  "ks": [
+   1,
+   2,
+   3
+  ],
+  "tolerancia_consecutivas_pasos": 2.5,
+  "bags_senalados": [
+   "2018-09-11-14-52-54",
+   "2018-10-05-14-37-22"
+  ]
+ },
+ "a9": {
+  "alfa": {
+   "n_eventos": 36,
+   "horas_nominales": 1.0772,
+   "grupos": 30,
+   "ventana_s": 2.0,
+   "paso_s": 2.0,
+   "por_k": {
+    "1": {
+     "persistencia_s": 2.0,
+     "metricas": {
+      "evento_f1": {
+       "punto": 0.4863,
+       "ic95": [
+        0.3944,
+        0.6069
+       ],
+       "por_semilla": [
+        0.4595,
+        0.4928,
+        0.541,
+        0.4595,
+        0.4789
+       ]
+      },
+      "evento_recall": {
+       "punto": 0.9389,
+       "ic95": [
+        0.8399,
+        1.0
+       ],
+       "por_semilla": [
+        0.9444,
+        0.9444,
+        0.9167,
+        0.9444,
+        0.9444
+       ]
+      },
+      "evento_precision": {
+       "punto": 0.329,
+       "ic95": [
+        0.2507,
+        0.4494
+       ],
+       "por_semilla": [
+        0.3036,
+        0.3333,
+        0.3837,
+        0.3036,
+        0.3208
+       ]
+      },
+      "retardo_mediana_s": {
+       "punto": 0.0,
+       "ic95": [
+        0.0,
+        2.0
+       ],
+       "por_semilla": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      "falsas_alarmas_por_hora": {
+       "punto": 64.7963,
+       "ic95": [
+        39.4684,
+        93.0871
+       ],
+       "por_semilla": [
+        72.4085,
+        63.1253,
+        49.2006,
+        72.4085,
+        66.8386
+       ]
+      }
+     }
+    },
+    "2": {
+     "persistencia_s": 4.0,
+     "metricas": {
+      "evento_f1": {
+       "punto": 0.6033,
+       "ic95": [
+        0.4609,
+        0.7401
+       ],
+       "por_semilla": [
+        0.5882,
+        0.6139,
+        0.6186,
+        0.5882,
+        0.6078
+       ]
+      },
+      "evento_recall": {
+       "punto": 0.8444,
+       "ic95": [
+        0.6903,
+        0.9833
+       ],
+       "por_semilla": [
+        0.8333,
+        0.8611,
+        0.8333,
+        0.8333,
+        0.8611
+       ]
+      },
+      "evento_precision": {
+       "punto": 0.4695,
+       "ic95": [
+        0.3413,
+        0.6335
+       ],
+       "por_semilla": [
+        0.4545,
+        0.4769,
+        0.4918,
+        0.4545,
+        0.4697
+       ]
+      },
+      "retardo_mediana_s": {
+       "punto": 2.0,
+       "ic95": [
+        2.0,
+        3.6
+       ],
+       "por_semilla": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+       ]
+      },
+      "falsas_alarmas_por_hora": {
+       "punto": 31.934,
+       "ic95": [
+        17.6455,
+        49.6444
+       ],
+       "por_semilla": [
+        33.4193,
+        31.5627,
+        28.7777,
+        33.4193,
+        32.491
+       ]
+      }
+     }
+    },
+    "3": {
+     "persistencia_s": 6.0,
+     "metricas": {
+      "evento_f1": {
+       "punto": 0.6674,
+       "ic95": [
+        0.515,
+        0.8094
+       ],
+       "por_semilla": [
+        0.6591,
+        0.6988,
+        0.6818,
+        0.6591,
+        0.6383
+       ]
+      },
+      "evento_recall": {
+       "punto": 0.8167,
+       "ic95": [
+        0.6585,
+        0.96
+       ],
+       "por_semilla": [
+        0.8056,
+        0.8056,
+        0.8333,
+        0.8056,
+        0.8333
+       ]
+      },
+      "evento_precision": {
+       "punto": 0.5653,
+       "ic95": [
+        0.4117,
+        0.7543
+       ],
+       "por_semilla": [
+        0.5577,
+        0.617,
+        0.5769,
+        0.5577,
+        0.5172
+       ]
+      },
+      "retardo_mediana_s": {
+       "punto": 4.0,
+       "ic95": [
+        4.0,
+        5.6
+       ],
+       "por_semilla": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+       ]
+      },
+      "falsas_alarmas_por_hora": {
+       "punto": 21.1655,
+       "ic95": [
+        9.5771,
+        35.8762
+       ],
+       "por_semilla": [
+        21.3512,
+        16.7096,
+        20.4229,
+        21.3512,
+        25.9928
+       ]
+      }
+     }
+    }
+   },
+   "control_k1_vs_e1_max_dif_abs_por_semilla": 0.0
+  }
+ },
+ "a13": {
+  "auroc_p_grupo_por_semilla": [
+   0.7333,
+   0.7201,
+   0.734,
+   0.7333,
+   0.7139
+  ],
+  "auroc_p_grupo_media": 0.7269,
+  "auroc_p_ventana": 0.9823,
+  "sin_bags_senalados": {
+   "bags": [
+    "2018-09-11-14-52-54",
+    "2018-10-05-14-37-22"
+   ],
+   "auroc_p_grupo_por_semilla": [
+    0.9156,
+    0.911,
+    0.9155,
+    0.9156,
+    0.9111
+   ],
+   "media": 0.9138,
+   "ventanas_retiradas": 268,
+   "positivas_retiradas": 108
+  },
+  "referencia_e1": [
+   0.7333,
+   0.7201,
+   0.734,
+   0.7333,
+   0.7139
+  ],
+  "por_tipo": {
+   "aleron": {
+    "bags": 5,
+    "ventanas_positivas": 166,
+    "P-ventana": {
+     "auroc": 0.9752,
+     "ic95": [
+      0.9509,
+      0.9931
+     ],
+     "por_semilla": [
+      0.9752
+     ]
+    },
+    "P-grupo": {
+     "auroc": 0.4502,
+     "ic95": [
+      0.3063,
+      0.9322
+     ],
+     "por_semilla": [
+      0.4635,
+      0.4371,
+      0.4634,
+      0.4635,
+      0.4238
+     ]
+    }
+   },
+   "elevador": {
+    "bags": 2,
+    "ventanas_positivas": 10,
+    "P-ventana": {
+     "auroc": 0.95,
+     "ic95": [
+      0.9042,
+      0.9831
+     ],
+     "por_semilla": [
+      0.95
+     ]
+    },
+    "P-grupo": {
+     "auroc": 0.8374,
+     "ic95": [
+      0.6863,
+      0.9646
+     ],
+     "por_semilla": [
+      0.8479,
+      0.8688,
+      0.8535,
+      0.8479,
+      0.7688
+     ]
+    }
+   },
+   "motor": {
+    "bags": 19,
+    "ventanas_positivas": 157,
+    "P-ventana": {
+     "auroc": 0.9901,
+     "ic95": [
+      0.9821,
+      0.996
+     ],
+     "por_semilla": [
+      0.9901
+     ]
+    },
+    "P-grupo": {
+     "auroc": 0.9826,
+     "ic95": [
+      0.9728,
+      0.9922
+     ],
+     "por_semilla": [
+      0.9819,
+      0.9794,
+      0.9839,
+      0.9819,
+      0.9859
+     ]
+    }
+   },
+   "timon": {
+    "bags": 1,
+    "ventanas_positivas": 18,
+    "P-ventana": {
+     "auroc": 0.9983,
+     "ic95": [
+      0.9969,
+      0.9996
+     ],
+     "por_semilla": [
+      0.9983
+     ]
+    },
+    "P-grupo": {
+     "auroc": 0.9871,
+     "ic95": [
+      0.9782,
+      0.9932
+     ],
+     "por_semilla": [
+      0.9899,
+      0.9862,
+      0.9834,
+      0.9899,
+      0.9862
+     ]
+    }
+   }
+  },
+  "por_bag": {
+   "2018-07-18-15-53-31": {
+    "bag": "2018-07-18-15-53-31",
+    "tipo": "motor",
+    "secuencias": 2,
+    "ventanas_positivas": 14,
+    "ventanas_negativas_del_bag": 94,
+    "auroc_p_ventana": 0.985,
+    "auroc_p_grupo_media": 0.9888,
+    "auroc_p_grupo_min": 0.9876,
+    "auroc_p_grupo_max": 0.9902,
+    "auroc_dentro_bag_p_grupo_media": 0.9957,
+    "bags_mismo_tipo_en_train_min": 14,
+    "bags_mismo_tipo_en_train_max": 17
+   },
+   "2018-07-18-16-22-01": {
+    "bag": "2018-07-18-16-22-01",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 7,
+    "ventanas_negativas_del_bag": 58,
+    "auroc_p_ventana": 1.0,
+    "auroc_p_grupo_media": 0.9985,
+    "auroc_p_grupo_min": 0.9984,
+    "auroc_p_grupo_max": 0.9987,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 14,
+    "bags_mismo_tipo_en_train_max": 16
+   },
+   "2018-07-18-16-37-39": {
+    "bag": "2018-07-18-16-37-39",
+    "tipo": "motor",
+    "secuencias": 2,
+    "ventanas_positivas": 7,
+    "ventanas_negativas_del_bag": 71,
+    "auroc_p_ventana": 0.9927,
+    "auroc_p_grupo_media": 0.9757,
+    "auroc_p_grupo_min": 0.9668,
+    "auroc_p_grupo_max": 0.9892,
+    "auroc_dentro_bag_p_grupo_media": 0.9903,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 14
+   },
+   "2018-07-30-16-29-45": {
+    "bag": "2018-07-30-16-29-45",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 8,
+    "ventanas_negativas_del_bag": 61,
+    "auroc_p_ventana": 0.9985,
+    "auroc_p_grupo_media": 0.9971,
+    "auroc_p_grupo_min": 0.9965,
+    "auroc_p_grupo_max": 0.9978,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 14
+   },
+   "2018-07-30-16-39-00": {
+    "bag": "2018-07-30-16-39-00",
+    "tipo": "motor",
+    "secuencias": 3,
+    "ventanas_positivas": 12,
+    "ventanas_negativas_del_bag": 142,
+    "auroc_p_ventana": 0.9959,
+    "auroc_p_grupo_media": 0.9902,
+    "auroc_p_grupo_min": 0.9862,
+    "auroc_p_grupo_max": 0.9914,
+    "auroc_dentro_bag_p_grupo_media": 0.9839,
+    "bags_mismo_tipo_en_train_min": 15,
+    "bags_mismo_tipo_en_train_max": 16
+   },
+   "2018-07-30-17-10-45": {
+    "bag": "2018-07-30-17-10-45",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 7,
+    "ventanas_negativas_del_bag": 58,
+    "auroc_p_ventana": 0.9858,
+    "auroc_p_grupo_media": 0.9721,
+    "auroc_p_grupo_min": 0.9478,
+    "auroc_p_grupo_max": 0.9818,
+    "auroc_dentro_bag_p_grupo_media": 0.9926,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 15
+   },
+   "2018-07-30-17-20-01": {
+    "bag": "2018-07-30-17-20-01",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 9,
+    "ventanas_negativas_del_bag": 43,
+    "auroc_p_ventana": 0.9975,
+    "auroc_p_grupo_media": 0.9947,
+    "auroc_p_grupo_min": 0.9918,
+    "auroc_p_grupo_max": 0.9963,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 16
+   },
+   "2018-07-30-17-36-35": {
+    "bag": "2018-07-30-17-36-35",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 11,
+    "ventanas_negativas_del_bag": 66,
+    "auroc_p_ventana": 0.9986,
+    "auroc_p_grupo_media": 0.9955,
+    "auroc_p_grupo_min": 0.9932,
+    "auroc_p_grupo_max": 0.9975,
+    "auroc_dentro_bag_p_grupo_media": 0.9983,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 14
+   },
+   "2018-07-30-17-46-31": {
+    "bag": "2018-07-30-17-46-31",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 10,
+    "ventanas_negativas_del_bag": 45,
+    "auroc_p_ventana": 0.9931,
+    "auroc_p_grupo_media": 0.9804,
+    "auroc_p_grupo_min": 0.9739,
+    "auroc_p_grupo_max": 0.9923,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 14
+   },
+   "2018-09-11-11-56-30": {
+    "bag": "2018-09-11-11-56-30",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 10,
+    "ventanas_negativas_del_bag": 51,
+    "auroc_p_ventana": 0.985,
+    "auroc_p_grupo_media": 0.9935,
+    "auroc_p_grupo_min": 0.9889,
+    "auroc_p_grupo_max": 0.9953,
+    "auroc_dentro_bag_p_grupo_media": 0.982,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 14
+   },
+   "2018-09-11-14-22-07": {
+    "bag": "2018-09-11-14-22-07",
+    "tipo": "motor",
+    "secuencias": 2,
+    "ventanas_positivas": 8,
+    "ventanas_negativas_del_bag": 76,
+    "auroc_p_ventana": 0.9667,
+    "auroc_p_grupo_media": 0.9585,
+    "auroc_p_grupo_min": 0.956,
+    "auroc_p_grupo_max": 0.965,
+    "auroc_dentro_bag_p_grupo_media": 0.984,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 14
+   },
+   "2018-09-11-14-41-51": {
+    "bag": "2018-09-11-14-41-51",
+    "tipo": "elevador",
+    "secuencias": 1,
+    "ventanas_positivas": 5,
+    "ventanas_negativas_del_bag": 58,
+    "auroc_p_ventana": 0.9733,
+    "auroc_p_grupo_media": 0.9501,
+    "auroc_p_grupo_min": 0.9253,
+    "auroc_p_grupo_max": 0.967,
+    "auroc_dentro_bag_p_grupo_media": 0.9938,
+    "bags_mismo_tipo_en_train_min": 0,
+    "bags_mismo_tipo_en_train_max": 1
+   },
+   "2018-09-11-14-52-54": {
+    "bag": "2018-09-11-14-52-54",
+    "tipo": "aleron",
+    "secuencias": 1,
+    "ventanas_positivas": 63,
+    "ventanas_negativas_del_bag": 52,
+    "auroc_p_ventana": 0.9896,
+    "auroc_p_grupo_media": 0.2897,
+    "auroc_p_grupo_min": 0.2329,
+    "auroc_p_grupo_max": 0.3311,
+    "auroc_dentro_bag_p_grupo_media": 0.6175,
+    "bags_mismo_tipo_en_train_min": 3,
+    "bags_mismo_tipo_en_train_max": 4
+   },
+   "2018-09-11-15-05-11": {
+    "bag": "2018-09-11-15-05-11",
+    "tipo": "elevador",
+    "secuencias": 2,
+    "ventanas_positivas": 5,
+    "ventanas_negativas_del_bag": 64,
+    "auroc_p_ventana": 0.9268,
+    "auroc_p_grupo_media": 0.7247,
+    "auroc_p_grupo_min": 0.5715,
+    "auroc_p_grupo_max": 0.7708,
+    "auroc_dentro_bag_p_grupo_media": 0.5191,
+    "bags_mismo_tipo_en_train_min": 0,
+    "bags_mismo_tipo_en_train_max": 1
+   },
+   "2018-09-11-15-06-34": {
+    "bag": "2018-09-11-15-06-34",
+    "tipo": "timon",
+    "secuencias": 3,
+    "ventanas_positivas": 18,
+    "ventanas_negativas_del_bag": 82,
+    "auroc_p_ventana": 0.9983,
+    "auroc_p_grupo_media": 0.9871,
+    "auroc_p_grupo_min": 0.9834,
+    "auroc_p_grupo_max": 0.9899,
+    "auroc_dentro_bag_p_grupo_media": 0.9551,
+    "bags_mismo_tipo_en_train_min": 0,
+    "bags_mismo_tipo_en_train_max": 0
+   },
+   "2018-09-11-17-27-13": {
+    "bag": "2018-09-11-17-27-13",
+    "tipo": "aleron",
+    "secuencias": 2,
+    "ventanas_positivas": 29,
+    "ventanas_negativas_del_bag": 90,
+    "auroc_p_ventana": 0.9804,
+    "auroc_p_grupo_media": 0.9278,
+    "auroc_p_grupo_min": 0.9192,
+    "auroc_p_grupo_max": 0.9307,
+    "auroc_dentro_bag_p_grupo_media": 0.9077,
+    "bags_mismo_tipo_en_train_min": 3,
+    "bags_mismo_tipo_en_train_max": 4
+   },
+   "2018-09-11-17-55-30": {
+    "bag": "2018-09-11-17-55-30",
+    "tipo": "aleron",
+    "secuencias": 2,
+    "ventanas_positivas": 25,
+    "ventanas_negativas_del_bag": 79,
+    "auroc_p_ventana": 0.9385,
+    "auroc_p_grupo_media": 0.4879,
+    "auroc_p_grupo_min": 0.4677,
+    "auroc_p_grupo_max": 0.5002,
+    "auroc_dentro_bag_p_grupo_media": 0.2453,
+    "bags_mismo_tipo_en_train_min": 4,
+    "bags_mismo_tipo_en_train_max": 4
+   },
+   "2018-10-05-14-34-20": {
+    "bag": "2018-10-05-14-34-20",
+    "tipo": "aleron",
+    "secuencias": 2,
+    "ventanas_positivas": 4,
+    "ventanas_negativas_del_bag": 108,
+    "auroc_p_ventana": 0.9929,
+    "auroc_p_grupo_media": 0.9947,
+    "auroc_p_grupo_min": 0.9878,
+    "auroc_p_grupo_max": 0.997,
+    "auroc_dentro_bag_p_grupo_media": 0.9981,
+    "bags_mismo_tipo_en_train_min": 3,
+    "bags_mismo_tipo_en_train_max": 4
+   },
+   "2018-10-05-14-37-22": {
+    "bag": "2018-10-05-14-37-22",
+    "tipo": "aleron",
+    "secuencias": 3,
+    "ventanas_positivas": 45,
+    "ventanas_negativas_del_bag": 108,
+    "auroc_p_ventana": 0.9706,
+    "auroc_p_grupo_media": 0.2979,
+    "auroc_p_grupo_min": 0.2798,
+    "auroc_p_grupo_max": 0.3319,
+    "auroc_dentro_bag_p_grupo_media": 0.6902,
+    "bags_mismo_tipo_en_train_min": 4,
+    "bags_mismo_tipo_en_train_max": 4
+   },
+   "2018-10-05-15-52-12": {
+    "bag": "2018-10-05-15-52-12",
+    "tipo": "motor",
+    "secuencias": 3,
+    "ventanas_positivas": 8,
+    "ventanas_negativas_del_bag": 91,
+    "auroc_p_ventana": 0.994,
+    "auroc_p_grupo_media": 0.9917,
+    "auroc_p_grupo_min": 0.9903,
+    "auroc_p_grupo_max": 0.9932,
+    "auroc_dentro_bag_p_grupo_media": 0.9746,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 16
+   },
+   "2018-10-05-15-55-10": {
+    "bag": "2018-10-05-15-55-10",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 6,
+    "ventanas_negativas_del_bag": 49,
+    "auroc_p_ventana": 0.9967,
+    "auroc_p_grupo_media": 0.9974,
+    "auroc_p_grupo_min": 0.9968,
+    "auroc_p_grupo_max": 0.9983,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 15
+   },
+   "2018-10-05-16-04-46": {
+    "bag": "2018-10-05-16-04-46",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 7,
+    "ventanas_negativas_del_bag": 37,
+    "auroc_p_ventana": 0.9963,
+    "auroc_p_grupo_media": 0.9898,
+    "auroc_p_grupo_min": 0.9845,
+    "auroc_p_grupo_max": 0.9933,
+    "auroc_dentro_bag_p_grupo_media": 0.9992,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 15
+   },
+   "2018-10-18-11-03-57": {
+    "bag": "2018-10-18-11-03-57",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 5,
+    "ventanas_negativas_del_bag": 52,
+    "auroc_p_ventana": 0.981,
+    "auroc_p_grupo_media": 0.9427,
+    "auroc_p_grupo_min": 0.9133,
+    "auroc_p_grupo_max": 0.9611,
+    "auroc_dentro_bag_p_grupo_media": 0.9804,
+    "bags_mismo_tipo_en_train_min": 13,
+    "bags_mismo_tipo_en_train_max": 17
+   },
+   "2018-10-18-11-04-00": {
+    "bag": "2018-10-18-11-04-00",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 5,
+    "ventanas_negativas_del_bag": 55,
+    "auroc_p_ventana": 0.9999,
+    "auroc_p_grupo_media": 0.9985,
+    "auroc_p_grupo_min": 0.9983,
+    "auroc_p_grupo_max": 0.9987,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 16,
+    "bags_mismo_tipo_en_train_max": 17
+   },
+   "2018-10-18-11-04-08": {
+    "bag": "2018-10-18-11-04-08",
+    "tipo": "motor",
+    "secuencias": 2,
+    "ventanas_positivas": 14,
+    "ventanas_negativas_del_bag": 99,
+    "auroc_p_ventana": 0.9733,
+    "auroc_p_grupo_media": 0.9402,
+    "auroc_p_grupo_min": 0.9327,
+    "auroc_p_grupo_max": 0.9567,
+    "auroc_dentro_bag_p_grupo_media": 0.9958,
+    "bags_mismo_tipo_en_train_min": 16,
+    "bags_mismo_tipo_en_train_max": 17
+   },
+   "2018-10-18-11-04-35": {
+    "bag": "2018-10-18-11-04-35",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 3,
+    "ventanas_negativas_del_bag": 50,
+    "auroc_p_ventana": 0.9883,
+    "auroc_p_grupo_media": 0.9768,
+    "auroc_p_grupo_min": 0.9722,
+    "auroc_p_grupo_max": 0.9795,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 14,
+    "bags_mismo_tipo_en_train_max": 17
+   },
+   "2018-10-18-11-06-06": {
+    "bag": "2018-10-18-11-06-06",
+    "tipo": "motor",
+    "secuencias": 1,
+    "ventanas_positivas": 6,
+    "ventanas_negativas_del_bag": 51,
+    "auroc_p_ventana": 0.997,
+    "auroc_p_grupo_media": 0.9978,
+    "auroc_p_grupo_min": 0.9972,
+    "auroc_p_grupo_max": 0.9985,
+    "auroc_dentro_bag_p_grupo_media": 1.0,
+    "bags_mismo_tipo_en_train_min": 14,
+    "bags_mismo_tipo_en_train_max": 16
+   }
+  }
+ },
+ "b9": {
+  "secuencias_aleron": 8,
+  "por_secuencia": {
+   "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure": {
+    "secuencia": "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+    "bag": "2018-09-11-14-52-54",
+    "senalado": true,
+    "fecha": "2018-09-11",
+    "codigos_failure_status": "aleron:2-1",
+    "combinado_con_timon": false,
+    "duracion_s": 232.817,
+    "tiempo_hasta_fallo_s": 105.019,
+    "tras_fallo_s": 127.798,
+    "segundo_evento_s": 71.5079,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 63,
+    "ventanas_negativas_e1": 52,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 15.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 65.0,
+    "rcout_c4_post_mediana_us": 1500.0,
+    "rcout_c4_post_desv_us": 33.5374,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 15.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 65.0,
+    "rcout_c5_post_mediana_us": 1500.0,
+    "rcout_c5_post_desv_us": 33.4377,
+    "canales_congelados": "rcout_c4=1500",
+    "viento_mediana_m_s": 1.3663,
+    "viento_p90_m_s": 1.4667,
+    "groundspeed_mediana_m_s": 17.8697,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 49.794,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 9.226,
+    "alabeo_abs_mediana_post_deg": 11.6057,
+    "alabeo_abs_max_post_deg": 45.8655,
+    "error_alabeo_mediana_pre_deg": 4.7397,
+    "error_alabeo_mediana_post_deg": 8.3999,
+    "roll_err_auditoria_pre": 10.2205,
+    "roll_err_auditoria_post": 17.3366
+   },
+   "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure": {
+    "secuencia": "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+    "bag": "2018-09-11-17-27-13",
+    "senalado": false,
+    "fecha": "2018-09-11",
+    "codigos_failure_status": "aleron:2;timon:1",
+    "combinado_con_timon": true,
+    "duracion_s": 143.162,
+    "tiempo_hasta_fallo_s": 116.149,
+    "tras_fallo_s": 27.0123,
+    "segundo_evento_s": null,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 12,
+    "ventanas_negativas_e1": 58,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 15.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 69.45,
+    "rcout_c4_post_mediana_us": 1500.0,
+    "rcout_c4_post_desv_us": 0.0,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 15.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 69.45,
+    "rcout_c5_post_mediana_us": 1520.5,
+    "rcout_c5_post_desv_us": 100.7163,
+    "canales_congelados": "rcout_c3=1500;rcout_c4=1500",
+    "viento_mediana_m_s": 2.0919,
+    "viento_p90_m_s": 2.2861,
+    "groundspeed_mediana_m_s": 16.7075,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 49.778,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 7.814,
+    "alabeo_abs_mediana_post_deg": 20.9556,
+    "alabeo_abs_max_post_deg": 48.6188,
+    "error_alabeo_mediana_pre_deg": 4.0709,
+    "error_alabeo_mediana_post_deg": 16.4282,
+    "roll_err_auditoria_pre": 9.0271,
+    "roll_err_auditoria_post": 23.6268
+   },
+   "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure": {
+    "secuencia": "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure",
+    "bag": "2018-09-11-17-27-13",
+    "senalado": false,
+    "fecha": "2018-09-11",
+    "codigos_failure_status": "aleron:3",
+    "combinado_con_timon": false,
+    "duracion_s": 101.372,
+    "tiempo_hasta_fallo_s": 65.6525,
+    "tras_fallo_s": 35.7191,
+    "segundo_evento_s": null,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 17,
+    "ventanas_negativas_e1": 32,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 13.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 53.15,
+    "rcout_c4_post_mediana_us": 1500.0,
+    "rcout_c4_post_desv_us": 0.0,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 13.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 53.15,
+    "rcout_c5_post_mediana_us": 1500.0,
+    "rcout_c5_post_desv_us": 0.0,
+    "canales_congelados": "rcout_c4=1500;rcout_c5=1500",
+    "viento_mediana_m_s": 2.2951,
+    "viento_p90_m_s": 2.3742,
+    "groundspeed_mediana_m_s": 16.5954,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 50.038,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 9.6128,
+    "alabeo_abs_mediana_post_deg": 27.7226,
+    "alabeo_abs_max_post_deg": 63.0409,
+    "error_alabeo_mediana_pre_deg": 3.8095,
+    "error_alabeo_mediana_post_deg": 26.9483,
+    "roll_err_auditoria_pre": 8.1911,
+    "roll_err_auditoria_post": 36.9728
+   },
+   "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure": {
+    "secuencia": "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure",
+    "bag": "2018-09-11-17-55-30",
+    "senalado": false,
+    "fecha": "2018-09-11",
+    "codigos_failure_status": "aleron:1",
+    "combinado_con_timon": false,
+    "duracion_s": 132.765,
+    "tiempo_hasta_fallo_s": 111.745,
+    "tras_fallo_s": 21.0193,
+    "segundo_evento_s": null,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 10,
+    "ventanas_negativas_e1": 55,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 17.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 62.1,
+    "rcout_c4_post_mediana_us": 1501.0,
+    "rcout_c4_post_desv_us": 44.7588,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 17.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 62.1,
+    "rcout_c5_post_mediana_us": 1500.0,
+    "rcout_c5_post_desv_us": 0.0,
+    "canales_congelados": "rcout_c5=1500",
+    "viento_mediana_m_s": 1.7313,
+    "viento_p90_m_s": 1.9281,
+    "groundspeed_mediana_m_s": 18.2237,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 50.004,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 11.7365,
+    "alabeo_abs_mediana_post_deg": 8.3015,
+    "alabeo_abs_max_post_deg": 41.6091,
+    "error_alabeo_mediana_pre_deg": 5.3369,
+    "error_alabeo_mediana_post_deg": 7.6411,
+    "roll_err_auditoria_pre": 9.4521,
+    "roll_err_auditoria_post": 7.6811
+   },
+   "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure": {
+    "secuencia": "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure",
+    "bag": "2018-09-11-17-55-30",
+    "senalado": false,
+    "fecha": "2018-09-11",
+    "codigos_failure_status": "aleron:2",
+    "combinado_con_timon": false,
+    "duracion_s": 81.0229,
+    "tiempo_hasta_fallo_s": 49.8396,
+    "tras_fallo_s": 31.1833,
+    "segundo_evento_s": null,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 15,
+    "ventanas_negativas_e1": 24,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 20.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 88.4,
+    "rcout_c4_post_mediana_us": 1500.0,
+    "rcout_c4_post_desv_us": 0.0,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 20.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 88.4,
+    "rcout_c5_post_mediana_us": 1506.0,
+    "rcout_c5_post_desv_us": 43.822,
+    "canales_congelados": "rcout_c4=1500",
+    "viento_mediana_m_s": 2.0132,
+    "viento_p90_m_s": 2.0926,
+    "groundspeed_mediana_m_s": 17.6697,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 49.45,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 14.7775,
+    "alabeo_abs_mediana_post_deg": 15.9825,
+    "alabeo_abs_max_post_deg": 41.3862,
+    "error_alabeo_mediana_pre_deg": 4.9764,
+    "error_alabeo_mediana_post_deg": 5.8921,
+    "roll_err_auditoria_pre": 9.2051,
+    "roll_err_auditoria_post": 10.8409
+   },
+   "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj": {
+    "secuencia": "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj",
+    "bag": "2018-10-05-14-34-20",
+    "senalado": false,
+    "fecha": "2018-10-05",
+    "codigos_failure_status": "aleron:1",
+    "combinado_con_timon": false,
+    "duracion_s": 161.687,
+    "tiempo_hasta_fallo_s": 151.861,
+    "tras_fallo_s": 9.8263,
+    "segundo_evento_s": null,
+    "emr_traj": true,
+    "ventanas_positivas_e1": 4,
+    "ventanas_negativas_e1": 75,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 16.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 67.6,
+    "rcout_c4_post_mediana_us": 1510.0,
+    "rcout_c4_post_desv_us": 38.2002,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 16.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 67.6,
+    "rcout_c5_post_mediana_us": 1500.0,
+    "rcout_c5_post_desv_us": 0.0,
+    "canales_congelados": "rcout_c5=1500",
+    "viento_mediana_m_s": 2.5493,
+    "viento_p90_m_s": 2.7447,
+    "groundspeed_mediana_m_s": 16.3441,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 49.9045,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 11.8209,
+    "alabeo_abs_mediana_post_deg": 27.705,
+    "alabeo_abs_max_post_deg": 46.4524,
+    "error_alabeo_mediana_pre_deg": 4.5399,
+    "error_alabeo_mediana_post_deg": 5.687,
+    "roll_err_auditoria_pre": 8.1783,
+    "roll_err_auditoria_post": 10.4498
+   },
+   "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure": {
+    "secuencia": "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+    "bag": "2018-10-05-14-37-22",
+    "senalado": true,
+    "fecha": "2018-10-05",
+    "codigos_failure_status": "aleron:1",
+    "combinado_con_timon": false,
+    "duracion_s": 144.308,
+    "tiempo_hasta_fallo_s": 72.9891,
+    "tras_fallo_s": 71.3187,
+    "segundo_evento_s": null,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 35,
+    "ventanas_negativas_e1": 36,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 15.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 69.1,
+    "rcout_c4_post_mediana_us": 1485.0,
+    "rcout_c4_post_desv_us": 66.2618,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 15.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 69.1,
+    "rcout_c5_post_mediana_us": 1500.0,
+    "rcout_c5_post_desv_us": 3.4621,
+    "canales_congelados": "rcout_c5=1500",
+    "viento_mediana_m_s": 2.3964,
+    "viento_p90_m_s": 2.7208,
+    "groundspeed_mediana_m_s": 16.4785,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 49.885,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 7.7229,
+    "alabeo_abs_mediana_post_deg": 16.1578,
+    "alabeo_abs_max_post_deg": 53.7153,
+    "error_alabeo_mediana_pre_deg": 4.3998,
+    "error_alabeo_mediana_post_deg": 10.3292,
+    "roll_err_auditoria_pre": 8.2725,
+    "roll_err_auditoria_post": 30.1669
+   },
+   "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure": {
+    "secuencia": "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure",
+    "bag": "2018-10-05-14-37-22",
+    "senalado": true,
+    "fecha": "2018-10-05",
+    "codigos_failure_status": "aleron:2",
+    "combinado_con_timon": false,
+    "duracion_s": 95.6499,
+    "tiempo_hasta_fallo_s": 72.0173,
+    "tras_fallo_s": 23.6326,
+    "segundo_evento_s": null,
+    "emr_traj": false,
+    "ventanas_positivas_e1": 10,
+    "ventanas_negativas_e1": 36,
+    "rcout_c4_pre_mediana_abs_desde_1500_us": 19.0,
+    "rcout_c4_pre_p95_abs_desde_1500_us": 71.4,
+    "rcout_c4_post_mediana_us": 1500.0,
+    "rcout_c4_post_desv_us": 0.0,
+    "rcout_c5_pre_mediana_abs_desde_1500_us": 19.0,
+    "rcout_c5_pre_p95_abs_desde_1500_us": 71.4,
+    "rcout_c5_post_mediana_us": 1487.0,
+    "rcout_c5_post_desv_us": 61.7002,
+    "canales_congelados": "rcout_c4=1500",
+    "viento_mediana_m_s": 2.7528,
+    "viento_p90_m_s": 2.8357,
+    "groundspeed_mediana_m_s": 15.3986,
+    "airspeed_max_m_s": 0.0,
+    "altura_relativa_mediana_m": 49.875,
+    "modos": "GUIDED",
+    "alabeo_abs_mediana_pre_deg": 7.9708,
+    "alabeo_abs_mediana_post_deg": 15.706,
+    "alabeo_abs_max_post_deg": 46.3266,
+    "error_alabeo_mediana_pre_deg": 4.4163,
+    "error_alabeo_mediana_post_deg": 10.62,
+    "roll_err_auditoria_pre": 8.0259,
+    "roll_err_auditoria_post": 21.4518
+   }
+  },
+  "resumen": {
+   "senaladas": [
+    "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+    "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+    "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure"
+   ],
+   "tras_fallo_s_senaladas": [
+    127.798,
+    71.3187,
+    23.6326
+   ],
+   "tras_fallo_s_resto_mediana": 27.0123,
+   "ventanas_positivas_senaladas": 108,
+   "ventanas_positivas_aleron_total": 166
+  },
+  "nota": "deflexión: el dataset no da el ángulo de superficie; se da el mando PWM de rc-out (1500 µs = neutro) antes del fallo y el valor congelado después. Condiciones meteorológicas: solo el viento estimado por el autopiloto (mavros/wind_estimation); el dataset no documenta otras. airspeed = 0 en vfr_hud (sensor ausente, auditoría 04)."
+ }
+}

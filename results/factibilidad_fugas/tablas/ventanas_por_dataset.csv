@@ -1,0 +1,4 @@
+dataset,ventana_s,n_ventanas,n_positivas,frac_positivas,n_vuelos_grupo,n_sesiones_grupo,n_rasgos_total,n_rasgos_fisicos,n_rasgos_atajo,ventanas_excluidas_por_contener_el_fallo,secuencias,casos_leidos,huella_cache_08
+uav_fd,1,1240,886,0.7145,18,3,193,186,7,,,,
+alfa,2,2290,351,0.1533,30,5,310,252,58,34,46,,
+rflymad,5,7836,3363,0.4292,440,18,229,222,7,,,493,bfcf46c4acb73f5f

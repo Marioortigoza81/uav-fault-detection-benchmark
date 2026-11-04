@@ -1,0 +1,15 @@
+destino,placa,vuelos,grupos,ventanas,ventanas_anomalas
+uav_sead,1e0028,156,156,12186,31
+uav_sead,3a002e,17,17,754,9
+uav_sead,23003d,4,4,75,1
+uav_sead,353833,69,69,2267,209
+uav_sead,353832,925,925,42655,2247
+real,2d004e,16,15,537,280
+real,51002e,301,276,7252,4401
+real,2c002e,176,161,5591,2643
+hil,2d003a,3054,2973,94177,67552
+real_motor,2d004e,16,15,537,280
+real_motor,51002e,169,160,4317,2354
+real_motor,2c002e,111,103,3831,1713
+real_sensors,51002e,152,136,3790,2047
+real_sensors,2c002e,96,88,2582,930

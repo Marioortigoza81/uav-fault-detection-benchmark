@@ -1,0 +1,1304 @@
+{
+ "bateria": {
+  "ajuste_con_descarga_mah": 1143,
+  "ajuste_r2_mayor_0_5": 1139,
+  "ajuste_r2_mediana": 0.935783,
+  "ajuste_r2_p10": 0.830817,
+  "celdas_declaradas": {
+   "4": 16,
+   "5": 175,
+   "6": 1202
+  },
+  "corriente_max_p90_a": 34.806797,
+  "corriente_media_mediana_a": 11.610776,
+  "descargado_mah_mediana": 258.040909,
+  "hz_mediana": 1.992365,
+  "r_mohm_mayor_500_vuelos": 0,
+  "r_mohm_mediana": 150.119605,
+  "r_mohm_negativa_vuelos": 0,
+  "r_mohm_p10": 123.845755,
+  "r_mohm_p90": 178.022176,
+  "v_fin_mediana": 22.817263,
+  "v_ini_mediana": 22.432017,
+  "v_ini_p10": 19.713342,
+  "v_ini_p90": 24.363122,
+  "v_min_p01": 14.631982,
+  "vuelos_con_ajuste_V_OCV_R": 1143,
+  "vuelos_con_battery_status": 1393,
+  "vuelos_con_corriente_media_mayor_0": 1381,
+  "vuelos_con_descargado_mah_mayor_0": 1392,
+  "vuelos_con_voltaje_valido": 1393,
+  "vuelos_corriente_centinela_menos1_ge50pct": 0,
+  "vuelos_corriente_cero_ge50pct": 222,
+  "vuelos_corriente_cero_ge50pct_por_hardware": {
+   "PX4FMU_V2": 62,
+   "PX4_FMU_V5": 160
+  },
+  "vuelos_corriente_valida_ge50pct": 1171,
+  "vuelos_sin_voltaje_valido": 0
+ },
+ "calidad": {
+  "dropouts": {
+   "dropouts_ms_mediana_entre_los_que_tienen": 1342.0,
+   "dropouts_ms_total": 3241732.0,
+   "dropouts_total": 197362,
+   "max_dropouts": 4778,
+   "vuelo_con_mas_dropouts": "2018-09-21/08_04_59",
+   "vuelos_con_dropouts": 753
+  },
+  "intervalos_de_anotacion": {
+   "dur_max_s": 211.832,
+   "dur_mediana_s": 6.749,
+   "fuera_del_vuelo": 12,
+   "invertidos_o_vacios": 0,
+   "total": 563,
+   "vuelos_con_intervalo_fuera": 11
+  },
+  "mensajes_log_error_o_warning": {
+   "total": 127651,
+   "total_error": 118978,
+   "vuelos_con_alguno": 1352,
+   "vuelos_con_error": 1333,
+   "vuelos_con_error_por_clase": {
+    "Altitude": 74,
+    "External Position": 196,
+    "Global Position": 40,
+    "Mechanical": 47,
+    "Normal": 861,
+    "Uncategorized": 123
+   }
+  },
+  "nan": {
+   "battery_status": {
+    "frac_nan_max": 0.111111,
+    "vuelos_con_nan": 193,
+    "vuelos_sin_el_topico": 0
+   },
+   "estimator_status": {
+    "frac_nan_max": 0.076923,
+    "vuelos_con_nan": 1,
+    "vuelos_sin_el_topico": 2
+   },
+   "sensor_combined": {
+    "frac_nan_max": 0.0,
+    "vuelos_con_nan": 0,
+    "vuelos_sin_el_topico": 0
+   },
+   "vehicle_attitude": {
+    "frac_nan_max": 0.0,
+    "vuelos_con_nan": 0,
+    "vuelos_sin_el_topico": 17
+   },
+   "vehicle_local_position": {
+    "frac_nan_max": 0.1,
+    "vuelos_con_nan": 1,
+    "vuelos_sin_el_topico": 19
+   }
+  },
+  "sensor_combined": {
+   "dt_mediana_ms_mediana_de_vuelos": 4.0,
+   "gap_max_s_global": 68.323166,
+   "gaps_10x_total": 24546,
+   "timestamps_no_monotonos_total": 0,
+   "vuelos_con_gap_mayor_10s": 15,
+   "vuelos_con_gap_mayor_1s": 100,
+   "vuelos_con_gaps_10x": 686,
+   "vuelos_sin_el_topico": 0
+  },
+  "vehicle_attitude": {
+   "dt_mediana_ms_mediana_de_vuelos": 31.985,
+   "gap_max_s_global": 68.322761,
+   "gaps_10x_total": 23700,
+   "timestamps_no_monotonos_total": 0,
+   "vuelos_con_gap_mayor_10s": 17,
+   "vuelos_con_gap_mayor_1s": 99,
+   "vuelos_con_gaps_10x": 528,
+   "vuelos_sin_el_topico": 17
+  },
+  "vuelos_vacios_o_cortos": {
+   "con_menos_de_100_mensajes": 0,
+   "dur_menor_30s": 110,
+   "sin_aire_segun_land_detected": 20,
+   "sin_battery_status": 0,
+   "sin_sensor_combined": 0,
+   "sin_vehicle_attitude": 17,
+   "sin_vehicle_local_position": 19
+  }
+ },
+ "carga": {
+  "bytes_cargados": 12138105818,
+  "duracion_total_h": 52.675964,
+  "fallos": {},
+  "t_aire_total_h": 50.277778,
+  "vuelos_cargados": 1393,
+  "vuelos_dur_menor_10s": 0,
+  "vuelos_dur_menor_60s": 383,
+  "vuelos_fallidos": 0,
+  "vuelos_intentados": 1393,
+  "vuelos_sin_land_detected": 0,
+  "vuelos_sin_ningun_dato_de_vuelo_en_aire": 20
+ },
+ "duraciones": {
+  "Altitude": {
+   "anom_horas_union_anotada": 0.426822,
+   "dur_min_s": 29.527644,
+   "horas": 2.444688,
+   "horas_en_aire": 2.391667,
+   "max_s": 417.874344,
+   "mediana_s": 116.405569,
+   "p10_s": 41.95414,
+   "p90_s": 185.2256,
+   "readme_anom_horas": 0.4325,
+   "readme_horas": 2.689167,
+   "readme_vuelos": 78,
+   "vuelos": 77,
+   "vuelos_solo_esa_clase": 72
+  },
+  "External Position": {
+   "anom_horas_union_anotada": 1.253478,
+   "dur_min_s": 23.653352,
+   "horas": 5.090272,
+   "horas_en_aire": 4.683333,
+   "max_s": 650.604976,
+   "mediana_s": 72.405283,
+   "p10_s": 33.674118,
+   "p90_s": 173.513471,
+   "readme_anom_horas": 1.283889,
+   "readme_horas": 5.206944,
+   "readme_vuelos": 197,
+   "vuelos": 197,
+   "vuelos_solo_esa_clase": 193
+  },
+  "Global Position": {
+   "anom_horas_union_anotada": 0.568613,
+   "dur_min_s": 25.473645,
+   "horas": 1.649835,
+   "horas_en_aire": 1.622222,
+   "max_s": 702.703451,
+   "mediana_s": 111.829598,
+   "p10_s": 29.540599,
+   "p90_s": 266.559532,
+   "readme_anom_horas": 0.606389,
+   "readme_horas": 1.678333,
+   "readme_vuelos": 41,
+   "vuelos": 41,
+   "vuelos_solo_esa_clase": 40
+  },
+  "Mechanical": {
+   "anom_horas_union_anotada": 0.211528,
+   "dur_min_s": 29.540599,
+   "horas": 2.004922,
+   "horas_en_aire": 1.961111,
+   "max_s": 476.285069,
+   "mediana_s": 140.837989,
+   "p10_s": 56.9638,
+   "p90_s": 233.157935,
+   "readme_anom_horas": 0.211944,
+   "readme_horas": 2.210556,
+   "readme_vuelos": 47,
+   "vuelos": 47,
+   "vuelos_solo_esa_clase": 41
+  },
+  "Normal": {
+   "anom_horas_union_anotada": 0.0,
+   "dur_min_s": 20.539451,
+   "horas": 38.400848,
+   "horas_en_aire": 37.6,
+   "max_s": 770.017064,
+   "mediana_s": 121.7121,
+   "p10_s": 43.812343,
+   "p90_s": 275.923846,
+   "readme_anom_horas": 0.0,
+   "readme_horas": 38.405278,
+   "readme_vuelos": 900,
+   "vuelos": 898,
+   "vuelos_solo_esa_clase": 898
+  },
+  "Uncategorized": {
+   "anom_horas_union_anotada": 0.0,
+   "dur_min_s": 10.739106,
+   "horas": 3.359517,
+   "horas_en_aire": 2.288889,
+   "max_s": 1794.291647,
+   "mediana_s": 31.889757,
+   "p10_s": 11.013993,
+   "p90_s": 154.525055,
+   "readme_anom_horas": 0.0,
+   "readme_horas": 3.219167,
+   "readme_vuelos": 141,
+   "vuelos": 141,
+   "vuelos_solo_esa_clase": 141
+  }
+ },
+ "episodios": {
+  "Altitude": {
+   "anyos": [
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+   ],
+   "anyos_distintos": 5,
+   "concentracion_top3_dias_pct": 28.947368,
+   "dias_distintos": 37,
+   "hw_distintos": 2,
+   "intervalo_dur_mediana_s": 3.904,
+   "intervalo_dur_p10_s": 1.809,
+   "intervalo_dur_p90_s": 23.396,
+   "intervalo_frac_vuelo_mediana": 0.044759,
+   "intervalos": 141,
+   "intervalos_fusionados_gap5s": 120,
+   "intervalos_por_vuelo_mediana": 1.0,
+   "nombres_de_rango": {
+    "Actuator Outputs": 1,
+    "Actuator Thrust": 1,
+    "Position.Z": 138,
+    "Roll Rate": 1
+   },
+   "plataformas_distintas": 4,
+   "sw_release_distintos": 5,
+   "vuelos": 77,
+   "vuelos_por_dia_max_dentro_de_clase": 12,
+   "vuelos_sin_fecha": 1,
+   "vuelos_sin_uuid": 0
+  },
+  "External Position": {
+   "anyos": [
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+   ],
+   "anyos_distintos": 5,
+   "concentracion_top3_dias_pct": 21.827411,
+   "dias_distintos": 62,
+   "hw_distintos": 2,
+   "intervalo_dur_mediana_s": 8.115,
+   "intervalo_dur_p10_s": 2.1295,
+   "intervalo_dur_p90_s": 49.959997,
+   "intervalo_frac_vuelo_mediana": 0.124794,
+   "intervalos": 248,
+   "intervalos_fusionados_gap5s": 216,
+   "intervalos_por_vuelo_mediana": 1.0,
+   "nombres_de_rango": {
+    "Actuator Controls": 1,
+    "Position.X": 160,
+    "Position.Y": 76,
+    "Position.Z": 8,
+    "Velocity": 3
+   },
+   "plataformas_distintas": 4,
+   "sw_release_distintos": 5,
+   "vuelos": 197,
+   "vuelos_por_dia_max_dentro_de_clase": 16,
+   "vuelos_sin_fecha": 0,
+   "vuelos_sin_uuid": 0
+  },
+  "Global Position": {
+   "anyos": [
+    2018,
+    2019
+   ],
+   "anyos_distintos": 2,
+   "concentracion_top3_dias_pct": 60.97561,
+   "dias_distintos": 11,
+   "hw_distintos": 1,
+   "intervalo_dur_mediana_s": 15.022,
+   "intervalo_dur_p10_s": 1.4784,
+   "intervalo_dur_p90_s": 48.6668,
+   "intervalo_frac_vuelo_mediana": 0.093301,
+   "intervalos": 99,
+   "intervalos_fusionados_gap5s": 76,
+   "intervalos_por_vuelo_mediana": 2.0,
+   "nombres_de_rango": {
+    "Position.X": 44,
+    "Position.Y": 55
+   },
+   "plataformas_distintas": 2,
+   "sw_release_distintos": 2,
+   "vuelos": 41,
+   "vuelos_por_dia_max_dentro_de_clase": 11,
+   "vuelos_sin_fecha": 0,
+   "vuelos_sin_uuid": 0
+  },
+  "Mechanical": {
+   "anyos": [
+    2018,
+    2019
+   ],
+   "anyos_distintos": 2,
+   "concentracion_top3_dias_pct": 28.26087,
+   "dias_distintos": 25,
+   "hw_distintos": 2,
+   "intervalo_dur_mediana_s": 6.105,
+   "intervalo_dur_p10_s": 1.9832,
+   "intervalo_dur_p90_s": 25.3978,
+   "intervalo_frac_vuelo_mediana": 0.044746,
+   "intervalos": 75,
+   "intervalos_fusionados_gap5s": 56,
+   "intervalos_por_vuelo_mediana": 1.0,
+   "nombres_de_rango": {
+    "Actuator Controls": 23,
+    "Actuator Outputs": 41,
+    "Actuator Thrust": 1,
+    "Battery": 3,
+    "Magnetometer": 4,
+    "Raw Acceleration": 1,
+    "Vibration": 2
+   },
+   "plataformas_distintas": 3,
+   "sw_release_distintos": 4,
+   "vuelos": 47,
+   "vuelos_por_dia_max_dentro_de_clase": 5,
+   "vuelos_sin_fecha": 1,
+   "vuelos_sin_uuid": 0
+  },
+  "_todas_anomalias": {
+   "dias_anomalos": 98,
+   "plataformas_anomalas": 5,
+   "plataformas_con_normal_y_anomalo": 5,
+   "plataformas_normales": 5,
+   "vuelos": 354,
+   "vuelos_normales_puros": 898
+  }
+ },
+ "fisica": {
+  "acc_norma_en_suelo_fuera_de_9_3_10_3_vuelos": 0,
+  "acc_norma_en_suelo_mediana_m_s2": 9.790199,
+  "acc_norma_en_suelo_p10": 9.751909,
+  "acc_norma_en_suelo_p90": 9.828261,
+  "acc_norma_en_suelo_vuelos": 775,
+  "g_estandar": 9.80665,
+  "r_pack_mohm_mediana_ajuste_V_OCV_R": 150.119605,
+  "rho_corriente_vs_empuje_mediana": 0.792311,
+  "rho_empuje_vs_menos_az_mediana": 0.275258,
+  "rho_empuje_vs_menos_az_p10": 0.076789,
+  "rho_empuje_vs_menos_az_p90": 0.567786,
+  "vuelos_con_correlacion_empuje_acel": 1235,
+  "vuelos_con_rho_corriente": 1184,
+  "vuelos_rho_corriente_mayor_0_3": 995,
+  "vuelos_rho_empuje_mayor_0_3": 558,
+  "vuelos_rho_empuje_menor_0": 51
+ },
+ "forense": {
+  "criterio": "por clase de vuelo con una sola anotación y 300–3600 s, el de duración más cercana a la mediana de esos vuelos; tres marcos a ritmo nativo (actitud, IMU 250 Hz con 20.000 filas centrales, batería)",
+  "detalle": {
+   "Altitude": {
+    "dur_s": 363.263074,
+    "marcos": {
+     "actitud": {
+      "filas": 87381,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 4.012,
+      "pasos_distintos": 2043,
+      "por_tipo": {
+       "H07": 1,
+       "H08": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H07",
+       "H08",
+       "H09"
+      ]
+     },
+     "bateria": {
+      "filas": 696,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 503.999,
+      "pasos_distintos": 436,
+      "por_tipo": {
+       "H09": 1
+      },
+      "tipos": [
+       "H09"
+      ]
+     },
+     "imu_250hz_centro20000": {
+      "filas": 20000,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 4.0,
+      "pasos_distintos": 305,
+      "por_tipo": {
+       "H08": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H08",
+       "H09"
+      ]
+     }
+    },
+    "vuelo": "2018-09-21/19_36_27"
+   },
+   "External Position": {
+    "dur_s": 388.366213,
+    "marcos": {
+     "actitud": {
+      "filas": 12173,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 31.991,
+      "pasos_distintos": 3191,
+      "por_tipo": {
+       "H08": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H08",
+       "H09"
+      ]
+     },
+     "bateria": {
+      "filas": 774,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 504.747,
+      "pasos_distintos": 741,
+      "por_tipo": {
+       "H02": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H02",
+       "H09"
+      ]
+     },
+     "imu_250hz_centro20000": {
+      "filas": 20000,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 4.0,
+      "pasos_distintos": 288,
+      "por_tipo": {
+       "H08": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H08",
+       "H09"
+      ]
+     }
+    },
+    "vuelo": "2018-05-31/16_07_48"
+   },
+   "Global Position": {
+    "dur_s": 702.703451,
+    "marcos": {
+     "actitud": {
+      "filas": 22161,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 31.985,
+      "pasos_distintos": 2297,
+      "por_tipo": {
+       "H09": 1
+      },
+      "tipos": [
+       "H09"
+      ]
+     },
+     "bateria": {
+      "filas": 1401,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 503.9945,
+      "pasos_distintos": 918,
+      "por_tipo": {
+       "H02": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H02",
+       "H09"
+      ]
+     },
+     "imu_250hz_centro20000": {
+      "filas": 20000,
+      "frase": "sin huellas",
+      "paso_mediano_ms": 4.0,
+      "pasos_distintos": 202,
+      "por_tipo": {},
+      "tipos": []
+     }
+    },
+    "vuelo": "2019-01-25/17_03_27"
+   },
+   "Mechanical": {
+    "dur_s": 314.047564,
+    "marcos": {
+     "actitud": {
+      "filas": 9887,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 31.985,
+      "pasos_distintos": 1850,
+      "por_tipo": {
+       "H09": 1
+      },
+      "tipos": [
+       "H09"
+      ]
+     },
+     "bateria": {
+      "filas": 626,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 504.034,
+      "pasos_distintos": 518,
+      "por_tipo": {
+       "H02": 1,
+       "H09": 1
+      },
+      "tipos": [
+       "H02",
+       "H09"
+      ]
+     },
+     "imu_250hz_centro20000": {
+      "filas": 20000,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 4.0,
+      "pasos_distintos": 248,
+      "por_tipo": {
+       "H09": 1
+      },
+      "tipos": [
+       "H09"
+      ]
+     }
+    },
+    "vuelo": "2019-02-01/17_42_55"
+   },
+   "Normal": {
+    "dur_s": 379.931353,
+    "marcos": {
+     "actitud": {
+      "filas": 90638,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 4.006,
+      "pasos_distintos": 2227,
+      "por_tipo": {
+       "H07": 3
+      },
+      "tipos": [
+       "H07"
+      ]
+     },
+     "bateria": {
+      "filas": 717,
+      "frase": "alguna huella aislada: revisar cada una antes de concluir",
+      "paso_mediano_ms": 503.995,
+      "pasos_distintos": 481,
+      "por_tipo": {
+       "H02": 1
+      },
+      "tipos": [
+       "H02"
+      ]
+     },
+     "imu_250hz_centro20000": {
+      "filas": 20000,
+      "frase": "sin huellas",
+      "paso_mediano_ms": 4.0,
+      "pasos_distintos": 283,
+      "por_tipo": {},
+      "tipos": []
+     }
+    },
+    "vuelo": "2018-09-21/20_24_01"
+   }
+  },
+  "huellas_por_id": {
+   "H02": 4,
+   "H07": 4,
+   "H08": 4,
+   "H09": 11
+  },
+  "marcos_con_3_o_mas_tipos_de_generacion": 0,
+  "marcos_con_algun_tipo_de_huella": 13,
+  "marcos_total": 15,
+  "paso_constante_H01": 0,
+  "vuelos_elegidos": {
+   "Altitude": "2018-09-21/19_36_27",
+   "External Position": "2018-05-31/16_07_48",
+   "Global Position": "2019-01-25/17_03_27",
+   "Mechanical": "2019-02-01/17_42_55",
+   "Normal": "2018-09-21/20_24_01"
+  }
+ },
+ "fugas": {
+  "anomalo_pct_por_anyo": {
+   "2018": 38.9,
+   "2019": 22.7,
+   "2021": 27.6,
+   "2022": 9.8,
+   "2023": 3.2
+  },
+  "anyo": {
+   "cramer_v": 0.248,
+   "grupos": 6,
+   "loo_exactitud": 0.7173,
+   "loo_exactitud_equilibrada": 0.5
+  },
+  "anyo_mes": {
+   "cramer_v": 0.329,
+   "grupos": 31,
+   "loo_exactitud": 0.7212,
+   "loo_exactitud_equilibrada": 0.5242
+  },
+  "auroc_anyo": 0.641,
+  "auroc_dur_s": 0.625,
+  "auroc_n_params": 0.662,
+  "auroc_n_topicos": 0.501,
+  "auroc_size_mb": 0.604,
+  "auroc_ver_sw_release": 0.643,
+  "dia_carpeta": {
+   "cramer_v": 0.561,
+   "grupos": 158,
+   "loo_exactitud": 0.734,
+   "loo_exactitud_equilibrada": 0.6263
+  },
+  "dia_y_plataforma": {
+   "cramer_v": 0.561,
+   "grupos": 158,
+   "loo_exactitud": 0.734,
+   "loo_exactitud_equilibrada": 0.6263
+  },
+  "exactitud_clase_mayoritaria": 0.717252,
+  "hardware": {
+   "cramer_v": 0.168,
+   "grupos": 2,
+   "loo_exactitud": 0.7173,
+   "loo_exactitud_equilibrada": 0.5
+  },
+  "plataforma_uuid": {
+   "cramer_v": 0.184,
+   "grupos": 5,
+   "loo_exactitud": 0.7173,
+   "loo_exactitud_equilibrada": 0.5
+  },
+  "por_clase_vs_dia_loo_exactitud_equilibrada": {
+   "Altitude": 0.6506,
+   "External Position": 0.6699,
+   "Global Position": 0.6779,
+   "Mechanical": 0.5224
+  },
+  "prevalencia_anomalo": 0.282748,
+  "sw_release": {
+   "cramer_v": 0.258,
+   "grupos": 7,
+   "loo_exactitud": 0.7188,
+   "loo_exactitud_equilibrada": 0.5293
+  },
+  "vuelos_anomalos_dur_mediana_s": 90.238651,
+  "vuelos_etiquetables_binario": 1252,
+  "vuelos_normales_dur_mediana_s": 121.7121,
+  "vuelos_por_anyo_etiquetables": {
+   "2018": 573,
+   "2019": 502,
+   "2021": 29,
+   "2022": 51,
+   "2023": 93
+  }
+ },
+ "fugas_presencia_topicos": {
+  "Altitude": {
+   "camera_trigger": {
+    "pct_clase": 2.6,
+    "pct_normal": 13.1
+   },
+   "mission_result": {
+    "pct_clase": 35.1,
+    "pct_normal": 61.4
+   },
+   "vehicle_command": {
+    "pct_clase": 80.5,
+    "pct_normal": 93.1
+   },
+   "vehicle_local_position_setpoint": {
+    "pct_clase": 67.5,
+    "pct_normal": 81.6
+   }
+  },
+  "External Position": {
+   "mission_result": {
+    "pct_clase": 21.3,
+    "pct_normal": 61.4
+   },
+   "position_setpoint_triplet": {
+    "pct_clase": 38.6,
+    "pct_normal": 74.2
+   },
+   "vehicle_air_data": {
+    "pct_clase": 79.2,
+    "pct_normal": 54.1
+   },
+   "vehicle_local_position_setpoint": {
+    "pct_clase": 51.3,
+    "pct_normal": 81.6
+   }
+  },
+  "Global Position": {
+   "home_position": {
+    "pct_clase": 61.0,
+    "pct_normal": 3.0
+   },
+   "vehicle_air_data": {
+    "pct_clase": 4.9,
+    "pct_normal": 54.1
+   },
+   "vehicle_global_position": {
+    "pct_clase": 61.0,
+    "pct_normal": 3.0
+   },
+   "vehicle_gps_position": {
+    "pct_clase": 100.0,
+    "pct_normal": 7.0
+   }
+  },
+  "Mechanical": {
+   "distance_sensor": {
+    "pct_clase": 78.7,
+    "pct_normal": 97.3
+   },
+   "mission_result": {
+    "pct_clase": 38.3,
+    "pct_normal": 61.4
+   },
+   "optical_flow": {
+    "pct_clase": 78.7,
+    "pct_normal": 53.9
+   },
+   "sensor_accel": {
+    "pct_clase": 51.1,
+    "pct_normal": 33.3
+   }
+  },
+  "nota": "tópicos cuya presencia más difiere entre la clase (vuelos con la clase) y los vuelos Normal; la presencia de un tópico depende del hardware y del año"
+ },
+ "mapping": {
+  "anotaciones_con_n_nombres_de_rango": {
+   "0": 1043,
+   "1": 331,
+   "2": 31,
+   "3": 2
+  },
+  "anotaciones_con_nota": 16,
+  "anotaciones_con_rangos_por_clase": {
+   "Altitude": 78,
+   "External Position": 197,
+   "Global Position": 42,
+   "Mechanical": 47,
+   "Normal": 0,
+   "Uncategorized": 0
+  },
+  "anotaciones_dias_distintos": 34,
+  "anotaciones_por_clase_todas": {
+   "Altitude": 78,
+   "External Position": 198,
+   "Global Position": 42,
+   "Mechanical": 47,
+   "Normal": 901,
+   "Uncategorized": 141
+  },
+  "anotaciones_total": 1407,
+  "claves_de_anotacion": [
+   "class",
+   "note",
+   "ranges",
+   "timestamp"
+  ],
+  "claves_del_esquema": [
+   "annotations"
+  ],
+  "claves_unicas": 1396,
+  "combinaciones_de_clase_en_vuelos_con_2": {
+   "Altitude|External Position": 2,
+   "Altitude|Mechanical": 3,
+   "External Position|External Position": 1,
+   "External Position|Mechanical": 2,
+   "Global Position|Global Position": 1,
+   "Global Position|Mechanical": 1,
+   "Normal|Normal": 1
+  },
+  "fecha_anotacion_max": "2025-05-19T17:31:35.301795",
+  "fecha_anotacion_min": "2025-01-29T23:25:47.373454",
+  "intervalos_total": 568,
+  "nombres_de_rango": {
+   "Actuator Controls": 11,
+   "Actuator Outputs": 31,
+   "Actuator Thrust": 2,
+   "Battery": 3,
+   "Magnetometer": 4,
+   "Position.X": 168,
+   "Position.Y": 90,
+   "Position.Z": 84,
+   "Raw Acceleration": 1,
+   "Roll Rate": 1,
+   "Velocity": 3,
+   "Vibration": 1
+  },
+  "ranges_formato": "lista de [nombre_de_senal, [[t0_us, t1_us], ...]]; t en µs absolutos del ULog (misma base que start_timestamp)",
+  "sha256_mapping": "afb1e2abbff684d6860ed0939655bca3124bf4463ab963349c4936a94377800a",
+  "ulg_en_disco_listados_en_mapping": 1393,
+  "ulg_listados_sin_fichero": [
+   "2018-07-04/19_38_27",
+   "2019-01-22/07_55_19",
+   "2019-03-04/08_04_13"
+  ],
+  "vuelos_en_mapping": 1396,
+  "vuelos_por_n_anotaciones": {
+   "1": 1385,
+   "2": 11
+  }
+ },
+ "mapping_sha256": "afb1e2abbff684d6860ed0939655bca3124bf4463ab963349c4936a94377800a",
+ "notas": {
+  "distintas_no_vacias": 9,
+  "top": {
+   "check global position computation": 1,
+   "crash": 2,
+   "external position outliers": 1,
+   "global normal": 2,
+   "log interruption": 6,
+   "possible external posiyion anomaly": 1,
+   "there is a log interruption": 1,
+   "there is no thrust change": 1
+  }
+ },
+ "plataforma_y_firmware": {
+  "anyos": {
+   "2018": 662,
+   "2019": 540,
+   "2020": 7,
+   "2021": 33,
+   "2022": 52,
+   "2023": 95
+  },
+  "autostart": {
+   "10015": 11,
+   "12001": 1202,
+   "4014": 180
+  },
+  "bat_cell_count": {
+   "4": 16,
+   "5": 175,
+   "6": 1202
+  },
+  "dias_distintos_en_carpeta": 164,
+  "fecha_origen": {
+   "carpeta": 1389,
+   "desconocida": 4
+  },
+  "is_rotary_wing": {
+   "-1": 191,
+   "1": 1202
+  },
+  "mav_type": {
+   "14": 1202,
+   "2": 191
+  },
+  "n_params_mediana": 670.0,
+  "sys_name": {
+   "PX4": 1393
+  },
+  "sys_uuid_distintos": 5,
+  "sys_uuid_top": {
+   "0002000000002032344142565005001e0028": 160,
+   "000200000000203331354e30500f003a002e": 20,
+   "00020000000035333837313851130023003d": 11,
+   "001E00293036510B31353833": 97,
+   "003000443337510F37353832": 1105
+  },
+  "system_type": {
+   "14": 1202,
+   "2": 191
+  },
+  "vehicle_type": {
+   "-1": 1202,
+   "1": 191
+  },
+  "ver_hw": {
+   "PX4FMU_V2": 1202,
+   "PX4_FMU_V5": 191
+  },
+  "ver_sw_hash_distintos": 7,
+  "ver_sw_release_distintos": 7,
+  "ver_sw_release_top": {
+   "17236991": 65,
+   "17301504": 423,
+   "17301759": 73,
+   "17302015": 562,
+   "17302271": 79,
+   "17433087": 190,
+   "17629439": 1
+  },
+  "vuelos_por_dia_max": 71,
+  "vuelos_por_dia_mediana": 6.0,
+  "vuelos_sin_anyo": 4,
+  "vuelos_sin_parametros": 0,
+  "vuelos_sin_sys_uuid": 0
+ },
+ "readme_tabla_clases": {
+  "Altitude": {
+   "dur_anom_s": 1557,
+   "dur_s": 9681,
+   "vuelos": 78
+  },
+  "External Position": {
+   "dur_anom_s": 4622,
+   "dur_s": 18745,
+   "vuelos": 197
+  },
+  "Global Position": {
+   "dur_anom_s": 2183,
+   "dur_s": 6042,
+   "vuelos": 41
+  },
+  "Mechanical": {
+   "dur_anom_s": 763,
+   "dur_s": 7958,
+   "vuelos": 47
+  },
+  "Normal": {
+   "dur_anom_s": null,
+   "dur_s": 138259,
+   "vuelos": 900
+  },
+  "Uncategorized": {
+   "dur_anom_s": null,
+   "dur_s": 11589,
+   "vuelos": 141
+  }
+ },
+ "readme_vs_calculado": {
+  "Altitude": {
+   "delta_vuelos_calculado_menos_readme": -1
+  },
+  "External Position": {
+   "delta_vuelos_calculado_menos_readme": 0
+  },
+  "Global Position": {
+   "delta_vuelos_calculado_menos_readme": 0
+  },
+  "Mechanical": {
+   "delta_vuelos_calculado_menos_readme": 0
+  },
+  "Normal": {
+   "delta_vuelos_calculado_menos_readme": -2
+  },
+  "Uncategorized": {
+   "delta_vuelos_calculado_menos_readme": 0
+  }
+ },
+ "separabilidad_ventanas": {
+  "Altitude": {
+   "mejores_intravuelo_centrado": {
+    "bat_v": 0.696,
+    "out_mean": 0.667,
+    "thrust": 0.667
+   },
+   "mejores_vs_normales": {
+    "epv": 0.845,
+    "hgt_test_ratio": 0.76,
+    "innov_pos": 0.819
+   },
+   "n_pos": 138,
+   "n_variables_auroc_sim_ge_0_8_intravuelo_centrado": 0,
+   "n_variables_auroc_sim_ge_0_9_intravuelo_centrado": 0,
+   "n_variables_auroc_sim_ge_0_9_vs_normales": 0,
+   "vuelos_pos": 38
+  },
+  "External Position": {
+   "mejores_intravuelo_centrado": {
+    "eph": 0.745,
+    "innov_pos": 0.685,
+    "vh": 0.684
+   },
+   "mejores_vs_normales": {
+    "pitch_abs": 0.891,
+    "vh": 0.897,
+    "vz_abs": 0.864
+   },
+   "n_pos": 425,
+   "n_variables_auroc_sim_ge_0_8_intravuelo_centrado": 0,
+   "n_variables_auroc_sim_ge_0_9_intravuelo_centrado": 0,
+   "n_variables_auroc_sim_ge_0_9_vs_normales": 0,
+   "vuelos_pos": 137
+  },
+  "Global Position": {
+   "mejores_intravuelo_centrado": {
+    "bat_v": 0.666,
+    "out_mean": 0.647,
+    "thrust": 0.645
+   },
+   "mejores_vs_normales": {
+    "eph": 0.713,
+    "out_mean": 0.74,
+    "thrust": 0.761
+   },
+   "n_pos": 196,
+   "n_variables_auroc_sim_ge_0_8_intravuelo_centrado": 0,
+   "n_variables_auroc_sim_ge_0_9_intravuelo_centrado": 0,
+   "n_variables_auroc_sim_ge_0_9_vs_normales": 0,
+   "vuelos_pos": 31
+  },
+  "Mechanical": {
+   "mejores_intravuelo_centrado": {
+    "out_imbalance": 0.904,
+    "thrust": 0.928,
+    "thrust_std": 0.858
+   },
+   "mejores_vs_normales": {
+    "bat_i": 0.918,
+    "out_mean": 0.926,
+    "thrust": 0.97
+   },
+   "n_pos": 73,
+   "n_variables_auroc_sim_ge_0_8_intravuelo_centrado": 12,
+   "n_variables_auroc_sim_ge_0_9_intravuelo_centrado": 2,
+   "n_variables_auroc_sim_ge_0_9_vs_normales": 3,
+   "vuelos_pos": 33
+  }
+ },
+ "separabilidad_vuelos": {
+  "Altitude": {
+   "mejores": {
+    "med_epv": 0.648,
+    "med_hgt_test_ratio": 0.693,
+    "med_innov_pos": 0.678,
+    "med_vibe0": 0.629
+   },
+   "n_neg": 898,
+   "n_pos": 77,
+   "n_variables_sim_ge_0_8": 0,
+   "n_variables_total": 53
+  },
+  "External Position": {
+   "mejores": {
+    "med_att_std": 0.786,
+    "med_gyr_n_std": 0.757,
+    "med_pitch_abs": 0.762,
+    "med_vz_abs": 0.808
+   },
+   "n_neg": 898,
+   "n_pos": 197,
+   "n_variables_sim_ge_0_8": 1,
+   "n_variables_total": 53
+  },
+  "Global Position": {
+   "mejores": {
+    "cpuload_media": 0.708,
+    "fis_acc_norma_suelo": 0.834,
+    "med_thrust": 0.732,
+    "mes": 0.775
+   },
+   "n_neg": 898,
+   "n_pos": 41,
+   "n_variables_sim_ge_0_8": 1,
+   "n_variables_total": 53
+  },
+  "Mechanical": {
+   "mejores": {
+    "bat_i_media": 0.771,
+    "fis_acc_norma_suelo": 0.791,
+    "med_out_mean": 0.789,
+    "med_thrust": 0.814
+   },
+   "n_neg": 898,
+   "n_pos": 47,
+   "n_variables_sim_ge_0_8": 1,
+   "n_variables_total": 53
+  }
+ },
+ "topicos": {
+  "clave": {
+   "actuator_controls_0": {
+    "hz_mediana": 245.507,
+    "pct": 100.0
+   },
+   "actuator_outputs": {
+    "hz_mediana": 9.845,
+    "pct": 100.0
+   },
+   "battery_status": {
+    "hz_mediana": 1.992,
+    "pct": 100.0
+   },
+   "distance_sensor": {
+    "hz_mediana": 17.552,
+    "pct": 94.7
+   },
+   "ekf2_innovations": {
+    "hz_mediana": 4.933,
+    "pct": 98.6
+   },
+   "estimator_status": {
+    "hz_mediana": 4.933,
+    "pct": 99.9
+   },
+   "optical_flow": {
+    "hz_mediana": 9.607,
+    "pct": 54.3
+   },
+   "sensor_baro": {
+    "hz_mediana": 9.47,
+    "pct": 38.0
+   },
+   "sensor_combined": {
+    "hz_mediana": 247.69,
+    "pct": 100.0
+   },
+   "vehicle_air_data": {
+    "hz_mediana": 66.474,
+    "pct": 56.5
+   },
+   "vehicle_attitude": {
+    "hz_mediana": 31.587,
+    "pct": 98.8
+   },
+   "vehicle_gps_position": {
+    "hz_mediana": 4.353,
+    "pct": 13.1
+   },
+   "vehicle_local_position": {
+    "hz_mediana": 9.834,
+    "pct": 98.6
+   },
+   "vehicle_magnetometer": {
+    "hz_mediana": 93.81,
+    "pct": 56.5
+   },
+   "vehicle_vision_position": {
+    "hz_mediana": 9.986,
+    "pct": 82.9
+   }
+  },
+  "distintos": 79,
+  "en_100pct": 11,
+  "en_al_menos_50pct": 34,
+  "en_al_menos_95pct": 20,
+  "en_al_menos_99pct": 15,
+  "en_menos_del_10pct": 35,
+  "nucleo_99pct": [
+   "actuator_controls_0",
+   "actuator_outputs",
+   "battery_status",
+   "cpuload",
+   "input_rc",
+   "sensor_combined",
+   "system_power",
+   "vehicle_attitude_setpoint",
+   "vehicle_land_detected",
+   "vehicle_rates_setpoint",
+   "vehicle_status",
+   "manual_control_setpoint",
+   "estimator_status",
+   "sensor_preflight",
+   "vehicle_status_flags"
+  ],
+  "nucleo_99pct_hz_mediana": {
+   "actuator_controls_0": 245.507,
+   "actuator_outputs": 9.845,
+   "battery_status": 1.992,
+   "cpuload": 0.997,
+   "estimator_status": 4.933,
+   "input_rc": 4.933,
+   "manual_control_setpoint": 4.939,
+   "sensor_combined": 247.69,
+   "sensor_preflight": 0.049,
+   "system_power": 1.992,
+   "vehicle_attitude_setpoint": 9.841,
+   "vehicle_land_detected": 1.004,
+   "vehicle_rates_setpoint": 31.608,
+   "vehicle_status": 1.01,
+   "vehicle_status_flags": 1.008
+  },
+  "readme_pct_vs_calculado": {
+   "battery_status": {
+    "calc_pct": 100.0,
+    "readme_pct": 100.0
+   },
+   "distance_sensor": {
+    "calc_pct": 94.7,
+    "readme_pct": 97.6
+   },
+   "optical_flow": {
+    "calc_pct": 54.3,
+    "readme_pct": 31.0
+   },
+   "sensor_baro": {
+    "calc_pct": 38.0,
+    "readme_pct": 16.9
+   },
+   "vehicle_air_data": {
+    "calc_pct": 56.5,
+    "readme_pct": 62.7
+   },
+   "vehicle_global_position": {
+    "calc_pct": 7.3,
+    "readme_pct": 3.2
+   },
+   "vehicle_gps_position": {
+    "calc_pct": 13.1,
+    "readme_pct": 5.8
+   },
+   "vehicle_vision_position": {
+    "calc_pct": 82.9,
+    "readme_pct": 54.4
+   }
+  },
+  "topicos_con_mas_de_una_instancia_vuelos": {
+   "actuator_outputs": 1202,
+   "battery_status": 190,
+   "distance_sensor": 0
+  },
+  "tópicos_del_readme_ausentes": [
+   "logger_status",
+   "multirotor_motor_limits",
+   "parameter_update",
+   "timestamp"
+  ]
+ },
+ "umbral_trivial_ventanas": {
+  "Altitude": {
+   "esperado_por_azar": 0.02,
+   "positivos_fuera_de_p01_p99_normales": 0.058,
+   "variable": "hgt_test_ratio"
+  },
+  "External Position": {
+   "esperado_por_azar": 0.02,
+   "positivos_fuera_de_p01_p99_normales": 0.6,
+   "variable": "eph"
+  },
+  "Global Position": {
+   "esperado_por_azar": 0.02,
+   "positivos_fuera_de_p01_p99_normales": 0.123,
+   "variable": "innov_vel"
+  },
+  "Mechanical": {
+   "esperado_por_azar": 0.02,
+   "positivos_fuera_de_p01_p99_normales": 0.959,
+   "variable": "thrust"
+  }
+ },
+ "variables_usables": {
+  "criterio": "tópicos presentes en >= 99 % de los vuelos cargados",
+  "n_vuelos_con_battery_y_local_y_attitude_y_sensor_combined": 1374,
+  "n_vuelos_con_distance_sensor": 1319,
+  "n_vuelos_con_ekf2_innovations": 1373,
+  "n_vuelos_con_gps": 183,
+  "n_vuelos_con_local_position": 1374,
+  "n_vuelos_con_vision_position": 1155
+ },
+ "ventanas": {
+  "descartadas_solape_parcial_0_a_0_5": 460,
+  "duracion_s": 10.0,
+  "en_aire": 18100,
+  "negativas_en_vuelos_anomalos_fuera_de_intervalo": 2448,
+  "negativas_en_vuelos_normales": 13536,
+  "positivas_por_clase_ov_ge_0_5": {
+   "Altitude": 138,
+   "External Position": 425,
+   "Global Position": 196,
+   "Mechanical": 73
+  },
+  "total": 19664
+ }
+}

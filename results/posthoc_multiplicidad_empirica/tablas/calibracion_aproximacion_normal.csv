@@ -1,0 +1,37 @@
+contraste,condicion,p_empirico,p_aprox_normal,misma_decision_alfa_0_025
+H1 uav_sead,inflación P-ventana − P-grupo (AUROC),4.99975e-05,2.93012e-20,True
+H1 alfa,inflación P-ventana − P-grupo (AUROC),4.99975e-05,0.00286384,True
+H1 rflymad,inflación P-ventana − P-grupo (AUROC),4.99975e-05,2.9259e-10,True
+H1 uav_fd,inflación P-ventana − P-grupo (AUROC),5.00501e-05,0.0663744,False
+H2 uav_sead,cociente AUROC solo atajos / completo (P-grupo),0.297785,0.297848,True
+H2 alfa,cociente AUROC solo atajos / completo (P-grupo),4.99975e-05,0,True
+H2 rflymad,cociente AUROC solo atajos / completo (P-grupo),4.99975e-05,0,True
+H2 uav_fd,cociente AUROC solo atajos / completo (P-grupo),0.211161,0.224997,True
+H3 uav_sead->real,caída = AUROC interno P-grupo − AUROC transferencia,4.99975e-05,7.94553e-17,True
+H3 uav_sead->real,AUROC de dominio (uav_sead_vs_real),4.99975e-05,0,True
+H3 real->uav_sead,caída = AUROC interno P-grupo − AUROC transferencia,0.00144993,0.00268343,True
+H3 real->uav_sead,AUROC de dominio (uav_sead_vs_real),4.99975e-05,0,True
+H3 uav_sead->hil,caída = AUROC interno P-grupo − AUROC transferencia,4.99975e-05,0,True
+H3 uav_sead->hil,AUROC de dominio (uav_sead_vs_hil),4.99975e-05,0,True
+H3 hil->real,caída = AUROC interno P-grupo − AUROC transferencia,0.000149993,3.93024e-05,True
+H3 hil->real,AUROC de dominio (hil_vs_real),4.99975e-05,0,True
+H3 real->hil,caída = AUROC interno P-grupo − AUROC transferencia,4.99975e-05,1.81839e-131,True
+H3 real->hil,AUROC de dominio (hil_vs_real),4.99975e-05,0,True
+H3 hil_prop->real_motor,caída = AUROC interno P-grupo − AUROC transferencia,0.00189991,0.00291267,True
+H3 hil_prop->real_motor,AUROC de dominio (hil_vs_real),4.99975e-05,0,True
+H3 hil_sensors->real_sensors,caída = AUROC interno P-grupo − AUROC transferencia,0.226189,0.231004,True
+H3 hil_sensors->real_sensors,AUROC de dominio (hil_vs_real),4.99975e-05,0,True
+H4 uav_sead->real,subida del AUROC de transferencia (invariante − base),0.984051,0.984411,True
+H4 uav_sead->real,"baja del AUROC de dominio (base − invariante, uav_sead_vs_real)",1,1,True
+H4 real->uav_sead,subida del AUROC de transferencia (invariante − base),0.020199,0.0210022,True
+H4 real->uav_sead,"baja del AUROC de dominio (base − invariante, uav_sead_vs_real)",1,1,True
+H4 uav_sead->hil,subida del AUROC de transferencia (invariante − base),1,1,True
+H4 uav_sead->hil,"baja del AUROC de dominio (base − invariante, uav_sead_vs_hil)",1,1,True
+H4 hil->real,subida del AUROC de transferencia (invariante − base),4.99975e-05,2.9712e-06,True
+H4 hil->real,"baja del AUROC de dominio (base − invariante, hil_vs_real)",1,1,True
+H4 real->hil,subida del AUROC de transferencia (invariante − base),1,1,True
+H4 real->hil,"baja del AUROC de dominio (base − invariante, hil_vs_real)",1,1,True
+H4 hil_prop->real_motor,subida del AUROC de transferencia (invariante − base),4.99975e-05,1.9279e-06,True
+H4 hil_prop->real_motor,"baja del AUROC de dominio (base − invariante, hil_vs_real)",1,1,True
+H4 hil_sensors->real_sensors,subida del AUROC de transferencia (invariante − base),0.935003,0.93942,True
+H4 hil_sensors->real_sensors,"baja del AUROC de dominio (base − invariante, hil_vs_real)",1,1,True

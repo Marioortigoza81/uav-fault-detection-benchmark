@@ -1,0 +1,5 @@
+A. Baldini, L. D'Alleva, R. Felicetti, F. Ferracuti, A. Freddi, A. Monteriu. UAV-FD: a dataset for actuator fault
+detection in multirotor drones. Zenodo, 2023. https://doi.org/10.5281/zenodo.7648996
+Paper: ICUAS 2023, https://doi.org/10.1109/ICUAS57906.2023.10156060
+Not included here (download from the record): data_feature_Table_zoh.mat (177 MB, above the GitHub file limit)
+and the MATLAB scripts (*.m).

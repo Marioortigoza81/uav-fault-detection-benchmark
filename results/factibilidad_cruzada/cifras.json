@@ -1,0 +1,1882 @@
+{
+ "entradas": {
+  "uav_sead": {
+   "anotados_en_mapping": 1396,
+   "excluidos": {
+    "uncategorized": 141,
+    "anomalo_sin_intervalos": 1,
+    "sin_fichero": 3
+   },
+   "a_leer": 1251
+  },
+  "rflymad_partes": {
+   "HIL-Load": 291,
+   "HIL-NoFault": 240,
+   "HIL-Prop": 435,
+   "HIL-Voltage": 36,
+   "HIL-Wind": 443,
+   "Real-Motor": 245,
+   "Real-NoFault": 51,
+   "Real-Sensors": 197
+  },
+  "vuelos_excluidos_por_motivo": {
+   "uav_sead: anomalía o fallo dentro del tramo de referencia": 59
+  }
+ },
+ "ventanas": {
+  "ambiguas_excluidas_solape_0_a_0_5": 2335,
+  "no_finitas_excluidas": 131,
+  "uav_sead": {
+   "vuelos_leidos": 1251,
+   "vuelos_con_ventanas": 1165,
+   "grupos": 1165,
+   "ventanas": 57903,
+   "ventanas_anomalas": 2492,
+   "prevalencia": 0.043,
+   "vuelos_con_ventana_anomala": 245,
+   "horas_en_el_aire_leidas": 47.325,
+   "por_clase": {
+    "Altitude": {
+     "vuelos": 62,
+     "ventanas": 2252,
+     "anomalas": 515
+    },
+    "Altitude|External Position": {
+     "vuelos": 1,
+     "ventanas": 53,
+     "anomalas": 3
+    },
+    "Altitude|Mechanical": {
+     "vuelos": 3,
+     "ventanas": 200,
+     "anomalas": 32
+    },
+    "External Position": {
+     "vuelos": 146,
+     "ventanas": 3860,
+     "anomalas": 959
+    },
+    "External Position|Mechanical": {
+     "vuelos": 2,
+     "ventanas": 44,
+     "anomalas": 14
+    },
+    "Global Position": {
+     "vuelos": 31,
+     "ventanas": 1780,
+     "anomalas": 689
+    },
+    "Mechanical": {
+     "vuelos": 36,
+     "ventanas": 2038,
+     "anomalas": 280
+    },
+    "Normal": {
+     "vuelos": 884,
+     "ventanas": 47676,
+     "anomalas": 0
+    }
+   },
+   "ventanas_fuera_del_aire": 1575,
+   "ventanas_en_recuperacion_excluidas": 0,
+   "ventanas_con_huecos_excluidas": 1145
+  },
+  "real": {
+   "vuelos_leidos": 493,
+   "vuelos_con_ventanas": 493,
+   "grupos": 440,
+   "ventanas": 13380,
+   "ventanas_anomalas": 7324,
+   "prevalencia": 0.5474,
+   "vuelos_con_ventana_anomala": 437,
+   "horas_en_el_aire_leidas": 14.8908,
+   "por_clase": {
+    "Accelerometer": {
+     "vuelos": 34,
+     "ventanas": 821,
+     "anomalas": 447
+    },
+    "Barometer": {
+     "vuelos": 45,
+     "ventanas": 1161,
+     "anomalas": 740
+    },
+    "GPS": {
+     "vuelos": 43,
+     "ventanas": 987,
+     "anomalas": 666
+    },
+    "Gyroscope": {
+     "vuelos": 39,
+     "ventanas": 867,
+     "anomalas": 556
+    },
+    "Magnetometer": {
+     "vuelos": 36,
+     "ventanas": 859,
+     "anomalas": 568
+    },
+    "Motor": {
+     "vuelos": 245,
+     "ventanas": 7008,
+     "anomalas": 4347
+    },
+    "No Fault": {
+     "vuelos": 51,
+     "ventanas": 1677,
+     "anomalas": 0
+    }
+   },
+   "ventanas_fuera_del_aire": 578,
+   "ventanas_en_recuperacion_excluidas": 4794,
+   "ventanas_con_huecos_excluidas": 0
+  },
+  "hil": {
+   "vuelos_leidos": 1445,
+   "vuelos_con_ventanas": 1445,
+   "grupos": 1445,
+   "ventanas": 42531,
+   "ventanas_anomalas": 29585,
+   "prevalencia": 0.6956,
+   "vuelos_con_ventana_anomala": 1200,
+   "horas_en_el_aire_leidas": 36.6215,
+   "por_clase": {
+    "Load": {
+     "vuelos": 291,
+     "ventanas": 9928,
+     "anomalas": 8025
+    },
+    "No Fault": {
+     "vuelos": 240,
+     "ventanas": 4668,
+     "anomalas": 0
+    },
+    "Prop": {
+     "vuelos": 435,
+     "ventanas": 12882,
+     "anomalas": 9711
+    },
+    "Voltage": {
+     "vuelos": 36,
+     "ventanas": 1114,
+     "anomalas": 862
+    },
+    "Wind": {
+     "vuelos": 443,
+     "ventanas": 13939,
+     "anomalas": 10987
+    }
+   },
+   "ventanas_fuera_del_aire": 418,
+   "ventanas_en_recuperacion_excluidas": 4,
+   "ventanas_con_huecos_excluidas": 299
+  },
+  "rflymad_fallo_sin_inyeccion_en_ulog": {
+   "real": 5,
+   "hil": 0
+  },
+  "rflymad_nofault_con_inyeccion_en_ulog": 0
+ },
+ "deteccion": {
+  "crudo": {
+   "uav_sead->uav_sead": {
+    "iforest": {
+     "auroc": 0.7161,
+     "auroc_ic95": [
+      0.6538,
+      0.7833
+     ],
+     "auprc": 0.1417,
+     "auprc_ic95": [
+      0.1047,
+      0.1852
+     ],
+     "bacc": 0.6075,
+     "bacc_ic95": [
+      0.5759,
+      0.6414
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "uav_sead",
+     "prueba": "uav_sead",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    },
+    "rf": {
+     "auroc": 0.8785,
+     "auroc_ic95": [
+      0.8529,
+      0.901
+     ],
+     "auprc": 0.2772,
+     "auprc_ic95": [
+      0.2027,
+      0.3438
+     ],
+     "bacc": 0.5783,
+     "bacc_ic95": [
+      0.5547,
+      0.6012
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "uav_sead",
+     "prueba": "uav_sead",
+     "umbral": "0.5",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    }
+   },
+   "real->real": {
+    "iforest": {
+     "auroc": 0.5857,
+     "auroc_ic95": [
+      0.5626,
+      0.61
+     ],
+     "auprc": 0.6509,
+     "auprc_ic95": [
+      0.6198,
+      0.6844
+     ],
+     "bacc": 0.5499,
+     "bacc_ic95": [
+      0.5364,
+      0.5641
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real",
+     "prueba": "real",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    },
+    "rf": {
+     "auroc": 0.8863,
+     "auroc_ic95": [
+      0.8743,
+      0.8996
+     ],
+     "auprc": 0.9015,
+     "auprc_ic95": [
+      0.8872,
+      0.9146
+     ],
+     "bacc": 0.7899,
+     "bacc_ic95": [
+      0.7758,
+      0.8061
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real",
+     "prueba": "real",
+     "umbral": "0.5",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    }
+   },
+   "hil->hil": {
+    "iforest": {
+     "auroc": 0.6033,
+     "auroc_ic95": [
+      0.5882,
+      0.6184
+     ],
+     "auprc": 0.79,
+     "auprc_ic95": [
+      0.7765,
+      0.8024
+     ],
+     "bacc": 0.5716,
+     "bacc_ic95": [
+      0.5622,
+      0.5806
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil",
+     "prueba": "hil",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    },
+    "rf": {
+     "auroc": 0.9962,
+     "auroc_ic95": [
+      0.9936,
+      0.9978
+     ],
+     "auprc": 0.9975,
+     "auprc_ic95": [
+      0.9945,
+      0.999
+     ],
+     "bacc": 0.9694,
+     "bacc_ic95": [
+      0.9644,
+      0.9742
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil",
+     "prueba": "hil",
+     "umbral": "0.5",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    }
+   },
+   "uav_sead->real": {
+    "iforest": {
+     "auroc": 0.5824,
+     "auroc_ic95": [
+      0.5614,
+      0.6061
+     ],
+     "auprc": 0.642,
+     "auprc_ic95": [
+      0.6161,
+      0.6702
+     ],
+     "bacc": 0.5364,
+     "bacc_ic95": [
+      0.5197,
+      0.5545
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "real",
+     "umbral": "0.5440",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    },
+    "rf": {
+     "auroc": 0.5656,
+     "auroc_ic95": [
+      0.5406,
+      0.5892
+     ],
+     "auprc": 0.6114,
+     "auprc_ic95": [
+      0.5855,
+      0.6366
+     ],
+     "bacc": 0.5133,
+     "bacc_ic95": [
+      0.509,
+      0.5172
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "real",
+     "umbral": "0.5",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    }
+   },
+   "real->uav_sead": {
+    "iforest": {
+     "auroc": 0.6001,
+     "auroc_ic95": [
+      0.5526,
+      0.6442
+     ],
+     "auprc": 0.0963,
+     "auprc_ic95": [
+      0.0697,
+      0.1312
+     ],
+     "bacc": 0.5122,
+     "bacc_ic95": [
+      0.5056,
+      0.5212
+     ],
+     "tipo": "entre",
+     "entrenamiento": "real",
+     "prueba": "uav_sead",
+     "umbral": "0.5211",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    },
+    "rf": {
+     "auroc": 0.5509,
+     "auroc_ic95": [
+      0.4811,
+      0.6194
+     ],
+     "auprc": 0.0579,
+     "auprc_ic95": [
+      0.0447,
+      0.0747
+     ],
+     "bacc": 0.5333,
+     "bacc_ic95": [
+      0.5178,
+      0.5501
+     ],
+     "tipo": "entre",
+     "entrenamiento": "real",
+     "prueba": "uav_sead",
+     "umbral": "0.5",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    }
+   },
+   "uav_sead->hil": {
+    "iforest": {
+     "auroc": 0.4856,
+     "auroc_ic95": [
+      0.4671,
+      0.5028
+     ],
+     "auprc": 0.7236,
+     "auprc_ic95": [
+      0.7102,
+      0.737
+     ],
+     "bacc": 0.5086,
+     "bacc_ic95": [
+      0.4968,
+      0.5191
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "hil",
+     "umbral": "0.5440",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    },
+    "rf": {
+     "auroc": 0.4593,
+     "auroc_ic95": [
+      0.4438,
+      0.4765
+     ],
+     "auprc": 0.6908,
+     "auprc_ic95": [
+      0.6763,
+      0.7035
+     ],
+     "bacc": 0.5089,
+     "bacc_ic95": [
+      0.5074,
+      0.5102
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "hil",
+     "umbral": "0.5",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    }
+   },
+   "hil->real": {
+    "iforest": {
+     "auroc": 0.6237,
+     "auroc_ic95": [
+      0.6012,
+      0.6472
+     ],
+     "auprc": 0.6715,
+     "auprc_ic95": [
+      0.6408,
+      0.6974
+     ],
+     "bacc": 0.5832,
+     "bacc_ic95": [
+      0.5671,
+      0.6011
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil",
+     "prueba": "real",
+     "umbral": "0.5652",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    },
+    "rf": {
+     "auroc": 0.6417,
+     "auroc_ic95": [
+      0.6153,
+      0.6683
+     ],
+     "auprc": 0.6487,
+     "auprc_ic95": [
+      0.6309,
+      0.6677
+     ],
+     "bacc": 0.5,
+     "bacc_ic95": [
+      0.5,
+      0.5
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil",
+     "prueba": "real",
+     "umbral": "0.5",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    }
+   },
+   "real->hil": {
+    "iforest": {
+     "auroc": 0.5971,
+     "auroc_ic95": [
+      0.5804,
+      0.6146
+     ],
+     "auprc": 0.7642,
+     "auprc_ic95": [
+      0.7495,
+      0.7768
+     ],
+     "bacc": 0.5356,
+     "bacc_ic95": [
+      0.5266,
+      0.545
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real",
+     "prueba": "hil",
+     "umbral": "0.5211",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    },
+    "rf": {
+     "auroc": 0.7206,
+     "auroc_ic95": [
+      0.7067,
+      0.7371
+     ],
+     "auprc": 0.8582,
+     "auprc_ic95": [
+      0.8478,
+      0.8694
+     ],
+     "bacc": 0.6323,
+     "bacc_ic95": [
+      0.6208,
+      0.6434
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real",
+     "prueba": "hil",
+     "umbral": "0.5",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    }
+   },
+   "hil_prop->hil_prop": {
+    "iforest": {
+     "auroc": 0.4724,
+     "auroc_ic95": [
+      0.4503,
+      0.491
+     ],
+     "auprc": 0.5678,
+     "auprc_ic95": [
+      0.5396,
+      0.5938
+     ],
+     "bacc": 0.5259,
+     "bacc_ic95": [
+      0.5186,
+      0.5319
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil_prop",
+     "prueba": "hil_prop",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    },
+    "rf": {
+     "auroc": 0.9986,
+     "auroc_ic95": [
+      0.9975,
+      0.9993
+     ],
+     "auprc": 0.9988,
+     "auprc_ic95": [
+      0.9977,
+      0.9995
+     ],
+     "bacc": 0.9859,
+     "bacc_ic95": [
+      0.981,
+      0.99
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil_prop",
+     "prueba": "hil_prop",
+     "umbral": "0.5",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    }
+   },
+   "real_motor->real_motor": {
+    "iforest": {
+     "auroc": 0.6425,
+     "auroc_ic95": [
+      0.6079,
+      0.6741
+     ],
+     "auprc": 0.6545,
+     "auprc_ic95": [
+      0.612,
+      0.6954
+     ],
+     "bacc": 0.5686,
+     "bacc_ic95": [
+      0.5478,
+      0.5908
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real_motor",
+     "prueba": "real_motor",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    },
+    "rf": {
+     "auroc": 0.9114,
+     "auroc_ic95": [
+      0.8946,
+      0.9265
+     ],
+     "auprc": 0.9125,
+     "auprc_ic95": [
+      0.894,
+      0.9288
+     ],
+     "bacc": 0.8237,
+     "bacc_ic95": [
+      0.8015,
+      0.8427
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real_motor",
+     "prueba": "real_motor",
+     "umbral": "0.5",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    }
+   },
+   "hil_prop->real_motor": {
+    "iforest": {
+     "auroc": 0.6667,
+     "auroc_ic95": [
+      0.6363,
+      0.6965
+     ],
+     "auprc": 0.6702,
+     "auprc_ic95": [
+      0.6298,
+      0.7092
+     ],
+     "bacc": 0.6142,
+     "bacc_ic95": [
+      0.5897,
+      0.639
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil_prop",
+     "prueba": "real_motor",
+     "umbral": "0.5751",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    },
+    "rf": {
+     "auroc": 0.6538,
+     "auroc_ic95": [
+      0.6223,
+      0.6896
+     ],
+     "auprc": 0.6449,
+     "auprc_ic95": [
+      0.6033,
+      0.6849
+     ],
+     "bacc": 0.5921,
+     "bacc_ic95": [
+      0.5676,
+      0.6188
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil_prop",
+     "prueba": "real_motor",
+     "umbral": "0.5",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    }
+   },
+   "real_motor->hil_prop": {
+    "iforest": {
+     "auroc": 0.5444,
+     "auroc_ic95": [
+      0.5204,
+      0.5692
+     ],
+     "auprc": 0.5662,
+     "auprc_ic95": [
+      0.537,
+      0.5926
+     ],
+     "bacc": 0.4887,
+     "bacc_ic95": [
+      0.484,
+      0.4935
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real_motor",
+     "prueba": "hil_prop",
+     "umbral": "0.5182",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    },
+    "rf": {
+     "auroc": 0.6449,
+     "auroc_ic95": [
+      0.6256,
+      0.6659
+     ],
+     "auprc": 0.6712,
+     "auprc_ic95": [
+      0.6458,
+      0.6979
+     ],
+     "bacc": 0.5236,
+     "bacc_ic95": [
+      0.5193,
+      0.5276
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real_motor",
+     "prueba": "hil_prop",
+     "umbral": "0.5",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    }
+   },
+   "caida_auroc": {
+    "uav_sead->real|iforest": 0.0033,
+    "uav_sead->real|rf": 0.3207,
+    "real->uav_sead|iforest": 0.116,
+    "real->uav_sead|rf": 0.3276,
+    "uav_sead->hil|iforest": 0.1177,
+    "uav_sead->hil|rf": 0.537,
+    "hil->real|iforest": -0.0381,
+    "hil->real|rf": 0.2446,
+    "real->hil|iforest": 0.0062,
+    "real->hil|rf": 0.2756,
+    "hil_prop->real_motor|iforest": -0.0242,
+    "hil_prop->real_motor|rf": 0.2576,
+    "real_motor->hil_prop|iforest": -0.072,
+    "real_motor->hil_prop|rf": 0.3538
+   }
+  },
+  "norm_vuelo": {
+   "uav_sead->uav_sead": {
+    "iforest": {
+     "auroc": 0.6975,
+     "auroc_ic95": [
+      0.6398,
+      0.7598
+     ],
+     "auprc": 0.1228,
+     "auprc_ic95": [
+      0.0969,
+      0.1583
+     ],
+     "bacc": 0.578,
+     "bacc_ic95": [
+      0.5537,
+      0.6073
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "uav_sead",
+     "prueba": "uav_sead",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    },
+    "rf": {
+     "auroc": 0.8492,
+     "auroc_ic95": [
+      0.8227,
+      0.875
+     ],
+     "auprc": 0.2126,
+     "auprc_ic95": [
+      0.1693,
+      0.2611
+     ],
+     "bacc": 0.5261,
+     "bacc_ic95": [
+      0.5188,
+      0.5361
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "uav_sead",
+     "prueba": "uav_sead",
+     "umbral": "0.5",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    }
+   },
+   "real->real": {
+    "iforest": {
+     "auroc": 0.5703,
+     "auroc_ic95": [
+      0.5455,
+      0.5945
+     ],
+     "auprc": 0.6138,
+     "auprc_ic95": [
+      0.5745,
+      0.6545
+     ],
+     "bacc": 0.5174,
+     "bacc_ic95": [
+      0.5054,
+      0.5307
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real",
+     "prueba": "real",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    },
+    "rf": {
+     "auroc": 0.8668,
+     "auroc_ic95": [
+      0.852,
+      0.881
+     ],
+     "auprc": 0.8787,
+     "auprc_ic95": [
+      0.8595,
+      0.8954
+     ],
+     "bacc": 0.7741,
+     "bacc_ic95": [
+      0.7593,
+      0.7891
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real",
+     "prueba": "real",
+     "umbral": "0.5",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    }
+   },
+   "hil->hil": {
+    "iforest": {
+     "auroc": 0.6005,
+     "auroc_ic95": [
+      0.5847,
+      0.6139
+     ],
+     "auprc": 0.7884,
+     "auprc_ic95": [
+      0.7774,
+      0.8007
+     ],
+     "bacc": 0.5693,
+     "bacc_ic95": [
+      0.5611,
+      0.5772
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil",
+     "prueba": "hil",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    },
+    "rf": {
+     "auroc": 0.9963,
+     "auroc_ic95": [
+      0.9937,
+      0.9981
+     ],
+     "auprc": 0.9976,
+     "auprc_ic95": [
+      0.995,
+      0.9991
+     ],
+     "bacc": 0.9688,
+     "bacc_ic95": [
+      0.9635,
+      0.9739
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil",
+     "prueba": "hil",
+     "umbral": "0.5",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    }
+   },
+   "uav_sead->real": {
+    "iforest": {
+     "auroc": 0.5381,
+     "auroc_ic95": [
+      0.5114,
+      0.5646
+     ],
+     "auprc": 0.598,
+     "auprc_ic95": [
+      0.5645,
+      0.6317
+     ],
+     "bacc": 0.5168,
+     "bacc_ic95": [
+      0.4979,
+      0.5385
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "real",
+     "umbral": "0.4991",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    },
+    "rf": {
+     "auroc": 0.5257,
+     "auroc_ic95": [
+      0.5007,
+      0.5531
+     ],
+     "auprc": 0.5818,
+     "auprc_ic95": [
+      0.5499,
+      0.6135
+     ],
+     "bacc": 0.5206,
+     "bacc_ic95": [
+      0.5113,
+      0.5315
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "real",
+     "umbral": "0.5",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    }
+   },
+   "real->uav_sead": {
+    "iforest": {
+     "auroc": 0.6044,
+     "auroc_ic95": [
+      0.5648,
+      0.6474
+     ],
+     "auprc": 0.0879,
+     "auprc_ic95": [
+      0.0673,
+      0.1151
+     ],
+     "bacc": 0.5141,
+     "bacc_ic95": [
+      0.5072,
+      0.5239
+     ],
+     "tipo": "entre",
+     "entrenamiento": "real",
+     "prueba": "uav_sead",
+     "umbral": "0.5336",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    },
+    "rf": {
+     "auroc": 0.48,
+     "auroc_ic95": [
+      0.4455,
+      0.5199
+     ],
+     "auprc": 0.0397,
+     "auprc_ic95": [
+      0.0322,
+      0.0496
+     ],
+     "bacc": 0.4722,
+     "bacc_ic95": [
+      0.4493,
+      0.4993
+     ],
+     "tipo": "entre",
+     "entrenamiento": "real",
+     "prueba": "uav_sead",
+     "umbral": "0.5",
+     "vuelos_prueba": 1165,
+     "ventanas_prueba": 57903,
+     "prevalencia_prueba": 0.043
+    }
+   },
+   "uav_sead->hil": {
+    "iforest": {
+     "auroc": 0.5188,
+     "auroc_ic95": [
+      0.5012,
+      0.536
+     ],
+     "auprc": 0.7336,
+     "auprc_ic95": [
+      0.7217,
+      0.7455
+     ],
+     "bacc": 0.5061,
+     "bacc_ic95": [
+      0.4936,
+      0.5166
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "hil",
+     "umbral": "0.4991",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    },
+    "rf": {
+     "auroc": 0.4541,
+     "auroc_ic95": [
+      0.4391,
+      0.4706
+     ],
+     "auprc": 0.6999,
+     "auprc_ic95": [
+      0.6865,
+      0.713
+     ],
+     "bacc": 0.5206,
+     "bacc_ic95": [
+      0.5163,
+      0.5254
+     ],
+     "tipo": "entre",
+     "entrenamiento": "uav_sead",
+     "prueba": "hil",
+     "umbral": "0.5",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    }
+   },
+   "hil->real": {
+    "iforest": {
+     "auroc": 0.5817,
+     "auroc_ic95": [
+      0.5574,
+      0.6057
+     ],
+     "auprc": 0.624,
+     "auprc_ic95": [
+      0.5828,
+      0.6633
+     ],
+     "bacc": 0.5376,
+     "bacc_ic95": [
+      0.5238,
+      0.5525
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil",
+     "prueba": "real",
+     "umbral": "0.5667",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    },
+    "rf": {
+     "auroc": 0.6066,
+     "auroc_ic95": [
+      0.5838,
+      0.6303
+     ],
+     "auprc": 0.6362,
+     "auprc_ic95": [
+      0.6106,
+      0.6616
+     ],
+     "bacc": 0.5018,
+     "bacc_ic95": [
+      0.501,
+      0.5029
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil",
+     "prueba": "real",
+     "umbral": "0.5",
+     "vuelos_prueba": 440,
+     "ventanas_prueba": 13380,
+     "prevalencia_prueba": 0.5474
+    }
+   },
+   "real->hil": {
+    "iforest": {
+     "auroc": 0.573,
+     "auroc_ic95": [
+      0.5573,
+      0.5874
+     ],
+     "auprc": 0.7536,
+     "auprc_ic95": [
+      0.7397,
+      0.7668
+     ],
+     "bacc": 0.5328,
+     "bacc_ic95": [
+      0.5232,
+      0.5426
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real",
+     "prueba": "hil",
+     "umbral": "0.5336",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    },
+    "rf": {
+     "auroc": 0.6402,
+     "auroc_ic95": [
+      0.6235,
+      0.6563
+     ],
+     "auprc": 0.7895,
+     "auprc_ic95": [
+      0.7694,
+      0.81
+     ],
+     "bacc": 0.5766,
+     "bacc_ic95": [
+      0.568,
+      0.585
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real",
+     "prueba": "hil",
+     "umbral": "0.5",
+     "vuelos_prueba": 1445,
+     "ventanas_prueba": 42531,
+     "prevalencia_prueba": 0.6956
+    }
+   },
+   "hil_prop->hil_prop": {
+    "iforest": {
+     "auroc": 0.4692,
+     "auroc_ic95": [
+      0.4478,
+      0.4914
+     ],
+     "auprc": 0.5665,
+     "auprc_ic95": [
+      0.5409,
+      0.5939
+     ],
+     "bacc": 0.5255,
+     "bacc_ic95": [
+      0.5192,
+      0.5319
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil_prop",
+     "prueba": "hil_prop",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    },
+    "rf": {
+     "auroc": 0.9985,
+     "auroc_ic95": [
+      0.9973,
+      0.9993
+     ],
+     "auprc": 0.9986,
+     "auprc_ic95": [
+      0.9974,
+      0.9994
+     ],
+     "bacc": 0.985,
+     "bacc_ic95": [
+      0.9796,
+      0.989
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "hil_prop",
+     "prueba": "hil_prop",
+     "umbral": "0.5",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    }
+   },
+   "real_motor->real_motor": {
+    "iforest": {
+     "auroc": 0.5994,
+     "auroc_ic95": [
+      0.5681,
+      0.6313
+     ],
+     "auprc": 0.5913,
+     "auprc_ic95": [
+      0.5415,
+      0.6502
+     ],
+     "bacc": 0.5236,
+     "bacc_ic95": [
+      0.5053,
+      0.5429
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real_motor",
+     "prueba": "real_motor",
+     "umbral": "p95 normales de cada pliegue",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    },
+    "rf": {
+     "auroc": 0.8782,
+     "auroc_ic95": [
+      0.8553,
+      0.896
+     ],
+     "auprc": 0.8765,
+     "auprc_ic95": [
+      0.8513,
+      0.8969
+     ],
+     "bacc": 0.7873,
+     "bacc_ic95": [
+      0.7642,
+      0.8075
+     ],
+     "tipo": "dentro",
+     "entrenamiento": "real_motor",
+     "prueba": "real_motor",
+     "umbral": "0.5",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    }
+   },
+   "hil_prop->real_motor": {
+    "iforest": {
+     "auroc": 0.6107,
+     "auroc_ic95": [
+      0.581,
+      0.6446
+     ],
+     "auprc": 0.6031,
+     "auprc_ic95": [
+      0.5519,
+      0.6533
+     ],
+     "bacc": 0.546,
+     "bacc_ic95": [
+      0.5263,
+      0.5684
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil_prop",
+     "prueba": "real_motor",
+     "umbral": "0.5770",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    },
+    "rf": {
+     "auroc": 0.6384,
+     "auroc_ic95": [
+      0.6054,
+      0.6731
+     ],
+     "auprc": 0.6433,
+     "auprc_ic95": [
+      0.5921,
+      0.6936
+     ],
+     "bacc": 0.5818,
+     "bacc_ic95": [
+      0.5624,
+      0.6035
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "hil_prop",
+     "prueba": "real_motor",
+     "umbral": "0.5",
+     "vuelos_prueba": 268,
+     "ventanas_prueba": 8685,
+     "prevalencia_prueba": 0.5005
+    }
+   },
+   "real_motor->hil_prop": {
+    "iforest": {
+     "auroc": 0.5284,
+     "auroc_ic95": [
+      0.5016,
+      0.5508
+     ],
+     "auprc": 0.5613,
+     "auprc_ic95": [
+      0.535,
+      0.5884
+     ],
+     "bacc": 0.4928,
+     "bacc_ic95": [
+      0.4855,
+      0.5003
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real_motor",
+     "prueba": "hil_prop",
+     "umbral": "0.5366",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    },
+    "rf": {
+     "auroc": 0.6393,
+     "auroc_ic95": [
+      0.6258,
+      0.655
+     ],
+     "auprc": 0.672,
+     "auprc_ic95": [
+      0.6444,
+      0.699
+     ],
+     "bacc": 0.5747,
+     "bacc_ic95": [
+      0.5614,
+      0.5899
+     ],
+     "tipo": "hil_real",
+     "entrenamiento": "real_motor",
+     "prueba": "hil_prop",
+     "umbral": "0.5",
+     "vuelos_prueba": 675,
+     "ventanas_prueba": 17550,
+     "prevalencia_prueba": 0.5533
+    }
+   },
+   "caida_auroc": {
+    "uav_sead->real|iforest": 0.0322,
+    "uav_sead->real|rf": 0.3412,
+    "real->uav_sead|iforest": 0.0931,
+    "real->uav_sead|rf": 0.3692,
+    "uav_sead->hil|iforest": 0.0817,
+    "uav_sead->hil|rf": 0.5422,
+    "hil->real|iforest": -0.0114,
+    "hil->real|rf": 0.2603,
+    "real->hil|iforest": 0.0275,
+    "real->hil|rf": 0.3561,
+    "hil_prop->real_motor|iforest": -0.0113,
+    "hil_prop->real_motor|rf": 0.2398,
+    "real_motor->hil_prop|iforest": -0.0592,
+    "real_motor->hil_prop|rf": 0.3591
+   }
+  }
+ },
+ "clasificador_dominio": {
+  "crudo": {
+   "uav_sead_normal_vs_real_nofault": {
+    "auroc": 0.9997,
+    "auroc_ic95": [
+     0.9994,
+     0.9998
+    ],
+    "bacc": 0.965,
+    "bacc_ic95": [
+     0.9508,
+     0.9776
+    ],
+    "vuelos_0": 884,
+    "vuelos_1": 50,
+    "ventanas_0": 47676,
+    "ventanas_1": 1677,
+    "rasgos_mas_importantes": {
+     "vh_media": 0.1163,
+     "gyr_z_desv": 0.1072,
+     "acc_x_media": 0.0923,
+     "gyr_z_rango": 0.0908,
+     "pitch_media": 0.0889,
+     "acc_y_media": 0.068,
+     "roll_media": 0.0422,
+     "gyr_vib_desv": 0.0327
+    }
+   },
+   "hil_nofault_vs_real_nofault": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     0.9998,
+     1.0
+    ],
+    "bacc": 0.9981,
+    "bacc_ic95": [
+     0.9938,
+     1.0
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4668,
+    "ventanas_1": 1677,
+    "rasgos_mas_importantes": {
+     "acc_vib_media": 0.2628,
+     "acc_vib_desv": 0.1076,
+     "acc_vib_rango": 0.0987,
+     "gyr_vib_media": 0.0946,
+     "acc_y_desv": 0.0692,
+     "acc_y_rango": 0.0437,
+     "err_p_desv": 0.0404,
+     "gyr_z_rango": 0.037
+    }
+   },
+   "uav_sead_normal_vs_hil_nofault": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9983,
+    "bacc_ic95": [
+     0.9945,
+     1.0
+    ],
+    "vuelos_0": 884,
+    "vuelos_1": 240,
+    "ventanas_0": 47676,
+    "ventanas_1": 4668,
+    "rasgos_mas_importantes": {
+     "acc_vib_media": 0.2597,
+     "gyr_vib_media": 0.0846,
+     "acc_vib_desv": 0.0838,
+     "acc_vib_rango": 0.0799,
+     "acc_y_desv": 0.0581,
+     "gyr_vib_desv": 0.0493,
+     "gyr_vib_rango": 0.0346,
+     "acc_y_rango": 0.0341
+    }
+   },
+   "real_nofault_vs_prefallo_real": {
+    "auroc": 0.9469,
+    "auroc_ic95": [
+     0.9212,
+     0.9665
+    ],
+    "bacc": 0.8594,
+    "bacc_ic95": [
+     0.8147,
+     0.8944
+    ],
+    "vuelos_0": 50,
+    "vuelos_1": 355,
+    "ventanas_0": 1677,
+    "ventanas_1": 4379,
+    "rasgos_mas_importantes": {
+     "vz_media": 0.1228,
+     "vh_media": 0.0684,
+     "acc_y_media": 0.0541,
+     "vh_rango": 0.0389,
+     "gyr_y_desv": 0.0326,
+     "gyr_z_media": 0.0307,
+     "vh_desv": 0.0298,
+     "gyr_y_rango": 0.0287
+    }
+   },
+   "hil_nofault_vs_prefallo_hil": {
+    "auroc": 0.9572,
+    "auroc_ic95": [
+     0.9503,
+     0.9641
+    ],
+    "bacc": 0.8973,
+    "bacc_ic95": [
+     0.8867,
+     0.9087
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 1205,
+    "ventanas_0": 4668,
+    "ventanas_1": 8278,
+    "rasgos_mas_importantes": {
+     "vz_rango": 0.0496,
+     "vz_desv": 0.0436,
+     "acc_z_desv": 0.0435,
+     "acc_z_media": 0.0432,
+     "vh_media": 0.0363,
+     "acc_z_rango": 0.0357,
+     "pitch_media": 0.0356,
+     "err_roll_desv": 0.0342
+    }
+   },
+   "uav_sead_normal_vs_normales_de_vuelos_anomalos": {
+    "auroc": 0.7598,
+    "auroc_ic95": [
+     0.7249,
+     0.7928
+    ],
+    "bacc": 0.5679,
+    "bacc_ic95": [
+     0.5444,
+     0.5927
+    ],
+    "vuelos_0": 884,
+    "vuelos_1": 265,
+    "ventanas_0": 47676,
+    "ventanas_1": 7735,
+    "rasgos_mas_importantes": {
+     "acc_vib_media": 0.05,
+     "acc_z_media": 0.0437,
+     "acc_x_media": 0.0371,
+     "acc_y_media": 0.0345,
+     "gyr_vib_media": 0.031,
+     "acc_vib_desv": 0.0279,
+     "err_r_rango": 0.0277,
+     "acc_vib_rango": 0.0274
+    }
+   }
+  },
+  "norm_vuelo": {
+   "uav_sead_normal_vs_real_nofault": {
+    "auroc": 0.9999,
+    "auroc_ic95": [
+     0.9998,
+     1.0
+    ],
+    "bacc": 0.9786,
+    "bacc_ic95": [
+     0.9653,
+     0.9887
+    ],
+    "vuelos_0": 884,
+    "vuelos_1": 50,
+    "ventanas_0": 47676,
+    "ventanas_1": 1677,
+    "rasgos_mas_importantes": {
+     "vz_media": 0.2265,
+     "vh_media": 0.1011,
+     "err_pitch_media": 0.0738,
+     "gyr_vib_desv": 0.0727,
+     "err_q_media": 0.0726,
+     "gyr_vib_rango": 0.0575,
+     "acc_vib_desv": 0.0528,
+     "acc_vib_rango": 0.0518
+    }
+   },
+   "hil_nofault_vs_real_nofault": {
+    "auroc": 0.9999,
+    "auroc_ic95": [
+     0.9996,
+     1.0
+    ],
+    "bacc": 0.9957,
+    "bacc_ic95": [
+     0.9909,
+     0.9992
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4668,
+    "ventanas_1": 1677,
+    "rasgos_mas_importantes": {
+     "acc_y_desv": 0.1536,
+     "acc_vib_desv": 0.1067,
+     "acc_vib_rango": 0.0907,
+     "acc_y_rango": 0.0868,
+     "gyr_vib_desv": 0.0596,
+     "gyr_vib_rango": 0.0575,
+     "acc_x_media": 0.0458,
+     "gyr_z_desv": 0.041
+    }
+   },
+   "uav_sead_normal_vs_hil_nofault": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9983,
+    "bacc_ic95": [
+     0.9947,
+     1.0
+    ],
+    "vuelos_0": 884,
+    "vuelos_1": 240,
+    "ventanas_0": 47676,
+    "ventanas_1": 4668,
+    "rasgos_mas_importantes": {
+     "vz_media": 0.1916,
+     "acc_y_desv": 0.1098,
+     "acc_vib_desv": 0.083,
+     "vh_media": 0.0749,
+     "acc_vib_rango": 0.0697,
+     "acc_y_rango": 0.0456,
+     "gyr_vib_desv": 0.0423,
+     "acc_x_media": 0.0387
+    }
+   },
+   "real_nofault_vs_prefallo_real": {
+    "auroc": 0.9365,
+    "auroc_ic95": [
+     0.9111,
+     0.956
+    ],
+    "bacc": 0.8275,
+    "bacc_ic95": [
+     0.7859,
+     0.867
+    ],
+    "vuelos_0": 50,
+    "vuelos_1": 355,
+    "ventanas_0": 1677,
+    "ventanas_1": 4379,
+    "rasgos_mas_importantes": {
+     "vz_media": 0.1104,
+     "vh_media": 0.1007,
+     "vh_desv": 0.0514,
+     "vh_rango": 0.0492,
+     "vz_rango": 0.0453,
+     "vz_desv": 0.0404,
+     "gyr_z_media": 0.0322,
+     "err_q_media": 0.0221
+    }
+   },
+   "hil_nofault_vs_prefallo_hil": {
+    "auroc": 0.959,
+    "auroc_ic95": [
+     0.952,
+     0.9653
+    ],
+    "bacc": 0.8935,
+    "bacc_ic95": [
+     0.8819,
+     0.9053
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 1205,
+    "ventanas_0": 4668,
+    "ventanas_1": 8278,
+    "rasgos_mas_importantes": {
+     "vz_rango": 0.0557,
+     "acc_z_desv": 0.0427,
+     "acc_z_media": 0.0402,
+     "vh_media": 0.0401,
+     "vz_desv": 0.0393,
+     "acc_z_rango": 0.0363,
+     "pitch_media": 0.0353,
+     "acc_x_media": 0.0335
+    }
+   },
+   "uav_sead_normal_vs_normales_de_vuelos_anomalos": {
+    "auroc": 0.728,
+    "auroc_ic95": [
+     0.6904,
+     0.7595
+    ],
+    "bacc": 0.5324,
+    "bacc_ic95": [
+     0.5184,
+     0.5458
+    ],
+    "vuelos_0": 884,
+    "vuelos_1": 265,
+    "ventanas_0": 47676,
+    "ventanas_1": 7735,
+    "rasgos_mas_importantes": {
+     "acc_x_desv": 0.0407,
+     "acc_x_rango": 0.0345,
+     "vz_media": 0.0325,
+     "gyr_vib_media": 0.0325,
+     "vh_media": 0.0318,
+     "gyr_z_desv": 0.0316,
+     "acc_y_desv": 0.0269,
+     "gyr_z_rango": 0.0264
+    }
+   }
+  }
+ },
+ "meta": {
+  "semilla": 20261103,
+  "semillas_bootstrap": {
+   "crudo|uav_sead->uav_sead|iforest": 409396809,
+   "crudo|uav_sead->uav_sead|rf": 1854384496,
+   "crudo|real->real|iforest": 629514341,
+   "crudo|real->real|rf": 1860452795,
+   "crudo|hil->hil|iforest": 1411706581,
+   "crudo|hil->hil|rf": 791141584,
+   "crudo|uav_sead->real|iforest": 813068152,
+   "crudo|uav_sead->real|rf": 2079634752,
+   "crudo|real->uav_sead|iforest": 315430801,
+   "crudo|real->uav_sead|rf": 2009505353,
+   "crudo|uav_sead->hil|iforest": 195998644,
+   "crudo|uav_sead->hil|rf": 987232764,
+   "crudo|hil->real|iforest": 1236115711,
+   "crudo|hil->real|rf": 2067146826,
+   "crudo|real->hil|iforest": 419039980,
+   "crudo|real->hil|rf": 1444653424,
+   "crudo|hil_prop->hil_prop|iforest": 337781163,
+   "crudo|hil_prop->hil_prop|rf": 1935335955,
+   "crudo|real_motor->real_motor|iforest": 902861282,
+   "crudo|real_motor->real_motor|rf": 1719929543,
+   "crudo|hil_prop->real_motor|iforest": 150055049,
+   "crudo|hil_prop->real_motor|rf": 520664820,
+   "crudo|real_motor->hil_prop|iforest": 1630080632,
+   "crudo|real_motor->hil_prop|rf": 948334057,
+   "norm_vuelo|uav_sead->uav_sead|iforest": 1823757068,
+   "norm_vuelo|uav_sead->uav_sead|rf": 867797189,
+   "norm_vuelo|real->real|iforest": 286999914,
+   "norm_vuelo|real->real|rf": 843474263,
+   "norm_vuelo|hil->hil|iforest": 1589060782,
+   "norm_vuelo|hil->hil|rf": 27021435,
+   "norm_vuelo|uav_sead->real|iforest": 641798026,
+   "norm_vuelo|uav_sead->real|rf": 950546285,
+   "norm_vuelo|real->uav_sead|iforest": 1734339527,
+   "norm_vuelo|real->uav_sead|rf": 1540140840,
+   "norm_vuelo|uav_sead->hil|iforest": 1812469442,
+   "norm_vuelo|uav_sead->hil|rf": 1668078162,
+   "norm_vuelo|hil->real|iforest": 1644603582,
+   "norm_vuelo|hil->real|rf": 1446822492,
+   "norm_vuelo|real->hil|iforest": 1216972175,
+   "norm_vuelo|real->hil|rf": 1575080324,
+   "norm_vuelo|hil_prop->hil_prop|iforest": 1064673076,
+   "norm_vuelo|hil_prop->hil_prop|rf": 2050707660,
+   "norm_vuelo|real_motor->real_motor|iforest": 1035469934,
+   "norm_vuelo|real_motor->real_motor|rf": 531223375,
+   "norm_vuelo|hil_prop->real_motor|iforest": 1410145881,
+   "norm_vuelo|hil_prop->real_motor|rf": 2103272478,
+   "norm_vuelo|real_motor->hil_prop|iforest": 505240461,
+   "norm_vuelo|real_motor->hil_prop|rf": 1632428797,
+   "dominio|crudo|uav_sead_normal_vs_real_nofault": 118794951,
+   "dominio|crudo|hil_nofault_vs_real_nofault": 248889110,
+   "dominio|crudo|uav_sead_normal_vs_hil_nofault": 985179441,
+   "dominio|crudo|real_nofault_vs_prefallo_real": 1125488528,
+   "dominio|crudo|hil_nofault_vs_prefallo_hil": 1414610872,
+   "dominio|crudo|uav_sead_normal_vs_normales_de_vuelos_anomalos": 975482472,
+   "dominio|norm_vuelo|uav_sead_normal_vs_real_nofault": 219036100,
+   "dominio|norm_vuelo|hil_nofault_vs_real_nofault": 357584165,
+   "dominio|norm_vuelo|uav_sead_normal_vs_hil_nofault": 1010809550,
+   "dominio|norm_vuelo|real_nofault_vs_prefallo_real": 746816712,
+   "dominio|norm_vuelo|hil_nofault_vs_prefallo_hil": 652820060,
+   "dominio|norm_vuelo|uav_sead_normal_vs_normales_de_vuelos_anomalos": 1893379256
+  },
+  "bootstrap_reps": 500,
+  "unidad_bootstrap": "grupo de vuelo (UAV-SEAD: vuelo; RflyMAD real: id de caso sin repetición; HIL: TestCase)",
+  "hz": 10.0,
+  "ventana_s": 5.0,
+  "paso_s": 2.5,
+  "referencia_s": 10.0,
+  "max_frac_nan_por_canal": 0.2,
+  "umbral_etiqueta_solape": 0.5,
+  "arboles": 200,
+  "pliegues": 5,
+  "canales": [
+   "acc_x",
+   "acc_y",
+   "acc_z",
+   "acc_vib",
+   "gyr_x",
+   "gyr_y",
+   "gyr_z",
+   "gyr_vib",
+   "roll",
+   "pitch",
+   "err_roll",
+   "err_pitch",
+   "err_p",
+   "err_q",
+   "err_r",
+   "vh",
+   "vz"
+  ],
+  "estadisticos": [
+   "media",
+   "desv",
+   "rango"
+  ],
+  "n_rasgos": 51,
+  "piso_escala": {
+   "acc_x": 0.1,
+   "acc_y": 0.1,
+   "acc_z": 0.1,
+   "acc_vib": 0.05,
+   "gyr_x": 0.02,
+   "gyr_y": 0.02,
+   "gyr_z": 0.02,
+   "gyr_vib": 0.01,
+   "roll": 0.5,
+   "pitch": 0.5,
+   "err_roll": 0.5,
+   "err_pitch": 0.5,
+   "err_p": 0.02,
+   "err_q": 0.02,
+   "err_r": 0.02,
+   "vh": 0.2,
+   "vz": 0.1
+  },
+  "ids_nominales_rfly_ctrl_lxl": [
+   0,
+   1500
+  ],
+  "excluidos": {
+   "actuator_outputs / actuator_controls_0": "geometría octo (8 motores) frente a quad (4); PWM y empuje dependen del vehículo (inventario §7)",
+   "battery_status": "4-6 celdas frente a 6; corriente poco fiable en UAV-SEAD; además delataría el fallo Voltage de HIL",
+   "estimator_status / innovaciones EKF2": "sin campo común de innovaciones; test ratios con cálculo dependiente de la versión 1.7-1.13 frente a 1.12.3",
+   "GPS, magnetómetro, barómetro": "presentes en < 95 % de UAV-SEAD",
+   "guiñada, posición x,y,z, dirección de vx,vy": "origen y rumbo arbitrarios por vuelo",
+   "vehicle_local_position_setpoint (consigna de velocidad)": "no está en la intersección >= 95 % del inventario",
+   "rfly_ctrl_lxl, TestInfo, nombre de carpeta": "contienen la etiqueta; solo se usan para etiquetar"
+  },
+  "partes_hil_fijadas": [
+   "HIL-NoFault",
+   "HIL-Load",
+   "HIL-Voltage",
+   "HIL-Wind",
+   "HIL-Prop"
+  ],
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0",
+   "pyulog": "?"
+  },
+  "muestra": 0
+ }
+}

@@ -1,0 +1,11 @@
+metadato,tipo,auroc_en_muestra_por_fraccion_de_clase,categorias_con_ambas_clases,auroc,media_sin_fallo,media_previo_al_fallo,ficheros_con_dato
+placa,categorico,0.6510,2.0000,,,,
+fecha,categorico,0.9257,4.0000,,,,
+estado,categorico,0.5898,5.0000,,,,
+params_hash,categorico,0.6800,4.0000,,,,
+ekf2_hgt_mode,categorico,0.5939,2.0000,,,,
+ekf2_aid_mask,categorico,0.6072,2.0000,,,,
+bat_v_ini,numerico,,,0.5771,23.7833,24.0069,483.0000
+viento_vel_media,numerico,,,0.8099,0.9625,2.5815,360.0000
+n_cmds,numerico,,,0.8180,4.3529,6.5787,483.0000
+dur_log,numerico,,,0.6007,101.5122,115.5331,483.0000

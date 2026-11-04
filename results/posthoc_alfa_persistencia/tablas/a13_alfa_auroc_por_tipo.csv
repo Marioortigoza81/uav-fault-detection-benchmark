@@ -1,0 +1,5 @@
+tipo,bags,ventanas_positivas,auroc_p_ventana,auroc_p_grupo,p_grupo_ic_lo,p_grupo_ic_hi,p_grupo_min_semilla,p_grupo_max_semilla
+aleron,5,166,0.9752,0.4502,0.3063,0.9322,0.4238,0.4635
+elevador,2,10,0.9500,0.8374,0.6863,0.9646,0.7688,0.8688
+motor,19,157,0.9901,0.9826,0.9728,0.9922,0.9794,0.9859
+timon,1,18,0.9983,0.9871,0.9782,0.9932,0.9834,0.9899

@@ -1,0 +1,23 @@
+hipotesis,contraste,margen,estimacion,se_bootstrap,sd_semillas,n_semillas,se_total,ic95_total_inf,ic95_total_sup,metodo_total,p_total,p_total_holm,cumple_total_holm,cumple_total_holm_alfa_0_05
+H1,H1 uav_sead,0,0.0782,0.00806137,0.00503458,5,0.00950435,0.0595718,0.0968282,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.000999001,0.021978,True,True
+H2,H2 uav_sead,0.9,0.9069,0.0132911,0.00520447,5,0.0142737,0.878924,0.934876,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.314404,1,False,False
+H1,H1 alfa,0,0.255394,0.0945682,0.00931687,5,0.0950261,0.0262039,0.388208,"réplicas bootstrap + N(0, var_semillas) por réplica (percentil)",0.001998,0.02997,False,True
+H2,H2 alfa,0.9,1.00034,0.000509556,0.000420914,5,0.000660921,0.999004,1.00163,"réplicas bootstrap + N(0, var_semillas) por réplica (percentil)",0.000999001,0.021978,True,True
+H1,H1 rflymad,0,0.0066638,0.00107495,0.00120341,5,0.0016136,0.00360473,0.00998372,"réplicas bootstrap + N(0, var_semillas) por réplica (percentil)",0.000999001,0.021978,True,True
+H2,H2 rflymad,0.9,1,0,0,5,0,1,1,"réplicas bootstrap + N(0, var_semillas) por réplica (percentil)",0.000999001,0.021978,True,True
+H1,H1 uav_fd,0,0.0502343,0.0322368,0.00260029,5,0.0323415,0.0047,0.123537,"réplicas bootstrap + N(0, var_semillas) por réplica (percentil)",0.00501002,0.0601202,False,False
+H2,H2 uav_fd,0.9,0.948093,0.0605122,0.00679551,5,0.0608925,0.801014,1.03381,"réplicas bootstrap + N(0, var_semillas) por réplica (percentil)",0.218437,1,False,False
+H3,H3 uav_sead->real,0.2,0.2995,0.0116329,0.00383732,5,0.0122494,0.275492,0.323508,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.000999001,0.021978,True,True
+H3,H3 real->uav_sead,0.2,0.299,0.0352813,0.00901793,5,0.0364155,0.227627,0.370373,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.00327774,0.0458883,False,True
+H3,H3 uav_sead->hil,0.2,0.5424,0.00469396,0.0305202,5,0.030879,0.481878,0.602922,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.000999001,0.021978,True,True
+H3,H3 hil->real,0.2,0.2408,0.0109186,0.0108584,5,0.0153987,0.210619,0.270981,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.00402967,0.0523858,False,False
+H3,H3 real->hil,0.2,0.3093,0.00438784,0.00844376,5,0.00951578,0.290649,0.327951,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.000999001,0.021978,True,True
+H3,H3 hil_prop->real_motor,0.2,0.2399,0.0140309,0.00700643,5,0.015683,0.209162,0.270638,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.00547701,0.0602471,False,False
+H3,H3 hil_sensors->real_sensors,0.2,0.2128,0.0168115,0.0122872,5,0.0208231,0.171987,0.253613,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",0.269376,1,False,False
+H4,H4 uav_sead->real,0.05,0.0353,0.00698992,0.00621064,5,0.00935046,0.0169734,0.0536266,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False
+H4,H4 real->uav_sead,0.05,0.0784,0.0141584,0.0103058,5,0.017512,0.0440771,0.112723,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False
+H4,H4 uav_sead->hil,0.05,-0.0709,0.00326537,0.0389834,5,0.0391199,-0.147574,0.00577357,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False
+H4,H4 hil->real,0.05,0.1086,0.013189,0.0099671,5,0.0165316,0.0761987,0.141001,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False
+H4,H4 real->hil,0.05,0.0055,0.00288271,0.0146072,5,0.0148889,-0.0236818,0.0346818,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False
+H4,H4 hil_prop->real_motor,0.05,0.1337,0.017883,0.0101935,5,0.0205842,0.0933558,0.174044,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False
+H4,H4 hil_sensors->real_sensors,0.05,0.029,0.0129594,0.0123275,5,0.0178861,-0.00605617,0.0640562,"normal: est ± 1,96 · raíz(SE_boot² + var_semillas)",1,1,False,False

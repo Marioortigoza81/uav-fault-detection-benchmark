@@ -1,0 +1,330 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión simulada C-6); no cambia los veredictos preregistrados",
+  "modelo": "RF de 12 (200 árboles, imputación por mediana, random_state 0)",
+  "protocolos": "P-ventana StratifiedKFold(5) semilla 0; P-grupo StratifiedGroupKFold(5) por bag, semillas 0-4 (cifra = media); P-sesión LeaveOneGroupOut por fecha (5 fechas), como en 12",
+  "bootstrap": "1000 réplicas de bags, semilla 20261103 (pareadas entre conjuntos)",
+  "n_jobs": 4,
+  "canales_velocidad_aire_en_sin_atajos": [
+   "asp_cmd",
+   "asp_err",
+   "asp_meas",
+   "aspd_error",
+   "vfr_airspeed"
+  ],
+  "tratamiento_en_04": "asp_meas y vfr_airspeed a NaN si valen 0 exacto en toda la secuencia; asp_err = asp_meas − asp_cmd hereda el NaN; el RF de 12 imputa la mediana del train",
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0"
+  },
+  "segundos": 138.9
+ },
+ "ausencia_velocidad_aire": {
+  "rasgo_testigo": "asp_meas__media",
+  "frac_ventanas_sin_aire": 0.6843,
+  "frac_sin_aire_normales": 0.671,
+  "frac_sin_aire_con_fallo": 0.7578,
+  "auroc_indicador_ausencia_frente_a_y": 0.5434,
+  "bags_sin_aire": 21,
+  "bags": 30,
+  "por_fecha": {
+   "2018-07-18": {
+    "ventanas": 251,
+    "frac_sin_aire": 0.0,
+    "prevalencia": 0.1116
+   },
+   "2018-07-30": {
+    "ventanas": 472,
+    "frac_sin_aire": 0.0,
+    "prevalencia": 0.1208
+   },
+   "2018-09-11": {
+    "ventanas": 752,
+    "frac_sin_aire": 1.0,
+    "prevalencia": 0.2168
+   },
+   "2018-10-05": {
+    "ventanas": 463,
+    "frac_sin_aire": 1.0,
+    "prevalencia": 0.1512
+   },
+   "2018-10-18": {
+    "ventanas": 352,
+    "frac_sin_aire": 1.0,
+    "prevalencia": 0.0938
+   }
+  }
+ },
+ "conjuntos": {
+  "sin_atajos_e1": {
+   "n_ventanas": 2290,
+   "n_positivas": 351,
+   "prevalencia": 0.1533,
+   "unidades_independientes": 30,
+   "n_rasgos": 252,
+   "P-ventana": {
+    "auroc": 0.9823,
+    "auroc_ic95": [
+     0.966,
+     0.9942
+    ],
+    "auprc": 0.9186,
+    "auprc_ic95": [
+     0.8662,
+     0.9689
+    ],
+    "auroc_por_asignacion": [
+     0.9823
+    ]
+   },
+   "P-grupo": {
+    "auroc": 0.7269,
+    "auroc_ic95": [
+     0.5833,
+     0.9707
+    ],
+    "auprc": 0.595,
+    "auprc_ic95": [
+     0.4465,
+     0.8607
+    ],
+    "auroc_por_asignacion": [
+     0.7333,
+     0.7201,
+     0.734,
+     0.7333,
+     0.7139
+    ]
+   },
+   "P-sesion": {
+    "auroc": 0.6895,
+    "auroc_ic95": [
+     0.5106,
+     0.9181
+    ],
+    "auprc": 0.5667,
+    "auprc_ic95": [
+     0.4183,
+     0.7952
+    ],
+    "auroc_por_asignacion": [
+     0.6895
+    ]
+   },
+   "inflacion_auroc": {
+    "diferencia": 0.2554,
+    "ic95": [
+     0.0236,
+     0.3879
+    ],
+    "ic_excluye_0": true
+   },
+   "inflacion_auprc": {
+    "diferencia": 0.3237,
+    "ic95": [
+     0.1031,
+     0.4363
+    ],
+    "ic_excluye_0": true
+   }
+  },
+  "sin_atajos_menos_aire_medida": {
+   "n_ventanas": 2290,
+   "n_positivas": 351,
+   "prevalencia": 0.1533,
+   "unidades_independientes": 30,
+   "n_rasgos": 234,
+   "P-ventana": {
+    "auroc": 0.982,
+    "auroc_ic95": [
+     0.9661,
+     0.9938
+    ],
+    "auprc": 0.9178,
+    "auprc_ic95": [
+     0.8671,
+     0.9659
+    ],
+    "auroc_por_asignacion": [
+     0.982
+    ]
+   },
+   "P-grupo": {
+    "auroc": 0.7331,
+    "auroc_ic95": [
+     0.5899,
+     0.9701
+    ],
+    "auprc": 0.5988,
+    "auprc_ic95": [
+     0.4504,
+     0.8658
+    ],
+    "auroc_por_asignacion": [
+     0.7406,
+     0.7162,
+     0.7379,
+     0.7406,
+     0.7302
+    ]
+   },
+   "P-sesion": {
+    "auroc": 0.6882,
+    "auroc_ic95": [
+     0.5105,
+     0.918
+    ],
+    "auprc": 0.563,
+    "auprc_ic95": [
+     0.4193,
+     0.7948
+    ],
+    "auroc_por_asignacion": [
+     0.6882
+    ]
+   },
+   "inflacion_auroc": {
+    "diferencia": 0.2489,
+    "ic95": [
+     0.0234,
+     0.3818
+    ],
+    "ic_excluye_0": true
+   },
+   "inflacion_auprc": {
+    "diferencia": 0.3191,
+    "ic95": [
+     0.1006,
+     0.4373
+    ],
+    "ic_excluye_0": true
+   }
+  },
+  "sin_atajos_menos_aire_todo": {
+   "n_ventanas": 2290,
+   "n_positivas": 351,
+   "prevalencia": 0.1533,
+   "unidades_independientes": 30,
+   "n_rasgos": 222,
+   "P-ventana": {
+    "auroc": 0.9799,
+    "auroc_ic95": [
+     0.9647,
+     0.9918
+    ],
+    "auprc": 0.9099,
+    "auprc_ic95": [
+     0.8583,
+     0.9583
+    ],
+    "auroc_por_asignacion": [
+     0.9799
+    ]
+   },
+   "P-grupo": {
+    "auroc": 0.7298,
+    "auroc_ic95": [
+     0.5872,
+     0.9646
+    ],
+    "auprc": 0.5865,
+    "auprc_ic95": [
+     0.4444,
+     0.8454
+    ],
+    "auroc_por_asignacion": [
+     0.7394,
+     0.7043,
+     0.7373,
+     0.7394,
+     0.7287
+    ]
+   },
+   "P-sesion": {
+    "auroc": 0.6963,
+    "auroc_ic95": [
+     0.5128,
+     0.9205
+    ],
+    "auprc": 0.5649,
+    "auprc_ic95": [
+     0.4182,
+     0.791
+    ],
+    "auroc_por_asignacion": [
+     0.6963
+    ]
+   },
+   "inflacion_auroc": {
+    "diferencia": 0.2501,
+    "ic95": [
+     0.0268,
+     0.3848
+    ],
+    "ic_excluye_0": true
+   },
+   "inflacion_auprc": {
+    "diferencia": 0.3234,
+    "ic95": [
+     0.1115,
+     0.436
+    ],
+    "ic_excluye_0": true
+   }
+  }
+ },
+ "control_frente_a_e1": {
+  "P-ventana": 0.0,
+  "P-grupo": 0.0,
+  "P-sesion": 0.0
+ },
+ "diferencias_pareadas_frente_a_sin_atajos_e1": {
+  "sin_atajos_menos_aire_medida": {
+   "P-ventana": {
+    "diferencia": -0.0003,
+    "ic95": [
+     -0.0016,
+     0.0008
+    ]
+   },
+   "P-grupo": {
+    "diferencia": 0.0062,
+    "ic95": [
+     -0.0023,
+     0.0197
+    ]
+   },
+   "P-sesion": {
+    "diferencia": -0.0013,
+    "ic95": [
+     -0.0107,
+     0.0071
+    ]
+   }
+  },
+  "sin_atajos_menos_aire_todo": {
+   "P-ventana": {
+    "diferencia": -0.0024,
+    "ic95": [
+     -0.0045,
+     -0.0002
+    ]
+   },
+   "P-grupo": {
+    "diferencia": 0.0029,
+    "ic95": [
+     -0.0068,
+     0.0129
+    ]
+   },
+   "P-sesion": {
+    "diferencia": 0.0067,
+    "ic95": [
+     -0.0089,
+     0.025
+    ]
+   }
+  }
+ }
+}

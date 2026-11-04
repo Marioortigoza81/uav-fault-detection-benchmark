@@ -1,0 +1,5 @@
+destino,ventanas,grupos,train_completo,train_igualado,train_lobo,pliegues_con_tope,pliegues,auroc_pgrupo_completo,auroc_pgrupo_igualado,auroc_lobo,efecto_tamano,efecto_tamano_ic_lo,efecto_tamano_ic_hi,efecto_vehiculo,efecto_vehiculo_ic_lo,efecto_vehiculo_ic_hi,dp_efecto_tamano,dp_efecto_vehiculo
+real,12636,428,10108.8000,7413.4559,6440.8514,18,68,0.8689,0.8329,0.6381,0.0359,0.0281,0.0435,0.1948,0.1658,0.2204,0.0318,0.1500
+real_motor,8034,258,6427.2000,4770.3623,4213.0946,19,69,0.8939,0.8732,0.7027,0.0207,0.0161,0.0256,0.1705,0.1412,0.2017,0.0190,0.1479
+real_sensors,6279,220,5023.2000,3164.9200,3023.4904,0,50,0.8728,0.8308,0.5964,0.0420,0.0305,0.0532,0.2344,0.1915,0.2784,0.0331,0.1462
+uav_sead,57937,1171,46349.6000,39422.1754,23871.3589,64,114,0.8694,0.7775,0.6329,0.0919,0.0645,0.1179,0.1445,0.0849,0.1976,0.1015,0.0967

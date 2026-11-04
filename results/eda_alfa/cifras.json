@@ -1,0 +1,1354 @@
+{
+ "verificacion": {
+  "processed.zip": {
+   "sha256": "02562756b9428aa24fbd27105f91687b38541ced8d5432766c14176573d0b4c9",
+   "coincide_con_ficha": true
+  },
+  "telemetry.zip": {
+   "sha256": "bc49ad9613ff76d03cc3497442afa0ff49fcfa51772399acc97b3032622ffa9e",
+   "coincide_con_ficha": true
+  },
+  "dataflash.zip": {
+   "sha256": "90585ca3286a970a36d76fc990e3ade2173a3b561c2def2c789ca78159e25a8b",
+   "coincide_con_ficha": true
+  },
+  "README.txt": {
+   "sha256": "25184131ee97c9cf2446c9e97cd356019c40a6d5bff3ff5ab07fae26962055f4",
+   "coincide_con_ficha": true
+  }
+ },
+ "inventario": {
+  "secuencias": 47,
+  "con_fallo_anotado": 36,
+  "sin_fallo": 10,
+  "sin_etiqueta": 1,
+  "por_tipo": {
+   "motor": 23,
+   "aleron": 8,
+   "timon": 3,
+   "elevador": 2
+  },
+  "combinadas": 1,
+  "con_emr_traj": 17,
+  "con_emr_traj_motor": 16,
+  "tipo_nombre_coincide_con_temas": 47,
+  "tipo_nombre_discrepancias": [],
+  "con_bag": 47,
+  "con_mat": 47,
+  "fechas": [
+   "2018-07-18",
+   "2018-07-30",
+   "2018-09-11",
+   "2018-10-05",
+   "2018-10-18"
+  ],
+  "bags_distintos": 31,
+  "secuencias_con_segundo_evento": [
+   "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure"
+  ],
+  "duracion_total_s": 4893.0,
+  "duracion_total_min": 81.55,
+  "duracion_s": {
+   "min": 25.8,
+   "mediana": 108.7,
+   "max": 232.8
+  },
+  "pre_s": {
+   "min": 49.0,
+   "mediana": 100.6,
+   "max": 151.9
+  },
+  "post_s": {
+   "min": 7.7,
+   "mediana": 15.7,
+   "max": 127.8,
+   "cv": 0.999
+  },
+  "pre_total_min": 56.16,
+  "post_total_min": 12.78,
+  "pre_s_por_tipo": {
+   "motor": {
+    "mediana": 102.3,
+    "min": 49.0
+   },
+   "aleron": {
+    "mediana": 89.0,
+    "min": 49.8
+   },
+   "timon": {
+    "mediana": 55.2,
+    "min": 51.7
+   },
+   "elevador": {
+    "mediana": 90.4,
+    "min": 63.2
+   }
+  },
+  "post_s_por_tipo": {
+   "motor": {
+    "mediana": 15.7,
+    "min": 7.7
+   },
+   "aleron": {
+    "mediana": 29.1,
+    "min": 9.8
+   },
+   "timon": {
+    "mediana": 14.4,
+    "min": 9.1
+   },
+   "elevador": {
+    "mediana": 11.5,
+    "min": 10.4
+   }
+  },
+  "codigos_por_tipo": {
+   "motor": [
+    "motor:1"
+   ],
+   "aleron": [
+    "aleron:1",
+    "aleron:2",
+    "aleron:2-1",
+    "aleron:3",
+    "timon:1"
+   ],
+   "timon": [
+    "timon:2",
+    "timon:3"
+   ],
+   "elevador": [
+    "elevador:1"
+   ]
+  }
+ },
+ "temas": {
+  "distintos": 39,
+  "csv_totales": 1590,
+  "en_todas_las_secuencias": 30,
+  "temas_no_en_todas": {
+   "emergency_responder-traj_file": 17,
+   "failure_status-aileron": 8,
+   "failure_status-elevator": 2,
+   "failure_status-engines": 23,
+   "failure_status-rudder": 4,
+   "mavctrl-path_dev": 41,
+   "mavctrl-rpy": 41,
+   "mavros-mission-reached": 3,
+   "mavros-setpoint_raw-local": 41
+  },
+  "columnas_totales_max": 691,
+  "hz_mediana": {
+   "mavros-nav_info-roll": 19.29,
+   "mavros-nav_info-airspeed": 18.93,
+   "mavros-imu-data_raw": 10.0,
+   "mavros-imu-data": 2.54,
+   "mavros-vfr_hud": 2.54,
+   "mavros-rc-out": 3.0,
+   "mavros-battery": 20.38,
+   "mavros-global_position-rel_alt": 4.12,
+   "mavros-global_position-global": 4.12,
+   "mavros-state": 1.0,
+   "mavctrl-rpy": 50.0,
+   "mavros-wind_estimation": 2.12
+  },
+  "no_monotonos_total": 0,
+  "offset_header_ms_mediana_global": 0.638
+ },
+ "calidad": {
+  "filas_rejilla": 48953,
+  "variables_en_rejilla": 64,
+  "rejilla_hz": 10,
+  "retencion_orden_cero_max_s": 1.0,
+  "nan_prop_global": 0.038,
+  "variables_todo_nan": [],
+  "variables_constantes_en_todas": [
+   "rcout_c0",
+   "rcout_c6",
+   "bat_voltage",
+   "bat_current"
+  ],
+  "variables_constantes_en_alguna_secuencia": {
+   "asp_cmd": 6,
+   "rcout_c7": 45,
+   "rcin_c0": 16,
+   "rcin_c1": 24,
+   "rcin_c2": 12,
+   "rcin_c3": 27
+  },
+  "variables_con_nan_prop_mayor_5pct": {
+   "asp_meas": 0.698,
+   "vfr_airspeed": 0.698,
+   "ctrl_roll": 0.066,
+   "ctrl_pitch": 0.066,
+   "path_dev_y": 0.066,
+   "path_dev_z": 0.066,
+   "asp_err": 0.698
+  },
+  "desfase_inicio_s": {
+   "mediana": 0.254,
+   "max": 0.399
+  },
+  "desfase_fin_s": {
+   "mediana": 0.229,
+   "max": 0.399
+  },
+  "gap_max_nucleo_s": {
+   "mediana": 0.585,
+   "max": 0.648,
+   "secuencias_con_hueco_mayor_2s": 0
+  },
+  "gap_max_por_tema_nucleo_s": {
+   "mavros-nav_info-roll": 0.19,
+   "mavros-nav_info-pitch": 0.188,
+   "mavros-nav_info-airspeed": 0.188,
+   "mavros-imu-data_raw": 0.222,
+   "mavros-rc-out": 0.535,
+   "mavros-vfr_hud": 0.648,
+   "mavros-global_position-rel_alt": 0.379
+  },
+  "acc_norm_mediana_ms2": 10.402,
+  "acc_norm_p01_p99": [
+   5.924,
+   17.154
+  ],
+  "pitch_meas_rango": [
+   -30.77,
+   33.0
+  ],
+  "roll_meas_rango": [
+   -57.04,
+   63.04
+  ],
+  "asp_meas_rango": [
+   7.47,
+   25.78
+  ],
+  "rcout_valores_unicos": {
+   "c0": 1,
+   "c1": 384,
+   "c2": 76,
+   "c3": 251,
+   "c4": 378,
+   "c5": 386,
+   "c6": 1,
+   "c7": 5
+  },
+  "rcout_rango": {
+   "c0": [
+    1500.0,
+    1500.0
+   ],
+   "c1": [
+    1100.0,
+    1654.0
+   ],
+   "c2": [
+    1100.0,
+    1700.0
+   ],
+   "c3": [
+    1100.0,
+    1900.0
+   ],
+   "c4": [
+    1193.0,
+    1801.0
+   ],
+   "c5": [
+    1193.0,
+    1801.0
+   ],
+   "c6": [
+    1500.0,
+    1500.0
+   ],
+   "c7": [
+    991.0,
+    2036.0
+   ]
+  },
+  "rcin_valores_unicos": {
+   "c0": 68,
+   "c1": 33,
+   "c2": 100,
+   "c3": 26
+  },
+  "modos": [
+   "GUIDED"
+  ],
+  "secuencias_con_mas_de_un_modo": [],
+  "armado_y_guided_siempre_en_todas": true,
+  "solapes_reloj_entre_bags": {
+   "pares_con_solape_mayor_5s": 9,
+   "max_solape_s": 111.2,
+   "pares": [
+    "2018-09-11-14-41-38_no_failure|2018-09-11-14-41-51_elevator_failure|5.7",
+    "2018-10-05-15-52-12_2_no_failure|2018-10-05-15-55-10_engine_failure_with_emr_traj|47.7",
+    "2018-10-18-11-03-57_engine_failure_with_emr_traj|2018-10-18-11-04-00_engine_failure_with_emr_traj|111.2",
+    "2018-10-18-11-03-57_engine_failure_with_emr_traj|2018-10-18-11-04-08_1_engine_failure_with_emr_traj|104.3",
+    "2018-10-18-11-03-57_engine_failure_with_emr_traj|2018-10-18-11-04-35_engine_failure_with_emr_traj|58.1",
+    "2018-10-18-11-04-00_engine_failure_with_emr_traj|2018-10-18-11-04-08_1_engine_failure_with_emr_traj|99.7",
+    "2018-10-18-11-04-00_engine_failure_with_emr_traj|2018-10-18-11-04-35_engine_failure_with_emr_traj|69.0",
+    "2018-10-18-11-04-08_1_engine_failure_with_emr_traj|2018-10-18-11-04-35_engine_failure_with_emr_traj|46.5",
+    "2018-10-18-11-04-08_2_engine_failure_with_emr_traj|2018-10-18-11-08-24_no_failure|19.8"
+   ]
+  }
+ },
+ "episodios": {
+  "por_tipo": {
+   "motor": {
+    "secuencias": 23,
+    "bags": 19,
+    "fechas": 5,
+    "con_emr_traj": 16,
+    "post_total_s": 355.4,
+    "pre_total_s": 2276.6,
+    "combinadas": 0
+   },
+   "aleron": {
+    "secuencias": 8,
+    "bags": 5,
+    "fechas": 2,
+    "con_emr_traj": 1,
+    "post_total_s": 347.5,
+    "pre_total_s": 745.3,
+    "combinadas": 1
+   },
+   "timon": {
+    "secuencias": 3,
+    "bags": 1,
+    "fechas": 1,
+    "con_emr_traj": 0,
+    "post_total_s": 40.6,
+    "pre_total_s": 166.9,
+    "combinadas": 0
+   },
+   "elevador": {
+    "secuencias": 2,
+    "bags": 2,
+    "fechas": 1,
+    "con_emr_traj": 0,
+    "post_total_s": 23.0,
+    "pre_total_s": 180.8,
+    "combinadas": 0
+   }
+  },
+  "total_secuencias_con_fallo": 36,
+  "bags_con_fallo": 27,
+  "umbral_episodios_forense": 10,
+  "tipos_por_debajo_del_umbral": [
+   "aleron",
+   "timon",
+   "elevador"
+  ],
+  "motor_bags": 19,
+  "secuencias_de_bags_compartidos": 17,
+  "secuencias_por_bag_con_fallo": 1.33,
+  "aleron_codigos": {
+   "1": 3,
+   "2": 3,
+   "3": 1,
+   "2-1": 1
+  },
+  "airspeed_ausente": {
+   "secuencias": 34,
+   "por_fecha": {
+    "2018-07-18": [
+     1,
+     6
+    ],
+    "2018-07-30": [
+     0,
+     8
+    ],
+    "2018-09-11": [
+     16,
+     16
+    ],
+    "2018-10-05": [
+     10,
+     10
+    ],
+    "2018-10-18": [
+     7,
+     7
+    ]
+   },
+   "con_fallo": 25,
+   "sin_fallo": 8,
+   "por_tipo": {
+    "motor": [
+     12,
+     23
+    ],
+    "aleron": [
+     8,
+     8
+    ],
+    "timon": [
+     3,
+     3
+    ],
+    "elevador": [
+     2,
+     2
+    ]
+   }
+  }
+ },
+ "separabilidad": {
+  "nota": "AUROC descriptivo: positivos = filas desde el instante de fallo, negativos = filas previas de las mismas secuencias; la desviación usa la mediana previa de cada secuencia (usa la etiqueta); filas correlacionadas, sin validación cruzada ni intervalos",
+  "por_grupo": {
+   "motor": {
+    "mayor_auroc_desviacion": {
+     "vfr_throttle": 0.985,
+     "rcout_c2": 0.982,
+     "alt_error": 0.872,
+     "rel_alt": 0.871,
+     "vfr_alt": 0.867,
+     "pressure": 0.852
+    },
+    "n_variables_auroc_desv_mayor_0_9": 2,
+    "n_variables_auroc_desv_mayor_0_8": 7,
+    "n_variables": 61,
+    "mayor_auroc_valor": {
+     "vfr_throttle": 0.985,
+     "rcout_c2": 0.982,
+     "rel_alt": 0.902,
+     "vel_z": 0.834
+    }
+   },
+   "motor_con_emr": {
+    "mayor_auroc_desviacion": {
+     "vfr_throttle": 0.987,
+     "rcout_c2": 0.985,
+     "alt_error": 0.883,
+     "rel_alt": 0.882,
+     "vfr_alt": 0.879,
+     "pressure": 0.865
+    },
+    "n_variables_auroc_desv_mayor_0_9": 2,
+    "n_variables_auroc_desv_mayor_0_8": 7,
+    "n_variables": 61,
+    "mayor_auroc_valor": {
+     "vfr_throttle": 0.987,
+     "rcout_c2": 0.984,
+     "rel_alt": 0.915,
+     "vel_z": 0.847
+    }
+   },
+   "motor_sin_emr": {
+    "mayor_auroc_desviacion": {
+     "vfr_throttle": 0.977,
+     "rcout_c2": 0.971,
+     "rcout_c1": 0.891,
+     "alt_error": 0.837,
+     "pitch_err": 0.837,
+     "rel_alt": 0.836
+    },
+    "n_variables_auroc_desv_mayor_0_9": 2,
+    "n_variables_auroc_desv_mayor_0_8": 14,
+    "n_variables": 61,
+    "mayor_auroc_valor": {
+     "vfr_throttle": 0.98,
+     "rcout_c2": 0.978,
+     "rcout_c1": 0.888,
+     "asp_meas": 0.887
+    }
+   },
+   "aleron": {
+    "mayor_auroc_desviacion": {
+     "rcout_c4_std2s": 0.733,
+     "roll_err": 0.679,
+     "rcout_c3": 0.668,
+     "roll_cmd": 0.622,
+     "rcout_c3_std2s": 0.619,
+     "roll_meas": 0.587
+    },
+    "n_variables_auroc_desv_mayor_0_9": 0,
+    "n_variables_auroc_desv_mayor_0_8": 0,
+    "n_variables": 58,
+    "mayor_auroc_valor": {
+     "rcout_c4_std2s": 0.676,
+     "wind_x": 0.641,
+     "rcin_c3": 0.62,
+     "rcout_c3_std2s": 0.602
+    }
+   },
+   "timon": {
+    "mayor_auroc_desviacion": {
+     "acc_y": 0.994,
+     "rcout_c3": 0.992,
+     "rcout_c4": 0.967,
+     "rcout_c5": 0.967,
+     "turn_err": 0.94,
+     "rcout_c1": 0.932
+    },
+    "n_variables_auroc_desv_mayor_0_9": 7,
+    "n_variables_auroc_desv_mayor_0_8": 20,
+    "n_variables": 58,
+    "mayor_auroc_valor": {
+     "acc_x": 0.925,
+     "rcout_c1": 0.888,
+     "pitch_cmd": 0.871,
+     "rcout_c3_std2s": 0.855
+    }
+   },
+   "elevador": {
+    "mayor_auroc_desviacion": {
+     "pitch_err": 0.845,
+     "pitch_meas": 0.802,
+     "vel_z": 0.801,
+     "ctrl_pitch": 0.793,
+     "vfr_groundspeed": 0.764,
+     "rcout_c1_std2s": 0.762
+    },
+    "n_variables_auroc_desv_mayor_0_9": 0,
+    "n_variables_auroc_desv_mayor_0_8": 3,
+    "n_variables": 58,
+    "mayor_auroc_valor": {
+     "rcout_c1_std2s": 0.906,
+     "vel_x": 0.78,
+     "wind_y": 0.772,
+     "rcout_c1": 0.711
+    }
+   },
+   "todos": {
+    "mayor_auroc_desviacion": {
+     "vfr_throttle": 0.753,
+     "rcout_c2": 0.751,
+     "asp_meas": 0.725,
+     "asp_err": 0.725,
+     "vfr_airspeed": 0.721,
+     "alt_error": 0.699
+    },
+    "n_variables_auroc_desv_mayor_0_9": 0,
+    "n_variables_auroc_desv_mayor_0_8": 0,
+    "n_variables": 61,
+    "mayor_auroc_valor": {
+     "asp_meas": 0.724,
+     "asp_err": 0.724,
+     "vfr_airspeed": 0.723,
+     "rel_alt": 0.703
+    }
+   }
+  },
+  "tiempo": {
+   "motor": {
+    "t_desde_inicio_auroc": 0.921,
+    "t_hasta_fin_auroc": 0.995
+   },
+   "motor_con_emr": {
+    "t_desde_inicio_auroc": 0.928,
+    "t_hasta_fin_auroc": 0.995
+   },
+   "motor_sin_emr": {
+    "t_desde_inicio_auroc": 0.907,
+    "t_hasta_fin_auroc": 0.996
+   },
+   "aleron": {
+    "t_desde_inicio_auroc": 0.906,
+    "t_hasta_fin_auroc": 0.847
+   },
+   "timon": {
+    "t_desde_inicio_auroc": 0.992,
+    "t_hasta_fin_auroc": 0.993
+   },
+   "elevador": {
+    "t_desde_inicio_auroc": 0.855,
+    "t_hasta_fin_auroc": 0.999
+   },
+   "todos": {
+    "t_desde_inicio_auroc": 0.902,
+    "t_hasta_fin_auroc": 0.896
+   }
+  },
+  "prefallo_vs_sin_fallo": {
+   "filas_sin_fallo": 5524,
+   "filas_prefallo": 33715,
+   "mayor": {
+    "alt_error": 0.756,
+    "asp_cmd": 0.714,
+    "rcin_c2": 0.71,
+    "rcin_c3": 0.696,
+    "wp_dist": 0.691,
+    "yaw_err": 0.689
+   },
+   "n_mayor_0_8": 0
+  },
+  "secuencias_con_velocidad_aire_en_todos": {
+   "motor": 11,
+   "aleron": 0,
+   "timon": 0,
+   "elevador": 0
+  }
+ },
+ "latencia": {
+  "regla": "|x − mediana previa| > 5.0·sigma robusta durante 3 muestras (0,3 s); base = 30 s previos; detectada = antes de 10 s; placebo = mismo test con el fallo falso 20 s antes",
+  "por_tipo": {
+   "motor": {
+    "n_seq": 23,
+    "variables_que_detectan_80pct_en_10s": 5,
+    "mas_rapidas": {
+     "vfr_throttle": {
+      "lat_mediana_s": 0.09,
+      "prop": 0.83,
+      "placebo": 0.14
+     },
+     "alt_error": {
+      "lat_mediana_s": 3.65,
+      "prop": 0.91,
+      "placebo": 0.05
+     },
+     "rel_alt": {
+      "lat_mediana_s": 3.7,
+      "prop": 0.91,
+      "placebo": 0.05
+     },
+     "vfr_alt": {
+      "lat_mediana_s": 3.7,
+      "prop": 0.91,
+      "placebo": 0.05
+     },
+     "pressure": {
+      "lat_mediana_s": 4.45,
+      "prop": 0.91,
+      "placebo": 0.05
+     }
+    },
+    "variables_que_detectan_y_placebo_menor_20pct": 5
+   },
+   "aleron": {
+    "n_seq": 8,
+    "variables_que_detectan_80pct_en_10s": 1,
+    "mas_rapidas": {
+     "asp_cmd": {
+      "lat_mediana_s": 3.28,
+      "prop": 0.88,
+      "placebo": 0.43
+     }
+    },
+    "variables_que_detectan_y_placebo_menor_20pct": 0
+   },
+   "timon": {
+    "n_seq": 3,
+    "variables_que_detectan_80pct_en_10s": 17,
+    "mas_rapidas": {
+     "gyro_z_std2s": {
+      "lat_mediana_s": 0.25,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "rcout_c3": {
+      "lat_mediana_s": 0.27,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "rcout_c3_std2s": {
+      "lat_mediana_s": 0.27,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "acc_y": {
+      "lat_mediana_s": 0.35,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "acc_y_std2s": {
+      "lat_mediana_s": 0.35,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "turn_err": {
+      "lat_mediana_s": 0.53,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "roll_err": {
+      "lat_mediana_s": 0.75,
+      "prop": 1.0,
+      "placebo": null
+     },
+     "rcout_c4": {
+      "lat_mediana_s": 0.85,
+      "prop": 1.0,
+      "placebo": null
+     }
+    },
+    "variables_que_detectan_y_placebo_menor_20pct": 0
+   },
+   "elevador": {
+    "n_seq": 2,
+    "variables_que_detectan_80pct_en_10s": 2,
+    "mas_rapidas": {
+     "pitch_err": {
+      "lat_mediana_s": 3.54,
+      "prop": 1.0,
+      "placebo": 0.5
+     },
+     "vfr_groundspeed": {
+      "lat_mediana_s": 4.74,
+      "prop": 1.0,
+      "placebo": 1.0
+     }
+    },
+    "variables_que_detectan_y_placebo_menor_20pct": 0
+   }
+  },
+  "placebo_prop_media_todas_variables": 0.165,
+  "placebo_prop_media_por_tipo": {
+   "motor": 0.109,
+   "aleron": 0.086,
+   "timon": null,
+   "elevador": 0.302
+  }
+ },
+ "fugas": {
+  "etiqueta_en_el_nombre_de_la_carpeta": {
+   "secuencias_cuyo_nombre_declara_la_clase": 47,
+   "de": 47
+  },
+  "tema_failure_status": {
+   "secuencias_con_tema": 36,
+   "secuencias_sin_fallo_con_tema": 0
+  },
+  "temas_solo_en_secuencias_con_fallo": [
+   "emergency_responder-traj_file",
+   "failure_status-aileron",
+   "failure_status-elevator",
+   "failure_status-engines",
+   "failure_status-rudder"
+  ],
+  "n_temas_csv_con_fallo": {
+   "min": 31,
+   "max": 36
+  },
+  "n_temas_csv_sin_fallo": {
+   "min": 30,
+   "max": 33
+  },
+  "temas_comunes": 30,
+  "modo_constante": true,
+  "modos": [
+   "GUIDED"
+  ],
+  "canales_y_comandos": {
+   "motor": {
+    "rcout_rcin_auroc_desv": {
+     "rcout_c2": 0.982,
+     "rcout_c1": 0.828,
+     "rcout_c1_std2s": 0.677,
+     "rcout_c3": 0.67
+    },
+    "comandos_auroc_desv": {
+     "path_dev_z": 0.772,
+     "pitch_cmd": 0.758,
+     "ctrl_pitch": 0.651,
+     "yaw_err": 0.641
+    }
+   },
+   "aleron": {
+    "rcout_rcin_auroc_desv": {
+     "rcout_c4_std2s": 0.733,
+     "rcout_c3": 0.668,
+     "rcout_c3_std2s": 0.619,
+     "rcout_c2": 0.541
+    },
+    "comandos_auroc_desv": {
+     "roll_cmd": 0.622,
+     "ctrl_roll": 0.585,
+     "yaw_err": 0.552,
+     "path_dev_z": 0.532
+    }
+   },
+   "timon": {
+    "rcout_rcin_auroc_desv": {
+     "rcout_c3": 0.992,
+     "rcout_c4": 0.967,
+     "rcout_c5": 0.967,
+     "rcout_c1": 0.932
+    },
+    "comandos_auroc_desv": {
+     "yaw_err": 0.91,
+     "pitch_cmd": 0.849,
+     "ctrl_pitch": 0.784,
+     "ctrl_roll": 0.781
+    }
+   },
+   "elevador": {
+    "rcout_rcin_auroc_desv": {
+     "rcout_c1_std2s": 0.762,
+     "rcout_c2": 0.678,
+     "rcout_c3": 0.511,
+     "rcout_c5": 0.504
+    },
+    "comandos_auroc_desv": {
+     "ctrl_pitch": 0.793,
+     "pitch_cmd": 0.748,
+     "path_dev_z": 0.719,
+     "asp_cmd": 0.517
+    }
+   }
+  },
+  "rcout_c2_motor": {
+   "pre_mediana_us": 1460.0,
+   "post_mediana_us": 1100.0,
+   "post_en_minimo_1100": 23,
+   "n": 23
+  },
+  "emr_traj_prefallo": {
+   "secuencias_con_emr": 16,
+   "secuencias_sin_emr": 7,
+   "mayor_auroc_prefallo": {
+    "rcin_c1": 0.771,
+    "wind_x": 0.757,
+    "rcin_c0": 0.749,
+    "acc_y_std2s": 0.697,
+    "rcout_c1": 0.673
+   }
+  },
+  "tipo_por_fecha": {
+   "2018-07-18": {
+    "motor": 4,
+    "aleron": 0,
+    "timon": 0,
+    "elevador": 0
+   },
+   "2018-07-30": {
+    "motor": 7,
+    "aleron": 0,
+    "timon": 0,
+    "elevador": 0
+   },
+   "2018-09-11": {
+    "motor": 3,
+    "aleron": 5,
+    "timon": 3,
+    "elevador": 2
+   },
+   "2018-10-05": {
+    "motor": 3,
+    "aleron": 3,
+    "timon": 0,
+    "elevador": 0
+   },
+   "2018-10-18": {
+    "motor": 6,
+    "aleron": 0,
+    "timon": 0,
+    "elevador": 0
+   }
+  },
+  "fechas_con_un_solo_tipo": 3
+ },
+ "fisica": {
+  "acc_norm_mediana_ms2": 10.402,
+  "motor": {
+   "n": 23,
+   "d_rcout_c2_mediana_us": -361.6,
+   "d_acc_x_mediana_ms2": -1.331,
+   "d_acc_x_negativa": 23,
+   "spearman_drcout_dacc": 0.787,
+   "spearman_p": 0.0,
+   "pend_vfr_airspeed_n": 11,
+   "pend_vfr_airspeed_pre_mediana_ms2": 0.035,
+   "pend_vfr_airspeed_post_mediana_ms2": 0.056,
+   "pend_vfr_airspeed_post_negativa": 4,
+   "d_climb_mediana_ms": -2.017,
+   "d_pitch_mediana_deg": -5.42,
+   "d_vfr_throttle_mediana": -0.442
+  },
+  "canal_vs_respuesta": {
+   "aleron": {
+    "n": 8,
+    "canal": "rcout_c4",
+    "respuesta": "gyro_x",
+    "corr_abs_pre_mediana": 0.873,
+    "corr_abs_post_mediana": 0.872,
+    "std_canal_pre_mediana": 26.99,
+    "std_canal_post_mediana": 0.0,
+    "canal_congelado_tras_fallo": 5,
+    "corr_no_definida_post": 5
+   },
+   "elevador": {
+    "n": 2,
+    "canal": "rcout_c1",
+    "respuesta": "gyro_y",
+    "corr_abs_pre_mediana": 0.964,
+    "corr_abs_post_mediana": null,
+    "std_canal_pre_mediana": 25.43,
+    "std_canal_post_mediana": 0.0,
+    "canal_congelado_tras_fallo": 2,
+    "corr_no_definida_post": 2
+   },
+   "timon": {
+    "n": 3,
+    "canal": "rcout_c3",
+    "respuesta": "gyro_z",
+    "corr_abs_pre_mediana": 0.331,
+    "corr_abs_post_mediana": null,
+    "std_canal_pre_mediana": 12.99,
+    "std_canal_post_mediana": 0.0,
+    "canal_congelado_tras_fallo": 3,
+    "corr_no_definida_post": 3
+   }
+  },
+  "aleron_canales_congelados": {
+   "n": 8,
+   "c4_congelado": 5,
+   "c5_congelado": 4,
+   "ambos_congelados": 1,
+   "ninguno_congelado": 0,
+   "por_codigo_inicial": {
+    "1": {
+     "n": 3,
+     "c4_congelado": 0,
+     "c5_congelado": 3
+    },
+    "2": {
+     "n": 4,
+     "c4_congelado": 4,
+     "c5_congelado": 0
+    },
+    "3": {
+     "n": 1,
+     "c4_congelado": 1,
+     "c5_congelado": 1
+    }
+   },
+   "secuencias_de_superficie": 13,
+   "con_algun_canal_congelado": 13
+  },
+  "metricas_pre_post": {
+   "aleron": {
+    "asp_err": {
+     "n": 0,
+     "pre_mediana": null,
+     "post_mediana": null,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "gyro_x_std": {
+     "n": 8,
+     "pre_mediana": 0.191,
+     "post_mediana": 0.203,
+     "post_mayor_que_pre": 4,
+     "wilcoxon_p": 0.8438
+    },
+    "gyro_y_std": {
+     "n": 8,
+     "pre_mediana": 0.126,
+     "post_mediana": 0.143,
+     "post_mayor_que_pre": 6,
+     "wilcoxon_p": 0.1094
+    },
+    "gyro_z_std": {
+     "n": 8,
+     "pre_mediana": 0.143,
+     "post_mediana": 0.153,
+     "post_mayor_que_pre": 5,
+     "wilcoxon_p": 0.3125
+    },
+    "pitch_err": {
+     "n": 8,
+     "pre_mediana": 3.372,
+     "post_mediana": 4.373,
+     "post_mayor_que_pre": 4,
+     "wilcoxon_p": 0.7422
+    },
+    "roll_abs_mediana": {
+     "n": 8,
+     "pre_mediana": 7.736,
+     "post_mediana": 20.89,
+     "post_mayor_que_pre": 7,
+     "wilcoxon_p": 0.0156
+    },
+    "roll_err": {
+     "n": 8,
+     "pre_mediana": 8.65,
+     "post_mediana": 19.394,
+     "post_mayor_que_pre": 7,
+     "wilcoxon_p": 0.0234
+    },
+    "turn_err_mediana_abs": {
+     "n": 8,
+     "pre_mediana": 3.243,
+     "post_mediana": 3.197,
+     "post_mayor_que_pre": 6,
+     "wilcoxon_p": 0.25
+    }
+   },
+   "elevador": {
+    "asp_err": {
+     "n": 0,
+     "pre_mediana": null,
+     "post_mediana": null,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "gyro_x_std": {
+     "n": 2,
+     "pre_mediana": 0.196,
+     "post_mediana": 0.162,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "gyro_y_std": {
+     "n": 2,
+     "pre_mediana": 0.135,
+     "post_mediana": 0.182,
+     "post_mayor_que_pre": 1,
+     "wilcoxon_p": null
+    },
+    "gyro_z_std": {
+     "n": 2,
+     "pre_mediana": 0.143,
+     "post_mediana": 0.083,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "pitch_err": {
+     "n": 2,
+     "pre_mediana": 5.193,
+     "post_mediana": 23.943,
+     "post_mayor_que_pre": 2,
+     "wilcoxon_p": null
+    },
+    "roll_abs_mediana": {
+     "n": 2,
+     "pre_mediana": 8.469,
+     "post_mediana": 5.995,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "roll_err": {
+     "n": 2,
+     "pre_mediana": 10.929,
+     "post_mediana": 6.794,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "turn_err_mediana_abs": {
+     "n": 2,
+     "pre_mediana": 2.833,
+     "post_mediana": 4.091,
+     "post_mayor_que_pre": 2,
+     "wilcoxon_p": null
+    }
+   },
+   "motor": {
+    "asp_err": {
+     "n": 11,
+     "pre_mediana": 1.072,
+     "post_mediana": 2.414,
+     "post_mayor_que_pre": 8,
+     "wilcoxon_p": 0.0137
+    },
+    "gyro_x_std": {
+     "n": 23,
+     "pre_mediana": 0.214,
+     "post_mediana": 0.228,
+     "post_mayor_que_pre": 13,
+     "wilcoxon_p": 0.0802
+    },
+    "gyro_y_std": {
+     "n": 23,
+     "pre_mediana": 0.13,
+     "post_mediana": 0.143,
+     "post_mayor_que_pre": 16,
+     "wilcoxon_p": 0.0415
+    },
+    "gyro_z_std": {
+     "n": 23,
+     "pre_mediana": 0.141,
+     "post_mediana": 0.175,
+     "post_mayor_que_pre": 18,
+     "wilcoxon_p": 0.0075
+    },
+    "pitch_err": {
+     "n": 23,
+     "pre_mediana": 3.878,
+     "post_mediana": 8.961,
+     "post_mayor_que_pre": 21,
+     "wilcoxon_p": 0.0
+    },
+    "roll_abs_mediana": {
+     "n": 23,
+     "pre_mediana": 7.133,
+     "post_mediana": 11.646,
+     "post_mayor_que_pre": 16,
+     "wilcoxon_p": 0.0007
+    },
+    "roll_err": {
+     "n": 23,
+     "pre_mediana": 9.492,
+     "post_mediana": 13.489,
+     "post_mayor_que_pre": 16,
+     "wilcoxon_p": 0.0021
+    },
+    "turn_err_mediana_abs": {
+     "n": 23,
+     "pre_mediana": 2.84,
+     "post_mediana": 3.813,
+     "post_mayor_que_pre": 18,
+     "wilcoxon_p": 0.0006
+    }
+   },
+   "timon": {
+    "asp_err": {
+     "n": 0,
+     "pre_mediana": null,
+     "post_mediana": null,
+     "post_mayor_que_pre": 0,
+     "wilcoxon_p": null
+    },
+    "gyro_x_std": {
+     "n": 3,
+     "pre_mediana": 0.175,
+     "post_mediana": 0.39,
+     "post_mayor_que_pre": 3,
+     "wilcoxon_p": null
+    },
+    "gyro_y_std": {
+     "n": 3,
+     "pre_mediana": 0.12,
+     "post_mediana": 0.173,
+     "post_mayor_que_pre": 3,
+     "wilcoxon_p": null
+    },
+    "gyro_z_std": {
+     "n": 3,
+     "pre_mediana": 0.132,
+     "post_mediana": 0.261,
+     "post_mayor_que_pre": 3,
+     "wilcoxon_p": null
+    },
+    "pitch_err": {
+     "n": 3,
+     "pre_mediana": 3.911,
+     "post_mediana": 7.135,
+     "post_mayor_que_pre": 3,
+     "wilcoxon_p": null
+    },
+    "roll_abs_mediana": {
+     "n": 3,
+     "pre_mediana": 7.91,
+     "post_mediana": 30.204,
+     "post_mayor_que_pre": 2,
+     "wilcoxon_p": null
+    },
+    "roll_err": {
+     "n": 3,
+     "pre_mediana": 9.288,
+     "post_mediana": 23.47,
+     "post_mayor_que_pre": 3,
+     "wilcoxon_p": null
+    },
+    "turn_err_mediana_abs": {
+     "n": 3,
+     "pre_mediana": 3.005,
+     "post_mediana": 11.621,
+     "post_mayor_que_pre": 3,
+     "wilcoxon_p": null
+    }
+   }
+  },
+  "congelacion": {
+   "ventana": "desde el primer mensaje failure_status hasta el segundo evento o 8 s",
+   "secuencias": 13,
+   "canales_esperados": 15,
+   "canales_esperados_congelados": 15,
+   "canales_no_esperados": 37,
+   "canales_no_esperados_congelados": 0,
+   "ultimo_cambio_antes_del_fallo_s": {
+    "min": -1.17,
+    "mediana": -0.26,
+    "max": -0.01
+   },
+   "valor_congelado_us_por_tipo_y_codigo": {
+    "elevador|elevador:1": [
+     1500.0
+    ],
+    "aleron|aleron:2-1": [
+     1500.0
+    ],
+    "timon|timon:3": [
+     1900.0
+    ],
+    "timon|timon:2": [
+     1100.0
+    ],
+    "aleron|aleron:2;timon:1": [
+     1500.0
+    ],
+    "aleron|aleron:3": [
+     1500.0
+    ],
+    "aleron|aleron:1": [
+     1500.0
+    ],
+    "aleron|aleron:2": [
+     1500.0
+    ]
+   },
+   "encadenada": {
+    "secuencia": "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+    "segundo_evento_s": 71.51,
+    "rcout_c4_std_tras_segundo": 50.73,
+    "rcout_c5_std_tras_segundo": 0.0,
+    "rcout_c4_primer_cambio_tras_onset_s": 0.03
+   }
+  }
+ },
+ "canales_servo": {
+  "mav_parm_ficheros": 35,
+  "param_dataflash_ficheros": 10,
+  "firmas_distintas_de_parametros": 1,
+  "SERVO_FUNCTION_por_canal_rcout": {
+   "rcout_c0": 0.0,
+   "rcout_c1": 19.0,
+   "rcout_c2": 70.0,
+   "rcout_c3": 21.0,
+   "rcout_c4": 25.0,
+   "rcout_c5": 24.0,
+   "rcout_c6": 10.0,
+   "rcout_c7": 1.0
+  },
+  "SERVO_REVERSED_por_canal_rcout": {
+   "rcout_c0": 0.0,
+   "rcout_c1": 1.0,
+   "rcout_c2": 0.0,
+   "rcout_c3": 0.0,
+   "rcout_c4": 0.0,
+   "rcout_c5": 0.0,
+   "rcout_c6": 0.0,
+   "rcout_c7": 0.0
+  },
+  "RCMAP": {
+   "RCMAP_PITCH": 2.0,
+   "RCMAP_ROLL": 1.0,
+   "RCMAP_THROTTLE": 3.0,
+   "RCMAP_YAW": 4.0
+  },
+  "nota": "valor numerico de SERVOn_FUNCTION leido de los parametros; su significado (19 elevador, 21 timon, 70 acelerador, 24 y 25 flaperones, 1 RCPassThru1, 0 desactivado) es de la documentacion de ArduPilot, no consultada en esta ejecucion"
+ },
+ "bateria": {
+  "procesado": {
+   "filas": 100211,
+   "voltaje_unicos": [
+    0.0
+   ],
+   "voltaje_max": 0.0,
+   "corriente_unicos": [
+    0.01
+   ],
+   "porcentaje_unicos": [
+    -0.01
+   ],
+   "secuencias_con_voltaje_distinto_de_cero": 0
+  },
+  "tlog": {
+   "ficheros": 41,
+   "vacios_sin_mensajes": 6,
+   "con_datos": 35,
+   "mensajes_sys_status": 787475,
+   "voltaje_unicos": [
+    "0"
+   ],
+   "corriente_unicos": [
+    "-1"
+   ],
+   "restante_unicos": [
+    "-1"
+   ],
+   "battery_status_mensajes": 0,
+   "power_status_mensajes": 787660,
+   "vcc_mv_rango": [
+    4671.0,
+    5280.0
+   ],
+   "vservo_mv_rango": [
+    0.0,
+    5634.0
+   ],
+   "secuencias_cubiertas_por_algun_tlog": 47,
+   "secuencias_cubiertas_por_mas_de_un_tlog": 26,
+   "bytes_tlog_total": 235783989
+  },
+  "dataflash": {
+   "mat": 10,
+   "BAT_declarado_en": 10,
+   "BAT_filas_total": 0,
+   "BAT2_filas_total": 0,
+   "CURR_filas_total": 0,
+   "POWR_filas_total": 123317,
+   "vcc_v_rango": [
+    4.152,
+    5.139
+   ],
+   "vservo_v_rango": [
+    0.0,
+    5.583
+   ],
+   "bin_totales": 10
+  },
+  "recuperable": false
+ },
+ "forense": {
+  "secuencias_cribadas": 7,
+  "cribas": 14,
+  "fuentes": [
+   "nav_info_roll (nativa, irregular)",
+   "imu_data_raw (nativa, 10 Hz)"
+  ],
+  "tipos_por_criba": {
+   "2018-07-18-15-53-31_1_engine_failure|nav_info_roll": "H02,H09",
+   "2018-07-18-15-53-31_1_engine_failure|imu_data_raw": "H09",
+   "2018-07-18-15-53-31_2_engine_failure|nav_info_roll": "H02,H09",
+   "2018-07-18-15-53-31_2_engine_failure|imu_data_raw": "H09",
+   "2018-09-11-14-52-54_left_aileron__right_aileron__failure|nav_info_roll": "H09",
+   "2018-09-11-14-52-54_left_aileron__right_aileron__failure|imu_data_raw": "H08,H09",
+   "2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure|nav_info_roll": "H08,H09",
+   "2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure|imu_data_raw": "H08,H09",
+   "2018-09-11-15-06-34_1_rudder_right_failure|nav_info_roll": "H02,H08,H09",
+   "2018-09-11-15-06-34_1_rudder_right_failure|imu_data_raw": "H08,H09",
+   "2018-09-11-14-41-51_elevator_failure|nav_info_roll": "H02,H09",
+   "2018-09-11-14-41-51_elevator_failure|imu_data_raw": "H08,H09",
+   "2018-07-18-16-37-39_1_no_failure|nav_info_roll": "H02",
+   "2018-07-18-16-37-39_1_no_failure|imu_data_raw": "H02"
+  },
+  "cribas_con_tipo": {
+   "H01": 0,
+   "H02": 6,
+   "H03": 0,
+   "H04": 0,
+   "H05": 0,
+   "H06": 0,
+   "H07": 0,
+   "H08": 6,
+   "H09": 12,
+   "H10": 0
+  },
+  "frases": {
+   "alguna huella aislada: revisar cada una antes de concluir": 14
+  },
+  "tipos_de_generacion_max_por_criba": 0,
+  "H08_secuencias": [
+   "2018-09-11-14-41-51_elevator_failure",
+   "2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+   "2018-09-11-15-06-34_1_rudder_right_failure",
+   "2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure"
+  ],
+  "H04_detalle": [],
+  "H02_detalle": [
+   "H02:field.measured",
+   "H02:field.commanded; H02:field.measured",
+   "H02:field.measured; H02:field.measured; H08:post",
+   "H02:field.commanded; H02:field.measured; H02:field.measured",
+   "H02:field.commanded; H02:field.commanded",
+   "H02:field.angular_velocity.x; H02:field.angular_velocity.x; H02:field.angular_velocity.y; H02:field.angular_velocity.y; H02:field.angular_velocity.z; H02:field.angular_velocity.z; H02:field.linear_acceleration.x; H02:field.linear_acceleration.x; H02:field.linear_acceleration.y; H02:field.linear_acceleration.y; H02:field.linear_acceleration.z; H02:field.linear_acceleration.z"
+  ],
+  "nota": "H09 salta siempre: cada secuencia tiene un solo episodio (post=1 desde el fallo); H01 no salta con tiempos nativos irregulares"
+ }
+}

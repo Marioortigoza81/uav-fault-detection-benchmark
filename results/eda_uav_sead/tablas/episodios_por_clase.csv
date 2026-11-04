@@ -1,0 +1,6 @@
+clase,vuelos,intervalos,intervalos_fusionados_gap5s,dias_distintos,vuelos_sin_fecha,plataformas_distintas,vuelos_sin_uuid,hw_distintos,sw_release_distintos,anyos_distintos,intervalo_dur_mediana_s,intervalo_dur_p10_s,intervalo_dur_p90_s,intervalo_frac_vuelo_mediana,intervalos_por_vuelo_mediana,vuelos_por_dia_max_dentro_de_clase,concentracion_top3_dias_pct,vuelos_normales_puros,dias_anomalos,plataformas_anomalas,plataformas_normales,plataformas_con_normal_y_anomalo
+Mechanical,47,75,56,25,1,3,0,2,4,2,6.105,1.9832,25.3978,0.0447463,1,5,28.2609,,,,,
+External Position,197,248,216,62,0,4,0,2,5,5,8.115,2.1295,49.96,0.124794,1,16,21.8274,,,,,
+Global Position,41,99,76,11,0,2,0,1,2,2,15.022,1.4784,48.6668,0.0933011,2,11,60.9756,,,,,
+Altitude,77,141,120,37,1,4,0,2,5,5,3.904,1.809,23.396,0.0447588,1,12,28.9474,,,,,
+_todas_anomalias,354,,,,,,,,,,,,,,,,,898,98,5,5,5

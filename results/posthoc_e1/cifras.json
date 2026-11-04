@@ -1,0 +1,327 @@
+{
+ "meta": {
+  "tipo": "post hoc (revisión independiente de E1); no cambia los veredictos preregistrados",
+  "modelo": "RF de 12 (200 árboles, semilla 0, n_jobs 3), P-grupo con las 5 asignaciones de 12; solo AUROC",
+  "bootstrap": "mismas 1000 réplicas de grupos que 12 (semilla 20261103): cifras pareadas con E1",
+  "control_auroc_vs_e1": {
+   "conjuntos_comparados": 10,
+   "max_dif_abs": 0.0
+  }
+ },
+ "uav_sead": {
+  "diagnosticos": {},
+  "auroc_rf_p_grupo": {
+   "sin_atajos": {
+    "n_rasgos": 51,
+    "auroc": 0.8768,
+    "ic95": [
+     0.8553,
+     0.8961
+    ],
+    "por_semilla": [
+     0.8799,
+     0.8706,
+     0.8721,
+     0.8809,
+     0.8806
+    ],
+    "e1_valor": 0.8768
+   },
+   "solo_atajos": {
+    "n_rasgos": 92,
+    "auroc": 0.8361,
+    "ic95": [
+     0.7944,
+     0.8663
+    ],
+    "por_semilla": [
+     0.8436,
+     0.8408,
+     0.8318,
+     0.834,
+     0.8303
+    ],
+    "e1_valor": 0.8361
+   }
+  },
+  "cocientes": {
+   "solo_atajos_entre_sin_atajos": {
+    "cociente": 0.9536,
+    "ic95": [
+     0.9091,
+     0.9878
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": true
+   }
+  }
+ },
+ "alfa": {
+  "diagnosticos": {},
+  "auroc_rf_p_grupo": {
+   "sin_atajos": {
+    "n_rasgos": 252,
+    "auroc": 0.7269,
+    "ic95": [
+     0.5833,
+     0.9707
+    ],
+    "por_semilla": [
+     0.7333,
+     0.7201,
+     0.734,
+     0.7333,
+     0.7139
+    ],
+    "e1_valor": 0.7269
+   },
+   "solo_atajos": {
+    "n_rasgos": 58,
+    "auroc": 0.9989,
+    "ic95": [
+     0.9968,
+     0.9999
+    ],
+    "por_semilla": [
+     0.9982,
+     0.9992,
+     0.9995,
+     0.9982,
+     0.9993
+    ],
+    "e1_valor": 0.9989
+   },
+   "solo_posicion_en_secuencia": {
+    "n_rasgos": 2,
+    "auroc": 0.9088,
+    "ic95": [
+     0.85,
+     0.9649
+    ],
+    "por_semilla": [
+     0.9181,
+     0.8938,
+     0.9187,
+     0.9181,
+     0.8955
+    ]
+   },
+   "completo": {
+    "n_rasgos": 310,
+    "auroc": 0.9986,
+    "ic95": [
+     0.9965,
+     0.9998
+    ],
+    "por_semilla": [
+     0.9983,
+     0.9984,
+     0.999,
+     0.9983,
+     0.9988
+    ],
+    "e1_valor": 0.9986
+   }
+  },
+  "cocientes": {
+   "solo_atajos_entre_sin_atajos": {
+    "cociente": 1.3742,
+    "ic95": [
+     1.029,
+     1.7114
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": true
+   },
+   "solo_posicion_en_secuencia_entre_sin_atajos": {
+    "cociente": 1.2502,
+    "ic95": [
+     0.9867,
+     1.5495
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": true
+   },
+   "solo_atajos_entre_completo": {
+    "cociente": 1.0003,
+    "ic95": [
+     0.9993,
+     1.0014
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": true
+   }
+  }
+ },
+ "rflymad": {
+  "diagnosticos": {
+   "rfly_ctrl_activo_frac_igual_a_y_frac_ventanas": 1.0,
+   "rfly_ctrl_activo_frac_mayor_0_igual_a_y_frac_ventanas": 1.0,
+   "centro_ventana_mayor_igual_inyeccion_testinfo_igual_a_y_frac_ventanas": 0.8628,
+   "casos_en_mas_de_una_fecha": 23,
+   "ventanas_de_casos_en_mas_de_una_fecha": 780,
+   "p_sesion": "no es disjunta por caso: un mismo caso puede quedar en train y en prueba; su cifra es una cota optimista"
+  },
+  "rasgos_retirados_por_ser_copia_de_la_etiqueta": [
+   "rfly_ctrl_activo_frac",
+   "inyeccion_testinfo_s"
+  ],
+  "auroc_rf_p_grupo": {
+   "sin_atajos": {
+    "n_rasgos": 222,
+    "auroc": 0.982,
+    "ic95": [
+     0.9777,
+     0.986
+    ],
+    "por_semilla": [
+     0.9833,
+     0.9809,
+     0.9822,
+     0.9805,
+     0.9829
+    ],
+    "e1_valor": 0.982
+   },
+   "solo_atajos": {
+    "n_rasgos": 7,
+    "auroc": 1.0,
+    "ic95": [
+     1.0,
+     1.0
+    ],
+    "por_semilla": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "e1_valor": 1.0
+   },
+   "completo_informativo": {
+    "n_rasgos": 227,
+    "auroc": 0.9984,
+    "ic95": [
+     0.9974,
+     0.9992
+    ],
+    "por_semilla": [
+     0.9985,
+     0.9983,
+     0.9983,
+     0.9982,
+     0.9985
+    ]
+   },
+   "solo_atajos_informativo": {
+    "n_rasgos": 5,
+    "auroc": 0.9965,
+    "ic95": [
+     0.994,
+     0.9987
+    ],
+    "por_semilla": [
+     0.9962,
+     0.9964,
+     0.9963,
+     0.9968,
+     0.9969
+    ]
+   }
+  },
+  "cocientes": {
+   "solo_atajos_informativo_entre_sin_atajos": {
+    "cociente": 1.0148,
+    "ic95": [
+     1.0101,
+     1.0197
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": true
+   },
+   "solo_atajos_informativo_entre_completo_informativo": {
+    "cociente": 0.9981,
+    "ic95": [
+     0.9958,
+     1.0
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": true
+   }
+  }
+ },
+ "uav_fd": {
+  "diagnosticos": {},
+  "auroc_rf_p_grupo": {
+   "sin_atajos": {
+    "n_rasgos": 186,
+    "auroc": 0.9451,
+    "ic95": [
+     0.8642,
+     0.9944
+    ],
+    "por_semilla": [
+     0.9472,
+     0.9409,
+     0.9472,
+     0.945,
+     0.945
+    ],
+    "e1_valor": 0.9451
+   },
+   "solo_atajos": {
+    "n_rasgos": 7,
+    "auroc": 0.8991,
+    "ic95": [
+     0.7277,
+     1.0
+    ],
+    "por_semilla": [
+     0.8965,
+     0.8867,
+     0.8965,
+     0.9079,
+     0.9079
+    ],
+    "e1_valor": 0.8991
+   },
+   "completo": {
+    "n_rasgos": 193,
+    "auroc": 0.9483,
+    "ic95": [
+     0.8584,
+     0.998
+    ],
+    "por_semilla": [
+     0.9506,
+     0.94,
+     0.9506,
+     0.9501,
+     0.9501
+    ],
+    "e1_valor": 0.9483
+   }
+  },
+  "cocientes": {
+   "solo_atajos_entre_sin_atajos": {
+    "cociente": 0.9513,
+    "ic95": [
+     0.7845,
+     1.0602
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": false
+   },
+   "solo_atajos_entre_completo": {
+    "cociente": 0.9481,
+    "ic95": [
+     0.8005,
+     1.0318
+    ],
+    "supera_0_9": true,
+    "limite_inferior_supera_0_9": false
+   }
+  }
+ }
+}

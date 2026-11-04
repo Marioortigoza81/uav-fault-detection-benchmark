@@ -1,0 +1,13 @@
+archivo,motor_fallo,severidad_pct,motor_argmax_abs_z,acierta_identidad,rango_del_motor_con_fallo,z_motor_con_fallo,cambio_rpm_relativa_pct_motor_con_fallo,cambio_rpm_relativa_pct_media_otros,max_abs_z
+FAULT_M1_5.mat,1,5,6,False,6,0.103011,0.0757913,0.00606368,2.88757
+FAULT_M2_5.mat,2,5,4,False,5,0.234321,0.288497,-0.0841738,2.24831
+FAULT_M3_5.mat,3,5,4,False,3,-2.19256,-2.54472,0.653004,2.23847
+FAULT_M4_5.mat,4,5,2,False,3,0.834192,1.06245,-0.279546,1.75132
+FAULT_M5_5.mat,5,5,5,True,1,1.55496,1.28622,-0.330589,1.55496
+FAULT_M6_5.mat,6,5,2,False,2,1.8983,1.14679,-0.388025,2.3486
+FAULT_M1_10.mat,1,10,1,True,1,3.01308,2.21689,-0.555549,3.01308
+FAULT_M2_10.mat,2,10,6,False,5,0.415349,0.51138,-0.0588231,2.48826
+FAULT_M3_10.mat,3,10,1,False,3,1.76059,2.04337,-0.38675,1.82474
+FAULT_M4_10.mat,4,10,1,False,5,1.35305,1.72329,-0.241299,1.63662
+FAULT_M5_10.mat,5,10,1,False,6,-0.767466,-0.634827,0.158448,1.25638
+FAULT_M6_10.mat,6,10,6,True,1,6.53867,3.9501,-0.854734,6.53867

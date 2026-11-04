@@ -1,0 +1,2789 @@
+{
+ "partes": {
+  "Real-NoFault": {
+   "zip_completo": true,
+   "hay_part_en_descarga": false,
+   "incluida": true,
+   "fichero": "Real-No_Fault.zip",
+   "bytes": 1019968855,
+   "sha256": "cc4485cce4b1663c0da3a817b123919c2969e5b661eca8f6ee254ffd7d7065c3",
+   "en_manifiesto": true,
+   "sha_coincide_manifiesto": true,
+   "bytes_coinciden_manifiesto": true,
+   "zip_valido": true,
+   "entradas": 6442
+  },
+  "Real-Sensors": {
+   "zip_completo": true,
+   "hay_part_en_descarga": false,
+   "incluida": true,
+   "fichero": "Real-Sensors.zip",
+   "bytes": 4306137651,
+   "sha256": "f2f5801e2a060beb9b6b2a8d07a307fd6c372b4734b5f38f21b89b20acb450d4",
+   "en_manifiesto": true,
+   "sha_coincide_manifiesto": true,
+   "bytes_coinciden_manifiesto": true,
+   "zip_valido": true,
+   "entradas": 24958
+  },
+  "Real-Motor": {
+   "zip_completo": true,
+   "hay_part_en_descarga": false,
+   "incluida": true,
+   "fichero": "Real-Motor.zip",
+   "bytes": 5982544439,
+   "sha256": "77161c06b2c27b0827e253f4b0bdd36bb5074414e8d235da0a5b7f6aa01efab6",
+   "en_manifiesto": true,
+   "sha_coincide_manifiesto": true,
+   "bytes_coinciden_manifiesto": true,
+   "zip_valido": true,
+   "entradas": 30918
+  }
+ },
+ "partes_cubiertas": [
+  "Real-NoFault",
+  "Real-Sensors",
+  "Real-Motor"
+ ],
+ "partes_no_cubiertas": {},
+ "inventario": {
+  "casos_directorio": 493,
+  "casos_por_parte": {
+   "Real-Motor": 245,
+   "Real-NoFault": 51,
+   "Real-Sensors": 197
+  },
+  "ids_unicos": 440,
+  "ids_unicos_por_parte": {
+   "Real-Motor": 218,
+   "Real-NoFault": 50,
+   "Real-Sensors": 172
+  },
+  "casos_por_clase": {
+   "No Fault": 51,
+   "Motor": 245,
+   "Accelerometer": 34,
+   "Gyroscope": 39,
+   "Magnetometer": 36,
+   "Barometer": 45,
+   "GPS": 43
+  },
+  "casos_por_estado": {
+   "hover": 106,
+   "waypoint": 152,
+   "velocity": 82,
+   "circling": 95,
+   "acce": 58
+  },
+  "casos_por_clase_y_estado": {
+   "No Fault": {
+    "hover": 11,
+    "waypoint": 10,
+    "velocity": 10,
+    "circling": 10,
+    "acce": 10
+   },
+   "Motor": {
+    "hover": 41,
+    "waypoint": 84,
+    "velocity": 42,
+    "circling": 51,
+    "acce": 27
+   },
+   "Accelerometer": {
+    "hover": 2,
+    "waypoint": 13,
+    "velocity": 6,
+    "circling": 8,
+    "acce": 5
+   },
+   "Gyroscope": {
+    "hover": 12,
+    "waypoint": 11,
+    "velocity": 6,
+    "circling": 6,
+    "acce": 4
+   },
+   "Magnetometer": {
+    "hover": 10,
+    "waypoint": 10,
+    "velocity": 6,
+    "circling": 6,
+    "acce": 4
+   },
+   "Barometer": {
+    "hover": 14,
+    "waypoint": 14,
+    "velocity": 6,
+    "circling": 7,
+    "acce": 4
+   },
+   "GPS": {
+    "hover": 16,
+    "waypoint": 10,
+    "velocity": 6,
+    "circling": 7,
+    "acce": 4
+   }
+  },
+  "repeticiones_distintas": {
+   "1": 440,
+   "2": 45,
+   "3": 7,
+   "4": 1
+  },
+  "ids_con_mas_de_un_directorio": 45,
+  "fechas_distintas": 18,
+  "con_ulg": 493,
+  "con_vehicle1": 288,
+  "con_tlog": 491,
+  "con_testinfo": 493,
+  "con_bag": 493,
+  "con_wind_csv": 370,
+  "con_no_wind_txt": 124,
+  "con_grid_analizable": 493,
+  "sin_ulg": [],
+  "ficheros_por_caso": {
+   "n": 493,
+   "q00": 106.0,
+   "q25": 123.0,
+   "q50": 124.0,
+   "q75": 124.0,
+   "q100": 125.0,
+   "media": 123.3205
+  },
+  "gb_descomprimidos": 36.59
+ },
+ "oficial_vs_observado": {
+  "oficial_total": 497,
+  "oficial_suma_tabla": 497,
+  "observado_total_directorios": 493,
+  "sensores_directorios": 197,
+  "sensores_oficial_ruido_mas_cinco_tipos": 182,
+  "por_categoria": {
+   "Motor": {
+    "oficial": 231,
+    "observado": 245
+   },
+   "Sensors' Noise": {
+    "oficial": 82,
+    "observado": null
+   },
+   "Accelerometer": {
+    "oficial": 20,
+    "observado": 34
+   },
+   "Gyroscope": {
+    "oficial": 20,
+    "observado": 39
+   },
+   "Magnetometer": {
+    "oficial": 20,
+    "observado": 36
+   },
+   "Barometer": {
+    "oficial": 20,
+    "observado": 45
+   },
+   "GPS": {
+    "oficial": 20,
+    "observado": 43
+   },
+   "No Fault": {
+    "oficial": 84,
+    "observado": 51
+   }
+  },
+  "sensores_por_modo": {
+   "3": 78,
+   "4": 119
+  },
+  "sensores_clase_por_modo": {
+   "Accelerometer": {
+    "3": 11,
+    "4": 23
+   },
+   "Gyroscope": {
+    "3": 17,
+    "4": 22
+   },
+   "Magnetometer": {
+    "3": 16,
+    "4": 20
+   },
+   "Barometer": {
+    "3": 18,
+    "4": 27
+   },
+   "GPS": {
+    "3": 16,
+    "4": 27
+   }
+  },
+  "nota": "la página no documenta qué modo de fallo corresponde a «Sensors' Noise»; las cuentas por modo se dan sin asignar"
+ },
+ "testinfo": {
+  "parseados": 493,
+  "fallos_de_parseo": 0,
+  "esquemas_distintos": {
+   "Real Flight case ID|Control Sequence|Fault ID|Fault parameter|Fault injection time|Test end time": 493
+  },
+  "hojas": {
+   "1": 493
+  },
+  "id_xlsx_distinto_de_carpeta": 0,
+  "n_ordenes_de_vuelo": {
+   "n": 493,
+   "q00": 2.0,
+   "q25": 4.0,
+   "q50": 6.0,
+   "q75": 8.0,
+   "q100": 8.0,
+   "media": 6.3692
+  },
+  "secuencias_tipo_distintas": 11,
+  "secuencias_mas_frecuentes": {
+   "2,1|1,1|2,4|1,1|2,9|1,1|2,6|1,1": 142,
+   "2,1|1,1|2,6|1,1": 94,
+   "2,1|1,1|2,4|1,1|2,11|1,1|2,6|1,1": 84,
+   "2,1|1,1|2,4|1,1|2,6|1,1": 72,
+   "2,1|1,1|2,10|1,1|2,6|1,1": 48,
+   "2,1|1,1|2,4|1,1|2,9|1,1": 11,
+   "2,1|1,1": 11,
+   "2,1|1,1|2,10|1,1": 10
+  },
+  "fault_id_por_clase": {
+   "No Fault": {
+    "0": 51
+   },
+   "Motor": {
+    "0": 5,
+    "123450": 240
+   },
+   "Accelerometer": {
+    "123452": 34
+   },
+   "Gyroscope": {
+    "123453": 39
+   },
+   "Magnetometer": {
+    "123453": 1,
+    "123455": 35
+   },
+   "Barometer": {
+    "123454": 45
+   },
+   "GPS": {
+    "123455": 6,
+    "123456": 37
+   }
+  },
+  "modo_por_clase": {
+   "No Fault": {
+    "-1": 51
+   },
+   "Motor": {
+    "-1": 5,
+    "1": 139,
+    "2": 101
+   },
+   "Accelerometer": {
+    "3": 11,
+    "4": 23
+   },
+   "Gyroscope": {
+    "3": 17,
+    "4": 22
+   },
+   "Magnetometer": {
+    "3": 16,
+    "4": 20
+   },
+   "Barometer": {
+    "3": 18,
+    "4": 27
+   },
+   "GPS": {
+    "3": 16,
+    "4": 27
+   }
+  },
+  "n_parametros_por_modo": {
+   "-1": 0,
+   "1": 7,
+   "2": 14,
+   "3": 7,
+   "4": 4
+  },
+  "param_distintos_por_clase": {
+   "No Fault": 1,
+   "Motor": 142,
+   "Accelerometer": 16,
+   "Gyroscope": 24,
+   "Magnetometer": 25,
+   "Barometer": 19,
+   "GPS": 24
+  },
+  "inyeccion_info_s_por_clase": {
+   "No Fault": {
+    "n": 51,
+    "q00": 0.0,
+    "q25": 0.0,
+    "q50": 0.0,
+    "q75": 0.0,
+    "q100": 0.0,
+    "media": 0.0
+   },
+   "Motor": {
+    "n": 245,
+    "q00": 0.0,
+    "q25": 22.0,
+    "q50": 38.0,
+    "q75": 57.0,
+    "q100": 127.0,
+    "media": 42.351
+   },
+   "Accelerometer": {
+    "n": 34,
+    "q00": 15.0,
+    "q25": 23.0,
+    "q50": 57.0,
+    "q75": 57.0,
+    "q100": 67.0,
+    "media": 44.5882
+   },
+   "Gyroscope": {
+    "n": 39,
+    "q00": 15.0,
+    "q25": 22.0,
+    "q50": 22.0,
+    "q75": 57.0,
+    "q100": 58.0,
+    "media": 36.7436
+   },
+   "Magnetometer": {
+    "n": 36,
+    "q00": 15.0,
+    "q25": 22.0,
+    "q50": 23.0,
+    "q75": 57.0,
+    "q100": 58.0,
+    "media": 36.9444
+   },
+   "Barometer": {
+    "n": 45,
+    "q00": 15.0,
+    "q25": 22.0,
+    "q50": 36.0,
+    "q75": 57.0,
+    "q100": 66.0,
+    "media": 39.9111
+   },
+   "GPS": {
+    "n": 43,
+    "q00": 15.0,
+    "q25": 22.0,
+    "q50": 23.0,
+    "q75": 57.0,
+    "q100": 58.0,
+    "media": 35.3953
+   }
+  },
+  "fin_info_s_por_clase": {
+   "No Fault": {
+    "n": 51,
+    "q00": 25.0,
+    "q25": 33.0,
+    "q50": 38.0,
+    "q75": 93.0,
+    "q100": 147.0,
+    "media": 67.3137
+   },
+   "Motor": {
+    "n": 245,
+    "q00": 0.0,
+    "q25": 32.0,
+    "q50": 84.0,
+    "q75": 117.0,
+    "q100": 247.0,
+    "media": 81.4408
+   },
+   "Accelerometer": {
+    "n": 34,
+    "q00": 0.0,
+    "q25": 32.25,
+    "q50": 102.0,
+    "q75": 117.0,
+    "q100": 127.0,
+    "media": 76.2941
+   },
+   "Gyroscope": {
+    "n": 39,
+    "q00": 0.0,
+    "q25": 32.5,
+    "q50": 42.0,
+    "q75": 109.5,
+    "q100": 118.0,
+    "media": 66.3077
+   },
+   "Magnetometer": {
+    "n": 36,
+    "q00": 25.0,
+    "q25": 32.0,
+    "q50": 43.0,
+    "q75": 117.0,
+    "q100": 117.0,
+    "media": 69.4444
+   },
+   "Barometer": {
+    "n": 45,
+    "q00": 0.0,
+    "q25": 30.0,
+    "q50": 43.0,
+    "q75": 110.0,
+    "q100": 126.0,
+    "media": 61.4667
+   },
+   "GPS": {
+    "n": 43,
+    "q00": 25.0,
+    "q25": 42.0,
+    "q50": 43.0,
+    "q75": 102.5,
+    "q100": 118.0,
+    "media": 66.4651
+   }
+  },
+  "nofault_con_inyeccion_cero": 51,
+  "fallo_con_inyeccion_cero": 5,
+  "fallo_con_fin_info_menor_o_igual_inyeccion": 24,
+  "fallo_con_fin_info_cero": 23,
+  "fallo_con_fin_info_menor_o_igual_inyeccion_e_inyeccion_positiva": 20,
+  "fallo_sin_ejecutar_y_con_fin_info_menor_o_igual_inyeccion": 4,
+  "etiqueta_por_parte_sin_fault_id_en_testinfo": {
+   "Motor": 5,
+   "Accelerometer": 0,
+   "Gyroscope": 0,
+   "Magnetometer": 0,
+   "Barometer": 0,
+   "GPS": 0
+  },
+  "orden_de_fallo_en_secuencia_fallo": 441,
+  "orden_de_fallo_en_secuencia_nofault": 0,
+  "orden_id_distinto_de_fault_id": 5,
+  "sensores_clase_por_fault_id": {
+   "Accelerometer": {
+    "123452": 34
+   },
+   "Barometer": {
+    "123454": 45
+   },
+   "GPS": {
+    "123455": 6,
+    "123456": 37
+   },
+   "Gyroscope": {
+    "123453": 39
+   },
+   "Magnetometer": {
+    "123453": 1,
+    "123455": 35
+   }
+  },
+  "sensores_fault_id_no_coincide_con_codigo_del_patron": {
+   "Accelerometer": 0,
+   "Gyroscope": 0,
+   "Barometer": 0,
+   "Magnetometer": 1,
+   "GPS": 6
+  },
+  "nota_patron": "patrón supuesto por la mayoría observada (acce 123452, gyro 123453, baro 123454, mag 123455, GPS 123456); no está en la página oficial"
+ },
+ "ventana_fallo_ulog": {
+  "casos_fallo_con_ulg": 442,
+  "con_ventana_en_rfly_ctrl": 437,
+  "sin_ventana": [
+   "Real-Motor/circling/328_2",
+   "Real-Motor/hover/2_2",
+   "Real-Motor/waypoint/148_1",
+   "Real-Motor/waypoint/150_1",
+   "Real-Motor/waypoint/171_1"
+  ],
+  "segmentos_por_caso": {
+   "0": 5,
+   "1": 383,
+   "7": 4,
+   "8": 6,
+   "9": 12,
+   "10": 1,
+   "11": 6,
+   "13": 7,
+   "14": 6,
+   "15": 6,
+   "16": 1,
+   "17": 1,
+   "18": 1,
+   "21": 3
+  },
+  "segmentos_crudos_por_caso_max": 21,
+  "casos_con_mas_de_un_segmento_crudo": 54,
+  "segmentos_crudos_mas_de_uno_por_clase": {
+   "Motor": 54,
+   "Accelerometer": 0,
+   "Gyroscope": 0,
+   "Magnetometer": 0,
+   "Barometer": 0,
+   "GPS": 0
+  },
+  "nofault_con_id_distinto_de_1500_en_ulg": 0,
+  "nofault_con_ulg": 51,
+  "nofault_sin_topico_rfly_ctrl": 0,
+  "fallo_sin_topico_rfly_ctrl": 0,
+  "ids_en_ulg_por_clase": {
+   "No Fault": {
+    "1500": 51
+   },
+   "Motor": {
+    "1500|123450": 240,
+    "1500": 5
+   },
+   "Accelerometer": {
+    "1500|123452": 34
+   },
+   "Gyroscope": {
+    "1500|123453": 39
+   },
+   "Magnetometer": {
+    "1500|123455": 36
+   },
+   "Barometer": {
+    "1500|123454": 45
+   },
+   "GPS": {
+    "1500|123456": 37,
+    "1500|123455": 6
+   }
+  },
+  "bag_rfly_tiene": {
+   "No Fault": 51,
+   "Motor": 245,
+   "Accelerometer": 34,
+   "Gyroscope": 39,
+   "Magnetometer": 36,
+   "Barometer": 45,
+   "GPS": 43
+  },
+  "bag_rfly_frac_activo_mediana": {
+   "No Fault": 0.0,
+   "Motor": 0.1873,
+   "Accelerometer": 0.1928,
+   "Gyroscope": 0.2426,
+   "Magnetometer": 0.3069,
+   "Barometer": 0.2336,
+   "GPS": 0.2968
+  },
+  "rfly_index_final_igual_a_caso_id": 493,
+  "rfly_index_final_igual_a_caso_id_nofault": 51,
+  "fault_id_testinfo_distinto_del_id_ulog": {
+   "casos": 1,
+   "claves": [
+    "Real-Sensors/velocity-mag/304_1"
+   ]
+  },
+  "t_on_ulog_menos_inyeccion_testinfo_s": {
+   "n": 437,
+   "q00": -9.0988,
+   "q25": -0.4171,
+   "q50": -0.1079,
+   "q75": 0.0985,
+   "q100": 1.3045,
+   "media": -0.1947
+  },
+  "dur_fallo_ulog_menos_(fin-inyeccion)_testinfo_s": {
+   "n": 437,
+   "q00": -78.2204,
+   "q25": 2.599,
+   "q50": 3.9024,
+   "q75": 6.9829,
+   "q100": 135.892,
+   "media": 9.2186
+  }
+ },
+ "duraciones": {
+  "No Fault": {
+   "dur_log_s": {
+    "n": 51,
+    "q00": 54.4334,
+    "q25": 60.9985,
+    "q50": 71.8347,
+    "q75": 134.0339,
+    "q100": 190.0481,
+    "media": 101.5122
+   }
+  },
+  "Motor": {
+   "dur_log_s": {
+    "n": 245,
+    "q00": 37.584,
+    "q25": 73.2852,
+    "q50": 117.0954,
+    "q75": 152.5349,
+    "q100": 284.6049,
+    "media": 120.4235
+   },
+   "pre_fallo_s": {
+    "n": 240,
+    "q00": 14.6966,
+    "q25": 22.1829,
+    "q50": 56.2455,
+    "q75": 57.084,
+    "q100": 127.0903,
+    "media": 43.0033
+   },
+   "fallo_s": {
+    "n": 240,
+    "q00": 6.9829,
+    "q25": 15.4814,
+    "q50": 49.0338,
+    "q75": 64.2104,
+    "q100": 123.0965,
+    "media": 47.333
+   },
+   "post_fallo_s": {
+    "n": 240,
+    "q00": 0.0154,
+    "q25": 25.1452,
+    "q50": 31.7303,
+    "q75": 36.5539,
+    "q100": 69.829,
+    "media": 30.9103
+   },
+   "fraccion_fallo": {
+    "n": 240,
+    "q00": 0.0765,
+    "q25": 0.2523,
+    "q50": 0.3762,
+    "q75": 0.4186,
+    "q100": 0.8083,
+    "media": 0.3726
+   }
+  },
+  "Accelerometer": {
+   "dur_log_s": {
+    "n": 34,
+    "q00": 53.6917,
+    "q25": 66.0176,
+    "q50": 100.8863,
+    "q75": 148.2466,
+    "q100": 161.7928,
+    "media": 108.533
+   },
+   "pre_fallo_s": {
+    "n": 34,
+    "q00": 14.7991,
+    "q25": 22.3946,
+    "q50": 56.8014,
+    "q75": 57.2728,
+    "q100": 67.3045,
+    "media": 44.1879
+   },
+   "fallo_s": {
+    "n": 34,
+    "q00": 3.7852,
+    "q25": 12.9224,
+    "q50": 35.9359,
+    "q75": 61.5709,
+    "q100": 65.0947,
+    "media": 34.787
+   },
+   "post_fallo_s": {
+    "n": 34,
+    "q00": 5.1866,
+    "q25": 24.0011,
+    "q50": 28.503,
+    "q75": 33.0741,
+    "q100": 61.561,
+    "media": 29.5581
+   },
+   "fraccion_fallo": {
+    "n": 34,
+    "q00": 0.0478,
+    "q25": 0.2044,
+    "q50": 0.3237,
+    "q75": 0.4148,
+    "q100": 0.5777,
+    "media": 0.2934
+   }
+  },
+  "Gyroscope": {
+   "dur_log_s": {
+    "n": 39,
+    "q00": 56.409,
+    "q25": 63.8791,
+    "q50": 70.8713,
+    "q75": 148.1366,
+    "q100": 165.5906,
+    "media": 101.5785
+   },
+   "pre_fallo_s": {
+    "n": 39,
+    "q00": 14.8997,
+    "q25": 21.9925,
+    "q50": 22.393,
+    "q75": 56.8349,
+    "q100": 57.3018,
+    "media": 36.6657
+   },
+   "fallo_s": {
+    "n": 39,
+    "q00": 10.9987,
+    "q25": 17.5462,
+    "q50": 41.4895,
+    "q75": 55.7508,
+    "q100": 63.7045,
+    "media": 37.6228
+   },
+   "post_fallo_s": {
+    "n": 39,
+    "q00": 0.0498,
+    "q25": 16.7897,
+    "q50": 30.753,
+    "q75": 36.0175,
+    "q100": 58.1954,
+    "media": 27.29
+   },
+   "fraccion_fallo": {
+    "n": 39,
+    "q00": 0.1071,
+    "q25": 0.2331,
+    "q50": 0.3859,
+    "q75": 0.4109,
+    "q100": 0.6745,
+    "media": 0.3701
+   }
+  },
+  "Magnetometer": {
+   "dur_log_s": {
+    "n": 36,
+    "q00": 57.6066,
+    "q25": 67.6146,
+    "q50": 72.3348,
+    "q75": 151.1971,
+    "q100": 156.907,
+    "media": 103.2864
+   },
+   "pre_fallo_s": {
+    "n": 36,
+    "q00": 14.7912,
+    "q25": 21.8913,
+    "q50": 22.4418,
+    "q75": 56.9898,
+    "q100": 57.4001,
+    "media": 36.8323
+   },
+   "fallo_s": {
+    "n": 36,
+    "q00": 11.2966,
+    "q25": 16.6829,
+    "q50": 42.4012,
+    "q75": 61.2576,
+    "q100": 64.6074,
+    "media": 41.3334
+   },
+   "post_fallo_s": {
+    "n": 36,
+    "q00": 0.0609,
+    "q25": 4.8733,
+    "q50": 31.2001,
+    "q75": 34.4945,
+    "q100": 50.5359,
+    "media": 25.1206
+   },
+   "fraccion_fallo": {
+    "n": 36,
+    "q00": 0.1829,
+    "q25": 0.26,
+    "q50": 0.4029,
+    "q75": 0.5999,
+    "q100": 0.6733,
+    "media": 0.4035
+   }
+  },
+  "Barometer": {
+   "dur_log_s": {
+    "n": 45,
+    "q00": 54.8007,
+    "q25": 71.1975,
+    "q50": 122.3298,
+    "q75": 159.1505,
+    "q100": 227.9961,
+    "media": 122.0637
+   },
+   "pre_fallo_s": {
+    "n": 45,
+    "q00": 14.9005,
+    "q25": 21.8904,
+    "q50": 35.9957,
+    "q75": 57.0924,
+    "q100": 65.8978,
+    "media": 39.8531
+   },
+   "fallo_s": {
+    "n": 45,
+    "q00": 11.2127,
+    "q25": 20.4956,
+    "q50": 34.493,
+    "q75": 62.2028,
+    "q100": 116.1017,
+    "media": 43.3103
+   },
+   "post_fallo_s": {
+    "n": 45,
+    "q00": 0.0708,
+    "q25": 26.778,
+    "q50": 35.7814,
+    "q75": 48.5651,
+    "q100": 105.4799,
+    "media": 38.9003
+   },
+   "fraccion_fallo": {
+    "n": 45,
+    "q00": 0.1264,
+    "q25": 0.2274,
+    "q50": 0.3464,
+    "q75": 0.4175,
+    "q100": 0.6845,
+    "media": 0.3422
+   }
+  },
+  "GPS": {
+   "dur_log_s": {
+    "n": 43,
+    "q00": 55.5609,
+    "q25": 67.1882,
+    "q50": 68.6993,
+    "q75": 151.3707,
+    "q100": 161.9747,
+    "media": 100.8359
+   },
+   "pre_fallo_s": {
+    "n": 43,
+    "q00": 14.6938,
+    "q25": 21.8517,
+    "q50": 22.4918,
+    "q75": 56.7783,
+    "q100": 57.2989,
+    "media": 35.2423
+   },
+   "fallo_s": {
+    "n": 43,
+    "q00": 11.2973,
+    "q25": 30.1015,
+    "q50": 41.6878,
+    "q75": 51.1441,
+    "q100": 67.987,
+    "media": 40.7812
+   },
+   "post_fallo_s": {
+    "n": 43,
+    "q00": 0.045,
+    "q25": 4.9584,
+    "q50": 28.6688,
+    "q75": 35.2262,
+    "q100": 59.582,
+    "media": 24.8124
+   },
+   "fraccion_fallo": {
+    "n": 43,
+    "q00": 0.1552,
+    "q25": 0.288,
+    "q50": 0.4054,
+    "q75": 0.5995,
+    "q100": 0.677,
+    "media": 0.415
+   }
+  },
+  "horas_totales_log": 15.522,
+  "horas_en_fallo": 5.333,
+  "desarme_menos_fin_log_s": {
+   "n": 493,
+   "q00": -1.0009,
+   "q25": -0.9981,
+   "q50": -0.996,
+   "q75": -0.9934,
+   "q100": -0.4903,
+   "media": -0.9933
+  }
+ },
+ "topicos": {
+  "distintos": 79,
+  "casos_ulg_analizados": 493,
+  "en_todos_los_casos": 65,
+  "en_menos_del_100_pct": {
+   "ekf_gps_drift_0": 489,
+   "estimator_event_flags_0": 487,
+   "estimator_global_position_0": 489,
+   "mission_result_0": 480,
+   "parameter_update_0": 483,
+   "position_setpoint_triplet_0": 483,
+   "rtl_flight_time_0": 489,
+   "sensor_gps_0": 489,
+   "sensor_selection_0": 483,
+   "test_motor_0": 483,
+   "vehicle_constraints_0": 492,
+   "vehicle_global_position_0": 489,
+   "vehicle_gps_position_0": 489,
+   "yaw_estimator_status_0": 489
+  },
+  "con_ficheros_vacios": {},
+  "csv_por_caso": {
+   "n": 493,
+   "q00": 71.0,
+   "q25": 79.0,
+   "q50": 79.0,
+   "q75": 79.0,
+   "q100": 79.0,
+   "media": 78.8215
+  },
+  "frecuencias": {
+   "sensor_combined_0": {
+    "hz_mediana": 222.42,
+    "hz_p05": 221.88,
+    "hz_p95": 222.47,
+    "casos": 493
+   },
+   "vehicle_attitude_0": {
+    "hz_mediana": 222.47,
+    "hz_p05": 221.73,
+    "hz_p95": 222.62,
+    "casos": 493
+   },
+   "battery_status_0": {
+    "hz_mediana": 5.0,
+    "hz_p05": 5.0,
+    "hz_p95": 5.0,
+    "casos": 493
+   },
+   "esc_status_0": {
+    "hz_mediana": 4.0,
+    "hz_p05": 3.34,
+    "hz_p95": 4.97,
+    "casos": 493
+   },
+   "actuator_outputs_0": {
+    "hz_mediana": 667.56,
+    "hz_p05": 665.78,
+    "hz_p95": 668.0,
+    "casos": 493
+   },
+   "estimator_innovations_0": {
+    "hz_mediana": 2.0,
+    "hz_p05": 2.0,
+    "hz_p95": 2.0,
+    "casos": 493
+   },
+   "estimator_status_0": {
+    "hz_mediana": 5.02,
+    "hz_p05": 5.01,
+    "hz_p95": 5.02,
+    "casos": 493
+   },
+   "vehicle_local_position_0": {
+    "hz_mediana": 9.96,
+    "hz_p05": 9.94,
+    "hz_p95": 10.16,
+    "casos": 493
+   },
+   "rfly_ctrl_lxl_0": {
+    "hz_mediana": 9.7,
+    "hz_p05": 9.59,
+    "hz_p95": 9.83,
+    "casos": 493
+   }
+  }
+ },
+ "calidad": {
+  "casos_sin_ulg": 0,
+  "casos_sin_vehicle1": 205,
+  "casos_sin_tlog": 2,
+  "casos_sin_testinfo": 0,
+  "casos_sin_bag": 0,
+  "casos_sin_viento_ni_nowind": 0,
+  "casos_con_ulg_sin_csv": 0,
+  "sin_vehicle1_por_clase": {
+   "No Fault": 11,
+   "Motor": 125,
+   "Accelerometer": 15,
+   "Gyroscope": 13,
+   "Magnetometer": 11,
+   "Barometer": 14,
+   "GPS": 16
+  },
+  "sin_ulg_por_clase": {
+   "No Fault": 0,
+   "Motor": 0,
+   "Accelerometer": 0,
+   "Gyroscope": 0,
+   "Magnetometer": 0,
+   "Barometer": 0,
+   "GPS": 0
+  },
+  "csv_vacios_total": 0,
+  "casos_con_csv_vacios": 0,
+  "logdirs_por_caso": {
+   "1": 493
+  },
+  "vehicle1_filas": {
+   "n": 284,
+   "q00": 57.0,
+   "q25": 79.0,
+   "q50": 118.5,
+   "q75": 163.0,
+   "q100": 362.0,
+   "media": 127.4789
+  },
+  "vehicle1_columnas": {
+   "135": 284
+  },
+  "vehicle1_frac_celdas_guion_mediana": 0.2186,
+  "ulog_vs_testinfo_dur": {
+   "n": 493,
+   "q00": -46.8444,
+   "q25": 28.5219,
+   "q50": 35.1022,
+   "q75": 41.7747,
+   "q100": 149.4587,
+   "media": 38.9243
+  },
+  "vehicle1_presentes_no_legibles": 4,
+  "vehicle1_errores": {
+   "'utf-8' codec can't decode byte 0xd5 in position 3060: invalid continuation byte": 2,
+   "'utf-8' codec can't decode byte 0xd5 in position 3061: invalid continuation byte": 1,
+   "Error tokenizing data. C error: Expected 123 fields in line 3, saw 135\n": 1
+  }
+ },
+ "parametros_ulog": {
+  "casos": 493,
+  "parametros_por_caso": {
+   "n": 493,
+   "q00": 819.0,
+   "q25": 819.0,
+   "q50": 819.0,
+   "q75": 819.0,
+   "q100": 819.0,
+   "media": 819.0
+  },
+  "parametros_que_varian_entre_casos": 36,
+  "parametros_de_ajuste_que_varian": [
+   "EKF2_AID_MASK",
+   "EKF2_HGT_MODE"
+  ],
+  "parametros_de_ajuste_considerados": 253,
+  "parametros_que_varian_ejemplos": [
+   "CAL_ACC0_XOFF",
+   "CAL_ACC0_XSCALE",
+   "CAL_ACC0_YOFF",
+   "CAL_ACC0_YSCALE",
+   "CAL_ACC0_ZOFF",
+   "CAL_ACC0_ZSCALE",
+   "CAL_MAG0_XODIAG",
+   "CAL_MAG0_XOFF",
+   "CAL_MAG0_XSCALE",
+   "CAL_MAG0_YODIAG",
+   "CAL_MAG0_YOFF",
+   "CAL_MAG0_YSCALE",
+   "CAL_MAG0_ZODIAG",
+   "CAL_MAG0_ZOFF",
+   "CAL_MAG0_ZSCALE",
+   "COM_FLIGHT_UUID",
+   "EKF2_AID_MASK",
+   "EKF2_HGT_MODE",
+   "LND_FLIGHT_T_HI",
+   "LND_FLIGHT_T_LO",
+   "RC10_MAX",
+   "RC10_MIN",
+   "RC10_TRIM",
+   "RC2_MAX",
+   "RC2_MIN"
+  ],
+  "ekf2_config_por_clase": {
+   "EKF2_AID_MASK": {
+    "No Fault": {
+     "3": 29,
+     "1": 22
+    },
+    "Motor": {
+     "1": 149,
+     "3": 96
+    },
+    "Accelerometer": {
+     "3": 22,
+     "1": 12
+    },
+    "Gyroscope": {
+     "1": 28,
+     "3": 11
+    },
+    "Magnetometer": {
+     "1": 26,
+     "3": 10
+    },
+    "Barometer": {
+     "1": 34,
+     "3": 11
+    },
+    "GPS": {
+     "1": 32,
+     "3": 11
+    }
+   },
+   "EKF2_HGT_MODE": {
+    "No Fault": {
+     "0": 30,
+     "2": 21
+    },
+    "Motor": {
+     "2": 166,
+     "0": 79
+    },
+    "Accelerometer": {
+     "2": 22,
+     "0": 12
+    },
+    "Gyroscope": {
+     "2": 33,
+     "0": 6
+    },
+    "Magnetometer": {
+     "0": 20,
+     "2": 16
+    },
+    "Barometer": {
+     "0": 37,
+     "2": 8
+    },
+    "GPS": {
+     "2": 23,
+     "0": 20
+    }
+   }
+  },
+  "ekf2_config_por_fecha": {
+   "2023-05-17": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-18": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-19": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-22": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     0,
+     2
+    ]
+   },
+   "2023-05-23": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-24": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-25": {
+    "EKF2_AID_MASK": [
+     1,
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-26": {
+    "EKF2_AID_MASK": [
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-27": {
+    "EKF2_AID_MASK": [
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-29": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-05-30": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     0,
+     2
+    ]
+   },
+   "2023-05-31": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     0
+    ]
+   },
+   "2023-06-01": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     0
+    ]
+   },
+   "2023-06-02": {
+    "EKF2_AID_MASK": [
+     1
+    ],
+    "EKF2_HGT_MODE": [
+     0
+    ]
+   },
+   "2023-06-07": {
+    "EKF2_AID_MASK": [
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-06-09": {
+    "EKF2_AID_MASK": [
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     2
+    ]
+   },
+   "2023-06-10": {
+    "EKF2_AID_MASK": [
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     0,
+     2
+    ]
+   },
+   "2023-06-15": {
+    "EKF2_AID_MASK": [
+     3
+    ],
+    "EKF2_HGT_MODE": [
+     0,
+     2
+    ]
+   }
+  },
+  "auroc_ekf2_aid_mask_vs_nofault": 0.602,
+  "auroc_ekf2_hgt_mode_vs_nofault": 0.597
+ },
+ "plataforma": {
+  "casos_con_parametros": 493,
+  "n_parametros_mediana": 819.0,
+  "firmas_de_ajuste_distintas": 4,
+  "ids_de_giroscopio_distintos": 1,
+  "ids_de_acelerometro_distintos": 1,
+  "ids_de_magnetometro_distintos": 1,
+  "autostart": {
+   "4011": 493
+  },
+  "celdas_bateria_param": {
+   "6": 493
+  },
+  "mpc_thr_hover": {
+   "0.4": 493
+  },
+  "mc_rollrate_p": {
+   "0.068": 493
+  },
+  "firmas_por_parte": {
+   "Real-Motor": 3,
+   "Real-NoFault": 4,
+   "Real-Sensors": 4
+  },
+  "firmas_de_ajuste_frecuencias": {
+   "5195f0d8": 180,
+   "6bff2da7": 166,
+   "3e1986d4": 123,
+   "9007f29a": 24
+  },
+  "fechas_por_firma": {
+   "5195f0d8": 5,
+   "6bff2da7": 7,
+   "3e1986d4": 9,
+   "9007f29a": 2
+  },
+  "multirrotor_X200_X450_X680_identificable": "no: ningún fichero del caso lo declara (el ID de caso, la carpeta y TestInfo no lo contienen); solo se pueden contar firmas de parámetros del ULog y el sys_uuid de la placa (no se asigna a una plataforma)",
+  "sys_uuid_distintos": 3,
+  "sys_uuid_casos": {
+   "51170051002e": 301,
+   "5118002c002e": 176,
+   "5103002d004e": 16
+  },
+  "sys_uuid_por_clase": {
+   "No Fault": {
+    "5118002c002e": 31,
+    "51170051002e": 20
+   },
+   "Motor": {
+    "51170051002e": 149,
+    "5118002c002e": 80,
+    "5103002d004e": 16
+   },
+   "Accelerometer": {
+    "5118002c002e": 22,
+    "51170051002e": 12
+   },
+   "Gyroscope": {
+    "51170051002e": 28,
+    "5118002c002e": 11
+   },
+   "Magnetometer": {
+    "51170051002e": 26,
+    "5118002c002e": 10
+   },
+   "Barometer": {
+    "51170051002e": 34,
+    "5118002c002e": 11
+   },
+   "GPS": {
+    "51170051002e": 32,
+    "5118002c002e": 11
+   }
+  },
+  "sys_uuid_fechas": {
+   "5103002d004e": [
+    "2023-06-07",
+    "2023-06-07",
+    1
+   ],
+   "51170051002e": [
+    "2023-05-17",
+    "2023-06-02",
+    12
+   ],
+   "5118002c002e": [
+    "2023-05-25",
+    "2023-06-15",
+    6
+   ]
+  }
+ },
+ "bateria_esc": {
+  "corriente_media_a": {
+   "n": 493,
+   "q00": 0.5429,
+   "q25": 1.4167,
+   "q50": 2.2965,
+   "q75": 2.9098,
+   "q100": 5.7025,
+   "media": 2.3873
+  },
+  "pwm_medio_us": {
+   "n": 493,
+   "q00": 1236.0987,
+   "q25": 1271.1965,
+   "q50": 1291.236,
+   "q75": 1307.7147,
+   "q100": 1451.9547,
+   "media": 1293.5504
+  },
+  "potencia_electrica_media_w": {
+   "n": 493,
+   "q00": 12.5812,
+   "q25": 33.8344,
+   "q50": 54.752,
+   "q75": 69.3054,
+   "q100": 141.4522,
+   "media": 56.9662
+  },
+  "celdas_mediana": {
+   "6.0": 493
+  },
+  "v_inicio": {
+   "n": 493,
+   "q00": 22.6008,
+   "q25": 23.1929,
+   "q50": 23.9461,
+   "q75": 24.7343,
+   "q100": 25.505,
+   "media": 23.9812
+  },
+  "v_fin": {
+   "n": 493,
+   "q00": 22.3719,
+   "q25": 22.9592,
+   "q50": 23.6087,
+   "q75": 24.4385,
+   "q100": 25.1996,
+   "media": 23.6746
+  },
+  "v_inicio_por_celda": {
+   "n": 493,
+   "q00": 3.7668,
+   "q25": 3.8655,
+   "q50": 3.991,
+   "q75": 4.1224,
+   "q100": 4.2508,
+   "media": 3.9969
+  },
+  "mah_descargados": {
+   "n": 493,
+   "q00": 31.6321,
+   "q25": 100.0601,
+   "q50": 137.0748,
+   "q75": 197.4057,
+   "q100": 1397.8676,
+   "media": 167.6399
+  },
+  "r_interna_ohm": {
+   "n": 493,
+   "q00": -0.0325,
+   "q25": 0.1574,
+   "q50": 0.2761,
+   "q75": 0.4459,
+   "q100": 1.488,
+   "media": 0.3525
+  },
+  "r_interna_positiva": 491,
+  "r_interna_casos": 493,
+  "r2_modelo_lineal": {
+   "n": 493,
+   "q00": 0.0686,
+   "q25": 0.4902,
+   "q50": 0.6205,
+   "q75": 0.7649,
+   "q100": 0.9659,
+   "media": 0.6151
+  },
+  "voltaje_baja_en_el_vuelo": 493,
+  "frecuencia_battery_status_hz": {
+   "hz_mediana": 5.0,
+   "hz_p05": 5.0,
+   "hz_p95": 5.0,
+   "casos": 493
+  },
+  "esc_status_con_rpm_positiva_alguna_vez": 0,
+  "esc_status_con_voltaje_o_corriente_positivos": 0,
+  "esc_status_casos": 493,
+  "esc_count_max_valores": {
+   "0.0": 493
+  }
+ },
+ "viento": {
+  "casos_con_wind_csv_y_no_wind_txt": 1,
+  "wind_csv_sin_filas": 1,
+  "por_clase": {
+   "No Fault": {
+    "casos": 51,
+    "con_wind_csv": 51,
+    "con_no_wind_txt": 0,
+    "vel_media_ms": {
+     "n": 51,
+     "q00": 0.0,
+     "q25": 0.4296,
+     "q50": 0.716,
+     "q75": 1.1879,
+     "q100": 3.325,
+     "media": 0.9625
+    },
+    "vel_max_ms": {
+     "n": 51,
+     "q00": 0.0,
+     "q25": 0.8,
+     "q50": 1.2,
+     "q75": 1.8,
+     "q100": 5.4,
+     "media": 1.5745
+    }
+   },
+   "Motor": {
+    "casos": 245,
+    "con_wind_csv": 175,
+    "con_no_wind_txt": 71,
+    "vel_media_ms": {
+     "n": 174,
+     "q00": 0.0,
+     "q25": 1.1274,
+     "q50": 2.3623,
+     "q75": 3.9294,
+     "q100": 6.0545,
+     "media": 2.576
+    },
+    "vel_max_ms": {
+     "n": 174,
+     "q00": 0.0,
+     "q25": 1.625,
+     "q50": 4.1,
+     "q75": 6.175,
+     "q100": 9.0,
+     "media": 3.9782
+    }
+   },
+   "Accelerometer": {
+    "casos": 34,
+    "con_wind_csv": 33,
+    "con_no_wind_txt": 1,
+    "vel_media_ms": {
+     "n": 33,
+     "q00": 0.1167,
+     "q25": 2.1462,
+     "q50": 3.5767,
+     "q75": 4.4167,
+     "q100": 6.2389,
+     "media": 3.3418
+    },
+    "vel_max_ms": {
+     "n": 33,
+     "q00": 0.6,
+     "q25": 3.8,
+     "q50": 5.8,
+     "q75": 7.0,
+     "q100": 9.3,
+     "media": 5.4273
+    }
+   },
+   "Gyroscope": {
+    "casos": 39,
+    "con_wind_csv": 27,
+    "con_no_wind_txt": 12,
+    "vel_media_ms": {
+     "n": 27,
+     "q00": 0.6615,
+     "q25": 1.6903,
+     "q50": 2.775,
+     "q75": 3.7192,
+     "q100": 6.9462,
+     "media": 2.9459
+    },
+    "vel_max_ms": {
+     "n": 27,
+     "q00": 1.0,
+     "q25": 2.9,
+     "q50": 4.8,
+     "q75": 6.35,
+     "q100": 9.8,
+     "media": 4.7593
+    }
+   },
+   "Magnetometer": {
+    "casos": 36,
+    "con_wind_csv": 26,
+    "con_no_wind_txt": 10,
+    "vel_media_ms": {
+     "n": 26,
+     "q00": 0.0,
+     "q25": 1.129,
+     "q50": 1.5433,
+     "q75": 3.2354,
+     "q100": 5.0687,
+     "media": 2.1733
+    },
+    "vel_max_ms": {
+     "n": 26,
+     "q00": 0.0,
+     "q25": 1.45,
+     "q50": 2.15,
+     "q75": 5.375,
+     "q100": 8.0,
+     "media": 3.35
+    }
+   },
+   "Barometer": {
+    "casos": 45,
+    "con_wind_csv": 31,
+    "con_no_wind_txt": 14,
+    "vel_media_ms": {
+     "n": 31,
+     "q00": 0.7273,
+     "q25": 1.4055,
+     "q50": 1.7565,
+     "q75": 3.9329,
+     "q100": 6.4143,
+     "media": 2.5252
+    },
+    "vel_max_ms": {
+     "n": 31,
+     "q00": 0.8,
+     "q25": 1.95,
+     "q50": 3.3,
+     "q75": 6.6,
+     "q100": 9.0,
+     "media": 4.0355
+    }
+   },
+   "GPS": {
+    "casos": 43,
+    "con_wind_csv": 27,
+    "con_no_wind_txt": 16,
+    "vel_media_ms": {
+     "n": 27,
+     "q00": 0.625,
+     "q25": 0.9165,
+     "q50": 1.2273,
+     "q75": 2.2308,
+     "q100": 4.6357,
+     "media": 1.7824
+    },
+    "vel_max_ms": {
+     "n": 27,
+     "q00": 0.8,
+     "q25": 1.4,
+     "q50": 1.7,
+     "q75": 4.1,
+     "q100": 8.0,
+     "media": 2.8
+    }
+   }
+  },
+  "no_wind_textos": {
+   "This flight has no wind data": 124
+  },
+  "filas_wind_csv": {
+   "n": 370,
+   "q00": 0.0,
+   "q25": 13.0,
+   "q50": 27.0,
+   "q75": 30.0,
+   "q100": 46.0,
+   "media": 22.5892
+  },
+  "vel_media_global_ms": 2.358,
+  "vel_media_por_estado": {
+   "hover": 0.662,
+   "waypoint": 1.442,
+   "velocity": 3.978,
+   "circling": 2.873,
+   "acce": 1.5
+  }
+ },
+ "ventanas": {
+  "casos": 488,
+  "proxy_en_nofault": 51,
+  "t_on_proxy_por_estado": {
+   "hover": 22.29,
+   "waypoint": 57.1,
+   "velocity": 15.35,
+   "circling": 56.99,
+   "acce": 21.9
+  },
+  "pre_filas_mediana": 10.0,
+  "fallo_filas_mediana": 96.0,
+  "nota": "ventanas: previa = 5 s antes del fallo, fallo = ventana del ULog, posterior = 5 s; en No Fault se usa la ventana mediana de los casos con fallo del mismo estado (ventana proxy, no etiqueta real)"
+ },
+ "episodios": {
+  "No Fault": {
+   "directorios": 51,
+   "con_ulg": 51,
+   "ids_unicos": 50,
+   "fechas_distintas": 4,
+   "estados": 5,
+   "celda_clase_estado_min": 10,
+   "celda_clase_estado_mediana": 10.0,
+   "firmas_de_parametros": 4,
+   "minimo_auroc_detectable_vs_nofault": 0.661
+  },
+  "Motor": {
+   "directorios": 245,
+   "con_ulg": 245,
+   "ids_unicos": 218,
+   "fechas_distintas": 13,
+   "estados": 5,
+   "celda_clase_estado_min": 27,
+   "celda_clase_estado_mediana": 42.0,
+   "firmas_de_parametros": 3,
+   "minimo_auroc_detectable_vs_nofault": 0.625
+  },
+  "Accelerometer": {
+   "directorios": 34,
+   "con_ulg": 34,
+   "ids_unicos": 28,
+   "fechas_distintas": 7,
+   "estados": 5,
+   "celda_clase_estado_min": 2,
+   "celda_clase_estado_mediana": 6.0,
+   "firmas_de_parametros": 4,
+   "minimo_auroc_detectable_vs_nofault": 0.68
+  },
+  "Gyroscope": {
+   "directorios": 39,
+   "con_ulg": 39,
+   "ids_unicos": 36,
+   "fechas_distintas": 8,
+   "estados": 5,
+   "celda_clase_estado_min": 4,
+   "celda_clase_estado_mediana": 6.0,
+   "firmas_de_parametros": 3,
+   "minimo_auroc_detectable_vs_nofault": 0.673
+  },
+  "Magnetometer": {
+   "directorios": 36,
+   "con_ulg": 36,
+   "ids_unicos": 36,
+   "fechas_distintas": 5,
+   "estados": 5,
+   "celda_clase_estado_min": 4,
+   "celda_clase_estado_mediana": 6.0,
+   "firmas_de_parametros": 4,
+   "minimo_auroc_detectable_vs_nofault": 0.677
+  },
+  "Barometer": {
+   "directorios": 45,
+   "con_ulg": 45,
+   "ids_unicos": 36,
+   "fechas_distintas": 6,
+   "estados": 5,
+   "celda_clase_estado_min": 4,
+   "celda_clase_estado_mediana": 7.0,
+   "firmas_de_parametros": 4,
+   "minimo_auroc_detectable_vs_nofault": 0.666
+  },
+  "GPS": {
+   "directorios": 43,
+   "con_ulg": 43,
+   "ids_unicos": 36,
+   "fechas_distintas": 7,
+   "estados": 5,
+   "celda_clase_estado_min": 4,
+   "celda_clase_estado_mediana": 7.0,
+   "firmas_de_parametros": 4,
+   "minimo_auroc_detectable_vs_nofault": 0.668
+  },
+  "_dias_compartidos_nofault_y_fallo": 4,
+  "_fallo_todas": {
+   "ids_unicos": 390,
+   "directorios": 442,
+   "minimo_auroc_detectable": 0.62
+  },
+  "_umbral_episodios_evaluacion_con_potencia": 10
+ },
+ "separabilidad": {
+  "mejores_por_clase": {
+   "Motor": {
+    "entre_vuelos_ventana_fallo": {
+     "variable": "pwm_mean",
+     "auroc_sim": 0.887,
+     "n": 291,
+     "ic95_bootstrap": [
+      0.85,
+      0.927
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 28
+    },
+    "dentro_de_vuelo_log2_fallo_sobre_pre": {
+     "variable": "ci_gps_hpos0",
+     "auroc_sim": 0.719,
+     "n": 291,
+     "ic95_bootstrap": [
+      0.647,
+      0.789
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 19
+    },
+    "dentro_de_vuelo_diferencia_fallo_menos_pre": {
+     "variable": "pwm_mean",
+     "auroc_sim": 0.96,
+     "n": 291,
+     "ic95_bootstrap": [
+      0.941,
+      0.977
+     ],
+     "variables_auroc_ge_0_9": 1,
+     "variables_evaluadas": 9
+    }
+   },
+   "Accelerometer": {
+    "entre_vuelos_ventana_fallo": {
+     "variable": "vel_test_ratio",
+     "auroc_sim": 0.952,
+     "n": 85,
+     "ic95_bootstrap": [
+      0.901,
+      0.985
+     ],
+     "variables_auroc_ge_0_9": 4,
+     "variables_evaluadas": 28
+    },
+    "dentro_de_vuelo_log2_fallo_sobre_pre": {
+     "variable": "ci_gps_vvel",
+     "auroc_sim": 0.835,
+     "n": 85,
+     "ic95_bootstrap": [
+      0.745,
+      0.911
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 19
+    },
+    "dentro_de_vuelo_diferencia_fallo_menos_pre": {
+     "variable": "vel_test_ratio",
+     "auroc_sim": 0.856,
+     "n": 85,
+     "ic95_bootstrap": [
+      0.766,
+      0.934
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 9
+    }
+   },
+   "Gyroscope": {
+    "entre_vuelos_ventana_fallo": {
+     "variable": "ci_gps_hvel1",
+     "auroc_sim": 0.878,
+     "n": 90,
+     "ic95_bootstrap": [
+      0.791,
+      0.955
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 28
+    },
+    "dentro_de_vuelo_log2_fallo_sobre_pre": {
+     "variable": "ci_gps_hvel1",
+     "auroc_sim": 0.737,
+     "n": 90,
+     "ic95_bootstrap": [
+      0.626,
+      0.84
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 19
+    },
+    "dentro_de_vuelo_diferencia_fallo_menos_pre": {
+     "variable": "vel_test_ratio",
+     "auroc_sim": 0.767,
+     "n": 90,
+     "ic95_bootstrap": [
+      0.66,
+      0.856
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 9
+    }
+   },
+   "Magnetometer": {
+    "entre_vuelos_ventana_fallo": {
+     "variable": "ci_heading",
+     "auroc_sim": 0.809,
+     "n": 87,
+     "ic95_bootstrap": [
+      0.704,
+      0.902
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 28
+    },
+    "dentro_de_vuelo_log2_fallo_sobre_pre": {
+     "variable": "ci_heading",
+     "auroc_sim": 0.807,
+     "n": 87,
+     "ic95_bootstrap": [
+      0.698,
+      0.903
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 19
+    },
+    "dentro_de_vuelo_diferencia_fallo_menos_pre": {
+     "variable": "mag_test_ratio",
+     "auroc_sim": 0.745,
+     "n": 87,
+     "ic95_bootstrap": [
+      0.628,
+      0.849
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 9
+    }
+   },
+   "Barometer": {
+    "entre_vuelos_ventana_fallo": {
+     "variable": "ci_baro_vpos",
+     "auroc_sim": 1.0,
+     "n": 96,
+     "ic95_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "variables_auroc_ge_0_9": 3,
+     "variables_evaluadas": 28
+    },
+    "dentro_de_vuelo_log2_fallo_sobre_pre": {
+     "variable": "ci_baro_vpos",
+     "auroc_sim": 0.943,
+     "n": 96,
+     "ic95_bootstrap": [
+      0.878,
+      0.99
+     ],
+     "variables_auroc_ge_0_9": 1,
+     "variables_evaluadas": 19
+    },
+    "dentro_de_vuelo_diferencia_fallo_menos_pre": {
+     "variable": "hgt_test_ratio",
+     "auroc_sim": 1.0,
+     "n": 96,
+     "ic95_bootstrap": [
+      0.997,
+      1.0
+     ],
+     "variables_auroc_ge_0_9": 1,
+     "variables_evaluadas": 9
+    }
+   },
+   "GPS": {
+    "entre_vuelos_ventana_fallo": {
+     "variable": "ci_gps_hpos1",
+     "auroc_sim": 0.856,
+     "n": 94,
+     "ic95_bootstrap": [
+      0.758,
+      0.938
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 28
+    },
+    "dentro_de_vuelo_log2_fallo_sobre_pre": {
+     "variable": "ci_gps_hpos1",
+     "auroc_sim": 0.839,
+     "n": 94,
+     "ic95_bootstrap": [
+      0.759,
+      0.914
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 19
+    },
+    "dentro_de_vuelo_diferencia_fallo_menos_pre": {
+     "variable": "pos_test_ratio",
+     "auroc_sim": 0.846,
+     "n": 93,
+     "ic95_bootstrap": [
+      0.752,
+      0.925
+     ],
+     "variables_auroc_ge_0_9": 0,
+     "variables_evaluadas": 9
+    }
+   }
+  },
+  "nota": "AUROC simétrico max(a,1-a) de una variable de resumen de ventana; la variable se elige mirando las etiquetas (optimista); el bootstrap remuestrea casos pero no corrige la selección de la mejor variable"
+ },
+ "fugas": {
+  "auroc_metadatos_todas_vs_nofault": {
+   "test_end_time_testinfo": 0.547,
+   "fault_injection_time_testinfo": 0.994,
+   "n_ordenes_de_vuelo": 0.821,
+   "id_de_caso": 0.659,
+   "duracion_log_s": 0.597,
+   "filas_log_rfly_ctrl": 0.597,
+   "tam_ulg_bytes": 0.6,
+   "n_topicos_csv": 0.516,
+   "n_ficheros_caso": 0.596,
+   "tiene_vehicle1": 0.612,
+   "indice_final_rfly_ctrl": 0.659,
+   "viento_vel_media": 0.807,
+   "fecha_ordinal": 0.695
+  },
+  "auroc_metadatos_por_clase": {
+   "test_end_time_testinfo": {
+    "Motor": 0.557,
+    "Accelerometer": 0.539,
+    "Gyroscope": 0.547,
+    "Magnetometer": 0.553,
+    "Barometer": 0.526,
+    "GPS": 0.567
+   },
+   "fault_injection_time_testinfo": {
+    "Motor": 0.99,
+    "Accelerometer": 1.0,
+    "Gyroscope": 1.0,
+    "Magnetometer": 1.0,
+    "Barometer": 1.0,
+    "GPS": 1.0
+   },
+   "n_ordenes_de_vuelo": {
+    "Motor": 0.848,
+    "Accelerometer": 0.902,
+    "Gyroscope": 0.769,
+    "Magnetometer": 0.782,
+    "Barometer": 0.773,
+    "GPS": 0.736
+   },
+   "id_de_caso": {
+    "Motor": 0.64,
+    "Accelerometer": 0.584,
+    "Gyroscope": 0.7,
+    "Magnetometer": 0.681,
+    "Barometer": 0.712,
+    "GPS": 0.719
+   },
+   "duracion_log_s": {
+    "Motor": 0.62,
+    "Accelerometer": 0.582,
+    "Gyroscope": 0.536,
+    "Magnetometer": 0.549,
+    "Barometer": 0.632,
+    "GPS": 0.539
+   },
+   "filas_log_rfly_ctrl": {
+    "Motor": 0.619,
+    "Accelerometer": 0.582,
+    "Gyroscope": 0.538,
+    "Magnetometer": 0.552,
+    "Barometer": 0.633,
+    "GPS": 0.54
+   },
+   "tam_ulg_bytes": {
+    "Motor": 0.622,
+    "Accelerometer": 0.584,
+    "Gyroscope": 0.539,
+    "Magnetometer": 0.554,
+    "Barometer": 0.632,
+    "GPS": 0.541
+   },
+   "n_topicos_csv": {
+    "Motor": 0.513,
+    "Accelerometer": 0.515,
+    "Gyroscope": 0.507,
+    "Magnetometer": 0.529,
+    "Barometer": 0.529,
+    "GPS": 0.529
+   },
+   "n_ficheros_caso": {
+    "Motor": 0.631,
+    "Accelerometer": 0.582,
+    "Gyroscope": 0.56,
+    "Magnetometer": 0.529,
+    "Barometer": 0.539,
+    "GPS": 0.557
+   },
+   "tiene_vehicle1": {
+    "Motor": 0.647,
+    "Accelerometer": 0.613,
+    "Gyroscope": 0.559,
+    "Magnetometer": 0.545,
+    "Barometer": 0.548,
+    "GPS": 0.578
+   },
+   "indice_final_rfly_ctrl": {
+    "Motor": 0.64,
+    "Accelerometer": 0.584,
+    "Gyroscope": 0.7,
+    "Magnetometer": 0.681,
+    "Barometer": 0.712,
+    "GPS": 0.719
+   },
+   "viento_vel_media": {
+    "Motor": 0.78,
+    "Accelerometer": 0.927,
+    "Gyroscope": 0.874,
+    "Magnetometer": 0.796,
+    "Barometer": 0.841,
+    "GPS": 0.738
+   },
+   "fecha_ordinal": {
+    "Motor": 0.717,
+    "Accelerometer": 0.615,
+    "Gyroscope": 0.7,
+    "Magnetometer": 0.654,
+    "Barometer": 0.692,
+    "GPS": 0.668
+   }
+  },
+  "rango_id_por_clase": {
+   "No Fault": [
+    101,
+    460
+   ],
+   "Motor": [
+    1,
+    430
+   ],
+   "Accelerometer": [
+    56,
+    434
+   ],
+   "Gyroscope": [
+    61,
+    438
+   ],
+   "Magnetometer": [
+    81,
+    446
+   ],
+   "Barometer": [
+    71,
+    442
+   ],
+   "GPS": [
+    91,
+    450
+   ]
+  },
+  "pares_de_clases_con_rangos_de_id_solapados": 21,
+  "pares_de_clases_totales": 21,
+  "carpeta_predice_clase_exacta": true,
+  "clase_por_nombre_de_parte_y_carpeta": "la clase es el nombre de la parte (zip) y el sufijo del directorio de estado; se deriva sin leer ninguna señal",
+  "testinfo_contiene_etiqueta": {
+   "fault_id": true,
+   "fault_parameter": true,
+   "control_sequence_orden_2_6": true,
+   "casos_fallo_con_orden_2_6": 441,
+   "casos_fallo_testinfo": 442
+  },
+  "ulog_contiene_etiqueta": {
+   "topico_rfly_ctrl_lxl_id_distinto_1500": 437,
+   "casos_fallo_con_ulg": 442
+  },
+  "topicos_especificos_del_proyecto": [
+   "offb_flight_mode_0",
+   "offboard_control_mode_0",
+   "rfly_ctrl_lxl_0"
+  ],
+  "topico_vehicle_command_en_ulg": 493
+ },
+ "fisica": {
+  "acc_norm_previa_relativa_a_g": {
+   "todos": {
+    "n": 488,
+    "q00": 0.9617,
+    "q25": 1.0148,
+    "q50": 1.025,
+    "q75": 1.0374,
+    "q100": 1.113,
+    "media": 1.0285
+   },
+   "hover": {
+    "n": 105,
+    "q00": 1.0004,
+    "q25": 1.0132,
+    "q50": 1.0177,
+    "q75": 1.0251,
+    "q100": 1.0949,
+    "media": 1.0216
+   }
+  },
+  "acc_norm_mediana_log_sobre_g": {
+   "n": 493,
+   "q00": 0.9641,
+   "q25": 1.0052,
+   "q50": 1.0133,
+   "q75": 1.0157,
+   "q100": 1.0402,
+   "media": 1.0113
+  },
+  "rho_spearman_pwm_medio_vs_corriente": {
+   "n": 493,
+   "q00": -0.5672,
+   "q25": -0.1574,
+   "q50": -0.0074,
+   "q75": 0.1638,
+   "q100": 0.8445,
+   "media": 0.0383
+  },
+  "rho_spearman_pwm_medio_vs_norma_acelerometro": {
+   "n": 493,
+   "q00": -0.3918,
+   "q25": -0.0436,
+   "q50": 0.0732,
+   "q75": 0.193,
+   "q100": 0.6078,
+   "media": 0.0772
+  },
+  "casos_rho_pwm_corriente_positiva": 235,
+  "casos_rho_pwm_corriente": 493,
+  "innovaciones": {
+   "No Fault": {
+    "frac_ratio_gt_2_por_canal": {
+     "ci_gps_hvel0": 0.294,
+     "ci_gps_hvel1": 0.176,
+     "ci_gps_vvel": 0.196,
+     "ci_gps_hpos0": 0.49,
+     "ci_gps_hpos1": 0.373,
+     "ci_baro_vpos": 0.137,
+     "ci_heading": 0.078,
+     "ci_mag0": 0.392,
+     "ci_mag1": 0.373,
+     "ci_mag2": 0.373
+    },
+    "casos": 51
+   },
+   "Motor": {
+    "frac_ratio_gt_2_por_canal": {
+     "ci_gps_hvel0": 0.212,
+     "ci_gps_hvel1": 0.263,
+     "ci_gps_vvel": 0.283,
+     "ci_gps_hpos0": 0.175,
+     "ci_gps_hpos1": 0.317,
+     "ci_baro_vpos": 0.133,
+     "ci_heading": 0.121,
+     "ci_mag0": 0.296,
+     "ci_mag1": 0.283,
+     "ci_mag2": 0.3
+    },
+    "casos": 240
+   },
+   "Accelerometer": {
+    "canales_esperados": [
+     "ci_gps_vvel",
+     "ci_baro_vpos",
+     "ci_gps_hvel0",
+     "ci_gps_hvel1"
+    ],
+    "frac_ratio_gt_2_en_canales_esperados": {
+     "ci_gps_vvel": 0.706,
+     "ci_baro_vpos": 0.5,
+     "ci_gps_hvel0": 0.324,
+     "ci_gps_hvel1": 0.265
+    },
+    "mediana_log2_en_canales_esperados": {
+     "ci_gps_vvel": 2.614,
+     "ci_baro_vpos": 1.061,
+     "ci_gps_hvel0": 0.383,
+     "ci_gps_hvel1": 0.465
+    },
+    "casos": 34,
+    "frac_ratio_gt_2_mejor_canal_cualquiera": {
+     "ci_gps_vvel": 0.706
+    }
+   },
+   "Gyroscope": {
+    "canales_esperados": [
+     "ci_heading",
+     "ci_mag0",
+     "ci_mag1",
+     "ci_mag2"
+    ],
+    "frac_ratio_gt_2_en_canales_esperados": {
+     "ci_heading": 0.231,
+     "ci_mag0": 0.282,
+     "ci_mag1": 0.308,
+     "ci_mag2": 0.256
+    },
+    "mediana_log2_en_canales_esperados": {
+     "ci_heading": 0.408,
+     "ci_mag0": 0.152,
+     "ci_mag1": 0.141,
+     "ci_mag2": 0.09
+    },
+    "casos": 39,
+    "frac_ratio_gt_2_mejor_canal_cualquiera": {
+     "ci_gps_hvel1": 0.615
+    }
+   },
+   "Magnetometer": {
+    "canales_esperados": [
+     "ci_heading",
+     "ci_mag0",
+     "ci_mag1",
+     "ci_mag2"
+    ],
+    "frac_ratio_gt_2_en_canales_esperados": {
+     "ci_heading": 0.611,
+     "ci_mag0": 0.472,
+     "ci_mag1": 0.361,
+     "ci_mag2": 0.528
+    },
+    "mediana_log2_en_canales_esperados": {
+     "ci_heading": 1.271,
+     "ci_mag0": 0.619,
+     "ci_mag1": 0.44,
+     "ci_mag2": 1.372
+    },
+    "casos": 36,
+    "frac_ratio_gt_2_mejor_canal_cualquiera": {
+     "ci_heading": 0.611
+    }
+   },
+   "Barometer": {
+    "canales_esperados": [
+     "ci_baro_vpos"
+    ],
+    "frac_ratio_gt_2_en_canales_esperados": {
+     "ci_baro_vpos": 0.911
+    },
+    "mediana_log2_en_canales_esperados": {
+     "ci_baro_vpos": 6.451
+    },
+    "casos": 45,
+    "frac_ratio_gt_2_mejor_canal_cualquiera": {
+     "ci_baro_vpos": 0.911
+    }
+   },
+   "GPS": {
+    "canales_esperados": [
+     "ci_gps_hvel0",
+     "ci_gps_hvel1",
+     "ci_gps_vvel",
+     "ci_gps_hpos0",
+     "ci_gps_hpos1"
+    ],
+    "frac_ratio_gt_2_en_canales_esperados": {
+     "ci_gps_hvel0": 0.163,
+     "ci_gps_hvel1": 0.186,
+     "ci_gps_vvel": 0.093,
+     "ci_gps_hpos0": 0.698,
+     "ci_gps_hpos1": 0.837
+    },
+    "mediana_log2_en_canales_esperados": {
+     "ci_gps_hvel0": 0.139,
+     "ci_gps_hvel1": 0.313,
+     "ci_gps_vvel": 0.227,
+     "ci_gps_hpos0": 5.599,
+     "ci_gps_hpos1": 2.243
+    },
+    "casos": 43,
+    "frac_ratio_gt_2_mejor_canal_cualquiera": {
+     "ci_gps_hpos1": 0.837
+    }
+   }
+  },
+  "respuesta_de_actitud_y_actuadores": {
+   "No Fault": {
+    "lr_att_dev_mediana": 0.13,
+    "lr_gyro_rms_mediana": 0.744,
+    "lr_pwm_spread_mediana": 0.132,
+    "d_pwm_mean_mediana": -12.88,
+    "d_bat_i_mediana_a": 0.245,
+    "d_bat_v_mediana_v": -0.033,
+    "pwm_spread_fallo_mediana": 100.68,
+    "pwm_spread_pre_mediana": 83.34,
+    "frac_lr_att_dev_gt_1": 0.157,
+    "casos": 51
+   },
+   "Motor": {
+    "lr_att_dev_mediana": 0.041,
+    "lr_gyro_rms_mediana": 0.343,
+    "lr_pwm_spread_mediana": 0.708,
+    "d_pwm_mean_mediana": 60.46,
+    "d_bat_i_mediana_a": 0.216,
+    "d_bat_v_mediana_v": -0.06,
+    "pwm_spread_fallo_mediana": 188.97,
+    "pwm_spread_pre_mediana": 125.8,
+    "frac_lr_att_dev_gt_1": 0.021,
+    "casos": 240
+   },
+   "Accelerometer": {
+    "lr_att_dev_mediana": -0.045,
+    "lr_gyro_rms_mediana": 0.242,
+    "lr_pwm_spread_mediana": -0.353,
+    "d_pwm_mean_mediana": 1.23,
+    "d_bat_i_mediana_a": 0.071,
+    "d_bat_v_mediana_v": -0.043,
+    "pwm_spread_fallo_mediana": 112.2,
+    "pwm_spread_pre_mediana": 142.33,
+    "frac_lr_att_dev_gt_1": 0.029,
+    "casos": 34
+   },
+   "Gyroscope": {
+    "lr_att_dev_mediana": -0.102,
+    "lr_gyro_rms_mediana": 0.241,
+    "lr_pwm_spread_mediana": -0.088,
+    "d_pwm_mean_mediana": -2.45,
+    "d_bat_i_mediana_a": 0.166,
+    "d_bat_v_mediana_v": -0.057,
+    "pwm_spread_fallo_mediana": 110.88,
+    "pwm_spread_pre_mediana": 126.15,
+    "frac_lr_att_dev_gt_1": 0.077,
+    "casos": 39
+   },
+   "Magnetometer": {
+    "lr_att_dev_mediana": -0.179,
+    "lr_gyro_rms_mediana": 0.076,
+    "lr_pwm_spread_mediana": 0.058,
+    "d_pwm_mean_mediana": -11.1,
+    "d_bat_i_mediana_a": 0.282,
+    "d_bat_v_mediana_v": -0.055,
+    "pwm_spread_fallo_mediana": 99.12,
+    "pwm_spread_pre_mediana": 101.3,
+    "frac_lr_att_dev_gt_1": 0.056,
+    "casos": 36
+   },
+   "Barometer": {
+    "lr_att_dev_mediana": -0.136,
+    "lr_gyro_rms_mediana": 0.026,
+    "lr_pwm_spread_mediana": -0.051,
+    "d_pwm_mean_mediana": 2.85,
+    "d_bat_i_mediana_a": 0.226,
+    "d_bat_v_mediana_v": -0.065,
+    "pwm_spread_fallo_mediana": 107.97,
+    "pwm_spread_pre_mediana": 120.89,
+    "frac_lr_att_dev_gt_1": 0.044,
+    "casos": 45
+   },
+   "GPS": {
+    "lr_att_dev_mediana": -0.1,
+    "lr_gyro_rms_mediana": 0.324,
+    "lr_pwm_spread_mediana": 0.017,
+    "d_pwm_mean_mediana": -8.25,
+    "d_bat_i_mediana_a": 0.311,
+    "d_bat_v_mediana_v": -0.047,
+    "pwm_spread_fallo_mediana": 103.22,
+    "pwm_spread_pre_mediana": 95.39,
+    "frac_lr_att_dev_gt_1": 0.047,
+    "casos": 43
+   }
+  },
+  "motor": {
+   "casos": 240,
+   "frac_pwm_spread_fallo_gt_2x_pre": 0.388,
+   "frac_att_dev_gt_2x_pre": 0.021,
+   "esc_rpm_telemetria_disponible": false,
+   "nota": "la caída de RPM no puede medirse directamente si esc_status viene vacío (esc_count = 0); se usa la salida PWM de los actuadores"
+  }
+ },
+ "forense": {
+  "casos_cribados": 21,
+  "claves": [
+   "Real-NoFault/acce/451_1",
+   "Real-NoFault/acce/452_1",
+   "Real-NoFault/hover/106_1",
+   "Real-Motor/acce/406_1",
+   "Real-Motor/acce/406_2",
+   "Real-Motor/velocity/248_2",
+   "Real-Sensors/acce-acce/431_1",
+   "Real-Sensors/acce-acce/432_1",
+   "Real-Sensors/velocity-acce/288_1",
+   "Real-Sensors/acce-gyro/435_1",
+   "Real-Sensors/acce-gyro/436_1",
+   "Real-Sensors/hover-gyro/68_2",
+   "Real-Sensors/acce-mag/443_1",
+   "Real-Sensors/acce-mag/444_1",
+   "Real-Sensors/hover-mag/89_1",
+   "Real-Sensors/acce-baro/439_1",
+   "Real-Sensors/acce-baro/440_1",
+   "Real-Sensors/hover-baro/79_1",
+   "Real-Sensors/acce-GPS/447_1",
+   "Real-Sensors/acce-GPS/448_1",
+   "Real-Sensors/hover-GPS/97_2"
+  ],
+  "tipos_por_numero_de_casos": {
+   "H07": 1,
+   "H08": 16,
+   "H09": 18
+  },
+  "casos_con_3_o_mas_tipos_de_generacion": 0,
+  "casos_sin_huellas": 3,
+  "paso_constante_H01_casos": 0,
+  "frases": {
+   "alguna huella aislada: revisar cada una antes de concluir": 18,
+   "sin huellas": 3
+  },
+  "paso_mediano_s_rango": [
+   0.004495,
+   0.004507
+  ],
+  "pasos_distintos_min": 272,
+  "huellas_por_variable": {
+   "H07:pitch_deg": 1,
+   "H07:roll_deg": 1,
+   "H08:falla": 16,
+   "H09:falla": 18
+  },
+  "marco": "sensor_combined (gyro, acelerómetro) + actitud derivada de vehicle_attitude, filas nativas del ULog; falla = ventana del ULog",
+  "por_caso": {
+   "Real-NoFault/acce/451_1": {
+    "tipos": "",
+    "huellas": []
+   },
+   "Real-NoFault/acce/452_1": {
+    "tipos": "",
+    "huellas": []
+   },
+   "Real-NoFault/hover/106_1": {
+    "tipos": "",
+    "huellas": []
+   },
+   "Real-Motor/acce/406_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Motor/acce/406_2": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Motor/velocity/248_2": {
+    "tipos": "H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-acce/431_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-acce/432_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/velocity-acce/288_1": {
+    "tipos": "H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-gyro/435_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-gyro/436_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/hover-gyro/68_2": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-mag/443_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-mag/444_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/hover-mag/89_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-baro/439_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-baro/440_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/hover-baro/79_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-GPS/447_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/acce-GPS/448_1": {
+    "tipos": "H08|H09",
+    "huellas": [
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   },
+   "Real-Sensors/hover-GPS/97_2": {
+    "tipos": "H07|H08|H09",
+    "huellas": [
+     {
+      "id": "H07",
+      "variable": "roll_deg"
+     },
+     {
+      "id": "H07",
+      "variable": "pitch_deg"
+     },
+     {
+      "id": "H09",
+      "variable": "falla"
+     },
+     {
+      "id": "H08",
+      "variable": "falla"
+     }
+    ]
+   }
+  }
+ },
+ "meta": {
+  "tabla_oficial_consultada": "https://rfly-openha.github.io/documents/4_resources/dataset.html (2026-11-03)",
+  "ventana_previa_y_posterior_s": 5.0,
+  "compartimento_s": 0.5,
+  "semilla_bootstrap": 20261103,
+  "version_cache": "v1"
+ }
+}

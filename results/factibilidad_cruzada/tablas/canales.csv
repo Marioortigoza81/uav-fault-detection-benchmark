@@ -1,0 +1,18 @@
+canal,origen,unidad,motivo
+acc_x,sensor_combined.accelerometer_m_s2[0],m/s2,fuerza específica cuerpo FRD; mismas unidades y marco en ambos (inventario §6)
+acc_y,sensor_combined.accelerometer_m_s2[1],m/s2,idem
+acc_z,sensor_combined.accelerometer_m_s2[2],m/s2,idem
+acc_vib,desv. intra-compartimento de |acc| (≈222-250 Hz),m/s2,vibración; ambos registran la IMU a > 200 Hz
+gyr_x,sensor_combined.gyro_rad[0],rad/s,velocidad angular cuerpo; común al 100 %
+gyr_y,sensor_combined.gyro_rad[1],rad/s,idem
+gyr_z,sensor_combined.gyro_rad[2],rad/s,idem
+gyr_vib,desv. intra-compartimento de |gyro|,rad/s,idem
+roll,vehicle_attitude.q -> alabeo,deg,"cuaternión unitario w,x,y,z en ambos; guiñada excluida (rumbo arbitrario)"
+pitch,vehicle_attitude.q -> cabeceo,deg,idem
+err_roll,alabeo - vehicle_attitude_setpoint.roll_body,deg,seguimiento de actitud; campo común (inventario §4)
+err_pitch,cabeceo - vehicle_attitude_setpoint.pitch_body,deg,idem
+err_p,gyro_rad[0] - vehicle_rates_setpoint.roll,rad/s,seguimiento de tasa; campo común
+err_q,gyro_rad[1] - vehicle_rates_setpoint.pitch,rad/s,idem
+err_r,gyro_rad[2] - vehicle_rates_setpoint.yaw,rad/s,idem
+vh,"|vehicle_local_position.vx,vy|",m/s,velocidad horizontal sin dirección (el rumbo es arbitrario)
+vz,vehicle_local_position.vz,m/s,velocidad vertical NED

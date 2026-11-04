@@ -1,0 +1,10 @@
+topico,casos_con_filas,casos_sin_topico_o_vacio,frecuencia_hz_mediana,frecuencia_hz_p05,frecuencia_hz_p95,casos_con_huecos_gt_1s,huecos_gt_1s_total,dt_max_mediana_s,dt_max_max_s,casos_con_nan,nan_frac_max,ts_duplicados_total,ts_no_monotonos_total
+sensor_combined_0,493,0,222.42,221.877,222.469,0,0,0.199199,0.263613,0,0,0,0
+vehicle_attitude_0,493,0,222.469,221.729,222.618,0,0,0.200693,0.261291,0,0,0,0
+battery_status_0,493,0,5,5,5,0,0,0.400004,0.609994,493,0.0212766,0,0
+esc_status_0,493,0,4.00428,3.34366,4.96903,0,0,0.501,0.798881,0,0,0,0
+actuator_outputs_0,493,0,667.557,665.779,668.003,0,0,0.196225,0.257617,0,0,0,0
+estimator_innovations_0,493,0,1.99972,1.99901,2.00451,172,203,0.996037,1.01268,493,0.0344828,0,0
+estimator_status_0,493,0,5.01857,5.00604,5.01958,0,0,0.40282,0.60948,4,0.0263158,0,0
+vehicle_local_position_0,493,0,9.96244,9.93566,10.1551,0,0,0.301868,0.411881,0,0,0,0
+rfly_ctrl_lxl_0,493,0,9.70026,9.58743,9.83302,3,3,0.303777,2.73931,0,0,0,0

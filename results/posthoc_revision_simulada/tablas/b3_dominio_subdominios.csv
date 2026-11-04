@@ -1,0 +1,17 @@
+comparacion,conjunto,auroc,ic_lo,ic_hi,bacc,grupos_0,grupos_1,ventanas_0,ventanas_1
+a_rflymad_placas_estricto,base,0.9743,0.9622,0.9840,0.9177,30,20,572,375
+a_rflymad_placas_estricto,invariante,0.9772,0.9560,0.9931,0.9212,30,20,572,375
+a_rflymad_placas_todas_y0,base,0.9705,0.9616,0.9776,0.9067,158,229,2662,1976
+a_rflymad_placas_todas_y0,invariante,0.9710,0.9616,0.9784,0.9053,158,229,2662,1976
+b_uav_sead_octo_vs_cuadri,base,0.9973,0.9931,0.9998,0.9787,160,726,3086,12718
+b_uav_sead_octo_vs_cuadri,invariante,0.9963,0.9929,0.9987,0.9594,160,726,3086,12718
+c_rflymad_no_fault_mitades_s0,base,0.3812,0.2744,0.5013,0.4297,25,25,461,486
+c_rflymad_no_fault_mitades_s0,invariante,0.4131,0.2949,0.5428,0.4487,25,25,461,486
+c_rflymad_no_fault_mitades_s1,base,0.6524,0.5192,0.7681,0.5968,25,25,464,483
+c_rflymad_no_fault_mitades_s1,invariante,0.6732,0.5266,0.7967,0.6199,25,25,464,483
+c_rflymad_no_fault_mitades_s2,base,0.3932,0.2842,0.4987,0.4451,25,25,467,480
+c_rflymad_no_fault_mitades_s2,invariante,0.3712,0.2481,0.5030,0.4294,25,25,467,480
+c_rflymad_no_fault_mitades_s3,base,0.5009,0.3915,0.6118,0.5227,25,25,474,473
+c_rflymad_no_fault_mitades_s3,invariante,0.5157,0.3995,0.6296,0.5237,25,25,474,473
+c_rflymad_no_fault_mitades_s4,base,0.5294,0.3964,0.6553,0.5280,25,25,461,486
+c_rflymad_no_fault_mitades_s4,invariante,0.5388,0.4184,0.6541,0.5523,25,25,461,486

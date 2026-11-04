@@ -1,0 +1,4 @@
+episodio,fila_inicio,fila_fin_excl,inicio_s,fin_s,muestras,duracion_s,fase
+1,3500,3561,350,356.1,61,6.1,WAYPOINT_SURVEY
+2,6200,6246,620,624.6,46,4.6,WAYPOINT_SURVEY
+3,8100,8151,810,815.1,51,5.1,LOITER

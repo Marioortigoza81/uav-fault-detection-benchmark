@@ -1,0 +1,193 @@
+variante,experimento,modelo,clase,vuelos_clase,ventanas_anomalas,auroc
+crudo,uav_sead->uav_sead,iforest,Altitude,48,515,0.6398
+crudo,uav_sead->uav_sead,iforest,Altitude|External Position,1,3,0.9170
+crudo,uav_sead->uav_sead,iforest,Altitude|Mechanical,3,32,0.8722
+crudo,uav_sead->uav_sead,iforest,External Position,130,959,0.9205
+crudo,uav_sead->uav_sead,iforest,External Position|Mechanical,2,14,0.9598
+crudo,uav_sead->uav_sead,iforest,Global Position,26,689,0.4041
+crudo,uav_sead->uav_sead,iforest,Mechanical,35,280,0.8921
+crudo,uav_sead->uav_sead,rf,Altitude,48,515,0.7740
+crudo,uav_sead->uav_sead,rf,Altitude|External Position,1,3,0.9531
+crudo,uav_sead->uav_sead,rf,Altitude|Mechanical,3,32,0.9486
+crudo,uav_sead->uav_sead,rf,External Position,130,959,0.9081
+crudo,uav_sead->uav_sead,rf,External Position|Mechanical,2,14,0.9760
+crudo,uav_sead->uav_sead,rf,Global Position,26,689,0.8767
+crudo,uav_sead->uav_sead,rf,Mechanical,35,280,0.9599
+crudo,real->real,iforest,Accelerometer,28,447,0.6640
+crudo,real->real,iforest,Barometer,36,740,0.5844
+crudo,real->real,iforest,GPS,36,666,0.3999
+crudo,real->real,iforest,Gyroscope,36,556,0.4777
+crudo,real->real,iforest,Magnetometer,36,568,0.4488
+crudo,real->real,iforest,Motor,218,4347,0.6380
+crudo,real->real,rf,Accelerometer,28,447,0.8706
+crudo,real->real,rf,Barometer,36,740,0.8895
+crudo,real->real,rf,GPS,36,666,0.8067
+crudo,real->real,rf,Gyroscope,36,556,0.8776
+crudo,real->real,rf,Magnetometer,36,568,0.8687
+crudo,real->real,rf,Motor,218,4347,0.9030
+crudo,hil->hil,iforest,Load,290,8025,0.6595
+crudo,hil->hil,iforest,Prop,435,9711,0.4614
+crudo,hil->hil,iforest,Voltage,32,862,0.4180
+crudo,hil->hil,iforest,Wind,443,10987,0.7023
+crudo,hil->hil,rf,Load,290,8025,0.9964
+crudo,hil->hil,rf,Prop,435,9711,0.9980
+crudo,hil->hil,rf,Voltage,32,862,0.9789
+crudo,hil->hil,rf,Wind,443,10987,0.9959
+crudo,uav_sead->real,iforest,Accelerometer,28,447,0.6556
+crudo,uav_sead->real,iforest,Barometer,36,740,0.5159
+crudo,uav_sead->real,iforest,GPS,36,666,0.3980
+crudo,uav_sead->real,iforest,Gyroscope,36,556,0.5232
+crudo,uav_sead->real,iforest,Magnetometer,36,568,0.4617
+crudo,uav_sead->real,iforest,Motor,218,4347,0.6377
+crudo,uav_sead->real,rf,Accelerometer,28,447,0.6799
+crudo,uav_sead->real,rf,Barometer,36,740,0.5058
+crudo,uav_sead->real,rf,GPS,36,666,0.3726
+crudo,uav_sead->real,rf,Gyroscope,36,556,0.5543
+crudo,uav_sead->real,rf,Magnetometer,36,568,0.4413
+crudo,uav_sead->real,rf,Motor,218,4347,0.6113
+crudo,real->uav_sead,iforest,Altitude,48,515,0.3932
+crudo,real->uav_sead,iforest,Altitude|External Position,1,3,0.6535
+crudo,real->uav_sead,iforest,Altitude|Mechanical,3,32,0.7810
+crudo,real->uav_sead,iforest,External Position,130,959,0.7785
+crudo,real->uav_sead,iforest,External Position|Mechanical,2,14,0.8699
+crudo,real->uav_sead,iforest,Global Position,26,689,0.4459
+crudo,real->uav_sead,iforest,Mechanical,35,280,0.7145
+crudo,real->uav_sead,rf,Altitude,48,515,0.6573
+crudo,real->uav_sead,rf,Altitude|External Position,1,3,0.7474
+crudo,real->uav_sead,rf,Altitude|Mechanical,3,32,0.7228
+crudo,real->uav_sead,rf,External Position,130,959,0.6347
+crudo,real->uav_sead,rf,External Position|Mechanical,2,14,0.8199
+crudo,real->uav_sead,rf,Global Position,26,689,0.2637
+crudo,real->uav_sead,rf,Mechanical,35,280,0.7396
+crudo,uav_sead->hil,iforest,Load,290,8025,0.5369
+crudo,uav_sead->hil,iforest,Prop,435,9711,0.4039
+crudo,uav_sead->hil,iforest,Voltage,32,862,0.3424
+crudo,uav_sead->hil,iforest,Wind,443,10987,0.5316
+crudo,uav_sead->hil,rf,Load,290,8025,0.4851
+crudo,uav_sead->hil,rf,Prop,435,9711,0.3755
+crudo,uav_sead->hil,rf,Voltage,32,862,0.3651
+crudo,uav_sead->hil,rf,Wind,443,10987,0.5217
+crudo,hil->real,iforest,Accelerometer,28,447,0.6924
+crudo,hil->real,iforest,Barometer,36,740,0.5580
+crudo,hil->real,iforest,GPS,36,666,0.4464
+crudo,hil->real,iforest,Gyroscope,36,556,0.5859
+crudo,hil->real,iforest,Magnetometer,36,568,0.5012
+crudo,hil->real,iforest,Motor,218,4347,0.6759
+crudo,hil->real,rf,Accelerometer,28,447,0.7462
+crudo,hil->real,rf,Barometer,36,740,0.5838
+crudo,hil->real,rf,GPS,36,666,0.5658
+crudo,hil->real,rf,Gyroscope,36,556,0.6923
+crudo,hil->real,rf,Magnetometer,36,568,0.6119
+crudo,hil->real,rf,Motor,218,4347,0.6499
+crudo,real->hil,iforest,Load,290,8025,0.6632
+crudo,real->hil,iforest,Prop,435,9711,0.5186
+crudo,real->hil,iforest,Voltage,32,862,0.4425
+crudo,real->hil,iforest,Wind,443,10987,0.6303
+crudo,real->hil,rf,Load,290,8025,0.7207
+crudo,real->hil,rf,Prop,435,9711,0.6768
+crudo,real->hil,rf,Voltage,32,862,0.5604
+crudo,real->hil,rf,Wind,443,10987,0.7718
+crudo,hil_prop->hil_prop,iforest,Prop,435,9711,0.4724
+crudo,hil_prop->hil_prop,rf,Prop,435,9711,0.9986
+crudo,real_motor->real_motor,iforest,Motor,218,4347,0.6425
+crudo,real_motor->real_motor,rf,Motor,218,4347,0.9114
+crudo,hil_prop->real_motor,iforest,Motor,218,4347,0.6667
+crudo,hil_prop->real_motor,rf,Motor,218,4347,0.6538
+crudo,real_motor->hil_prop,iforest,Prop,435,9711,0.5444
+crudo,real_motor->hil_prop,rf,Prop,435,9711,0.6449
+norm_vuelo,uav_sead->uav_sead,iforest,Altitude,48,515,0.5995
+norm_vuelo,uav_sead->uav_sead,iforest,Altitude|External Position,1,3,0.9466
+norm_vuelo,uav_sead->uav_sead,iforest,Altitude|Mechanical,3,32,0.8882
+norm_vuelo,uav_sead->uav_sead,iforest,External Position,130,959,0.8844
+norm_vuelo,uav_sead->uav_sead,iforest,External Position|Mechanical,2,14,0.9698
+norm_vuelo,uav_sead->uav_sead,iforest,Global Position,26,689,0.4193
+norm_vuelo,uav_sead->uav_sead,iforest,Mechanical,35,280,0.8835
+norm_vuelo,uav_sead->uav_sead,rf,Altitude,48,515,0.7274
+norm_vuelo,uav_sead->uav_sead,rf,Altitude|External Position,1,3,0.9743
+norm_vuelo,uav_sead->uav_sead,rf,Altitude|Mechanical,3,32,0.9562
+norm_vuelo,uav_sead->uav_sead,rf,External Position,130,959,0.8792
+norm_vuelo,uav_sead->uav_sead,rf,External Position|Mechanical,2,14,0.9849
+norm_vuelo,uav_sead->uav_sead,rf,Global Position,26,689,0.8601
+norm_vuelo,uav_sead->uav_sead,rf,Mechanical,35,280,0.9237
+norm_vuelo,real->real,iforest,Accelerometer,28,447,0.5487
+norm_vuelo,real->real,iforest,Barometer,36,740,0.6038
+norm_vuelo,real->real,iforest,GPS,36,666,0.4505
+norm_vuelo,real->real,iforest,Gyroscope,36,556,0.4146
+norm_vuelo,real->real,iforest,Magnetometer,36,568,0.4847
+norm_vuelo,real->real,iforest,Motor,218,4347,0.6162
+norm_vuelo,real->real,rf,Accelerometer,28,447,0.8311
+norm_vuelo,real->real,rf,Barometer,36,740,0.8943
+norm_vuelo,real->real,rf,GPS,36,666,0.7900
+norm_vuelo,real->real,rf,Gyroscope,36,556,0.8474
+norm_vuelo,real->real,rf,Magnetometer,36,568,0.8240
+norm_vuelo,real->real,rf,Motor,218,4347,0.8857
+norm_vuelo,hil->hil,iforest,Load,290,8025,0.6548
+norm_vuelo,hil->hil,iforest,Prop,435,9711,0.4587
+norm_vuelo,hil->hil,iforest,Voltage,32,862,0.4138
+norm_vuelo,hil->hil,iforest,Wind,443,10987,0.7008
+norm_vuelo,hil->hil,rf,Load,290,8025,0.9962
+norm_vuelo,hil->hil,rf,Prop,435,9711,0.9978
+norm_vuelo,hil->hil,rf,Voltage,32,862,0.9831
+norm_vuelo,hil->hil,rf,Wind,443,10987,0.9961
+norm_vuelo,uav_sead->real,iforest,Accelerometer,28,447,0.4994
+norm_vuelo,uav_sead->real,iforest,Barometer,36,740,0.4874
+norm_vuelo,uav_sead->real,iforest,GPS,36,666,0.4232
+norm_vuelo,uav_sead->real,iforest,Gyroscope,36,556,0.4513
+norm_vuelo,uav_sead->real,iforest,Magnetometer,36,568,0.4853
+norm_vuelo,uav_sead->real,iforest,Motor,218,4347,0.5862
+norm_vuelo,uav_sead->real,rf,Accelerometer,28,447,0.5707
+norm_vuelo,uav_sead->real,rf,Barometer,36,740,0.4670
+norm_vuelo,uav_sead->real,rf,GPS,36,666,0.3849
+norm_vuelo,uav_sead->real,rf,Gyroscope,36,556,0.4746
+norm_vuelo,uav_sead->real,rf,Magnetometer,36,568,0.4414
+norm_vuelo,uav_sead->real,rf,Motor,218,4347,0.5702
+norm_vuelo,real->uav_sead,iforest,Altitude,48,515,0.5155
+norm_vuelo,real->uav_sead,iforest,Altitude|External Position,1,3,0.7821
+norm_vuelo,real->uav_sead,iforest,Altitude|Mechanical,3,32,0.8622
+norm_vuelo,real->uav_sead,iforest,External Position,130,959,0.6760
+norm_vuelo,real->uav_sead,iforest,External Position|Mechanical,2,14,0.9513
+norm_vuelo,real->uav_sead,iforest,Global Position,26,689,0.4926
+norm_vuelo,real->uav_sead,iforest,Mechanical,35,280,0.7492
+norm_vuelo,real->uav_sead,rf,Altitude,48,515,0.4906
+norm_vuelo,real->uav_sead,rf,Altitude|External Position,1,3,0.6635
+norm_vuelo,real->uav_sead,rf,Altitude|Mechanical,3,32,0.7625
+norm_vuelo,real->uav_sead,rf,External Position,130,959,0.4579
+norm_vuelo,real->uav_sead,rf,External Position|Mechanical,2,14,0.8237
+norm_vuelo,real->uav_sead,rf,Global Position,26,689,0.4098
+norm_vuelo,real->uav_sead,rf,Mechanical,35,280,0.6576
+norm_vuelo,uav_sead->hil,iforest,Load,290,8025,0.5252
+norm_vuelo,uav_sead->hil,iforest,Prop,435,9711,0.4439
+norm_vuelo,uav_sead->hil,iforest,Voltage,32,862,0.3688
+norm_vuelo,uav_sead->hil,iforest,Wind,443,10987,0.5921
+norm_vuelo,uav_sead->hil,rf,Load,290,8025,0.4579
+norm_vuelo,uav_sead->hil,rf,Prop,435,9711,0.3952
+norm_vuelo,uav_sead->hil,rf,Voltage,32,862,0.3629
+norm_vuelo,uav_sead->hil,rf,Wind,443,10987,0.5106
+norm_vuelo,hil->real,iforest,Accelerometer,28,447,0.5352
+norm_vuelo,hil->real,iforest,Barometer,36,740,0.5549
+norm_vuelo,hil->real,iforest,GPS,36,666,0.4564
+norm_vuelo,hil->real,iforest,Gyroscope,36,556,0.4969
+norm_vuelo,hil->real,iforest,Magnetometer,36,568,0.5216
+norm_vuelo,hil->real,iforest,Motor,218,4347,0.6289
+norm_vuelo,hil->real,rf,Accelerometer,28,447,0.6782
+norm_vuelo,hil->real,rf,Barometer,36,740,0.5379
+norm_vuelo,hil->real,rf,GPS,36,666,0.5246
+norm_vuelo,hil->real,rf,Gyroscope,36,556,0.5619
+norm_vuelo,hil->real,rf,Magnetometer,36,568,0.5597
+norm_vuelo,hil->real,rf,Motor,218,4347,0.6353
+norm_vuelo,real->hil,iforest,Load,290,8025,0.6112
+norm_vuelo,real->hil,iforest,Prop,435,9711,0.4874
+norm_vuelo,real->hil,iforest,Voltage,32,862,0.4299
+norm_vuelo,real->hil,iforest,Wind,443,10987,0.6319
+norm_vuelo,real->hil,rf,Load,290,8025,0.6947
+norm_vuelo,real->hil,rf,Prop,435,9711,0.6966
+norm_vuelo,real->hil,rf,Voltage,32,862,0.7117
+norm_vuelo,real->hil,rf,Wind,443,10987,0.5451
+norm_vuelo,hil_prop->hil_prop,iforest,Prop,435,9711,0.4692
+norm_vuelo,hil_prop->hil_prop,rf,Prop,435,9711,0.9985
+norm_vuelo,real_motor->real_motor,iforest,Motor,218,4347,0.5994
+norm_vuelo,real_motor->real_motor,rf,Motor,218,4347,0.8782
+norm_vuelo,hil_prop->real_motor,iforest,Motor,218,4347,0.6107
+norm_vuelo,hil_prop->real_motor,rf,Motor,218,4347,0.6384
+norm_vuelo,real_motor->hil_prop,iforest,Prop,435,9711,0.5284
+norm_vuelo,real_motor->hil_prop,rf,Prop,435,9711,0.6393

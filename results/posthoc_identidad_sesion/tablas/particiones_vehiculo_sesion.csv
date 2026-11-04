@@ -1,0 +1,6 @@
+dataset,particion,auroc,ic95_inf,ic95_sup,p_grupo_menos_esta,dif_ic95_inf,dif_ic95_sup
+uav_sead,P-plataforma,0.6284,0.5581,0.7056,0.2484,0.1713,0.3215
+uav_sead,P-tipo_vehiculo,0.6280,0.5646,0.7007,0.2489,0.1795,0.3127
+rflymad,P-placa_LOBO_3,0.8390,0.8164,0.8615,0.1425,0.1213,0.1643
+rflymad,P-placa_dos_placas_grandes,0.8234,0.7995,0.8480,0.1588,0.1352,0.1820
+rflymad,P-sesion_disjunta_por_caso,0.9221,0.9056,0.9378,0.0598,0.0452,0.0750

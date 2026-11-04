@@ -1,0 +1,13 @@
+variante,par,auroc,bacc,vuelos_0,vuelos_1,ventanas_0,ventanas_1,auroc_ic_lo,auroc_ic_hi
+crudo,uav_sead_normal_vs_real_nofault,0.9997,0.9650,884,50,47676,1677,0.9994,0.9998
+crudo,hil_nofault_vs_real_nofault,1.0000,0.9981,240,50,4668,1677,0.9998,1.0000
+crudo,uav_sead_normal_vs_hil_nofault,1.0000,0.9983,884,240,47676,4668,1.0000,1.0000
+crudo,real_nofault_vs_prefallo_real,0.9469,0.8594,50,355,1677,4379,0.9212,0.9665
+crudo,hil_nofault_vs_prefallo_hil,0.9572,0.8973,240,1205,4668,8278,0.9503,0.9641
+crudo,uav_sead_normal_vs_normales_de_vuelos_anomalos,0.7598,0.5679,884,265,47676,7735,0.7249,0.7928
+norm_vuelo,uav_sead_normal_vs_real_nofault,0.9999,0.9786,884,50,47676,1677,0.9998,1.0000
+norm_vuelo,hil_nofault_vs_real_nofault,0.9999,0.9957,240,50,4668,1677,0.9996,1.0000
+norm_vuelo,uav_sead_normal_vs_hil_nofault,1.0000,0.9983,884,240,47676,4668,1.0000,1.0000
+norm_vuelo,real_nofault_vs_prefallo_real,0.9365,0.8275,50,355,1677,4379,0.9111,0.9560
+norm_vuelo,hil_nofault_vs_prefallo_hil,0.9590,0.8935,240,1205,4668,8278,0.9520,0.9653
+norm_vuelo,uav_sead_normal_vs_normales_de_vuelos_anomalos,0.7280,0.5324,884,265,47676,7735,0.6904,0.7595

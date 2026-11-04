@@ -1,0 +1,7160 @@
+{
+ "entradas": {
+  "uav_sead": {
+   "anotados_en_mapping": 1396,
+   "excluidos": {
+    "uncategorized": 141,
+    "anomalo_sin_intervalos": 1,
+    "sin_fichero": 3
+   },
+   "a_leer": 1251
+  },
+  "rflymad_partes": {
+   "HIL-Load": 291,
+   "HIL-Motor1": 486,
+   "HIL-Motor2": 435,
+   "HIL-NoFault": 240,
+   "HIL-Prop": 435,
+   "HIL-Sensors": 690,
+   "HIL-Voltage": 36,
+   "HIL-Wind": 443,
+   "Real-Motor": 245,
+   "Real-NoFault": 51,
+   "Real-Sensors": 197
+  },
+  "vuelos_excluidos_por_motivo": {
+   "hil: anomalía o fallo dentro del tramo de referencia": 2,
+   "uav_sead: anomalía o fallo dentro del tramo de referencia": 59
+  }
+ },
+ "ventanas": {
+  "ambiguas_excluidas_solape_0_a_0_5": 3943,
+  "no_finitas_excluidas_por_familia": {
+   "base": 0,
+   "d": 815,
+   "a": 576,
+   "b": 1086,
+   "c": 576
+  },
+  "no_finitas_excluidas_en_alguna_familia": 1216,
+  "uav_sead": {
+   "vuelos": 1171,
+   "grupos": 1171,
+   "ventanas": 57937,
+   "ventanas_anomalas": 2497,
+   "prevalencia": 0.0431,
+   "por_clase": {
+    "Altitude": {
+     "vuelos": 63,
+     "ventanas": 2283,
+     "anomalas": 517
+    },
+    "Altitude|External Position": {
+     "vuelos": 1,
+     "ventanas": 53,
+     "anomalas": 3
+    },
+    "Altitude|Mechanical": {
+     "vuelos": 3,
+     "ventanas": 200,
+     "anomalas": 32
+    },
+    "External Position": {
+     "vuelos": 149,
+     "ventanas": 3884,
+     "anomalas": 962
+    },
+    "External Position|Mechanical": {
+     "vuelos": 2,
+     "ventanas": 44,
+     "anomalas": 14
+    },
+    "Global Position": {
+     "vuelos": 31,
+     "ventanas": 1780,
+     "anomalas": 689
+    },
+    "Mechanical": {
+     "vuelos": 36,
+     "ventanas": 2036,
+     "anomalas": 280
+    },
+    "Normal": {
+     "vuelos": 886,
+     "ventanas": 47657,
+     "anomalas": 0
+    }
+   }
+  },
+  "real": {
+   "vuelos": 493,
+   "grupos": 440,
+   "ventanas": 13380,
+   "ventanas_anomalas": 7324,
+   "prevalencia": 0.5474,
+   "por_clase": {
+    "Accelerometer": {
+     "vuelos": 34,
+     "ventanas": 821,
+     "anomalas": 447
+    },
+    "Barometer": {
+     "vuelos": 45,
+     "ventanas": 1161,
+     "anomalas": 740
+    },
+    "GPS": {
+     "vuelos": 43,
+     "ventanas": 987,
+     "anomalas": 666
+    },
+    "Gyroscope": {
+     "vuelos": 39,
+     "ventanas": 867,
+     "anomalas": 556
+    },
+    "Magnetometer": {
+     "vuelos": 36,
+     "ventanas": 859,
+     "anomalas": 568
+    },
+    "Motor": {
+     "vuelos": 245,
+     "ventanas": 7008,
+     "anomalas": 4347
+    },
+    "No Fault": {
+     "vuelos": 51,
+     "ventanas": 1677,
+     "anomalas": 0
+    }
+   }
+  },
+  "hil": {
+   "vuelos": 3054,
+   "grupos": 2973,
+   "ventanas": 94177,
+   "ventanas_anomalas": 67552,
+   "prevalencia": 0.7173,
+   "por_clase": {
+    "Accelerometer": {
+     "vuelos": 138,
+     "ventanas": 4249,
+     "anomalas": 3158
+    },
+    "Barometer": {
+     "vuelos": 136,
+     "ventanas": 3603,
+     "anomalas": 2529
+    },
+    "GPS": {
+     "vuelos": 138,
+     "ventanas": 4321,
+     "anomalas": 3221
+    },
+    "Gyroscope": {
+     "vuelos": 138,
+     "ventanas": 4277,
+     "anomalas": 3180
+    },
+    "Load": {
+     "vuelos": 291,
+     "ventanas": 9816,
+     "anomalas": 7916
+    },
+    "Magnetometer": {
+     "vuelos": 138,
+     "ventanas": 4314,
+     "anomalas": 3209
+    },
+    "Motor": {
+     "vuelos": 921,
+     "ventanas": 31318,
+     "anomalas": 23043
+    },
+    "No Fault": {
+     "vuelos": 240,
+     "ventanas": 4628,
+     "anomalas": 0
+    },
+    "Prop": {
+     "vuelos": 435,
+     "ventanas": 12735,
+     "anomalas": 9581
+    },
+    "Voltage": {
+     "vuelos": 36,
+     "ventanas": 1103,
+     "anomalas": 851
+    },
+    "Wind": {
+     "vuelos": 443,
+     "ventanas": 13813,
+     "anomalas": 10864
+    }
+   }
+  },
+  "hil_prop": {
+   "vuelos": 675,
+   "grupos": 675,
+   "ventanas": 17363,
+   "ventanas_anomalas": 9581,
+   "prevalencia": 0.5518,
+   "por_clase": {
+    "No Fault": {
+     "vuelos": 240,
+     "ventanas": 4628,
+     "anomalas": 0
+    },
+    "Prop": {
+     "vuelos": 435,
+     "ventanas": 12735,
+     "anomalas": 9581
+    }
+   }
+  },
+  "hil_motor": {
+   "vuelos": 1161,
+   "grupos": 1080,
+   "ventanas": 35946,
+   "ventanas_anomalas": 23043,
+   "prevalencia": 0.641,
+   "por_clase": {
+    "Motor": {
+     "vuelos": 921,
+     "ventanas": 31318,
+     "anomalas": 23043
+    },
+    "No Fault": {
+     "vuelos": 240,
+     "ventanas": 4628,
+     "anomalas": 0
+    }
+   }
+  },
+  "hil_sensors": {
+   "vuelos": 928,
+   "grupos": 928,
+   "ventanas": 25392,
+   "ventanas_anomalas": 15297,
+   "prevalencia": 0.6024,
+   "por_clase": {
+    "Accelerometer": {
+     "vuelos": 138,
+     "ventanas": 4249,
+     "anomalas": 3158
+    },
+    "Barometer": {
+     "vuelos": 136,
+     "ventanas": 3603,
+     "anomalas": 2529
+    },
+    "GPS": {
+     "vuelos": 138,
+     "ventanas": 4321,
+     "anomalas": 3221
+    },
+    "Gyroscope": {
+     "vuelos": 138,
+     "ventanas": 4277,
+     "anomalas": 3180
+    },
+    "Magnetometer": {
+     "vuelos": 138,
+     "ventanas": 4314,
+     "anomalas": 3209
+    },
+    "No Fault": {
+     "vuelos": 240,
+     "ventanas": 4628,
+     "anomalas": 0
+    }
+   }
+  },
+  "real_motor": {
+   "vuelos": 296,
+   "grupos": 268,
+   "ventanas": 8685,
+   "ventanas_anomalas": 4347,
+   "prevalencia": 0.5005,
+   "por_clase": {
+    "Motor": {
+     "vuelos": 245,
+     "ventanas": 7008,
+     "anomalas": 4347
+    },
+    "No Fault": {
+     "vuelos": 51,
+     "ventanas": 1677,
+     "anomalas": 0
+    }
+   }
+  },
+  "real_sensors": {
+   "vuelos": 248,
+   "grupos": 222,
+   "ventanas": 6372,
+   "ventanas_anomalas": 2977,
+   "prevalencia": 0.4672,
+   "por_clase": {
+    "Accelerometer": {
+     "vuelos": 34,
+     "ventanas": 821,
+     "anomalas": 447
+    },
+    "Barometer": {
+     "vuelos": 45,
+     "ventanas": 1161,
+     "anomalas": 740
+    },
+    "GPS": {
+     "vuelos": 43,
+     "ventanas": 987,
+     "anomalas": 666
+    },
+    "Gyroscope": {
+     "vuelos": 39,
+     "ventanas": 867,
+     "anomalas": 556
+    },
+    "Magnetometer": {
+     "vuelos": 36,
+     "ventanas": 859,
+     "anomalas": 568
+    },
+    "No Fault": {
+     "vuelos": 51,
+     "ventanas": 1677,
+     "anomalas": 0
+    }
+   }
+  },
+  "rflymad_fallo_sin_inyeccion_en_ulog": {
+   "real": 5,
+   "hil": 0
+  },
+  "vuelos_sin_actuator_controls_0": {
+   "uav_sead": 0,
+   "real": 0,
+   "hil": 0
+  }
+ },
+ "frecuencias_nativas_hz": {
+  "uav_sead": {
+   "sensor_combined": {
+    "p10": 250.0,
+    "mediana": 250.0,
+    "p90": 250.0
+   },
+   "vehicle_attitude": {
+    "p10": 18.943,
+    "mediana": 31.2647,
+    "p90": 249.5633
+   },
+   "vehicle_attitude_setpoint": {
+    "p10": 9.9275,
+    "mediana": 9.9704,
+    "p90": 250.0625
+   },
+   "vehicle_rates_setpoint": {
+    "p10": 31.252,
+    "mediana": 31.2549,
+    "p90": 249.8751
+   },
+   "vehicle_local_position": {
+    "p10": 9.8425,
+    "mediana": 9.9724,
+    "p90": 9.9864
+   },
+   "actuator_controls_0": {
+    "p10": 9.8431,
+    "mediana": 249.8751,
+    "p90": 249.9375
+   }
+  },
+  "real": {
+   "sensor_combined": {
+    "p10": 221.9263,
+    "mediana": 222.4199,
+    "p90": 222.4694
+   },
+   "vehicle_attitude": {
+    "p10": 221.7295,
+    "mediana": 222.4694,
+    "p90": 222.5684
+   },
+   "vehicle_attitude_setpoint": {
+    "p10": 95.4654,
+    "mediana": 95.8313,
+    "p90": 111.205
+   },
+   "vehicle_rates_setpoint": {
+    "p10": 221.7295,
+    "mediana": 222.4694,
+    "p90": 222.5684
+   },
+   "vehicle_local_position": {
+    "p10": 9.938,
+    "mediana": 9.9624,
+    "p90": 10.0903
+   },
+   "actuator_controls_0": {
+    "p10": 665.779,
+    "mediana": 667.5567,
+    "p90": 667.5567
+   }
+  },
+  "hil": {
+   "sensor_combined": {
+    "p10": 248.8367,
+    "mediana": 249.6256,
+    "p90": 250.1876
+   },
+   "vehicle_attitude": {
+    "p10": 248.8181,
+    "mediana": 249.6256,
+    "p90": 250.1876
+   },
+   "vehicle_attitude_setpoint": {
+    "p10": 101.8465,
+    "mediana": 104.3841,
+    "p90": 108.2526
+   },
+   "vehicle_rates_setpoint": {
+    "p10": 248.8181,
+    "mediana": 249.6256,
+    "p90": 250.1876
+   },
+   "vehicle_local_position": {
+    "p10": 10.0038,
+    "mediana": 10.0093,
+    "p90": 10.0137
+   },
+   "actuator_controls_0": {
+    "p10": 248.8181,
+    "mediana": 249.6256,
+    "p90": 250.1876
+   }
+  }
+ },
+ "interno": {
+  "hil": {
+   "base": {
+    "rf": {
+     "auroc": 0.9942,
+     "auroc_ic95": [
+      0.9927,
+      0.9954
+     ],
+     "auprc": 0.9972,
+     "auprc_ic95": [
+      0.9961,
+      0.998
+     ],
+     "bacc": 0.9664,
+     "bacc_ic95": [
+      0.9624,
+      0.9703
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.8805,
+     "auroc_ic95": [
+      0.8736,
+      0.8873
+     ],
+     "auprc": 0.9438,
+     "auprc_ic95": [
+      0.9386,
+      0.9483
+     ],
+     "bacc": 0.789,
+     "bacc_ic95": [
+      0.7807,
+      0.7967
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.5627,
+     "auroc_ic95": [
+      0.554,
+      0.5713
+     ],
+     "auprc": 0.7769,
+     "auprc_ic95": [
+      0.7695,
+      0.784
+     ],
+     "bacc": 0.5754,
+     "bacc_ic95": [
+      0.5686,
+      0.5828
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.6372,
+     "auroc_ic95": [
+      0.6287,
+      0.645
+     ],
+     "auprc": 0.8294,
+     "auprc_ic95": [
+      0.8212,
+      0.8369
+     ],
+     "bacc": 0.6165,
+     "bacc_ic95": [
+      0.6116,
+      0.6216
+     ],
+     "semillas": 5
+    },
+    "atajos": {
+     "auroc": 0.9855,
+     "auroc_ic95": [
+      0.9824,
+      0.9882
+     ],
+     "auprc": 0.9936,
+     "auprc_ic95": [
+      0.992,
+      0.995
+     ],
+     "bacc": 0.9403,
+     "bacc_ic95": [
+      0.9325,
+      0.9477
+     ],
+     "semillas": 5
+    },
+    "aleatorio": {
+     "auroc": 0.4973,
+     "auroc_ic95": [
+      0.4931,
+      0.5014
+     ],
+     "auprc": 0.7161,
+     "auprc_ic95": [
+      0.7085,
+      0.7226
+     ],
+     "bacc": 0.4978,
+     "bacc_ic95": [
+      0.4943,
+      0.5014
+     ],
+     "semillas": 1
+    }
+   },
+   "invariante": {
+    "rf": {
+     "auroc": 0.9953,
+     "auroc_ic95": [
+      0.9941,
+      0.9964
+     ],
+     "auprc": 0.9978,
+     "auprc_ic95": [
+      0.997,
+      0.9985
+     ],
+     "bacc": 0.969,
+     "bacc_ic95": [
+      0.9654,
+      0.9725
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.9477,
+     "auroc_ic95": [
+      0.9432,
+      0.952
+     ],
+     "auprc": 0.9739,
+     "auprc_ic95": [
+      0.9709,
+      0.9767
+     ],
+     "bacc": 0.8866,
+     "bacc_ic95": [
+      0.8807,
+      0.8922
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.5528,
+     "auroc_ic95": [
+      0.5446,
+      0.5615
+     ],
+     "auprc": 0.7812,
+     "auprc_ic95": [
+      0.7737,
+      0.7878
+     ],
+     "bacc": 0.5659,
+     "bacc_ic95": [
+      0.5607,
+      0.571
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.6363,
+     "auroc_ic95": [
+      0.631,
+      0.642
+     ],
+     "auprc": 0.7904,
+     "auprc_ic95": [
+      0.7834,
+      0.7971
+     ],
+     "bacc": 0.6713,
+     "bacc_ic95": [
+      0.6654,
+      0.6783
+     ],
+     "semillas": 5
+    }
+   }
+  },
+  "real": {
+   "base": {
+    "rf": {
+     "auroc": 0.8703,
+     "auroc_ic95": [
+      0.8565,
+      0.8846
+     ],
+     "auprc": 0.8863,
+     "auprc_ic95": [
+      0.8701,
+      0.901
+     ],
+     "bacc": 0.7755,
+     "bacc_ic95": [
+      0.7605,
+      0.7904
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.7901,
+     "auroc_ic95": [
+      0.7743,
+      0.8078
+     ],
+     "auprc": 0.8241,
+     "auprc_ic95": [
+      0.8043,
+      0.8443
+     ],
+     "bacc": 0.7002,
+     "bacc_ic95": [
+      0.6838,
+      0.7186
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.5904,
+     "auroc_ic95": [
+      0.5672,
+      0.6134
+     ],
+     "auprc": 0.6541,
+     "auprc_ic95": [
+      0.6176,
+      0.6863
+     ],
+     "bacc": 0.5771,
+     "bacc_ic95": [
+      0.5605,
+      0.5958
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.6476,
+     "auroc_ic95": [
+      0.627,
+      0.6707
+     ],
+     "auprc": 0.7046,
+     "auprc_ic95": [
+      0.6764,
+      0.731
+     ],
+     "bacc": 0.595,
+     "bacc_ic95": [
+      0.5784,
+      0.6119
+     ],
+     "semillas": 5
+    },
+    "atajos": {
+     "auroc": 0.9713,
+     "auroc_ic95": [
+      0.959,
+      0.9818
+     ],
+     "auprc": 0.9743,
+     "auprc_ic95": [
+      0.9615,
+      0.9844
+     ],
+     "bacc": 0.9156,
+     "bacc_ic95": [
+      0.897,
+      0.9334
+     ],
+     "semillas": 5
+    },
+    "aleatorio": {
+     "auroc": 0.502,
+     "auroc_ic95": [
+      0.4929,
+      0.5112
+     ],
+     "auprc": 0.5482,
+     "auprc_ic95": [
+      0.5161,
+      0.5763
+     ],
+     "bacc": 0.5041,
+     "bacc_ic95": [
+      0.4957,
+      0.5125
+     ],
+     "semillas": 1
+    }
+   },
+   "invariante": {
+    "rf": {
+     "auroc": 0.9095,
+     "auroc_ic95": [
+      0.8977,
+      0.9217
+     ],
+     "auprc": 0.9233,
+     "auprc_ic95": [
+      0.9103,
+      0.936
+     ],
+     "bacc": 0.8263,
+     "bacc_ic95": [
+      0.8122,
+      0.8412
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.8581,
+     "auroc_ic95": [
+      0.8435,
+      0.8744
+     ],
+     "auprc": 0.8813,
+     "auprc_ic95": [
+      0.8617,
+      0.8997
+     ],
+     "bacc": 0.7692,
+     "bacc_ic95": [
+      0.7534,
+      0.7858
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.6018,
+     "auroc_ic95": [
+      0.5835,
+      0.6191
+     ],
+     "auprc": 0.6612,
+     "auprc_ic95": [
+      0.6245,
+      0.695
+     ],
+     "bacc": 0.5687,
+     "bacc_ic95": [
+      0.5549,
+      0.5827
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.7051,
+     "auroc_ic95": [
+      0.6846,
+      0.7275
+     ],
+     "auprc": 0.7156,
+     "auprc_ic95": [
+      0.6913,
+      0.7374
+     ],
+     "bacc": 0.6471,
+     "bacc_ic95": [
+      0.6305,
+      0.6649
+     ],
+     "semillas": 5
+    }
+   }
+  },
+  "real_motor": {
+   "base": {
+    "rf": {
+     "auroc": 0.8943,
+     "auroc_ic95": [
+      0.8764,
+      0.9116
+     ],
+     "auprc": 0.8966,
+     "auprc_ic95": [
+      0.8765,
+      0.9159
+     ],
+     "bacc": 0.7977,
+     "bacc_ic95": [
+      0.7767,
+      0.8174
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.8382,
+     "auroc_ic95": [
+      0.8177,
+      0.8573
+     ],
+     "auprc": 0.8482,
+     "auprc_ic95": [
+      0.8249,
+      0.8707
+     ],
+     "bacc": 0.7477,
+     "bacc_ic95": [
+      0.7285,
+      0.7668
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.6393,
+     "auroc_ic95": [
+      0.6072,
+      0.6732
+     ],
+     "auprc": 0.654,
+     "auprc_ic95": [
+      0.6096,
+      0.7
+     ],
+     "bacc": 0.6026,
+     "bacc_ic95": [
+      0.5752,
+      0.6299
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.7086,
+     "auroc_ic95": [
+      0.6772,
+      0.7361
+     ],
+     "auprc": 0.725,
+     "auprc_ic95": [
+      0.6884,
+      0.7603
+     ],
+     "bacc": 0.6366,
+     "bacc_ic95": [
+      0.613,
+      0.6601
+     ],
+     "semillas": 5
+    },
+    "atajos": {
+     "auroc": 0.9786,
+     "auroc_ic95": [
+      0.9658,
+      0.9882
+     ],
+     "auprc": 0.9771,
+     "auprc_ic95": [
+      0.9629,
+      0.9881
+     ],
+     "bacc": 0.9269,
+     "bacc_ic95": [
+      0.902,
+      0.9468
+     ],
+     "semillas": 5
+    },
+    "aleatorio": {
+     "auroc": 0.5071,
+     "auroc_ic95": [
+      0.4956,
+      0.5193
+     ],
+     "auprc": 0.51,
+     "auprc_ic95": [
+      0.472,
+      0.5447
+     ],
+     "bacc": 0.5027,
+     "bacc_ic95": [
+      0.4925,
+      0.5131
+     ],
+     "semillas": 1
+    }
+   },
+   "invariante": {
+    "rf": {
+     "auroc": 0.955,
+     "auroc_ic95": [
+      0.9451,
+      0.9635
+     ],
+     "auprc": 0.9585,
+     "auprc_ic95": [
+      0.9475,
+      0.9681
+     ],
+     "bacc": 0.883,
+     "bacc_ic95": [
+      0.8673,
+      0.8972
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.9326,
+     "auroc_ic95": [
+      0.9204,
+      0.9439
+     ],
+     "auprc": 0.9325,
+     "auprc_ic95": [
+      0.9142,
+      0.9476
+     ],
+     "bacc": 0.854,
+     "bacc_ic95": [
+      0.8388,
+      0.869
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.651,
+     "auroc_ic95": [
+      0.6252,
+      0.6796
+     ],
+     "auprc": 0.6624,
+     "auprc_ic95": [
+      0.6188,
+      0.7087
+     ],
+     "bacc": 0.6004,
+     "bacc_ic95": [
+      0.5761,
+      0.6243
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.764,
+     "auroc_ic95": [
+      0.7421,
+      0.7872
+     ],
+     "auprc": 0.7331,
+     "auprc_ic95": [
+      0.7026,
+      0.7619
+     ],
+     "bacc": 0.707,
+     "bacc_ic95": [
+      0.6856,
+      0.7297
+     ],
+     "semillas": 5
+    }
+   }
+  },
+  "real_sensors": {
+   "base": {
+    "rf": {
+     "auroc": 0.8732,
+     "auroc_ic95": [
+      0.8504,
+      0.8953
+     ],
+     "auprc": 0.8463,
+     "auprc_ic95": [
+      0.8191,
+      0.8727
+     ],
+     "bacc": 0.7699,
+     "bacc_ic95": [
+      0.7422,
+      0.7961
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.7701,
+     "auroc_ic95": [
+      0.7426,
+      0.7959
+     ],
+     "auprc": 0.7453,
+     "auprc_ic95": [
+      0.71,
+      0.7796
+     ],
+     "bacc": 0.6845,
+     "bacc_ic95": [
+      0.6586,
+      0.7095
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.5505,
+     "auroc_ic95": [
+      0.5215,
+      0.5793
+     ],
+     "auprc": 0.5164,
+     "auprc_ic95": [
+      0.4656,
+      0.5637
+     ],
+     "bacc": 0.5294,
+     "bacc_ic95": [
+      0.5006,
+      0.5581
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.6457,
+     "auroc_ic95": [
+      0.6111,
+      0.6778
+     ],
+     "auprc": 0.5746,
+     "auprc_ic95": [
+      0.5308,
+      0.6179
+     ],
+     "bacc": 0.6076,
+     "bacc_ic95": [
+      0.58,
+      0.634
+     ],
+     "semillas": 5
+    },
+    "atajos": {
+     "auroc": 0.9563,
+     "auroc_ic95": [
+      0.9314,
+      0.9764
+     ],
+     "auprc": 0.9592,
+     "auprc_ic95": [
+      0.9393,
+      0.976
+     ],
+     "bacc": 0.8792,
+     "bacc_ic95": [
+      0.8464,
+      0.9077
+     ],
+     "semillas": 5
+    },
+    "aleatorio": {
+     "auroc": 0.5004,
+     "auroc_ic95": [
+      0.4873,
+      0.5134
+     ],
+     "auprc": 0.4618,
+     "auprc_ic95": [
+      0.4105,
+      0.5136
+     ],
+     "bacc": 0.5043,
+     "bacc_ic95": [
+      0.4931,
+      0.5149
+     ],
+     "semillas": 1
+    }
+   },
+   "invariante": {
+    "rf": {
+     "auroc": 0.8489,
+     "auroc_ic95": [
+      0.8236,
+      0.8734
+     ],
+     "auprc": 0.8233,
+     "auprc_ic95": [
+      0.7969,
+      0.8503
+     ],
+     "bacc": 0.7459,
+     "bacc_ic95": [
+      0.7167,
+      0.7731
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.7879,
+     "auroc_ic95": [
+      0.7595,
+      0.815
+     ],
+     "auprc": 0.7465,
+     "auprc_ic95": [
+      0.7073,
+      0.7861
+     ],
+     "bacc": 0.6909,
+     "bacc_ic95": [
+      0.6604,
+      0.7182
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.5407,
+     "auroc_ic95": [
+      0.5142,
+      0.5641
+     ],
+     "auprc": 0.4991,
+     "auprc_ic95": [
+      0.4502,
+      0.5517
+     ],
+     "bacc": 0.5304,
+     "bacc_ic95": [
+      0.5045,
+      0.5544
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.6359,
+     "auroc_ic95": [
+      0.605,
+      0.6673
+     ],
+     "auprc": 0.5831,
+     "auprc_ic95": [
+      0.5377,
+      0.6221
+     ],
+     "bacc": 0.6124,
+     "bacc_ic95": [
+      0.586,
+      0.6397
+     ],
+     "semillas": 5
+    }
+   }
+  },
+  "uav_sead": {
+   "base": {
+    "rf": {
+     "auroc": 0.8694,
+     "auroc_ic95": [
+      0.8478,
+      0.894
+     ],
+     "auprc": 0.2568,
+     "auprc_ic95": [
+      0.1964,
+      0.3262
+     ],
+     "bacc": 0.7845,
+     "bacc_ic95": [
+      0.7574,
+      0.8115
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.7734,
+     "auroc_ic95": [
+      0.7389,
+      0.8113
+     ],
+     "auprc": 0.1614,
+     "auprc_ic95": [
+      0.1258,
+      0.2025
+     ],
+     "bacc": 0.6951,
+     "bacc_ic95": [
+      0.6614,
+      0.7329
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.7117,
+     "auroc_ic95": [
+      0.6499,
+      0.7841
+     ],
+     "auprc": 0.1406,
+     "auprc_ic95": [
+      0.1083,
+      0.1847
+     ],
+     "bacc": 0.6646,
+     "bacc_ic95": [
+      0.6177,
+      0.7206
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.684,
+     "auroc_ic95": [
+      0.6474,
+      0.7251
+     ],
+     "auprc": 0.0931,
+     "auprc_ic95": [
+      0.0757,
+      0.1142
+     ],
+     "bacc": 0.6552,
+     "bacc_ic95": [
+      0.6181,
+      0.6959
+     ],
+     "semillas": 5
+    },
+    "atajos": {
+     "auroc": 0.6371,
+     "auroc_ic95": [
+      0.5963,
+      0.6809
+     ],
+     "auprc": 0.0635,
+     "auprc_ic95": [
+      0.0525,
+      0.0762
+     ],
+     "bacc": 0.576,
+     "bacc_ic95": [
+      0.5366,
+      0.6199
+     ],
+     "semillas": 5
+    },
+    "aleatorio": {
+     "auroc": 0.4969,
+     "auroc_ic95": [
+      0.4848,
+      0.5093
+     ],
+     "auprc": 0.0427,
+     "auprc_ic95": [
+      0.0337,
+      0.0519
+     ],
+     "bacc": 0.4996,
+     "bacc_ic95": [
+      0.4889,
+      0.5105
+     ],
+     "semillas": 1
+    }
+   },
+   "invariante": {
+    "rf": {
+     "auroc": 0.8406,
+     "auroc_ic95": [
+      0.8145,
+      0.8684
+     ],
+     "auprc": 0.2288,
+     "auprc_ic95": [
+      0.1818,
+      0.2824
+     ],
+     "bacc": 0.7399,
+     "bacc_ic95": [
+      0.7108,
+      0.7698
+     ],
+     "semillas": 5
+    },
+    "lr": {
+     "auroc": 0.7935,
+     "auroc_ic95": [
+      0.7689,
+      0.8235
+     ],
+     "auprc": 0.1791,
+     "auprc_ic95": [
+      0.1403,
+      0.2241
+     ],
+     "bacc": 0.7296,
+     "bacc_ic95": [
+      0.7084,
+      0.7514
+     ],
+     "semillas": 5
+    },
+    "if": {
+     "auroc": 0.701,
+     "auroc_ic95": [
+      0.6534,
+      0.7614
+     ],
+     "auprc": 0.1286,
+     "auprc_ic95": [
+      0.1,
+      0.1649
+     ],
+     "bacc": 0.6721,
+     "bacc_ic95": [
+      0.63,
+      0.7256
+     ],
+     "semillas": 5
+    },
+    "una_regla": {
+     "auroc": 0.7558,
+     "auroc_ic95": [
+      0.7225,
+      0.7901
+     ],
+     "auprc": 0.1067,
+     "auprc_ic95": [
+      0.0852,
+      0.1326
+     ],
+     "bacc": 0.7006,
+     "bacc_ic95": [
+      0.6747,
+      0.7291
+     ],
+     "semillas": 5
+    }
+   }
+  }
+ },
+ "transferencia": {
+  "uav_sead->real": {
+   "abc": {
+    "rf": {
+     "auroc": 0.6193,
+     "auroc_ic95": [
+      0.6021,
+      0.6372
+     ],
+     "auprc": 0.6661,
+     "auprc_ic95": [
+      0.6371,
+      0.6948
+     ],
+     "bacc": 0.5226,
+     "bacc_ic95": [
+      0.5139,
+      0.5317
+     ],
+     "umbral_origen": 0.0739
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.5747,
+     "auroc_ic95": [
+      0.5487,
+      0.6016
+     ],
+     "auprc": 0.631,
+     "auprc_ic95": [
+      0.602,
+      0.6585
+     ],
+     "bacc": 0.5216,
+     "bacc_ic95": [
+      0.5102,
+      0.5327
+     ],
+     "umbral_origen": 0.0869
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.5603,
+     "auroc_ic95": [
+      0.5377,
+      0.5832
+     ],
+     "auprc": 0.6264,
+     "auprc_ic95": [
+      0.5897,
+      0.6595
+     ],
+     "bacc": 0.5587,
+     "bacc_ic95": [
+      0.5413,
+      0.5758
+     ],
+     "umbral_origen": 0.3819
+    },
+    "rf": {
+     "auroc": 0.603,
+     "auroc_ic95": [
+      0.5817,
+      0.6244
+     ],
+     "auprc": 0.6323,
+     "auprc_ic95": [
+      0.6034,
+      0.6604
+     ],
+     "bacc": 0.5713,
+     "bacc_ic95": [
+      0.5555,
+      0.5874
+     ],
+     "umbral_origen": 0.0797
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.4989,
+     "auroc_ic95": [
+      0.4895,
+      0.5089
+     ],
+     "auprc": 0.5467,
+     "auprc_ic95": [
+      0.5163,
+      0.5746
+     ],
+     "bacc": 0.4986,
+     "bacc_ic95": [
+      0.4905,
+      0.5067
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.6529,
+     "auroc_ic95": [
+      0.628,
+      0.6769
+     ],
+     "auprc": 0.6574,
+     "auprc_ic95": [
+      0.6147,
+      0.7005
+     ],
+     "bacc": 0.6014,
+     "bacc_ic95": [
+      0.5889,
+      0.6146
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.5831,
+     "auroc_ic95": [
+      0.561,
+      0.6069
+     ],
+     "auprc": 0.6456,
+     "auprc_ic95": [
+      0.6167,
+      0.6723
+     ],
+     "bacc": 0.5091,
+     "bacc_ic95": [
+      0.5047,
+      0.5145
+     ],
+     "umbral_origen": 0.3819
+    },
+    "lr": {
+     "auroc": 0.5688,
+     "auroc_ic95": [
+      0.5439,
+      0.5929
+     ],
+     "auprc": 0.6175,
+     "auprc_ic95": [
+      0.5833,
+      0.65
+     ],
+     "bacc": 0.5066,
+     "bacc_ic95": [
+      0.4942,
+      0.5207
+     ],
+     "umbral_origen": -0.5936
+    },
+    "rf": {
+     "auroc": 0.5708,
+     "auroc_ic95": [
+      0.5474,
+      0.5951
+     ],
+     "auprc": 0.6173,
+     "auprc_ic95": [
+      0.5906,
+      0.644
+     ],
+     "bacc": 0.5036,
+     "bacc_ic95": [
+      0.4991,
+      0.5083
+     ],
+     "umbral_origen": 0.0785
+    },
+    "una_regla": {
+     "auroc": 0.6253,
+     "auroc_ic95": [
+      0.6041,
+      0.6464
+     ],
+     "auprc": 0.6755,
+     "auprc_ic95": [
+      0.6441,
+      0.7059
+     ],
+     "bacc": 0.5351,
+     "bacc_ic95": [
+      0.5238,
+      0.5463
+     ],
+     "umbral_origen": 0.0152,
+     "rasgo_elegido_en_origen": "err_r_desv"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.5106,
+     "auroc_ic95": [
+      0.4944,
+      0.5273
+     ],
+     "auprc": 0.57,
+     "auprc_ic95": [
+      0.5333,
+      0.603
+     ],
+     "bacc": 0.506,
+     "bacc_ic95": [
+      0.4939,
+      0.5188
+     ],
+     "umbral_origen": 0.1018
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.5039,
+     "auroc_ic95": [
+      0.4854,
+      0.5216
+     ],
+     "auprc": 0.5572,
+     "auprc_ic95": [
+      0.5223,
+      0.5904
+     ],
+     "bacc": 0.4946,
+     "bacc_ic95": [
+      0.4837,
+      0.5056
+     ],
+     "umbral_origen": 0.0939
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.5631,
+     "auroc_ic95": [
+      0.5409,
+      0.5868
+     ],
+     "auprc": 0.6031,
+     "auprc_ic95": [
+      0.5758,
+      0.6304
+     ],
+     "bacc": 0.5089,
+     "bacc_ic95": [
+      0.5034,
+      0.5143
+     ],
+     "umbral_origen": 0.0758
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.5691,
+     "auroc_ic95": [
+      0.5446,
+      0.594
+     ],
+     "auprc": 0.6113,
+     "auprc_ic95": [
+      0.5857,
+      0.6373
+     ],
+     "bacc": 0.5036,
+     "bacc_ic95": [
+      0.4962,
+      0.5112
+     ],
+     "umbral_origen": 0.0773
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.556,
+     "auroc_ic95": [
+      0.5341,
+      0.5782
+     ],
+     "auprc": 0.6019,
+     "auprc_ic95": [
+      0.5747,
+      0.6293
+     ],
+     "bacc": 0.5115,
+     "bacc_ic95": [
+      0.5042,
+      0.5192
+     ],
+     "umbral_origen": 0.0896
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.5293,
+     "auroc_ic95": [
+      0.5111,
+      0.548
+     ],
+     "auprc": 0.6056,
+     "auprc_ic95": [
+      0.5715,
+      0.6371
+     ],
+     "bacc": 0.5405,
+     "bacc_ic95": [
+      0.5282,
+      0.5532
+     ],
+     "umbral_origen": 0.4427
+    },
+    "rf": {
+     "auroc": 0.6358,
+     "auroc_ic95": [
+      0.6113,
+      0.6597
+     ],
+     "auprc": 0.6986,
+     "auprc_ic95": [
+      0.6713,
+      0.7246
+     ],
+     "bacc": 0.5957,
+     "bacc_ic95": [
+      0.5797,
+      0.613
+     ],
+     "umbral_origen": 0.0717
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.5781,
+     "auroc_ic95": [
+      0.5561,
+      0.5997
+     ],
+     "auprc": 0.6292,
+     "auprc_ic95": [
+      0.5983,
+      0.657
+     ],
+     "bacc": 0.5221,
+     "bacc_ic95": [
+      0.5068,
+      0.5378
+     ],
+     "umbral_origen": 0.4427
+    },
+    "lr": {
+     "auroc": 0.5478,
+     "auroc_ic95": [
+      0.5227,
+      0.5741
+     ],
+     "auprc": 0.5995,
+     "auprc_ic95": [
+      0.5644,
+      0.6334
+     ],
+     "bacc": 0.5003,
+     "bacc_ic95": [
+      0.4857,
+      0.5155
+     ],
+     "umbral_origen": -0.5824
+    },
+    "rf": {
+     "auroc": 0.6061,
+     "auroc_ic95": [
+      0.5841,
+      0.63
+     ],
+     "auprc": 0.6395,
+     "auprc_ic95": [
+      0.6101,
+      0.6684
+     ],
+     "bacc": 0.5256,
+     "bacc_ic95": [
+      0.5153,
+      0.537
+     ],
+     "umbral_origen": 0.0822
+    },
+    "una_regla": {
+     "auroc": 0.6379,
+     "auroc_ic95": [
+      0.6129,
+      0.6628
+     ],
+     "auprc": 0.7036,
+     "auprc_ic95": [
+      0.6735,
+      0.7337
+     ],
+     "bacc": 0.55,
+     "bacc_ic95": [
+      0.5357,
+      0.5637
+     ],
+     "umbral_origen": 0.2849,
+     "rasgo_elegido_en_origen": "a_err_r_nrmse_local"
+    }
+   }
+  },
+  "real->uav_sead": {
+   "abc": {
+    "rf": {
+     "auroc": 0.6392,
+     "auroc_ic95": [
+      0.6102,
+      0.671
+     ],
+     "auprc": 0.0896,
+     "auprc_ic95": [
+      0.0693,
+      0.1188
+     ],
+     "bacc": 0.5683,
+     "bacc_ic95": [
+      0.5455,
+      0.5983
+     ],
+     "umbral_origen": 0.512
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.6885,
+     "auroc_ic95": [
+      0.6552,
+      0.7288
+     ],
+     "auprc": 0.0967,
+     "auprc_ic95": [
+      0.0763,
+      0.1262
+     ],
+     "bacc": 0.5582,
+     "bacc_ic95": [
+      0.5381,
+      0.5861
+     ],
+     "umbral_origen": 0.5425
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.7267,
+     "auroc_ic95": [
+      0.67,
+      0.7901
+     ],
+     "auprc": 0.1407,
+     "auprc_ic95": [
+      0.1062,
+      0.1864
+     ],
+     "bacc": 0.6776,
+     "bacc_ic95": [
+      0.6305,
+      0.7301
+     ],
+     "umbral_origen": 0.4413
+    },
+    "rf": {
+     "auroc": 0.6842,
+     "auroc_ic95": [
+      0.6554,
+      0.7141
+     ],
+     "auprc": 0.0784,
+     "auprc_ic95": [
+      0.064,
+      0.0949
+     ],
+     "bacc": 0.6354,
+     "bacc_ic95": [
+      0.61,
+      0.6631
+     ],
+     "umbral_origen": 0.5343
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.5021,
+     "auroc_ic95": [
+      0.4888,
+      0.5157
+     ],
+     "auprc": 0.0426,
+     "auprc_ic95": [
+      0.0339,
+      0.0516
+     ],
+     "bacc": 0.4991,
+     "bacc_ic95": [
+      0.4877,
+      0.5112
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.5278,
+     "auroc_ic95": [
+      0.4909,
+      0.5627
+     ],
+     "auprc": 0.0435,
+     "auprc_ic95": [
+      0.0326,
+      0.0564
+     ],
+     "bacc": 0.5075,
+     "bacc_ic95": [
+      0.4718,
+      0.5395
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.6005,
+     "auroc_ic95": [
+      0.5557,
+      0.6538
+     ],
+     "auprc": 0.0965,
+     "auprc_ic95": [
+      0.0736,
+      0.1293
+     ],
+     "bacc": 0.5457,
+     "bacc_ic95": [
+      0.5298,
+      0.5662
+     ],
+     "umbral_origen": 0.4413
+    },
+    "lr": {
+     "auroc": 0.369,
+     "auroc_ic95": [
+      0.3108,
+      0.4268
+     ],
+     "auprc": 0.0459,
+     "auprc_ic95": [
+      0.0306,
+      0.0659
+     ],
+     "bacc": 0.5132,
+     "bacc_ic95": [
+      0.5045,
+      0.525
+     ],
+     "umbral_origen": -0.1211
+    },
+    "rf": {
+     "auroc": 0.5703,
+     "auroc_ic95": [
+      0.5098,
+      0.6326
+     ],
+     "auprc": 0.0592,
+     "auprc_ic95": [
+      0.046,
+      0.075
+     ],
+     "bacc": 0.5207,
+     "bacc_ic95": [
+      0.5112,
+      0.5335
+     ],
+     "umbral_origen": 0.5343
+    },
+    "una_regla": {
+     "auroc": 0.6738,
+     "auroc_ic95": [
+      0.6156,
+      0.7396
+     ],
+     "auprc": 0.1109,
+     "auprc_ic95": [
+      0.087,
+      0.1435
+     ],
+     "bacc": 0.5647,
+     "bacc_ic95": [
+      0.5468,
+      0.5897
+     ],
+     "umbral_origen": 0.0758,
+     "rasgo_elegido_en_origen": "err_p_desv"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.5453,
+     "auroc_ic95": [
+      0.5064,
+      0.5798
+     ],
+     "auprc": 0.0535,
+     "auprc_ic95": [
+      0.0387,
+      0.0702
+     ],
+     "bacc": 0.5315,
+     "bacc_ic95": [
+      0.5032,
+      0.5557
+     ],
+     "umbral_origen": 0.5059
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.4349,
+     "auroc_ic95": [
+      0.4045,
+      0.463
+     ],
+     "auprc": 0.0369,
+     "auprc_ic95": [
+      0.0283,
+      0.0466
+     ],
+     "bacc": 0.4513,
+     "bacc_ic95": [
+      0.428,
+      0.4715
+     ],
+     "umbral_origen": 0.5349
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.5381,
+     "auroc_ic95": [
+      0.4871,
+      0.5894
+     ],
+     "auprc": 0.0608,
+     "auprc_ic95": [
+      0.0481,
+      0.0801
+     ],
+     "bacc": 0.5215,
+     "bacc_ic95": [
+      0.5107,
+      0.5353
+     ],
+     "umbral_origen": 0.5027
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.5675,
+     "auroc_ic95": [
+      0.5076,
+      0.6293
+     ],
+     "auprc": 0.0641,
+     "auprc_ic95": [
+      0.0492,
+      0.085
+     ],
+     "bacc": 0.5181,
+     "bacc_ic95": [
+      0.5088,
+      0.5301
+     ],
+     "umbral_origen": 0.5249
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.5433,
+     "auroc_ic95": [
+      0.4862,
+      0.5982
+     ],
+     "auprc": 0.0616,
+     "auprc_ic95": [
+      0.0488,
+      0.0793
+     ],
+     "bacc": 0.5192,
+     "bacc_ic95": [
+      0.5095,
+      0.5318
+     ],
+     "umbral_origen": 0.5481
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.7164,
+     "auroc_ic95": [
+      0.6688,
+      0.7723
+     ],
+     "auprc": 0.1328,
+     "auprc_ic95": [
+      0.1043,
+      0.1704
+     ],
+     "bacc": 0.6225,
+     "bacc_ic95": [
+      0.5921,
+      0.658
+     ],
+     "umbral_origen": 0.444
+    },
+    "rf": {
+     "auroc": 0.6976,
+     "auroc_ic95": [
+      0.6705,
+      0.7241
+     ],
+     "auprc": 0.0827,
+     "auprc_ic95": [
+      0.0651,
+      0.103
+     ],
+     "bacc": 0.6476,
+     "bacc_ic95": [
+      0.6268,
+      0.668
+     ],
+     "umbral_origen": 0.5325
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.5858,
+     "auroc_ic95": [
+      0.5574,
+      0.6189
+     ],
+     "auprc": 0.0833,
+     "auprc_ic95": [
+      0.064,
+      0.1108
+     ],
+     "bacc": 0.5708,
+     "bacc_ic95": [
+      0.5507,
+      0.5954
+     ],
+     "umbral_origen": 0.444
+    },
+    "lr": {
+     "auroc": 0.5737,
+     "auroc_ic95": [
+      0.5341,
+      0.6115
+     ],
+     "auprc": 0.1038,
+     "auprc_ic95": [
+      0.0764,
+      0.1371
+     ],
+     "bacc": 0.5596,
+     "bacc_ic95": [
+      0.5363,
+      0.5856
+     ],
+     "umbral_origen": 0.0218
+    },
+    "rf": {
+     "auroc": 0.6488,
+     "auroc_ic95": [
+      0.6057,
+      0.6991
+     ],
+     "auprc": 0.0864,
+     "auprc_ic95": [
+      0.0669,
+      0.1139
+     ],
+     "bacc": 0.5576,
+     "bacc_ic95": [
+      0.5391,
+      0.5822
+     ],
+     "umbral_origen": 0.5277
+    },
+    "una_regla": {
+     "auroc": 0.5921,
+     "auroc_ic95": [
+      0.5491,
+      0.6436
+     ],
+     "auprc": 0.0712,
+     "auprc_ic95": [
+      0.0558,
+      0.0933
+     ],
+     "bacc": 0.5596,
+     "bacc_ic95": [
+      0.5389,
+      0.5871
+     ],
+     "umbral_origen": 0.5562,
+     "rasgo_elegido_en_origen": "a_err_p_nrmse_local"
+    }
+   }
+  },
+  "uav_sead->hil": {
+   "abc": {
+    "rf": {
+     "auroc": 0.4276,
+     "auroc_ic95": [
+      0.4182,
+      0.4365
+     ],
+     "auprc": 0.7203,
+     "auprc_ic95": [
+      0.7122,
+      0.7272
+     ],
+     "bacc": 0.4564,
+     "bacc_ic95": [
+      0.453,
+      0.4599
+     ],
+     "umbral_origen": 0.0739
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.5178,
+     "auroc_ic95": [
+      0.5104,
+      0.5256
+     ],
+     "auprc": 0.7485,
+     "auprc_ic95": [
+      0.7391,
+      0.7575
+     ],
+     "bacc": 0.5183,
+     "bacc_ic95": [
+      0.5138,
+      0.5234
+     ],
+     "umbral_origen": 0.0869
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.4882,
+     "auroc_ic95": [
+      0.4803,
+      0.4962
+     ],
+     "auprc": 0.7303,
+     "auprc_ic95": [
+      0.7226,
+      0.7372
+     ],
+     "bacc": 0.4477,
+     "bacc_ic95": [
+      0.4407,
+      0.4544
+     ],
+     "umbral_origen": 0.3819
+    },
+    "rf": {
+     "auroc": 0.5061,
+     "auroc_ic95": [
+      0.4972,
+      0.5143
+     ],
+     "auprc": 0.7391,
+     "auprc_ic95": [
+      0.7311,
+      0.7472
+     ],
+     "bacc": 0.4693,
+     "bacc_ic95": [
+      0.4622,
+      0.4761
+     ],
+     "umbral_origen": 0.0797
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.4994,
+     "auroc_ic95": [
+      0.4952,
+      0.5034
+     ],
+     "auprc": 0.7154,
+     "auprc_ic95": [
+      0.7085,
+      0.7219
+     ],
+     "bacc": 0.4993,
+     "bacc_ic95": [
+      0.4955,
+      0.503
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.8483,
+     "auroc_ic95": [
+      0.8406,
+      0.8562
+     ],
+     "auprc": 0.9076,
+     "auprc_ic95": [
+      0.8988,
+      0.9158
+     ],
+     "bacc": 0.6608,
+     "bacc_ic95": [
+      0.6562,
+      0.665
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.4226,
+     "auroc_ic95": [
+      0.4123,
+      0.4328
+     ],
+     "auprc": 0.7024,
+     "auprc_ic95": [
+      0.6948,
+      0.7093
+     ],
+     "bacc": 0.498,
+     "bacc_ic95": [
+      0.4972,
+      0.4987
+     ],
+     "umbral_origen": 0.3819
+    },
+    "lr": {
+     "auroc": 0.5122,
+     "auroc_ic95": [
+      0.5001,
+      0.5249
+     ],
+     "auprc": 0.7699,
+     "auprc_ic95": [
+      0.7606,
+      0.7791
+     ],
+     "bacc": 0.4839,
+     "bacc_ic95": [
+      0.4768,
+      0.4912
+     ],
+     "umbral_origen": -0.5936
+    },
+    "rf": {
+     "auroc": 0.4518,
+     "auroc_ic95": [
+      0.4428,
+      0.4612
+     ],
+     "auprc": 0.7013,
+     "auprc_ic95": [
+      0.693,
+      0.7086
+     ],
+     "bacc": 0.4403,
+     "bacc_ic95": [
+      0.4335,
+      0.4474
+     ],
+     "umbral_origen": 0.0785
+    },
+    "una_regla": {
+     "auroc": 0.4623,
+     "auroc_ic95": [
+      0.454,
+      0.471
+     ],
+     "auprc": 0.7321,
+     "auprc_ic95": [
+      0.7238,
+      0.7391
+     ],
+     "bacc": 0.4832,
+     "bacc_ic95": [
+      0.4778,
+      0.489
+     ],
+     "umbral_origen": 0.0152,
+     "rasgo_elegido_en_origen": "err_r_desv"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.4139,
+     "auroc_ic95": [
+      0.4057,
+      0.4218
+     ],
+     "auprc": 0.6946,
+     "auprc_ic95": [
+      0.6859,
+      0.7022
+     ],
+     "bacc": 0.4199,
+     "bacc_ic95": [
+      0.4146,
+      0.4251
+     ],
+     "umbral_origen": 0.1018
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.3821,
+     "auroc_ic95": [
+      0.3757,
+      0.3895
+     ],
+     "auprc": 0.6658,
+     "auprc_ic95": [
+      0.6583,
+      0.6723
+     ],
+     "bacc": 0.3978,
+     "bacc_ic95": [
+      0.3924,
+      0.4043
+     ],
+     "umbral_origen": 0.0939
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.4068,
+     "auroc_ic95": [
+      0.3986,
+      0.4148
+     ],
+     "auprc": 0.6812,
+     "auprc_ic95": [
+      0.6733,
+      0.6879
+     ],
+     "bacc": 0.4429,
+     "bacc_ic95": [
+      0.4367,
+      0.4489
+     ],
+     "umbral_origen": 0.0758
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.3861,
+     "auroc_ic95": [
+      0.3767,
+      0.3957
+     ],
+     "auprc": 0.6696,
+     "auprc_ic95": [
+      0.6615,
+      0.6767
+     ],
+     "bacc": 0.4331,
+     "bacc_ic95": [
+      0.4264,
+      0.4402
+     ],
+     "umbral_origen": 0.0773
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.4245,
+     "auroc_ic95": [
+      0.4151,
+      0.4339
+     ],
+     "auprc": 0.6936,
+     "auprc_ic95": [
+      0.6857,
+      0.7005
+     ],
+     "bacc": 0.4458,
+     "bacc_ic95": [
+      0.4383,
+      0.4533
+     ],
+     "umbral_origen": 0.0896
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.4061,
+     "auroc_ic95": [
+      0.3971,
+      0.4156
+     ],
+     "auprc": 0.7042,
+     "auprc_ic95": [
+      0.6965,
+      0.7111
+     ],
+     "bacc": 0.4304,
+     "bacc_ic95": [
+      0.425,
+      0.4365
+     ],
+     "umbral_origen": 0.4427
+    },
+    "rf": {
+     "auroc": 0.4452,
+     "auroc_ic95": [
+      0.4379,
+      0.4529
+     ],
+     "auprc": 0.711,
+     "auprc_ic95": [
+      0.7034,
+      0.7173
+     ],
+     "bacc": 0.4515,
+     "bacc_ic95": [
+      0.4458,
+      0.4576
+     ],
+     "umbral_origen": 0.0717
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.3667,
+     "auroc_ic95": [
+      0.3571,
+      0.3772
+     ],
+     "auprc": 0.6813,
+     "auprc_ic95": [
+      0.6731,
+      0.6879
+     ],
+     "bacc": 0.4258,
+     "bacc_ic95": [
+      0.4197,
+      0.432
+     ],
+     "umbral_origen": 0.4427
+    },
+    "lr": {
+     "auroc": 0.5869,
+     "auroc_ic95": [
+      0.5761,
+      0.5977
+     ],
+     "auprc": 0.7893,
+     "auprc_ic95": [
+      0.7803,
+      0.7982
+     ],
+     "bacc": 0.5058,
+     "bacc_ic95": [
+      0.4992,
+      0.5128
+     ],
+     "umbral_origen": -0.5824
+    },
+    "rf": {
+     "auroc": 0.381,
+     "auroc_ic95": [
+      0.3722,
+      0.3903
+     ],
+     "auprc": 0.6972,
+     "auprc_ic95": [
+      0.6888,
+      0.7043
+     ],
+     "bacc": 0.3828,
+     "bacc_ic95": [
+      0.3766,
+      0.3895
+     ],
+     "umbral_origen": 0.0822
+    },
+    "una_regla": {
+     "auroc": 0.499,
+     "auroc_ic95": [
+      0.4909,
+      0.5082
+     ],
+     "auprc": 0.7658,
+     "auprc_ic95": [
+      0.7579,
+      0.7728
+     ],
+     "bacc": 0.5433,
+     "bacc_ic95": [
+      0.5372,
+      0.5493
+     ],
+     "umbral_origen": 0.2849,
+     "rasgo_elegido_en_origen": "a_err_r_nrmse_local"
+    }
+   }
+  },
+  "hil->real": {
+   "abc": {
+    "rf": {
+     "auroc": 0.7313,
+     "auroc_ic95": [
+      0.7088,
+      0.7537
+     ],
+     "auprc": 0.7538,
+     "auprc_ic95": [
+      0.7224,
+      0.7834
+     ],
+     "bacc": 0.5221,
+     "bacc_ic95": [
+      0.5171,
+      0.5276
+     ],
+     "umbral_origen": 0.6448
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.6988,
+     "auroc_ic95": [
+      0.6765,
+      0.7215
+     ],
+     "auprc": 0.7327,
+     "auprc_ic95": [
+      0.7049,
+      0.7619
+     ],
+     "bacc": 0.5148,
+     "bacc_ic95": [
+      0.5118,
+      0.5181
+     ],
+     "umbral_origen": 0.6299
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.598,
+     "auroc_ic95": [
+      0.5764,
+      0.62
+     ],
+     "auprc": 0.6532,
+     "auprc_ic95": [
+      0.619,
+      0.6842
+     ],
+     "bacc": 0.5524,
+     "bacc_ic95": [
+      0.5345,
+      0.5689
+     ],
+     "umbral_origen": 0.3631
+    },
+    "rf": {
+     "auroc": 0.6121,
+     "auroc_ic95": [
+      0.5936,
+      0.6309
+     ],
+     "auprc": 0.6487,
+     "auprc_ic95": [
+      0.6267,
+      0.6697
+     ],
+     "bacc": 0.5644,
+     "bacc_ic95": [
+      0.5524,
+      0.5781
+     ],
+     "umbral_origen": 0.6782
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.4984,
+     "auroc_ic95": [
+      0.4868,
+      0.5096
+     ],
+     "auprc": 0.5507,
+     "auprc_ic95": [
+      0.5202,
+      0.5783
+     ],
+     "bacc": 0.4986,
+     "bacc_ic95": [
+      0.4893,
+      0.508
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.871,
+     "auroc_ic95": [
+      0.8393,
+      0.9027
+     ],
+     "auprc": 0.8435,
+     "auprc_ic95": [
+      0.7924,
+      0.8918
+     ],
+     "bacc": 0.8067,
+     "bacc_ic95": [
+      0.7791,
+      0.8356
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.6269,
+     "auroc_ic95": [
+      0.6051,
+      0.6494
+     ],
+     "auprc": 0.6748,
+     "auprc_ic95": [
+      0.646,
+      0.7015
+     ],
+     "bacc": 0.5,
+     "bacc_ic95": [
+      0.5,
+      0.5
+     ],
+     "umbral_origen": 0.3631
+    },
+    "lr": {
+     "auroc": 0.6095,
+     "auroc_ic95": [
+      0.582,
+      0.6382
+     ],
+     "auprc": 0.6522,
+     "auprc_ic95": [
+      0.6291,
+      0.6746
+     ],
+     "bacc": 0.5002,
+     "bacc_ic95": [
+      0.4994,
+      0.501
+     ],
+     "umbral_origen": 0.1877
+    },
+    "rf": {
+     "auroc": 0.6295,
+     "auroc_ic95": [
+      0.6067,
+      0.6546
+     ],
+     "auprc": 0.6295,
+     "auprc_ic95": [
+      0.6094,
+      0.6487
+     ],
+     "bacc": 0.5005,
+     "bacc_ic95": [
+      0.5001,
+      0.501
+     ],
+     "umbral_origen": 0.6819
+    },
+    "una_regla": {
+     "auroc": 0.4395,
+     "auroc_ic95": [
+      0.4119,
+      0.4686
+     ],
+     "auprc": 0.5038,
+     "auprc_ic95": [
+      0.4607,
+      0.5475
+     ],
+     "bacc": 0.4987,
+     "bacc_ic95": [
+      0.4969,
+      0.5
+     ],
+     "umbral_origen": -0.0076,
+     "rasgo_elegido_en_origen": "vz_desv"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.661,
+     "auroc_ic95": [
+      0.6411,
+      0.6807
+     ],
+     "auprc": 0.6843,
+     "auprc_ic95": [
+      0.6534,
+      0.713
+     ],
+     "bacc": 0.5091,
+     "bacc_ic95": [
+      0.5063,
+      0.5121
+     ],
+     "umbral_origen": 0.5559
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.693,
+     "auroc_ic95": [
+      0.6747,
+      0.7106
+     ],
+     "auprc": 0.713,
+     "auprc_ic95": [
+      0.6796,
+      0.7444
+     ],
+     "bacc": 0.6109,
+     "bacc_ic95": [
+      0.5975,
+      0.6236
+     ],
+     "umbral_origen": 0.6246
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.6705,
+     "auroc_ic95": [
+      0.6496,
+      0.6929
+     ],
+     "auprc": 0.668,
+     "auprc_ic95": [
+      0.6468,
+      0.6876
+     ],
+     "bacc": 0.5202,
+     "bacc_ic95": [
+      0.5148,
+      0.5262
+     ],
+     "umbral_origen": 0.6397
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.6523,
+     "auroc_ic95": [
+      0.6291,
+      0.6761
+     ],
+     "auprc": 0.6505,
+     "auprc_ic95": [
+      0.6292,
+      0.6709
+     ],
+     "bacc": 0.5236,
+     "bacc_ic95": [
+      0.518,
+      0.5302
+     ],
+     "umbral_origen": 0.6588
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.6682,
+     "auroc_ic95": [
+      0.646,
+      0.6912
+     ],
+     "auprc": 0.6639,
+     "auprc_ic95": [
+      0.6409,
+      0.6839
+     ],
+     "bacc": 0.5127,
+     "bacc_ic95": [
+      0.5091,
+      0.5163
+     ],
+     "umbral_origen": 0.634
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.6322,
+     "auroc_ic95": [
+      0.6143,
+      0.6503
+     ],
+     "auprc": 0.6834,
+     "auprc_ic95": [
+      0.6506,
+      0.7134
+     ],
+     "bacc": 0.5041,
+     "bacc_ic95": [
+      0.5022,
+      0.5062
+     ],
+     "umbral_origen": 0.5282
+    },
+    "rf": {
+     "auroc": 0.7343,
+     "auroc_ic95": [
+      0.7171,
+      0.7513
+     ],
+     "auprc": 0.7663,
+     "auprc_ic95": [
+      0.7415,
+      0.7896
+     ],
+     "bacc": 0.6195,
+     "bacc_ic95": [
+      0.6099,
+      0.6294
+     ],
+     "umbral_origen": 0.6552
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.6568,
+     "auroc_ic95": [
+      0.6361,
+      0.6783
+     ],
+     "auprc": 0.6997,
+     "auprc_ic95": [
+      0.6722,
+      0.725
+     ],
+     "bacc": 0.6049,
+     "bacc_ic95": [
+      0.5902,
+      0.6205
+     ],
+     "umbral_origen": 0.5282
+    },
+    "lr": {
+     "auroc": 0.7194,
+     "auroc_ic95": [
+      0.6969,
+      0.7441
+     ],
+     "auprc": 0.7673,
+     "auprc_ic95": [
+      0.7389,
+      0.7954
+     ],
+     "bacc": 0.5513,
+     "bacc_ic95": [
+      0.5425,
+      0.5601
+     ],
+     "umbral_origen": -0.2384
+    },
+    "rf": {
+     "auroc": 0.7381,
+     "auroc_ic95": [
+      0.7186,
+      0.7591
+     ],
+     "auprc": 0.7472,
+     "auprc_ic95": [
+      0.7203,
+      0.7749
+     ],
+     "bacc": 0.512,
+     "bacc_ic95": [
+      0.5087,
+      0.5159
+     ],
+     "umbral_origen": 0.6428
+    },
+    "una_regla": {
+     "auroc": 0.5749,
+     "auroc_ic95": [
+      0.5635,
+      0.5869
+     ],
+     "auprc": 0.5871,
+     "auprc_ic95": [
+      0.5563,
+      0.6159
+     ],
+     "bacc": 0.5399,
+     "bacc_ic95": [
+      0.5354,
+      0.545
+     ],
+     "umbral_origen": 0.1,
+     "rasgo_elegido_en_origen": "b_tasa_q_retardo"
+    }
+   }
+  },
+  "real->hil": {
+   "abc": {
+    "rf": {
+     "auroc": 0.6737,
+     "auroc_ic95": [
+      0.6647,
+      0.6828
+     ],
+     "auprc": 0.8484,
+     "auprc_ic95": [
+      0.8414,
+      0.8543
+     ],
+     "bacc": 0.5791,
+     "bacc_ic95": [
+      0.5742,
+      0.5841
+     ],
+     "umbral_origen": 0.512
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.6739,
+     "auroc_ic95": [
+      0.6671,
+      0.6815
+     ],
+     "auprc": 0.841,
+     "auprc_ic95": [
+      0.8349,
+      0.847
+     ],
+     "bacc": 0.559,
+     "bacc_ic95": [
+      0.5543,
+      0.5642
+     ],
+     "umbral_origen": 0.5425
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.4557,
+     "auroc_ic95": [
+      0.4468,
+      0.4647
+     ],
+     "auprc": 0.7266,
+     "auprc_ic95": [
+      0.7189,
+      0.7335
+     ],
+     "bacc": 0.4853,
+     "bacc_ic95": [
+      0.4789,
+      0.4921
+     ],
+     "umbral_origen": 0.4413
+    },
+    "rf": {
+     "auroc": 0.6798,
+     "auroc_ic95": [
+      0.6731,
+      0.6864
+     ],
+     "auprc": 0.8168,
+     "auprc_ic95": [
+      0.8097,
+      0.8232
+     ],
+     "bacc": 0.6089,
+     "bacc_ic95": [
+      0.6031,
+      0.6151
+     ],
+     "umbral_origen": 0.5343
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.5023,
+     "auroc_ic95": [
+      0.4985,
+      0.5067
+     ],
+     "auprc": 0.7195,
+     "auprc_ic95": [
+      0.712,
+      0.726
+     ],
+     "bacc": 0.502,
+     "bacc_ic95": [
+      0.4986,
+      0.5054
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.796,
+     "auroc_ic95": [
+      0.7855,
+      0.8062
+     ],
+     "auprc": 0.8834,
+     "auprc_ic95": [
+      0.8753,
+      0.8903
+     ],
+     "bacc": 0.6036,
+     "bacc_ic95": [
+      0.5961,
+      0.6103
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.5461,
+     "auroc_ic95": [
+      0.5355,
+      0.5563
+     ],
+     "auprc": 0.7473,
+     "auprc_ic95": [
+      0.7388,
+      0.7556
+     ],
+     "bacc": 0.5642,
+     "bacc_ic95": [
+      0.5562,
+      0.5719
+     ],
+     "umbral_origen": 0.4413
+    },
+    "lr": {
+     "auroc": 0.6475,
+     "auroc_ic95": [
+      0.6373,
+      0.6575
+     ],
+     "auprc": 0.827,
+     "auprc_ic95": [
+      0.8191,
+      0.8347
+     ],
+     "bacc": 0.5623,
+     "bacc_ic95": [
+      0.5547,
+      0.57
+     ],
+     "umbral_origen": -0.1211
+    },
+    "rf": {
+     "auroc": 0.6849,
+     "auroc_ic95": [
+      0.6763,
+      0.6939
+     ],
+     "auprc": 0.8519,
+     "auprc_ic95": [
+      0.846,
+      0.8576
+     ],
+     "bacc": 0.589,
+     "bacc_ic95": [
+      0.5836,
+      0.5947
+     ],
+     "umbral_origen": 0.5343
+    },
+    "una_regla": {
+     "auroc": 0.5507,
+     "auroc_ic95": [
+      0.5411,
+      0.5601
+     ],
+     "auprc": 0.7754,
+     "auprc_ic95": [
+      0.7684,
+      0.7821
+     ],
+     "bacc": 0.5323,
+     "bacc_ic95": [
+      0.5272,
+      0.5377
+     ],
+     "umbral_origen": 0.0758,
+     "rasgo_elegido_en_origen": "err_p_desv"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.7343,
+     "auroc_ic95": [
+      0.7248,
+      0.7439
+     ],
+     "auprc": 0.8701,
+     "auprc_ic95": [
+      0.8634,
+      0.8767
+     ],
+     "bacc": 0.5949,
+     "bacc_ic95": [
+      0.59,
+      0.6
+     ],
+     "umbral_origen": 0.5059
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.7507,
+     "auroc_ic95": [
+      0.7431,
+      0.7577
+     ],
+     "auprc": 0.8741,
+     "auprc_ic95": [
+      0.8658,
+      0.881
+     ],
+     "bacc": 0.6807,
+     "bacc_ic95": [
+      0.6738,
+      0.687
+     ],
+     "umbral_origen": 0.5349
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.6794,
+     "auroc_ic95": [
+      0.6714,
+      0.6874
+     ],
+     "auprc": 0.8501,
+     "auprc_ic95": [
+      0.8447,
+      0.8552
+     ],
+     "bacc": 0.5871,
+     "bacc_ic95": [
+      0.5823,
+      0.5918
+     ],
+     "umbral_origen": 0.5027
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.6823,
+     "auroc_ic95": [
+      0.6744,
+      0.6908
+     ],
+     "auprc": 0.8469,
+     "auprc_ic95": [
+      0.8413,
+      0.8523
+     ],
+     "bacc": 0.5743,
+     "bacc_ic95": [
+      0.5695,
+      0.5793
+     ],
+     "umbral_origen": 0.5249
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.6752,
+     "auroc_ic95": [
+      0.6677,
+      0.683
+     ],
+     "auprc": 0.8469,
+     "auprc_ic95": [
+      0.8413,
+      0.8518
+     ],
+     "bacc": 0.5625,
+     "bacc_ic95": [
+      0.558,
+      0.5672
+     ],
+     "umbral_origen": 0.5481
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.4205,
+     "auroc_ic95": [
+      0.4119,
+      0.4298
+     ],
+     "auprc": 0.7101,
+     "auprc_ic95": [
+      0.7023,
+      0.7166
+     ],
+     "bacc": 0.4217,
+     "bacc_ic95": [
+      0.4154,
+      0.4286
+     ],
+     "umbral_origen": 0.444
+    },
+    "rf": {
+     "auroc": 0.7463,
+     "auroc_ic95": [
+      0.7388,
+      0.7538
+     ],
+     "auprc": 0.8791,
+     "auprc_ic95": [
+      0.873,
+      0.8847
+     ],
+     "bacc": 0.6773,
+     "bacc_ic95": [
+      0.6708,
+      0.684
+     ],
+     "umbral_origen": 0.5325
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.3988,
+     "auroc_ic95": [
+      0.3896,
+      0.4085
+     ],
+     "auprc": 0.6704,
+     "auprc_ic95": [
+      0.6612,
+      0.6779
+     ],
+     "bacc": 0.4785,
+     "bacc_ic95": [
+      0.4742,
+      0.4828
+     ],
+     "umbral_origen": 0.444
+    },
+    "lr": {
+     "auroc": 0.7049,
+     "auroc_ic95": [
+      0.6939,
+      0.7156
+     ],
+     "auprc": 0.8321,
+     "auprc_ic95": [
+      0.8233,
+      0.8398
+     ],
+     "bacc": 0.5778,
+     "bacc_ic95": [
+      0.5703,
+      0.5851
+     ],
+     "umbral_origen": 0.0218
+    },
+    "rf": {
+     "auroc": 0.6904,
+     "auroc_ic95": [
+      0.6818,
+      0.6988
+     ],
+     "auprc": 0.8537,
+     "auprc_ic95": [
+      0.8478,
+      0.8592
+     ],
+     "bacc": 0.5811,
+     "bacc_ic95": [
+      0.5761,
+      0.5862
+     ],
+     "umbral_origen": 0.5277
+    },
+    "una_regla": {
+     "auroc": 0.6053,
+     "auroc_ic95": [
+      0.5964,
+      0.6144
+     ],
+     "auprc": 0.8201,
+     "auprc_ic95": [
+      0.8135,
+      0.8256
+     ],
+     "bacc": 0.5751,
+     "bacc_ic95": [
+      0.5699,
+      0.5801
+     ],
+     "umbral_origen": 0.5562,
+     "rasgo_elegido_en_origen": "a_err_p_nrmse_local"
+    }
+   }
+  },
+  "hil_prop->real_motor": {
+   "abc": {
+    "rf": {
+     "auroc": 0.7735,
+     "auroc_ic95": [
+      0.7491,
+      0.7965
+     ],
+     "auprc": 0.7435,
+     "auprc_ic95": [
+      0.6982,
+      0.7914
+     ],
+     "bacc": 0.5704,
+     "bacc_ic95": [
+      0.5589,
+      0.5812
+     ],
+     "umbral_origen": 0.5399
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.7058,
+     "auroc_ic95": [
+      0.6758,
+      0.7379
+     ],
+     "auprc": 0.6913,
+     "auprc_ic95": [
+      0.6498,
+      0.7335
+     ],
+     "bacc": 0.5577,
+     "bacc_ic95": [
+      0.5446,
+      0.5702
+     ],
+     "umbral_origen": 0.4891
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.6435,
+     "auroc_ic95": [
+      0.6114,
+      0.6754
+     ],
+     "auprc": 0.6434,
+     "auprc_ic95": [
+      0.6003,
+      0.6882
+     ],
+     "bacc": 0.5007,
+     "bacc_ic95": [
+      0.4997,
+      0.5022
+     ],
+     "umbral_origen": 0.5869
+    },
+    "rf": {
+     "auroc": 0.5332,
+     "auroc_ic95": [
+      0.5025,
+      0.5622
+     ],
+     "auprc": 0.5475,
+     "auprc_ic95": [
+      0.5056,
+      0.5912
+     ],
+     "bacc": 0.5067,
+     "bacc_ic95": [
+      0.4809,
+      0.5319
+     ],
+     "umbral_origen": 0.5328
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.5078,
+     "auroc_ic95": [
+      0.4959,
+      0.5202
+     ],
+     "auprc": 0.5048,
+     "auprc_ic95": [
+      0.4668,
+      0.5437
+     ],
+     "bacc": 0.5091,
+     "bacc_ic95": [
+      0.4991,
+      0.5188
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.8089,
+     "auroc_ic95": [
+      0.7698,
+      0.8475
+     ],
+     "auprc": 0.7609,
+     "auprc_ic95": [
+      0.6993,
+      0.8292
+     ],
+     "bacc": 0.7604,
+     "bacc_ic95": [
+      0.7264,
+      0.7941
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.6676,
+     "auroc_ic95": [
+      0.6366,
+      0.6975
+     ],
+     "auprc": 0.6692,
+     "auprc_ic95": [
+      0.6298,
+      0.7088
+     ],
+     "bacc": 0.6132,
+     "bacc_ic95": [
+      0.5905,
+      0.6378
+     ],
+     "umbral_origen": 0.5866
+    },
+    "lr": {
+     "auroc": 0.6309,
+     "auroc_ic95": [
+      0.5995,
+      0.664
+     ],
+     "auprc": 0.6183,
+     "auprc_ic95": [
+      0.5912,
+      0.6444
+     ],
+     "bacc": 0.5016,
+     "bacc_ic95": [
+      0.5005,
+      0.5029
+     ],
+     "umbral_origen": 0.0899
+    },
+    "rf": {
+     "auroc": 0.6544,
+     "auroc_ic95": [
+      0.6249,
+      0.6875
+     ],
+     "auprc": 0.6356,
+     "auprc_ic95": [
+      0.6016,
+      0.6717
+     ],
+     "bacc": 0.5975,
+     "bacc_ic95": [
+      0.5727,
+      0.6219
+     ],
+     "umbral_origen": 0.5257
+    },
+    "una_regla": {
+     "auroc": 0.4,
+     "auroc_ic95": [
+      0.3649,
+      0.4347
+     ],
+     "auprc": 0.431,
+     "auprc_ic95": [
+      0.3815,
+      0.4849
+     ],
+     "bacc": 0.5,
+     "bacc_ic95": [
+      0.5,
+      0.5
+     ],
+     "umbral_origen": -0.0037,
+     "rasgo_elegido_en_origen": "gyr_vib_media"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.6917,
+     "auroc_ic95": [
+      0.6722,
+      0.7116
+     ],
+     "auprc": 0.6897,
+     "auprc_ic95": [
+      0.6505,
+      0.7273
+     ],
+     "bacc": 0.5638,
+     "bacc_ic95": [
+      0.555,
+      0.5726
+     ],
+     "umbral_origen": 0.5374
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.5827,
+     "auroc_ic95": [
+      0.5626,
+      0.6029
+     ],
+     "auprc": 0.5521,
+     "auprc_ic95": [
+      0.5064,
+      0.6021
+     ],
+     "bacc": 0.5432,
+     "bacc_ic95": [
+      0.5267,
+      0.5591
+     ],
+     "umbral_origen": 0.5408
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.7101,
+     "auroc_ic95": [
+      0.686,
+      0.7366
+     ],
+     "auprc": 0.6678,
+     "auprc_ic95": [
+      0.6315,
+      0.7051
+     ],
+     "bacc": 0.6138,
+     "bacc_ic95": [
+      0.5956,
+      0.6321
+     ],
+     "umbral_origen": 0.5212
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.6843,
+     "auroc_ic95": [
+      0.6545,
+      0.7154
+     ],
+     "auprc": 0.6818,
+     "auprc_ic95": [
+      0.6476,
+      0.7188
+     ],
+     "bacc": 0.5921,
+     "bacc_ic95": [
+      0.5723,
+      0.6118
+     ],
+     "umbral_origen": 0.5072
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.6643,
+     "auroc_ic95": [
+      0.6376,
+      0.6908
+     ],
+     "auprc": 0.627,
+     "auprc_ic95": [
+      0.593,
+      0.6599
+     ],
+     "bacc": 0.5923,
+     "bacc_ic95": [
+      0.5727,
+      0.613
+     ],
+     "umbral_origen": 0.5297
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.6618,
+     "auroc_ic95": [
+      0.635,
+      0.6889
+     ],
+     "auprc": 0.6768,
+     "auprc_ic95": [
+      0.6369,
+      0.7173
+     ],
+     "bacc": 0.5024,
+     "bacc_ic95": [
+      0.5006,
+      0.5048
+     ],
+     "umbral_origen": 0.5527
+    },
+    "rf": {
+     "auroc": 0.8032,
+     "auroc_ic95": [
+      0.7835,
+      0.8242
+     ],
+     "auprc": 0.8048,
+     "auprc_ic95": [
+      0.7745,
+      0.8346
+     ],
+     "bacc": 0.6474,
+     "bacc_ic95": [
+      0.6283,
+      0.6698
+     ],
+     "umbral_origen": 0.5155
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.6912,
+     "auroc_ic95": [
+      0.6622,
+      0.7195
+     ],
+     "auprc": 0.6998,
+     "auprc_ic95": [
+      0.6652,
+      0.7355
+     ],
+     "bacc": 0.6243,
+     "bacc_ic95": [
+      0.6021,
+      0.6471
+     ],
+     "umbral_origen": 0.5527
+    },
+    "lr": {
+     "auroc": 0.7227,
+     "auroc_ic95": [
+      0.6934,
+      0.7533
+     ],
+     "auprc": 0.7593,
+     "auprc_ic95": [
+      0.7233,
+      0.7961
+     ],
+     "bacc": 0.5457,
+     "bacc_ic95": [
+      0.5352,
+      0.5553
+     ],
+     "umbral_origen": -0.1454
+    },
+    "rf": {
+     "auroc": 0.7882,
+     "auroc_ic95": [
+      0.7666,
+      0.8103
+     ],
+     "auprc": 0.7499,
+     "auprc_ic95": [
+      0.7061,
+      0.7946
+     ],
+     "bacc": 0.5844,
+     "bacc_ic95": [
+      0.5723,
+      0.5955
+     ],
+     "umbral_origen": 0.5303
+    },
+    "una_regla": {
+     "auroc": 0.5288,
+     "auroc_ic95": [
+      0.5127,
+      0.544
+     ],
+     "auprc": 0.5241,
+     "auprc_ic95": [
+      0.4867,
+      0.5625
+     ],
+     "bacc": 0.5217,
+     "bacc_ic95": [
+      0.5096,
+      0.5349
+     ],
+     "umbral_origen": -0.9116,
+     "rasgo_elegido_en_origen": "b_tasa_p_rho"
+    }
+   }
+  },
+  "hil_sensors->real_sensors": {
+   "abc": {
+    "rf": {
+     "auroc": 0.6234,
+     "auroc_ic95": [
+      0.5995,
+      0.6478
+     ],
+     "auprc": 0.5457,
+     "auprc_ic95": [
+      0.4869,
+      0.609
+     ],
+     "bacc": 0.5777,
+     "bacc_ic95": [
+      0.5622,
+      0.5923
+     ],
+     "umbral_origen": 0.5726
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.5823,
+     "auroc_ic95": [
+      0.5602,
+      0.6071
+     ],
+     "auprc": 0.5223,
+     "auprc_ic95": [
+      0.4674,
+      0.5761
+     ],
+     "bacc": 0.538,
+     "bacc_ic95": [
+      0.529,
+      0.547
+     ],
+     "umbral_origen": 0.5316
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.544,
+     "auroc_ic95": [
+      0.5106,
+      0.5766
+     ],
+     "auprc": 0.5113,
+     "auprc_ic95": [
+      0.462,
+      0.56
+     ],
+     "bacc": 0.5267,
+     "bacc_ic95": [
+      0.4996,
+      0.5544
+     ],
+     "umbral_origen": 0.3493
+    },
+    "rf": {
+     "auroc": 0.629,
+     "auroc_ic95": [
+      0.5974,
+      0.66
+     ],
+     "auprc": 0.6134,
+     "auprc_ic95": [
+      0.5726,
+      0.6511
+     ],
+     "bacc": 0.5804,
+     "bacc_ic95": [
+      0.5607,
+      0.6011
+     ],
+     "umbral_origen": 0.5747
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.5032,
+     "auroc_ic95": [
+      0.4894,
+      0.5153
+     ],
+     "auprc": 0.4653,
+     "auprc_ic95": [
+      0.417,
+      0.5138
+     ],
+     "bacc": 0.5037,
+     "bacc_ic95": [
+      0.4911,
+      0.5165
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.7635,
+     "auroc_ic95": [
+      0.7068,
+      0.8203
+     ],
+     "auprc": 0.6349,
+     "auprc_ic95": [
+      0.5386,
+      0.7355
+     ],
+     "bacc": 0.6942,
+     "bacc_ic95": [
+      0.6458,
+      0.7378
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.5853,
+     "auroc_ic95": [
+      0.5485,
+      0.6175
+     ],
+     "auprc": 0.5425,
+     "auprc_ic95": [
+      0.4948,
+      0.5869
+     ],
+     "bacc": 0.5,
+     "bacc_ic95": [
+      0.5,
+      0.5
+     ],
+     "umbral_origen": 0.3493
+    },
+    "lr": {
+     "auroc": 0.6173,
+     "auroc_ic95": [
+      0.5903,
+      0.6427
+     ],
+     "auprc": 0.5652,
+     "auprc_ic95": [
+      0.5197,
+      0.6099
+     ],
+     "bacc": 0.5651,
+     "bacc_ic95": [
+      0.5463,
+      0.5824
+     ],
+     "umbral_origen": -0.3416
+    },
+    "rf": {
+     "auroc": 0.6604,
+     "auroc_ic95": [
+      0.6204,
+      0.6968
+     ],
+     "auprc": 0.6306,
+     "auprc_ic95": [
+      0.5823,
+      0.6689
+     ],
+     "bacc": 0.5973,
+     "bacc_ic95": [
+      0.5704,
+      0.624
+     ],
+     "umbral_origen": 0.592
+    },
+    "una_regla": {
+     "auroc": 0.4632,
+     "auroc_ic95": [
+      0.4219,
+      0.5022
+     ],
+     "auprc": 0.4341,
+     "auprc_ic95": [
+      0.3714,
+      0.5085
+     ],
+     "bacc": 0.4959,
+     "bacc_ic95": [
+      0.492,
+      0.4998
+     ],
+     "umbral_origen": -0.0085,
+     "rasgo_elegido_en_origen": "vz_desv"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.5742,
+     "auroc_ic95": [
+      0.5404,
+      0.6149
+     ],
+     "auprc": 0.5628,
+     "auprc_ic95": [
+      0.5084,
+      0.6172
+     ],
+     "bacc": 0.5001,
+     "bacc_ic95": [
+      0.4911,
+      0.5095
+     ],
+     "umbral_origen": 0.5309
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.6058,
+     "auroc_ic95": [
+      0.5869,
+      0.6249
+     ],
+     "auprc": 0.5412,
+     "auprc_ic95": [
+      0.4873,
+      0.5953
+     ],
+     "bacc": 0.5733,
+     "bacc_ic95": [
+      0.5584,
+      0.5891
+     ],
+     "umbral_origen": 0.5876
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.6679,
+     "auroc_ic95": [
+      0.6328,
+      0.7019
+     ],
+     "auprc": 0.6077,
+     "auprc_ic95": [
+      0.5652,
+      0.6443
+     ],
+     "bacc": 0.6156,
+     "bacc_ic95": [
+      0.5887,
+      0.6421
+     ],
+     "umbral_origen": 0.5908
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.6514,
+     "auroc_ic95": [
+      0.6125,
+      0.6889
+     ],
+     "auprc": 0.6193,
+     "auprc_ic95": [
+      0.5721,
+      0.6594
+     ],
+     "bacc": 0.5952,
+     "bacc_ic95": [
+      0.5645,
+      0.6242
+     ],
+     "umbral_origen": 0.5961
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.6499,
+     "auroc_ic95": [
+      0.6167,
+      0.6818
+     ],
+     "auprc": 0.5943,
+     "auprc_ic95": [
+      0.5475,
+      0.6342
+     ],
+     "bacc": 0.604,
+     "bacc_ic95": [
+      0.5775,
+      0.6308
+     ],
+     "umbral_origen": 0.5731
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.56,
+     "auroc_ic95": [
+      0.531,
+      0.5859
+     ],
+     "auprc": 0.5218,
+     "auprc_ic95": [
+      0.4728,
+      0.5725
+     ],
+     "bacc": 0.5004,
+     "bacc_ic95": [
+      0.4997,
+      0.5013
+     ],
+     "umbral_origen": 0.5838
+    },
+    "rf": {
+     "auroc": 0.6338,
+     "auroc_ic95": [
+      0.6072,
+      0.6601
+     ],
+     "auprc": 0.5834,
+     "auprc_ic95": [
+      0.5419,
+      0.627
+     ],
+     "bacc": 0.5657,
+     "bacc_ic95": [
+      0.5449,
+      0.5862
+     ],
+     "umbral_origen": 0.5703
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.5969,
+     "auroc_ic95": [
+      0.5622,
+      0.6263
+     ],
+     "auprc": 0.5461,
+     "auprc_ic95": [
+      0.4999,
+      0.5917
+     ],
+     "bacc": 0.5294,
+     "bacc_ic95": [
+      0.5162,
+      0.5423
+     ],
+     "umbral_origen": 0.5838
+    },
+    "lr": {
+     "auroc": 0.5766,
+     "auroc_ic95": [
+      0.551,
+      0.6006
+     ],
+     "auprc": 0.5408,
+     "auprc_ic95": [
+      0.4941,
+      0.588
+     ],
+     "bacc": 0.5472,
+     "bacc_ic95": [
+      0.5273,
+      0.5667
+     ],
+     "umbral_origen": -0.3302
+    },
+    "rf": {
+     "auroc": 0.6894,
+     "auroc_ic95": [
+      0.659,
+      0.7171
+     ],
+     "auprc": 0.619,
+     "auprc_ic95": [
+      0.5695,
+      0.6617
+     ],
+     "bacc": 0.6392,
+     "bacc_ic95": [
+      0.6192,
+      0.6597
+     ],
+     "umbral_origen": 0.5852
+    },
+    "una_regla": {
+     "auroc": 0.43,
+     "auroc_ic95": [
+      0.3946,
+      0.4656
+     ],
+     "auprc": 0.4154,
+     "auprc_ic95": [
+      0.3582,
+      0.4874
+     ],
+     "bacc": 0.497,
+     "bacc_ic95": [
+      0.4926,
+      0.5015
+     ],
+     "umbral_origen": -0.1218,
+     "rasgo_elegido_en_origen": "d_acc_z_rango"
+    }
+   }
+  },
+  "hil_motor->real_motor": {
+   "abc": {
+    "rf": {
+     "auroc": 0.8105,
+     "auroc_ic95": [
+      0.7897,
+      0.8311
+     ],
+     "auprc": 0.8052,
+     "auprc_ic95": [
+      0.7707,
+      0.8396
+     ],
+     "bacc": 0.552,
+     "bacc_ic95": [
+      0.5416,
+      0.5615
+     ],
+     "umbral_origen": 0.6056
+    }
+   },
+   "a": {
+    "rf": {
+     "auroc": 0.7245,
+     "auroc_ic95": [
+      0.6938,
+      0.7573
+     ],
+     "auprc": 0.7331,
+     "auprc_ic95": [
+      0.6915,
+      0.7764
+     ],
+     "bacc": 0.5213,
+     "bacc_ic95": [
+      0.5154,
+      0.5283
+     ],
+     "umbral_origen": 0.5431
+    }
+   },
+   "base+znorm": {
+    "if": {
+     "auroc": 0.6379,
+     "auroc_ic95": [
+      0.6069,
+      0.6695
+     ],
+     "auprc": 0.6411,
+     "auprc_ic95": [
+      0.597,
+      0.685
+     ],
+     "bacc": 0.5064,
+     "bacc_ic95": [
+      0.5016,
+      0.5127
+     ],
+     "umbral_origen": 0.5176
+    },
+    "rf": {
+     "auroc": 0.6153,
+     "auroc_ic95": [
+      0.5883,
+      0.6419
+     ],
+     "auprc": 0.6392,
+     "auprc_ic95": [
+      0.6027,
+      0.6763
+     ],
+     "bacc": 0.5779,
+     "bacc_ic95": [
+      0.5597,
+      0.5975
+     ],
+     "umbral_origen": 0.6125
+    }
+   },
+   "base": {
+    "aleatorio": {
+     "auroc": 0.4951,
+     "auroc_ic95": [
+      0.4838,
+      0.508
+     ],
+     "auprc": 0.4989,
+     "auprc_ic95": [
+      0.4632,
+      0.535
+     ],
+     "bacc": 0.5001,
+     "bacc_ic95": [
+      0.49,
+      0.5105
+     ],
+     "umbral_origen": 0.5
+    },
+    "atajos": {
+     "auroc": 0.8419,
+     "auroc_ic95": [
+      0.8062,
+      0.88
+     ],
+     "auprc": 0.7743,
+     "auprc_ic95": [
+      0.7126,
+      0.841
+     ],
+     "bacc": 0.7861,
+     "bacc_ic95": [
+      0.7535,
+      0.8188
+     ],
+     "umbral_origen": null
+    },
+    "if": {
+     "auroc": 0.6717,
+     "auroc_ic95": [
+      0.6395,
+      0.7015
+     ],
+     "auprc": 0.6765,
+     "auprc_ic95": [
+      0.639,
+      0.7144
+     ],
+     "bacc": 0.5953,
+     "bacc_ic95": [
+      0.5708,
+      0.6176
+     ],
+     "umbral_origen": 0.5176
+    },
+    "lr": {
+     "auroc": 0.716,
+     "auroc_ic95": [
+      0.6865,
+      0.7464
+     ],
+     "auprc": 0.7356,
+     "auprc_ic95": [
+      0.7018,
+      0.7686
+     ],
+     "bacc": 0.5576,
+     "bacc_ic95": [
+      0.5412,
+      0.5736
+     ],
+     "umbral_origen": -0.1685
+    },
+    "rf": {
+     "auroc": 0.6457,
+     "auroc_ic95": [
+      0.6137,
+      0.681
+     ],
+     "auprc": 0.6452,
+     "auprc_ic95": [
+      0.6045,
+      0.6879
+     ],
+     "bacc": 0.576,
+     "bacc_ic95": [
+      0.5562,
+      0.5966
+     ],
+     "umbral_origen": 0.5747
+    },
+    "una_regla": {
+     "auroc": 0.5343,
+     "auroc_ic95": [
+      0.4993,
+      0.5641
+     ],
+     "auprc": 0.5501,
+     "auprc_ic95": [
+      0.516,
+      0.5847
+     ],
+     "bacc": 0.5303,
+     "bacc_ic95": [
+      0.505,
+      0.5559
+     ],
+     "umbral_origen": -0.3568,
+     "rasgo_elegido_en_origen": "roll_media"
+    }
+   },
+   "b": {
+    "rf": {
+     "auroc": 0.7551,
+     "auroc_ic95": [
+      0.7398,
+      0.7683
+     ],
+     "auprc": 0.747,
+     "auprc_ic95": [
+      0.7122,
+      0.7816
+     ],
+     "bacc": 0.5623,
+     "bacc_ic95": [
+      0.5534,
+      0.571
+     ],
+     "umbral_origen": 0.5622
+    }
+   },
+   "c": {
+    "rf": {
+     "auroc": 0.6576,
+     "auroc_ic95": [
+      0.6358,
+      0.6796
+     ],
+     "auprc": 0.6457,
+     "auprc_ic95": [
+      0.5988,
+      0.6909
+     ],
+     "bacc": 0.6122,
+     "bacc_ic95": [
+      0.596,
+      0.6291
+     ],
+     "umbral_origen": 0.6366
+    }
+   },
+   "de": {
+    "rf": {
+     "auroc": 0.715,
+     "auroc_ic95": [
+      0.6847,
+      0.744
+     ],
+     "auprc": 0.7106,
+     "auprc_ic95": [
+      0.6761,
+      0.7487
+     ],
+     "bacc": 0.6336,
+     "bacc_ic95": [
+      0.6109,
+      0.6561
+     ],
+     "umbral_origen": 0.6076
+    }
+   },
+   "d": {
+    "rf": {
+     "auroc": 0.6796,
+     "auroc_ic95": [
+      0.6488,
+      0.7126
+     ],
+     "auprc": 0.6824,
+     "auprc_ic95": [
+      0.6458,
+      0.7245
+     ],
+     "bacc": 0.6143,
+     "bacc_ic95": [
+      0.5902,
+      0.638
+     ],
+     "umbral_origen": 0.6236
+    }
+   },
+   "e": {
+    "rf": {
+     "auroc": 0.6898,
+     "auroc_ic95": [
+      0.6591,
+      0.7217
+     ],
+     "auprc": 0.6868,
+     "auprc_ic95": [
+      0.6537,
+      0.7235
+     ],
+     "bacc": 0.6102,
+     "bacc_ic95": [
+      0.5859,
+      0.6342
+     ],
+     "umbral_origen": 0.58
+    }
+   },
+   "invariante+znorm": {
+    "if": {
+     "auroc": 0.6716,
+     "auroc_ic95": [
+      0.6472,
+      0.6975
+     ],
+     "auprc": 0.675,
+     "auprc_ic95": [
+      0.6351,
+      0.7181
+     ],
+     "bacc": 0.507,
+     "bacc_ic95": [
+      0.5038,
+      0.5104
+     ],
+     "umbral_origen": 0.5272
+    },
+    "rf": {
+     "auroc": 0.8128,
+     "auroc_ic95": [
+      0.7963,
+      0.8308
+     ],
+     "auprc": 0.8311,
+     "auprc_ic95": [
+      0.8059,
+      0.8558
+     ],
+     "bacc": 0.7293,
+     "bacc_ic95": [
+      0.7121,
+      0.7471
+     ],
+     "umbral_origen": 0.6073
+    }
+   },
+   "invariante": {
+    "if": {
+     "auroc": 0.6943,
+     "auroc_ic95": [
+      0.6678,
+      0.7209
+     ],
+     "auprc": 0.6934,
+     "auprc_ic95": [
+      0.6597,
+      0.73
+     ],
+     "bacc": 0.628,
+     "bacc_ic95": [
+      0.607,
+      0.6494
+     ],
+     "umbral_origen": 0.5272
+    },
+    "lr": {
+     "auroc": 0.7328,
+     "auroc_ic95": [
+      0.6999,
+      0.7643
+     ],
+     "auprc": 0.7605,
+     "auprc_ic95": [
+      0.7215,
+      0.796
+     ],
+     "bacc": 0.5612,
+     "bacc_ic95": [
+      0.5472,
+      0.5757
+     ],
+     "umbral_origen": -0.2169
+    },
+    "rf": {
+     "auroc": 0.8141,
+     "auroc_ic95": [
+      0.7942,
+      0.8357
+     ],
+     "auprc": 0.8055,
+     "auprc_ic95": [
+      0.7709,
+      0.8405
+     ],
+     "bacc": 0.5951,
+     "bacc_ic95": [
+      0.5806,
+      0.6097
+     ],
+     "umbral_origen": 0.6117
+    },
+    "una_regla": {
+     "auroc": 0.7596,
+     "auroc_ic95": [
+      0.7324,
+      0.7883
+     ],
+     "auprc": 0.7342,
+     "auprc_ic95": [
+      0.6866,
+      0.7835
+     ],
+     "bacc": 0.7068,
+     "bacc_ic95": [
+      0.6801,
+      0.7336
+     ],
+     "umbral_origen": -0.1638,
+     "rasgo_elegido_en_origen": "b_empuje_nivel_z"
+    }
+   }
+  }
+ },
+ "dominio": {
+  "uav_sead_vs_real": {
+   "base": {
+    "auroc": 0.9979,
+    "auroc_ic95": [
+     0.9965,
+     0.9989
+    ],
+    "bacc": 0.9328,
+    "bacc_ic95": [
+     0.9059,
+     0.9546
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947
+   },
+   "d": {
+    "auroc": 0.9949,
+    "auroc_ic95": [
+     0.9921,
+     0.9971
+    ],
+    "bacc": 0.9126,
+    "bacc_ic95": [
+     0.8827,
+     0.9381
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.003,
+     "ic95": [
+      0.0017,
+      0.0046
+     ]
+    }
+   },
+   "e": {
+    "auroc": 0.9958,
+    "auroc_ic95": [
+     0.9935,
+     0.9976
+    ],
+    "bacc": 0.9168,
+    "bacc_ic95": [
+     0.8873,
+     0.9409
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0021,
+     "ic95": [
+      0.0013,
+      0.0031
+     ]
+    }
+   },
+   "de": {
+    "auroc": 0.9936,
+    "auroc_ic95": [
+     0.9899,
+     0.9964
+    ],
+    "bacc": 0.907,
+    "bacc_ic95": [
+     0.8751,
+     0.9343
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0043,
+     "ic95": [
+      0.0024,
+      0.0067
+     ]
+    }
+   },
+   "a": {
+    "auroc": 0.9553,
+    "auroc_ic95": [
+     0.9387,
+     0.9699
+    ],
+    "bacc": 0.7572,
+    "bacc_ic95": [
+     0.717,
+     0.7918
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0426,
+     "ic95": [
+      0.0284,
+      0.0588
+     ]
+    }
+   },
+   "b": {
+    "auroc": 0.934,
+    "auroc_ic95": [
+     0.9204,
+     0.9464
+    ],
+    "bacc": 0.7126,
+    "bacc_ic95": [
+     0.6905,
+     0.7369
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0638,
+     "ic95": [
+      0.0513,
+      0.0775
+     ]
+    }
+   },
+   "c": {
+    "auroc": 0.9016,
+    "auroc_ic95": [
+     0.8703,
+     0.926
+    ],
+    "bacc": 0.6328,
+    "bacc_ic95": [
+     0.6041,
+     0.6616
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0962,
+     "ic95": [
+      0.0716,
+      0.1277
+     ]
+    }
+   },
+   "abc": {
+    "auroc": 0.9863,
+    "auroc_ic95": [
+     0.9779,
+     0.993
+    ],
+    "bacc": 0.8178,
+    "bacc_ic95": [
+     0.7892,
+     0.8461
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0115,
+     "ic95": [
+      0.0048,
+      0.0201
+     ]
+    }
+   },
+   "invariante": {
+    "auroc": 0.9982,
+    "auroc_ic95": [
+     0.9968,
+     0.9992
+    ],
+    "bacc": 0.9216,
+    "bacc_ic95": [
+     0.8908,
+     0.9475
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": -0.0003,
+     "ic95": [
+      -0.0013,
+      0.0006
+     ]
+    }
+   },
+   "base+znorm": {
+    "auroc": 0.9978,
+    "auroc_ic95": [
+     0.9963,
+     0.9991
+    ],
+    "bacc": 0.916,
+    "bacc_ic95": [
+     0.8989,
+     0.9347
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0001,
+     "ic95": [
+      -0.0018,
+      0.002
+     ]
+    }
+   },
+   "invariante+znorm": {
+    "auroc": 0.9999,
+    "auroc_ic95": [
+     0.9998,
+     1.0
+    ],
+    "bacc": 0.9815,
+    "bacc_ic95": [
+     0.9728,
+     0.9895
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 50,
+    "ventanas_0": 15804,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": -0.0021,
+     "ic95": [
+      -0.0035,
+      -0.001
+     ]
+    }
+   }
+  },
+  "uav_sead_vs_hil": {
+   "base": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9978,
+    "bacc_ic95": [
+     0.994,
+     0.9997
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078
+   },
+   "d": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     0.9999,
+     1.0
+    ],
+    "bacc": 0.996,
+    "bacc_ic95": [
+     0.9923,
+     0.9985
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0,
+     "ic95": [
+      0.0,
+      0.0001
+     ]
+    }
+   },
+   "e": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     0.9999,
+     1.0
+    ],
+    "bacc": 0.9959,
+    "bacc_ic95": [
+     0.9916,
+     0.9986
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0,
+     "ic95": [
+      0.0,
+      0.0001
+     ]
+    }
+   },
+   "de": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     0.9999,
+     1.0
+    ],
+    "bacc": 0.9956,
+    "bacc_ic95": [
+     0.9917,
+     0.9983
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0,
+     "ic95": [
+      0.0,
+      0.0001
+     ]
+    }
+   },
+   "a": {
+    "auroc": 0.9995,
+    "auroc_ic95": [
+     0.999,
+     0.9998
+    ],
+    "bacc": 0.9847,
+    "bacc_ic95": [
+     0.9799,
+     0.9889
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0005,
+     "ic95": [
+      0.0002,
+      0.001
+     ]
+    }
+   },
+   "b": {
+    "auroc": 0.9985,
+    "auroc_ic95": [
+     0.996,
+     0.9998
+    ],
+    "bacc": 0.9898,
+    "bacc_ic95": [
+     0.9856,
+     0.9931
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0014,
+     "ic95": [
+      0.0002,
+      0.004
+     ]
+    }
+   },
+   "c": {
+    "auroc": 0.9888,
+    "auroc_ic95": [
+     0.986,
+     0.9915
+    ],
+    "bacc": 0.921,
+    "bacc_ic95": [
+     0.9095,
+     0.9325
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0112,
+     "ic95": [
+      0.0085,
+      0.014
+     ]
+    }
+   },
+   "abc": {
+    "auroc": 0.9996,
+    "auroc_ic95": [
+     0.9987,
+     1.0
+    ],
+    "bacc": 0.9962,
+    "bacc_ic95": [
+     0.9923,
+     0.9986
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0004,
+     "ic95": [
+      0.0,
+      0.0013
+     ]
+    }
+   },
+   "invariante": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9977,
+    "bacc_ic95": [
+     0.995,
+     0.9998
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0,
+     "ic95": [
+      -0.0,
+      0.0
+     ]
+    }
+   },
+   "base+znorm": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9952,
+    "bacc_ic95": [
+     0.9913,
+     0.9977
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": 0.0,
+     "ic95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "invariante+znorm": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9996,
+    "bacc_ic95": [
+     0.9988,
+     1.0
+    ],
+    "vuelos_0": 886,
+    "vuelos_1": 240,
+    "ventanas_0": 15804,
+    "ventanas_1": 4078,
+    "dif_vs_base": {
+     "punto": -0.0,
+     "ic95": [
+      -0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  "hil_vs_real": {
+   "base": {
+    "auroc": 0.9999,
+    "auroc_ic95": [
+     0.9997,
+     1.0
+    ],
+    "bacc": 0.997,
+    "bacc_ic95": [
+     0.9932,
+     0.9998
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947
+   },
+   "d": {
+    "auroc": 0.999,
+    "auroc_ic95": [
+     0.9981,
+     0.9997
+    ],
+    "bacc": 0.9885,
+    "bacc_ic95": [
+     0.9832,
+     0.9942
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0009,
+     "ic95": [
+      0.0003,
+      0.0017
+     ]
+    }
+   },
+   "e": {
+    "auroc": 0.9991,
+    "auroc_ic95": [
+     0.9983,
+     0.9997
+    ],
+    "bacc": 0.9879,
+    "bacc_ic95": [
+     0.983,
+     0.9929
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0008,
+     "ic95": [
+      0.0003,
+      0.0015
+     ]
+    }
+   },
+   "de": {
+    "auroc": 0.9988,
+    "auroc_ic95": [
+     0.9979,
+     0.9996
+    ],
+    "bacc": 0.9852,
+    "bacc_ic95": [
+     0.9786,
+     0.9919
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0011,
+     "ic95": [
+      0.0004,
+      0.0019
+     ]
+    }
+   },
+   "a": {
+    "auroc": 0.9966,
+    "auroc_ic95": [
+     0.9939,
+     0.9988
+    ],
+    "bacc": 0.974,
+    "bacc_ic95": [
+     0.9634,
+     0.984
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0033,
+     "ic95": [
+      0.0012,
+      0.0059
+     ]
+    }
+   },
+   "b": {
+    "auroc": 0.9974,
+    "auroc_ic95": [
+     0.994,
+     0.9994
+    ],
+    "bacc": 0.9799,
+    "bacc_ic95": [
+     0.9714,
+     0.9879
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0025,
+     "ic95": [
+      0.0006,
+      0.0057
+     ]
+    }
+   },
+   "c": {
+    "auroc": 0.9805,
+    "auroc_ic95": [
+     0.973,
+     0.9872
+    ],
+    "bacc": 0.8872,
+    "bacc_ic95": [
+     0.8635,
+     0.9096
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0194,
+     "ic95": [
+      0.0128,
+      0.0268
+     ]
+    }
+   },
+   "abc": {
+    "auroc": 0.998,
+    "auroc_ic95": [
+     0.9944,
+     0.9999
+    ],
+    "bacc": 0.9876,
+    "bacc_ic95": [
+     0.9793,
+     0.9951
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0019,
+     "ic95": [
+      0.0001,
+      0.0053
+     ]
+    }
+   },
+   "invariante": {
+    "auroc": 0.9994,
+    "auroc_ic95": [
+     0.9986,
+     0.9999
+    ],
+    "bacc": 0.9894,
+    "bacc_ic95": [
+     0.9833,
+     0.9955
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": 0.0005,
+     "ic95": [
+      0.0001,
+      0.0011
+     ]
+    }
+   },
+   "base+znorm": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     0.9999,
+     1.0
+    ],
+    "bacc": 0.9897,
+    "bacc_ic95": [
+     0.9843,
+     0.9944
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": -0.0001,
+     "ic95": [
+      -0.0002,
+      0.0001
+     ]
+    }
+   },
+   "invariante+znorm": {
+    "auroc": 1.0,
+    "auroc_ic95": [
+     1.0,
+     1.0
+    ],
+    "bacc": 0.9989,
+    "bacc_ic95": [
+     0.9973,
+     1.0
+    ],
+    "vuelos_0": 240,
+    "vuelos_1": 50,
+    "ventanas_0": 4078,
+    "ventanas_1": 947,
+    "dif_vs_base": {
+     "punto": -0.0001,
+     "ic95": [
+      -0.0003,
+      0.0
+     ]
+    }
+   }
+  }
+ },
+ "h3": {
+  "modelo": "rf",
+  "conjunto": "base",
+  "criterio": "caida >= 0,2 y AUROC de dominio > 0,95 (estimación puntual)",
+  "por_par": {
+   "uav_sead->real": {
+    "auroc_interno": 0.8703,
+    "auroc_transferencia": 0.5708,
+    "caida": {
+     "punto": 0.2995,
+     "ic95": [
+      0.2771,
+      0.3227
+     ]
+    },
+    "par_dominio": "uav_sead_vs_real",
+    "auroc_dominio": 0.9979,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": false
+   },
+   "real->uav_sead": {
+    "auroc_interno": 0.8694,
+    "auroc_transferencia": 0.5703,
+    "caida": {
+     "punto": 0.299,
+     "ic95": [
+      0.2309,
+      0.3692
+     ]
+    },
+    "par_dominio": "uav_sead_vs_real",
+    "auroc_dominio": 0.9979,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": false
+   },
+   "uav_sead->hil": {
+    "auroc_interno": 0.9942,
+    "auroc_transferencia": 0.4518,
+    "caida": {
+     "punto": 0.5424,
+     "ic95": [
+      0.533,
+      0.5514
+     ]
+    },
+    "par_dominio": "uav_sead_vs_hil",
+    "auroc_dominio": 1.0,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": false
+   },
+   "hil->real": {
+    "auroc_interno": 0.8703,
+    "auroc_transferencia": 0.6295,
+    "caida": {
+     "punto": 0.2408,
+     "ic95": [
+      0.2191,
+      0.2619
+     ]
+    },
+    "par_dominio": "hil_vs_real",
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": false
+   },
+   "real->hil": {
+    "auroc_interno": 0.9942,
+    "auroc_transferencia": 0.6849,
+    "caida": {
+     "punto": 0.3093,
+     "ic95": [
+      0.3004,
+      0.3176
+     ]
+    },
+    "par_dominio": "hil_vs_real",
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": false
+   },
+   "hil_prop->real_motor": {
+    "auroc_interno": 0.8943,
+    "auroc_transferencia": 0.6544,
+    "caida": {
+     "punto": 0.2399,
+     "ic95": [
+      0.2121,
+      0.2671
+     ]
+    },
+    "par_dominio": "hil_vs_real",
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": false
+   },
+   "hil_sensors->real_sensors": {
+    "auroc_interno": 0.8732,
+    "auroc_transferencia": 0.6604,
+    "caida": {
+     "punto": 0.2128,
+     "ic95": [
+      0.1814,
+      0.2473
+     ]
+    },
+    "par_dominio": "hil_vs_real",
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": false,
+    "adicional": false
+   },
+   "hil_motor->real_motor": {
+    "auroc_interno": 0.8943,
+    "auroc_transferencia": 0.6457,
+    "caida": {
+     "punto": 0.2486,
+     "ic95": [
+      0.2218,
+      0.275
+     ]
+    },
+    "par_dominio": "hil_vs_real",
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "adicional": true
+   }
+  },
+  "pares_evaluados": 7,
+  "pares_que_cumplen": 7,
+  "pares_que_cumplen_con_ic": 6,
+  "veredicto": "se cumple",
+  "veredicto_con_ic": "se cumple"
+ },
+ "h4": {
+  "modelo": "rf",
+  "conjunto_del_veredicto": "invariante (a+b+c+d con e)",
+  "criterio": "baja del AUROC de dominio >= 0,05 y subida del AUROC de transferencia >= 0,05 frente a base, en >= 2 pares",
+  "por_conjunto": {
+   "d": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.003,
+       "ic95": [
+        0.0017,
+        0.0046
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0017,
+       "ic95": [
+        -0.0083,
+        0.0045
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.003,
+       "ic95": [
+        0.0017,
+        0.0046
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0029,
+       "ic95": [
+        -0.0164,
+        0.009
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0,
+       "ic95": [
+        0.0,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0658,
+       "ic95": [
+        -0.0707,
+        -0.0605
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0009,
+       "ic95": [
+        0.0003,
+        0.0017
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0227,
+       "ic95": [
+        0.013,
+        0.0324
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0009,
+       "ic95": [
+        0.0003,
+        0.0017
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0026,
+       "ic95": [
+        -0.0051,
+        -0.0
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0009,
+       "ic95": [
+        0.0003,
+        0.0017
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0299,
+       "ic95": [
+        0.0174,
+        0.0432
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0009,
+       "ic95": [
+        0.0003,
+        0.0017
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.009,
+       "ic95": [
+        -0.0218,
+        0.002
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0009,
+       "ic95": [
+        0.0003,
+        0.0017
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0339,
+       "ic95": [
+        0.0223,
+        0.0455
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "e": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0021,
+       "ic95": [
+        0.0013,
+        0.0031
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0148,
+       "ic95": [
+        -0.0275,
+        -0.003
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0021,
+       "ic95": [
+        0.0013,
+        0.0031
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0271,
+       "ic95": [
+        -0.0469,
+        -0.0103
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0,
+       "ic95": [
+        0.0,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0273,
+       "ic95": [
+        -0.0334,
+        -0.0218
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0008,
+       "ic95": [
+        0.0003,
+        0.0015
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0387,
+       "ic95": [
+        0.0276,
+        0.0494
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0008,
+       "ic95": [
+        0.0003,
+        0.0015
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0097,
+       "ic95": [
+        -0.0136,
+        -0.0055
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0008,
+       "ic95": [
+        0.0003,
+        0.0015
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0099,
+       "ic95": [
+        -0.009,
+        0.03
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0008,
+       "ic95": [
+        0.0003,
+        0.0015
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0106,
+       "ic95": [
+        -0.0325,
+        0.0122
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0008,
+       "ic95": [
+        0.0003,
+        0.0015
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.044,
+       "ic95": [
+        0.0315,
+        0.0569
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "de": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0043,
+       "ic95": [
+        0.0024,
+        0.0067
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0077,
+       "ic95": [
+        -0.0208,
+        0.0054
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0043,
+       "ic95": [
+        0.0024,
+        0.0067
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0323,
+       "ic95": [
+        -0.0553,
+        -0.0119
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0,
+       "ic95": [
+        0.0,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.045,
+       "ic95": [
+        -0.0503,
+        -0.0395
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0011,
+       "ic95": [
+        0.0004,
+        0.0019
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.041,
+       "ic95": [
+        0.0305,
+        0.0509
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0011,
+       "ic95": [
+        0.0004,
+        0.0019
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0055,
+       "ic95": [
+        -0.0095,
+        -0.0018
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0011,
+       "ic95": [
+        0.0004,
+        0.0019
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0556,
+       "ic95": [
+        0.0369,
+        0.0754
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0011,
+       "ic95": [
+        0.0004,
+        0.0019
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0075,
+       "ic95": [
+        -0.0152,
+        0.0288
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0011,
+       "ic95": [
+        0.0004,
+        0.0019
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0693,
+       "ic95": [
+        0.0526,
+        0.0862
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "a": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0426,
+       "ic95": [
+        0.0284,
+        0.0588
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0039,
+       "ic95": [
+        -0.02,
+        0.0286
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0426,
+       "ic95": [
+        0.0284,
+        0.0588
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1182,
+       "ic95": [
+        0.0681,
+        0.1656
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0005,
+       "ic95": [
+        0.0002,
+        0.001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.066,
+       "ic95": [
+        0.0548,
+        0.0769
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0033,
+       "ic95": [
+        0.0012,
+        0.0059
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0693,
+       "ic95": [
+        0.0413,
+        0.0974
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0033,
+       "ic95": [
+        0.0012,
+        0.0059
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0109,
+       "ic95": [
+        -0.0172,
+        -0.0044
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0033,
+       "ic95": [
+        0.0012,
+        0.0059
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0514,
+       "ic95": [
+        0.0212,
+        0.0798
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0033,
+       "ic95": [
+        0.0012,
+        0.0059
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0781,
+       "ic95": [
+        -0.1193,
+        -0.0337
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0033,
+       "ic95": [
+        0.0012,
+        0.0059
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0787,
+       "ic95": [
+        0.0472,
+        0.1072
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "b": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0638,
+       "ic95": [
+        0.0513,
+        0.0775
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0602,
+       "ic95": [
+        -0.0894,
+        -0.0315
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0638,
+       "ic95": [
+        0.0513,
+        0.0775
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.025,
+       "ic95": [
+        -0.111,
+        0.0513
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0014,
+       "ic95": [
+        0.0002,
+        0.004
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.038,
+       "ic95": [
+        -0.0484,
+        -0.0269
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0025,
+       "ic95": [
+        0.0006,
+        0.0057
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0315,
+       "ic95": [
+        0.0015,
+        0.0598
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0025,
+       "ic95": [
+        0.0006,
+        0.0057
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0494,
+       "ic95": [
+        0.0389,
+        0.0595
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0025,
+       "ic95": [
+        0.0006,
+        0.0057
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0373,
+       "ic95": [
+        0.001,
+        0.0726
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0025,
+       "ic95": [
+        0.0006,
+        0.0057
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0863,
+       "ic95": [
+        -0.1411,
+        -0.0224
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0025,
+       "ic95": [
+        0.0006,
+        0.0057
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1094,
+       "ic95": [
+        0.074,
+        0.141
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "c": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0962,
+       "ic95": [
+        0.0716,
+        0.1277
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0669,
+       "ic95": [
+        -0.0904,
+        -0.0451
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0962,
+       "ic95": [
+        0.0716,
+        0.1277
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.1355,
+       "ic95": [
+        -0.222,
+        -0.051
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0112,
+       "ic95": [
+        0.0085,
+        0.014
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0697,
+       "ic95": [
+        -0.0769,
+        -0.0622
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0194,
+       "ic95": [
+        0.0128,
+        0.0268
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0635,
+       "ic95": [
+        0.0309,
+        0.0921
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0194,
+       "ic95": [
+        0.0128,
+        0.0268
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0659,
+       "ic95": [
+        0.0528,
+        0.0777
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0194,
+       "ic95": [
+        0.0128,
+        0.0268
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0717,
+       "ic95": [
+        -0.1136,
+        -0.0343
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0194,
+       "ic95": [
+        0.0128,
+        0.0268
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0547,
+       "ic95": [
+        -0.0946,
+        -0.0092
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0194,
+       "ic95": [
+        0.0128,
+        0.0268
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0118,
+       "ic95": [
+        -0.0256,
+        0.0468
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "abc": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0115,
+       "ic95": [
+        0.0048,
+        0.0201
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0485,
+       "ic95": [
+        0.0298,
+        0.0674
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0115,
+       "ic95": [
+        0.0048,
+        0.0201
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0688,
+       "ic95": [
+        0.0068,
+        0.1298
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0004,
+       "ic95": [
+        0.0,
+        0.0013
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0243,
+       "ic95": [
+        -0.0337,
+        -0.0151
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0019,
+       "ic95": [
+        0.0001,
+        0.0053
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1018,
+       "ic95": [
+        0.0701,
+        0.132
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0019,
+       "ic95": [
+        0.0001,
+        0.0053
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0111,
+       "ic95": [
+        -0.0202,
+        -0.0026
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0019,
+       "ic95": [
+        0.0001,
+        0.0053
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1191,
+       "ic95": [
+        0.0814,
+        0.1549
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0019,
+       "ic95": [
+        0.0001,
+        0.0053
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.037,
+       "ic95": [
+        -0.0802,
+        0.0142
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0019,
+       "ic95": [
+        0.0001,
+        0.0053
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1647,
+       "ic95": [
+        0.1308,
+        0.1961
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "invariante": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": -0.0003,
+       "ic95": [
+        -0.0013,
+        0.0006
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0353,
+       "ic95": [
+        0.0215,
+        0.0489
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": -0.0003,
+       "ic95": [
+        -0.0013,
+        0.0006
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0784,
+       "ic95": [
+        0.052,
+        0.1075
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0,
+       "ic95": [
+        -0.0,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0709,
+       "ic95": [
+        -0.077,
+        -0.0642
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": 0.0005,
+       "ic95": [
+        0.0001,
+        0.0011
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1086,
+       "ic95": [
+        0.0824,
+        0.1341
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": 0.0005,
+       "ic95": [
+        0.0001,
+        0.0011
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0055,
+       "ic95": [
+        -0.0002,
+        0.0111
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0005,
+       "ic95": [
+        0.0001,
+        0.0011
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1337,
+       "ic95": [
+        0.0978,
+        0.1679
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": 0.0005,
+       "ic95": [
+        0.0001,
+        0.0011
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.029,
+       "ic95": [
+        0.005,
+        0.0558
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": 0.0005,
+       "ic95": [
+        0.0001,
+        0.0011
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1684,
+       "ic95": [
+        0.1372,
+        0.1968
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "base+znorm": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": 0.0001,
+       "ic95": [
+        -0.0018,
+        0.002
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0322,
+       "ic95": [
+        0.0155,
+        0.0492
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": 0.0001,
+       "ic95": [
+        -0.0018,
+        0.002
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1139,
+       "ic95": [
+        0.0582,
+        0.1704
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": 0.0,
+       "ic95": [
+        0.0,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0543,
+       "ic95": [
+        0.0488,
+        0.0595
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0002,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0174,
+       "ic95": [
+        -0.037,
+        0.0002
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0002,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.005,
+       "ic95": [
+        -0.0154,
+        0.0045
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0002,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.1213,
+       "ic95": [
+        -0.1721,
+        -0.0741
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0002,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0315,
+       "ic95": [
+        -0.0586,
+        -0.003
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0002,
+        0.0001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0304,
+       "ic95": [
+        -0.0653,
+        0.0035
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   },
+   "invariante+znorm": {
+    "por_par": {
+     "uav_sead->real": {
+      "baja_dominio": {
+       "punto": -0.0021,
+       "ic95": [
+        -0.0035,
+        -0.001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0649,
+       "ic95": [
+        0.0453,
+        0.0855
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->uav_sead": {
+      "baja_dominio": {
+       "punto": -0.0021,
+       "ic95": [
+        -0.0035,
+        -0.001
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1272,
+       "ic95": [
+        0.0584,
+        0.197
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "uav_sead->hil": {
+      "baja_dominio": {
+       "punto": -0.0,
+       "ic95": [
+        -0.0,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0067,
+       "ic95": [
+        -0.013,
+        -0.001
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil->real": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0003,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1048,
+       "ic95": [
+        0.0806,
+        0.1285
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "real->hil": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0003,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.0614,
+       "ic95": [
+        0.0522,
+        0.0702
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_prop->real_motor": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0003,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1487,
+       "ic95": [
+        0.1204,
+        0.176
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_sensors->real_sensors": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0003,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": -0.0267,
+       "ic95": [
+        -0.0597,
+        0.0109
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": false
+     },
+     "hil_motor->real_motor": {
+      "baja_dominio": {
+       "punto": -0.0001,
+       "ic95": [
+        -0.0003,
+        0.0
+       ]
+      },
+      "sube_transferencia": {
+       "punto": 0.1671,
+       "ic95": [
+        0.1377,
+        0.1934
+       ]
+      },
+      "cumple": false,
+      "cumple_y_ic_excluye_0": false,
+      "adicional": true
+     }
+    },
+    "pares_que_cumplen": 0,
+    "pares_que_cumplen_y_ic_excluye_0": 0
+   }
+  },
+  "veredicto": "no se cumple",
+  "nota": "los conjuntos por familia y los +znorm (post hoc, usan datos no etiquetados del destino) son descriptivos"
+ },
+ "meta": {
+  "semilla": 20261103,
+  "semillas_pgrupo": [
+   20261103,
+   20261104,
+   20261105,
+   20261106,
+   20261107
+  ],
+  "bootstrap_reps": 1000,
+  "unidad_bootstrap": "grupo (UAV-SEAD: vuelo; real: id de caso; HIL: TestCase)",
+  "arboles_rf": 150,
+  "max_samples_rf": 0.3,
+  "min_samples_leaf_rf": 5,
+  "arboles_if": 200,
+  "umbral_origen": "máxima exactitud equilibrada en puntuaciones fuera de pliegue de StratifiedGroupKFold(3) por grupo en el origen",
+  "umbral_interno": "máxima exactitud equilibrada en el primer pliegue de un StratifiedGroupKFold(5) interno del entrenamiento; solo semilla 1",
+  "max_ventanas_por_vuelo_dominio": 20,
+  "fc_antialias_hz": 2.5,
+  "rejilla_intermedia_hz": 50.0,
+  "hz": 10.0,
+  "ventana_s": 5.0,
+  "paso_s": 2.5,
+  "canales_delatores_e": [
+   "acc_vib",
+   "gyr_vib",
+   "vh",
+   "vz"
+  ],
+  "partes_hil_fijadas": [
+   "HIL-NoFault",
+   "HIL-Load",
+   "HIL-Voltage",
+   "HIL-Wind",
+   "HIL-Prop",
+   "HIL-Sensors",
+   "HIL-Motor1",
+   "HIL-Motor2"
+  ],
+  "pares_h3_h4": [
+   "uav_sead->real",
+   "real->uav_sead",
+   "uav_sead->hil",
+   "hil->real",
+   "real->hil",
+   "hil_prop->real_motor",
+   "hil_sensors->real_sensors"
+  ],
+  "pares_adicionales": [
+   "hil_motor->real_motor"
+  ],
+  "conjuntos": {
+   "base": 51,
+   "d": 45,
+   "e": 39,
+   "de": 39,
+   "a": 20,
+   "b": 25,
+   "c": 39,
+   "abc": 84,
+   "invariante": 123
+  },
+  "atajos": [
+   "t_s",
+   "t_rel",
+   "dur_s"
+  ],
+  "huella_extraccion_f2": "902a5608876a668b",
+  "huella_extraccion_e2": "a0ca247dfb2741fa",
+  "vuelos_con_base_desde_cache_f2": 3189,
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0",
+   "scipy": "1.18.0",
+   "pyulog": "?"
+  },
+  "muestra": 0
+ }
+}

@@ -1,0 +1,1487 @@
+{
+ "meta": {
+  "tipo": "post hoc (comentario A-M1 de la revisión simulada); no cambia los veredictos preregistrados",
+  "modelo": "RF de 12 (n_estimators=200, random_state=0, n_jobs=3), rasgos sin atajos",
+  "particion_control": "StratifiedGroupKFold(5) por la unidad de E1, semillas 0–4; cifra = media de las 5 asignaciones",
+  "bootstrap": "1000 réplicas de unidades de E1 (semilla 20261103): pareadas con E1",
+  "clase_1_control": "ventana nominal previa al fallo (fin de la ventana <= primera ventana positiva; UAV-SEAD con un paso de margen) de un fichero que después tiene fallo",
+  "clase_0_control": "ventana de un vuelo sin fallo (RflyMAD Real-NoFault; ALFA no_failure; UAV-SEAD sin ventanas positivas ni anomalía anotada)",
+  "estratos_tiempo": "5 cuantiles del tiempo desde el inicio del log de las ventanas previas al fallo; ventanas sin fallo fuera de ese rango, fuera de la evaluación estratificada",
+  "importancia": "MDI del RF ajustado con todo el conjunto del control (descriptiva) y AUROC de rasgo único en muestra"
+ },
+ "uav_sead": {
+  "control_identidad": {
+   "datos": {
+    "ventanas_previas_al_fallo": 4177,
+    "ficheros_con_tramo_previo": 197,
+    "unidades_con_tramo_previo": 197,
+    "ventanas_sin_fallo": 47676,
+    "ficheros_sin_fallo": 884,
+    "unidades_sin_fallo": 884,
+    "ventanas_excluidas": 6050,
+    "unidades_con_ambas_clases": 0
+   },
+   "aplicable": true,
+   "resultados": {
+    "rf_identidad|global": {
+     "auroc": 0.7689,
+     "ic95": [
+      0.7261,
+      0.8048
+     ],
+     "estratos_validos": 1,
+     "por_asignacion": [
+      0.7625,
+      0.7742,
+      0.7695,
+      0.7652,
+      0.7734
+     ]
+    },
+    "rf_identidad|estratificado_tiempo": {
+     "auroc": 0.7501,
+     "ic95": [
+      0.6965,
+      0.7938
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.7424,
+      0.7582,
+      0.7505,
+      0.7421,
+      0.7575
+     ]
+    },
+    "detector_e1|global": {
+     "auroc": 0.6668,
+     "ic95": [
+      0.6222,
+      0.7078
+     ],
+     "estratos_validos": 1,
+     "por_asignacion": [
+      0.6619,
+      0.6706,
+      0.6604,
+      0.6707,
+      0.6702
+     ]
+    },
+    "detector_e1|estratificado_tiempo": {
+     "auroc": 0.6428,
+     "ic95": [
+      0.5901,
+      0.6922
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.6362,
+      0.6469,
+      0.6351,
+      0.6475,
+      0.6481
+     ]
+    }
+   },
+   "rasgos_mas_separadores": {
+    "acc_x_media": {
+     "auroc_rasgo_unico": 0.3519,
+     "mdi": 0.0317
+    },
+    "acc_z_media": {
+     "auroc_rasgo_unico": 0.3547,
+     "mdi": 0.0233
+    },
+    "acc_vib_media": {
+     "auroc_rasgo_unico": 0.6405,
+     "mdi": 0.0388
+    },
+    "acc_y_rango": {
+     "auroc_rasgo_unico": 0.6371,
+     "mdi": 0.02
+    },
+    "err_r_desv": {
+     "auroc_rasgo_unico": 0.636,
+     "mdi": 0.0204
+    },
+    "acc_vib_desv": {
+     "auroc_rasgo_unico": 0.6343,
+     "mdi": 0.0281
+    },
+    "err_r_rango": {
+     "auroc_rasgo_unico": 0.6339,
+     "mdi": 0.0198
+    },
+    "acc_vib_rango": {
+     "auroc_rasgo_unico": 0.6329,
+     "mdi": 0.0247
+    },
+    "acc_z_rango": {
+     "auroc_rasgo_unico": 0.6311,
+     "mdi": 0.0179
+    },
+    "acc_y_desv": {
+     "auroc_rasgo_unico": 0.6301,
+     "mdi": 0.02
+    }
+   },
+   "mdi_por_canal_top10": {
+    "vz_media": 0.0448,
+    "acc_vib_media": 0.0388,
+    "acc_y_media": 0.0344,
+    "acc_x_media": 0.0317,
+    "gyr_vib_media": 0.0298,
+    "roll_media": 0.0296,
+    "acc_vib_desv": 0.0281,
+    "acc_vib_rango": 0.0247,
+    "vh_media": 0.0243,
+    "acc_z_media": 0.0233
+   },
+   "estratos_tiempo": {
+    "n": 5,
+    "ventanas_fuera_de_rango": 1079
+   },
+   "estratificado_plataforma": {
+    "auroc": 0.7293,
+    "ic95": [
+     0.6808,
+     0.7733
+    ],
+    "estratos_validos": 5,
+    "por_asignacion": [
+     0.7227,
+     0.7346,
+     0.7291,
+     0.7231,
+     0.7371
+    ]
+   },
+   "estratificado_plataforma_y_tiempo": {
+    "auroc": 0.707,
+    "ic95": [
+     0.6459,
+     0.7604
+    ],
+    "estratos_validos": 21,
+    "por_asignacion": [
+     0.699,
+     0.7161,
+     0.7059,
+     0.6959,
+     0.7183
+    ]
+   }
+  },
+  "particiones_vehiculo_sesion": {
+   "P-grupo_reproducido": {
+    "auroc": 0.8768,
+    "ic95": [
+     0.8553,
+     0.8961
+    ],
+    "estratos_validos": 1,
+    "por_asignacion": [
+     0.8799,
+     0.8706,
+     0.8721,
+     0.8809,
+     0.8806
+    ]
+   },
+   "P-grupo_e1": {
+    "valor": 0.8768,
+    "ic95": [
+     0.8553,
+     0.8961
+    ],
+    "por_semilla": [
+     0.8799,
+     0.8706,
+     0.8721,
+     0.8809,
+     0.8806
+    ]
+   },
+   "control_reproduccion_e1_abs": 0.0,
+   "P-sesion_e1": {
+    "valor": 0.8209,
+    "ic95": [
+     0.7911,
+     0.8479
+    ]
+   },
+   "P-plataforma": {
+    "auroc": 0.6284,
+    "ic95": [
+     0.5581,
+     0.7056
+    ],
+    "estratos_validos": 1,
+    "menos_P-grupo": {
+     "diferencia": 0.2484,
+     "ic95": [
+      0.1713,
+      0.3215
+     ],
+     "ic_excluye_0": true
+    },
+    "por_bloque_de_prueba": {
+     "5005001e0028": {
+      "auroc": 0.9839,
+      "ic95": [
+       0.9569,
+       0.9968
+      ],
+      "estratos_validos": 1,
+      "vuelos": 156,
+      "vuelos_con_anomalia": 8,
+      "ventanas": 12188
+     },
+     "500f003a002e": {
+      "auroc": 0.9611,
+      "ic95": [
+       0.943,
+       0.9905
+      ],
+      "estratos_validos": 1,
+      "vuelos": 17,
+      "vuelos_con_anomalia": 2,
+      "ventanas": 768
+     },
+     "51130023003d": {
+      "auroc": 1.0,
+      "ic95": [
+       1.0,
+       1.0
+      ],
+      "estratos_validos": 1,
+      "vuelos": 4,
+      "vuelos_con_anomalia": 1,
+      "ventanas": 79
+     },
+     "510B31353833": {
+      "auroc": 0.6606,
+      "ic95": [
+       0.5007,
+       0.8314
+      ],
+      "estratos_validos": 1,
+      "vuelos": 63,
+      "vuelos_con_anomalia": 23,
+      "ventanas": 2143
+     },
+     "510F37353832": {
+      "auroc": 0.6223,
+      "ic95": [
+       0.5483,
+       0.7041
+      ],
+      "estratos_validos": 1,
+      "vuelos": 925,
+      "vuelos_con_anomalia": 211,
+      "ventanas": 42725
+     }
+    }
+   },
+   "P-tipo_vehiculo": {
+    "auroc": 0.628,
+    "ic95": [
+     0.5646,
+     0.7007
+    ],
+    "estratos_validos": 1,
+    "menos_P-grupo": {
+     "diferencia": 0.2489,
+     "ic95": [
+      0.1795,
+      0.3127
+     ],
+     "ic_excluye_0": true
+    },
+    "por_bloque_de_prueba": {
+     "14": {
+      "auroc": 0.6686,
+      "ic95": [
+       0.6105,
+       0.7354
+      ],
+      "estratos_validos": 1,
+      "vuelos": 988,
+      "vuelos_con_anomalia": 234,
+      "ventanas": 44868
+     },
+     "2": {
+      "auroc": 0.9369,
+      "ic95": [
+       0.8723,
+       0.9765
+      ],
+      "estratos_validos": 1,
+      "vuelos": 177,
+      "vuelos_con_anomalia": 11,
+      "ventanas": 13035
+     }
+    }
+   }
+  }
+ },
+ "alfa": {
+  "control_identidad": {
+   "datos": {
+    "ventanas_previas_al_fallo": 1667,
+    "ficheros_con_tramo_previo": 36,
+    "unidades_con_tramo_previo": 27,
+    "ventanas_sin_fallo": 272,
+    "ficheros_sin_fallo": 10,
+    "unidades_sin_fallo": 9,
+    "ventanas_excluidas": 351,
+    "unidades_con_ambas_clases": 6
+   },
+   "aplicable": true,
+   "resultados": {
+    "rf_identidad|global": {
+     "auroc": 0.6777,
+     "ic95": [
+      0.5039,
+      0.9064
+     ],
+     "estratos_validos": 1,
+     "por_asignacion": [
+      0.681,
+      0.6741,
+      0.651,
+      0.6674,
+      0.715
+     ]
+    },
+    "rf_identidad|estratificado_tiempo": {
+     "auroc": 0.6555,
+     "ic95": [
+      0.4771,
+      0.9008
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.6618,
+      0.6508,
+      0.625,
+      0.6464,
+      0.6935
+     ]
+    },
+    "detector_e1|global": {
+     "auroc": 0.43,
+     "ic95": [
+      0.2564,
+      0.6609
+     ],
+     "estratos_validos": 1,
+     "por_asignacion": [
+      0.4196,
+      0.4337,
+      0.4195,
+      0.4196,
+      0.4578
+     ]
+    },
+    "detector_e1|estratificado_tiempo": {
+     "auroc": 0.4596,
+     "ic95": [
+      0.2924,
+      0.6904
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.4485,
+      0.4679,
+      0.4515,
+      0.4485,
+      0.4816
+     ]
+    }
+   },
+   "rasgos_mas_separadores": {
+    "alt_error__media": {
+     "auroc_rasgo_unico": 0.7597,
+     "mdi": 0.0162
+    },
+    "alt_error__min": {
+     "auroc_rasgo_unico": 0.7595,
+     "mdi": 0.019
+    },
+    "alt_error__max": {
+     "auroc_rasgo_unico": 0.7591,
+     "mdi": 0.0128
+    },
+    "asp_cmd__max": {
+     "auroc_rasgo_unico": 0.7232,
+     "mdi": 0.0248
+    },
+    "rcin_c2__max": {
+     "auroc_rasgo_unico": 0.2869,
+     "mdi": 0.0446
+    },
+    "rcin_c2__min": {
+     "auroc_rasgo_unico": 0.2872,
+     "mdi": 0.0382
+    },
+    "rcin_c2__media": {
+     "auroc_rasgo_unico": 0.2873,
+     "mdi": 0.0348
+    },
+    "rcin_c3__media": {
+     "auroc_rasgo_unico": 0.3024,
+     "mdi": 0.0062
+    },
+    "rcin_c3__min": {
+     "auroc_rasgo_unico": 0.3028,
+     "mdi": 0.006
+    },
+    "rcin_c3__max": {
+     "auroc_rasgo_unico": 0.3031,
+     "mdi": 0.0088
+    }
+   },
+   "mdi_por_canal_top10": {
+    "rcin_c2": 0.1177,
+    "vfr_alt": 0.0737,
+    "asp_cmd": 0.0731,
+    "rel_alt": 0.0627,
+    "path_dev_y": 0.0552,
+    "alt_error": 0.0508,
+    "xtrack_error": 0.0489,
+    "wind_x": 0.0475,
+    "yaw_err": 0.045,
+    "wind_y": 0.0388
+   },
+   "estratos_tiempo": {
+    "n": 5,
+    "ventanas_fuera_de_rango": 0
+   },
+   "nota": "6 de los 9 bags con secuencia no_failure tienen también secuencias con fallo: la secuencia sin fallo y la previa al fallo pueden ser tramos del mismo vuelo físico"
+  },
+  "particiones_vehiculo_sesion": {
+   "P-grupo_reproducido": {
+    "auroc": 0.7269,
+    "ic95": [
+     0.5833,
+     0.9707
+    ],
+    "estratos_validos": 1,
+    "por_asignacion": [
+     0.7333,
+     0.7201,
+     0.734,
+     0.7333,
+     0.7139
+    ]
+   },
+   "P-grupo_e1": {
+    "valor": 0.7269,
+    "ic95": [
+     0.5833,
+     0.9707
+    ],
+    "por_semilla": [
+     0.7333,
+     0.7201,
+     0.734,
+     0.7333,
+     0.7139
+    ]
+   },
+   "control_reproduccion_e1_abs": 0.0,
+   "P-sesion_e1": {
+    "valor": 0.6895,
+    "ic95": [
+     0.5106,
+     0.9181
+    ]
+   },
+   "P-sesion_e1_es_disjunta_por_bag": true,
+   "fechas": 5,
+   "vehiculos": "uno (Carbon Z); no hay partición por vehículo",
+   "P-sesion_e1_menos": {
+    "diferencia": 0.0374,
+    "ic95": [
+     -0.097,
+     0.1415
+    ],
+    "ic_excluye_0": false
+   }
+  }
+ },
+ "rflymad": {
+  "control_identidad": {
+   "datos": {
+    "ventanas_previas_al_fallo": 3346,
+    "ficheros_con_tramo_previo": 432,
+    "unidades_con_tramo_previo": 389,
+    "ventanas_sin_fallo": 997,
+    "ficheros_sin_fallo": 51,
+    "unidades_sin_fallo": 50,
+    "ventanas_excluidas": 3493,
+    "unidades_con_ambas_clases": 0
+   },
+   "aplicable": true,
+   "resultados": {
+    "rf_identidad|global": {
+     "auroc": 0.9739,
+     "ic95": [
+      0.9656,
+      0.9809
+     ],
+     "estratos_validos": 1,
+     "por_asignacion": [
+      0.9738,
+      0.9732,
+      0.9749,
+      0.9723,
+      0.9754
+     ]
+    },
+    "rf_identidad|estratificado_tiempo": {
+     "auroc": 0.9709,
+     "ic95": [
+      0.9618,
+      0.9788
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.9704,
+      0.9708,
+      0.9727,
+      0.9674,
+      0.9732
+     ]
+    },
+    "detector_e1|global": {
+     "auroc": 0.4174,
+     "ic95": [
+      0.3818,
+      0.4525
+     ],
+     "estratos_validos": 1,
+     "por_asignacion": [
+      0.4221,
+      0.4108,
+      0.4233,
+      0.4109,
+      0.4199
+     ]
+    },
+    "detector_e1|estratificado_tiempo": {
+     "auroc": 0.6449,
+     "ic95": [
+      0.5806,
+      0.705
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.6504,
+      0.6352,
+      0.6539,
+      0.6338,
+      0.6509
+     ]
+    }
+   },
+   "rasgos_mas_separadores": {
+    "vz__min": {
+     "auroc_rasgo_unico": 0.2736,
+     "mdi": 0.0265
+    },
+    "vz__media": {
+     "auroc_rasgo_unico": 0.3005,
+     "mdi": 0.0429
+    },
+    "ci_mag1__min": {
+     "auroc_rasgo_unico": 0.3332,
+     "mdi": 0.0027
+    },
+    "ci_mag2__min": {
+     "auroc_rasgo_unico": 0.3423,
+     "mdi": 0.0021
+    },
+    "ci_mag0__min": {
+     "auroc_rasgo_unico": 0.3423,
+     "mdi": 0.0015
+    },
+    "ci_mag1__media": {
+     "auroc_rasgo_unico": 0.36,
+     "mdi": 0.0029
+    },
+    "ci_mag2__media": {
+     "auroc_rasgo_unico": 0.3606,
+     "mdi": 0.0027
+    },
+    "ci_mag0__media": {
+     "auroc_rasgo_unico": 0.3687,
+     "mdi": 0.003
+    },
+    "bat_i__energia_dif": {
+     "auroc_rasgo_unico": 0.3693,
+     "mdi": 0.01
+    },
+    "ci_mag2__max": {
+     "auroc_rasgo_unico": 0.3712,
+     "mdi": 0.0025
+    }
+   },
+   "mdi_por_canal_top10": {
+    "vz": 0.116,
+    "bat_i": 0.1086,
+    "bat_mah": 0.1038,
+    "vh": 0.0891,
+    "pitch": 0.0459,
+    "z": 0.0444,
+    "gyro_x_ms": 0.0398,
+    "att_dev": 0.0295,
+    "roll": 0.0278,
+    "pwm1": 0.0272
+   },
+   "estratos_tiempo": {
+    "n": 5,
+    "ventanas_fuera_de_rango": 115
+   }
+  },
+  "origen_control": {
+   "metadatos_frente_a_clase": {
+    "placa": {
+     "tipo": "categorico",
+     "auroc_en_muestra_por_fraccion_de_clase": 0.651,
+     "categorias_con_ambas_clases": 2,
+     "ficheros_por_categoria_y_clase": {
+      "2c002e": {
+       "sin_fallo": 31,
+       "previo_al_fallo": 138
+      },
+      "2d004e": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 15
+      },
+      "51002e": {
+       "sin_fallo": 20,
+       "previo_al_fallo": 279
+      }
+     }
+    },
+    "fecha": {
+     "tipo": "categorico",
+     "auroc_en_muestra_por_fraccion_de_clase": 0.9257,
+     "categorias_con_ambas_clases": 4,
+     "ficheros_por_categoria_y_clase": {
+      "2023-05-17": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 32
+      },
+      "2023-05-18": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 8
+      },
+      "2023-05-19": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 6
+      },
+      "2023-05-22": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 49
+      },
+      "2023-05-23": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 23
+      },
+      "2023-05-24": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 4
+      },
+      "2023-05-25": {
+       "sin_fallo": 11,
+       "previo_al_fallo": 5
+      },
+      "2023-05-26": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 59
+      },
+      "2023-05-27": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 1
+      },
+      "2023-05-29": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 7
+      },
+      "2023-05-30": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 8
+      },
+      "2023-05-31": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 51
+      },
+      "2023-06-01": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 55
+      },
+      "2023-06-02": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 35
+      },
+      "2023-06-07": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 15
+      },
+      "2023-06-09": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 23
+      },
+      "2023-06-10": {
+       "sin_fallo": 0,
+       "previo_al_fallo": 30
+      },
+      "2023-06-15": {
+       "sin_fallo": 20,
+       "previo_al_fallo": 21
+      }
+     }
+    },
+    "estado": {
+     "tipo": "categorico",
+     "auroc_en_muestra_por_fraccion_de_clase": 0.5898,
+     "categorias_con_ambas_clases": 5,
+     "ficheros_por_categoria_y_clase": {
+      "acce": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 48
+      },
+      "circling": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 82
+      },
+      "hover": {
+       "sin_fallo": 11,
+       "previo_al_fallo": 94
+      },
+      "velocity": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 71
+      },
+      "waypoint": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 137
+      }
+     }
+    },
+    "params_hash": {
+     "tipo": "categorico",
+     "auroc_en_muestra_por_fraccion_de_clase": 0.68,
+     "categorias_con_ambas_clases": 4,
+     "ficheros_por_categoria_y_clase": {
+      "3e1986d4": {
+       "sin_fallo": 2,
+       "previo_al_fallo": 120
+      },
+      "5195f0d8": {
+       "sin_fallo": 20,
+       "previo_al_fallo": 159
+      },
+      "6bff2da7": {
+       "sin_fallo": 19,
+       "previo_al_fallo": 139
+      },
+      "9007f29a": {
+       "sin_fallo": 10,
+       "previo_al_fallo": 14
+      }
+     }
+    },
+    "ekf2_hgt_mode": {
+     "tipo": "categorico",
+     "auroc_en_muestra_por_fraccion_de_clase": 0.5939,
+     "categorias_con_ambas_clases": 2,
+     "ficheros_por_categoria_y_clase": {
+      "0": {
+       "sin_fallo": 30,
+       "previo_al_fallo": 173
+      },
+      "2": {
+       "sin_fallo": 21,
+       "previo_al_fallo": 259
+      }
+     }
+    },
+    "ekf2_aid_mask": {
+     "tipo": "categorico",
+     "auroc_en_muestra_por_fraccion_de_clase": 0.6072,
+     "categorias_con_ambas_clases": 2,
+     "ficheros_por_categoria_y_clase": {
+      "1": {
+       "sin_fallo": 22,
+       "previo_al_fallo": 279
+      },
+      "3": {
+       "sin_fallo": 29,
+       "previo_al_fallo": 153
+      }
+     }
+    },
+    "bat_v_ini": {
+     "tipo": "numerico",
+     "auroc": 0.5771,
+     "media_sin_fallo": 23.7833,
+     "media_previo_al_fallo": 24.0069,
+     "ficheros_con_dato": 483
+    },
+    "viento_vel_media": {
+     "tipo": "numerico",
+     "auroc": 0.8099,
+     "media_sin_fallo": 0.9625,
+     "media_previo_al_fallo": 2.5815,
+     "ficheros_con_dato": 360
+    },
+    "n_cmds": {
+     "tipo": "numerico",
+     "auroc": 0.818,
+     "media_sin_fallo": 4.3529,
+     "media_previo_al_fallo": 6.5787,
+     "ficheros_con_dato": 483
+    },
+    "dur_log": {
+     "tipo": "numerico",
+     "auroc": 0.6007,
+     "media_sin_fallo": 101.5122,
+     "media_previo_al_fallo": 115.5331,
+     "ficheros_con_dato": 483
+    }
+   },
+   "estratificado": {
+    "placa": {
+     "auroc": 0.973,
+     "ic95": [
+      0.9646,
+      0.9804
+     ],
+     "estratos_validos": 2,
+     "por_asignacion": [
+      0.9727,
+      0.9721,
+      0.9739,
+      0.9715,
+      0.9747
+     ],
+     "ventanas_en_estratos_validos": 4178
+    },
+    "fecha": {
+     "auroc": 0.933,
+     "ic95": [
+      0.8992,
+      0.9559
+     ],
+     "estratos_validos": 4,
+     "por_asignacion": [
+      0.9301,
+      0.9314,
+      0.9389,
+      0.9265,
+      0.938
+     ],
+     "ventanas_en_estratos_validos": 1732
+    },
+    "estado": {
+     "auroc": 0.9781,
+     "ic95": [
+      0.9701,
+      0.9849
+     ],
+     "estratos_validos": 5,
+     "por_asignacion": [
+      0.978,
+      0.9782,
+      0.98,
+      0.9748,
+      0.9797
+     ],
+     "ventanas_en_estratos_validos": 4343
+    },
+    "params_hash": {
+     "auroc": 0.9681,
+     "ic95": [
+      0.958,
+      0.9769
+     ],
+     "estratos_validos": 4,
+     "por_asignacion": [
+      0.9674,
+      0.9681,
+      0.9697,
+      0.9651,
+      0.97
+     ],
+     "ventanas_en_estratos_validos": 4343
+    },
+    "ekf2_hgt_mode": {
+     "auroc": 0.9713,
+     "ic95": [
+      0.9624,
+      0.9788
+     ],
+     "estratos_validos": 2,
+     "por_asignacion": [
+      0.9712,
+      0.9705,
+      0.9726,
+      0.9694,
+      0.9729
+     ],
+     "ventanas_en_estratos_validos": 4343
+    },
+    "ekf2_aid_mask": {
+     "auroc": 0.9741,
+     "ic95": [
+      0.9661,
+      0.9813
+     ],
+     "estratos_validos": 2,
+     "por_asignacion": [
+      0.9738,
+      0.9732,
+      0.975,
+      0.9726,
+      0.9757
+     ],
+     "ventanas_en_estratos_validos": 4343
+    },
+    "bat_v_ini_terciles": {
+     "auroc": 0.9745,
+     "ic95": [
+      0.9668,
+      0.9812
+     ],
+     "estratos_validos": 3,
+     "por_asignacion": [
+      0.9745,
+      0.974,
+      0.9755,
+      0.9727,
+      0.9757
+     ],
+     "ventanas_en_estratos_validos": 4343
+    },
+    "viento_terciles": {
+     "auroc": 0.9509,
+     "ic95": [
+      0.9364,
+      0.9643
+     ],
+     "estratos_validos": 3,
+     "por_asignacion": [
+      0.9497,
+      0.9505,
+      0.9535,
+      0.9473,
+      0.9537
+     ],
+     "ventanas_en_estratos_validos": 3475
+    },
+    "placa_y_fecha": {
+     "auroc": 0.9328,
+     "ic95": [
+      0.8988,
+      0.9558
+     ],
+     "estratos_validos": 4,
+     "por_asignacion": [
+      0.9299,
+      0.9313,
+      0.9388,
+      0.9264,
+      0.9379
+     ],
+     "ventanas_en_estratos_validos": 1728
+    },
+    "fecha_y_tiempo": {
+     "auroc": 0.8978,
+     "ic95": [
+      0.8533,
+      0.933
+     ],
+     "estratos_validos": 18,
+     "por_asignacion": [
+      0.8901,
+      0.9005,
+      0.9117,
+      0.8764,
+      0.9101
+     ],
+     "ventanas_en_estratos_validos": 1537
+    }
+   },
+   "dentro_de_placa": {
+    "51002e": {
+     "global": {
+      "auroc": 0.9796,
+      "ic95": [
+       0.9684,
+       0.9884
+      ],
+      "estratos_validos": 1,
+      "por_asignacion": [
+       0.9782,
+       0.9806,
+       0.9786,
+       0.9786,
+       0.9818
+      ],
+      "ficheros_sin_fallo": 20,
+      "ficheros_previo_al_fallo": 279
+     },
+     "estratificado_fecha_y_tiempo": {
+      "auroc": 0.9418,
+      "ic95": [
+       0.9048,
+       0.9731
+      ],
+      "estratos_validos": 8,
+      "por_asignacion": [
+       0.9371,
+       0.9428,
+       0.9432,
+       0.9337,
+       0.952
+      ]
+     }
+    },
+    "2c002e": {
+     "global": {
+      "auroc": 0.9769,
+      "ic95": [
+       0.9647,
+       0.9867
+      ],
+      "estratos_validos": 1,
+      "por_asignacion": [
+       0.9786,
+       0.9754,
+       0.9743,
+       0.9766,
+       0.9797
+      ],
+      "ficheros_sin_fallo": 31,
+      "ficheros_previo_al_fallo": 138
+     },
+     "estratificado_fecha_y_tiempo": {
+      "auroc": 0.7951,
+      "ic95": [
+       0.6997,
+       0.88
+      ],
+      "estratos_validos": 10,
+      "por_asignacion": [
+       0.8148,
+       0.7729,
+       0.7892,
+       0.7972,
+       0.8016
+      ]
+     }
+    }
+   },
+   "sin_canales_top": {
+    "1": {
+     "canales_quitados": [
+      "vz"
+     ],
+     "rasgos_restantes": 216,
+     "global": {
+      "auroc": 0.972,
+      "ic95": [
+       0.9632,
+       0.9799
+      ],
+      "estratos_validos": 1,
+      "por_asignacion": [
+       0.9719,
+       0.9705,
+       0.9725,
+       0.9713,
+       0.9738
+      ]
+     },
+     "estratificado_fecha_y_tiempo": {
+      "auroc": 0.8948,
+      "ic95": [
+       0.8449,
+       0.9321
+      ],
+      "estratos_validos": 18,
+      "por_asignacion": [
+       0.8913,
+       0.8939,
+       0.9048,
+       0.8781,
+       0.906
+      ]
+     }
+    },
+    "3": {
+     "canales_quitados": [
+      "vz",
+      "bat_i",
+      "bat_mah"
+     ],
+     "rasgos_restantes": 204,
+     "global": {
+      "auroc": 0.9416,
+      "ic95": [
+       0.9234,
+       0.9575
+      ],
+      "estratos_validos": 1,
+      "por_asignacion": [
+       0.9414,
+       0.9424,
+       0.9377,
+       0.9434,
+       0.9433
+      ]
+     },
+     "estratificado_fecha_y_tiempo": {
+      "auroc": 0.8221,
+      "ic95": [
+       0.7485,
+       0.8866
+      ],
+      "estratos_validos": 18,
+      "por_asignacion": [
+       0.8207,
+       0.8255,
+       0.8099,
+       0.8309,
+       0.8236
+      ]
+     }
+    },
+    "5": {
+     "canales_quitados": [
+      "vz",
+      "bat_i",
+      "bat_mah",
+      "vh",
+      "pitch"
+     ],
+     "rasgos_restantes": 192,
+     "global": {
+      "auroc": 0.9364,
+      "ic95": [
+       0.9198,
+       0.9521
+      ],
+      "estratos_validos": 1,
+      "por_asignacion": [
+       0.9362,
+       0.9354,
+       0.9342,
+       0.9375,
+       0.9387
+      ]
+     },
+     "estratificado_fecha_y_tiempo": {
+      "auroc": 0.8054,
+      "ic95": [
+       0.7298,
+       0.8718
+      ],
+      "estratos_validos": 18,
+      "por_asignacion": [
+       0.806,
+       0.8084,
+       0.7964,
+       0.8075,
+       0.8089
+      ]
+     }
+    },
+    "10": {
+     "canales_quitados": [
+      "vz",
+      "bat_i",
+      "bat_mah",
+      "vh",
+      "pitch",
+      "z",
+      "gyro_x_ms",
+      "att_dev",
+      "roll",
+      "pwm1"
+     ],
+     "rasgos_restantes": 162,
+     "global": {
+      "auroc": 0.8964,
+      "ic95": [
+       0.8734,
+       0.9167
+      ],
+      "estratos_validos": 1,
+      "por_asignacion": [
+       0.8959,
+       0.8972,
+       0.8948,
+       0.899,
+       0.8952
+      ]
+     },
+     "estratificado_fecha_y_tiempo": {
+      "auroc": 0.7611,
+      "ic95": [
+       0.6822,
+       0.8271
+      ],
+      "estratos_validos": 18,
+      "por_asignacion": [
+       0.7568,
+       0.7674,
+       0.7543,
+       0.7627,
+       0.7641
+      ]
+     }
+    }
+   }
+  },
+  "particiones_vehiculo_sesion": {
+   "P-grupo_reproducido": {
+    "auroc": 0.982,
+    "ic95": [
+     0.9777,
+     0.986
+    ],
+    "estratos_validos": 1,
+    "por_asignacion": [
+     0.9833,
+     0.9809,
+     0.9822,
+     0.9805,
+     0.9829
+    ]
+   },
+   "P-grupo_e1": {
+    "valor": 0.982,
+    "ic95": [
+     0.9777,
+     0.986
+    ],
+    "por_semilla": [
+     0.9833,
+     0.9809,
+     0.9822,
+     0.9805,
+     0.9829
+    ]
+   },
+   "control_reproduccion_e1_abs": 0.0,
+   "P-sesion_e1": {
+    "valor": 0.9175,
+    "ic95": [
+     0.9004,
+     0.9327
+    ]
+   },
+   "casos_en_dos_placas_excluidos": 12,
+   "ventanas_subconjunto": 7405,
+   "P-grupo_subconjunto": {
+    "auroc": 0.9815,
+    "ic95": [
+     0.9772,
+     0.9856
+    ],
+    "estratos_validos": 1,
+    "por_asignacion": [
+     0.9816,
+     0.982,
+     0.9808,
+     0.9823,
+     0.9808
+    ]
+   },
+   "P-placa_LOBO_3": {
+    "auroc": 0.839,
+    "ic95": [
+     0.8164,
+     0.8615
+    ],
+    "estratos_validos": 1,
+    "menos_P-grupo": {
+     "diferencia": 0.1425,
+     "ic95": [
+      0.1213,
+      0.1643
+     ],
+     "ic_excluye_0": true
+    },
+    "por_placa_de_prueba": {
+     "2c002e": {
+      "auroc": 0.9097,
+      "ic95": [
+       0.886,
+       0.9308
+      ],
+      "estratos_validos": 1,
+      "casos": 158,
+      "ventanas": 3174,
+      "clases": [
+       "Accelerometer",
+       "Barometer",
+       "GPS",
+       "Gyroscope",
+       "Magnetometer",
+       "Motor",
+       "No Fault"
+      ]
+     },
+     "2d004e": {
+      "auroc": 0.9111,
+      "ic95": [
+       0.8066,
+       0.998
+      ],
+      "estratos_validos": 1,
+      "casos": 6,
+      "ventanas": 116,
+      "clases": [
+       "Motor"
+      ]
+     },
+     "51002e": {
+      "auroc": 0.8024,
+      "ic95": [
+       0.7747,
+       0.8333
+      ],
+      "estratos_validos": 1,
+      "casos": 264,
+      "ventanas": 4115,
+      "clases": [
+       "Accelerometer",
+       "Barometer",
+       "GPS",
+       "Gyroscope",
+       "Magnetometer",
+       "Motor",
+       "No Fault"
+      ]
+     }
+    }
+   },
+   "P-grupo_dos_placas_grandes": {
+    "auroc": 0.9822,
+    "ic95": [
+     0.9779,
+     0.9864
+    ],
+    "estratos_validos": 1,
+    "por_asignacion": [
+     0.9823,
+     0.9827,
+     0.9811,
+     0.9824,
+     0.9826
+    ]
+   },
+   "P-placa_dos_placas_grandes": {
+    "auroc": 0.8234,
+    "ic95": [
+     0.7995,
+     0.848
+    ],
+    "estratos_validos": 1,
+    "menos_P-grupo": {
+     "diferencia": 0.1588,
+     "ic95": [
+      0.1352,
+      0.182
+     ],
+     "ic_excluye_0": true
+    }
+   },
+   "casos_en_mas_de_una_fecha": 23,
+   "P-sesion_disjunta_por_caso": {
+    "auroc": 0.9221,
+    "ic95": [
+     0.9056,
+     0.9378
+    ],
+    "estratos_validos": 1,
+    "menos_P-grupo": {
+     "diferencia": 0.0598,
+     "ic95": [
+      0.0452,
+      0.075
+     ],
+     "ic_excluye_0": true
+    }
+   }
+  }
+ },
+ "uav_fd": {
+  "control_identidad": {
+   "datos": {
+    "ventanas_previas_al_fallo": 0,
+    "ficheros_con_tramo_previo": 0,
+    "unidades_con_tramo_previo": 0,
+    "ventanas_sin_fallo": 354,
+    "ficheros_sin_fallo": 6,
+    "unidades_sin_fallo": 6,
+    "ventanas_excluidas": 886,
+    "unidades_con_ambas_clases": 0
+   },
+   "aplicable": false,
+   "motivo_no_aplicable": "la pala dañada está montada durante todo el vuelo: los vuelos con fallo no tienen tramo previo al fallo, así que no hay ventanas nominales de vuelos que «después» tendrán fallo"
+  },
+  "particiones_vehiculo_sesion": {
+   "vuelos_por_sesion": {
+    "S1_N1_y_5pct_2022-10-07": [
+     "M1_5",
+     "M2_5",
+     "M3_5",
+     "M4_5",
+     "M5_5",
+     "M6_5",
+     "N1"
+    ],
+    "S2_N2-N6_2022-10-13": [
+     "N2",
+     "N3",
+     "N4",
+     "N5",
+     "N6"
+    ],
+    "S3_10pct_2022-10-20": [
+     "M1_10",
+     "M2_10",
+     "M3_10",
+     "M4_10",
+     "M5_10",
+     "M6_10"
+    ]
+   },
+   "ventanas_por_sesion_y_clase": {
+    "S1_N1_y_5pct_2022-10-07": {
+     "normal": 39,
+     "pala_danada": 382
+    },
+    "S2_N2-N6_2022-10-13": {
+     "normal": 315,
+     "pala_danada": 0
+    },
+    "S3_10pct_2022-10-20": {
+     "normal": 0,
+     "pala_danada": 504
+    }
+   },
+   "sesiones_con_una_sola_clase": 2,
+   "vehiculos": "uno (hexarrotor); no hay partición por vehículo",
+   "veredicto": "P-sesión no evaluable: dos de las tres sesiones tienen una sola clase y la tercera mezcla N1 con 5 %; cualquier AUROC entre sesiones compara sesión, no fallo (preregistro y revisión de F1 §7)"
+  }
+ }
+}

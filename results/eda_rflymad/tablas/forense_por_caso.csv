@@ -1,0 +1,22 @@
+clave,clase,filas,nulos,paso_mediano_s,pasos_distintos,tipos,por_tipo,tipos_de_generacion,frase
+Real-NoFault/acce/451_1,No Fault,11683,0,0.004507,336,,{},,sin huellas
+Real-NoFault/acce/452_1,No Fault,12089,0,0.004507,370,,{},,sin huellas
+Real-NoFault/hover/106_1,No Fault,11620,0,0.004505,456,,{},,sin huellas
+Real-Motor/acce/406_1,Motor,11824,0,0.004495,283,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Motor/acce/406_2,Motor,11776,0,0.004497,293,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Motor/velocity/248_2,Motor,11137,0,0.004496,285,H09,"{""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-acce/431_1,Accelerometer,10938,0,0.004496,275,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-acce/432_1,Accelerometer,10786,0,0.004496,272,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/velocity-acce/288_1,Accelerometer,12669,0,0.004495,280,H09,"{""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-gyro/435_1,Gyroscope,11350,0,0.004507,345,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-gyro/436_1,Gyroscope,12089,0,0.004506,365,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/hover-gyro/68_2,Gyroscope,12102,0,0.004495,290,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-mag/443_1,Magnetometer,12104,0,0.004506,365,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-mag/444_1,Magnetometer,11651,0,0.004507,341,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/hover-mag/89_1,Magnetometer,13153,0,0.004496,286,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-baro/439_1,Barometer,10729,0,0.004507,343,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-baro/440_1,Barometer,11600,0,0.004506,363,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/hover-baro/79_1,Barometer,24829,0,0.004495,342,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-GPS/447_1,GPS,10515,0,0.004506,362,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/acce-GPS/448_1,GPS,11209,0,0.004507,367,H08|H09,"{""H08"": 1, ""H09"": 1}",,alguna huella aislada: revisar cada una antes de concluir
+Real-Sensors/hover-GPS/97_2,GPS,13224,0,0.004496,293,H07|H08|H09,"{""H07"": 2, ""H08"": 1, ""H09"": 1}",H07,alguna huella aislada: revisar cada una antes de concluir

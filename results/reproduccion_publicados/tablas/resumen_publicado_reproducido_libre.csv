@@ -1,0 +1,4 @@
+metodo,metrica,publicado,reproducido_p_autores,ic95_p_autores,libre_de_fugas_p_grupo,ic95_p_grupo,diferencia_autores_menos_libre,ic95_diferencia,libre_de_fugas_diseno_autores_por_bag,ic95_p_bag,diferencia_autores_menos_p_bag,ic95_diferencia_p_bag
+UAV-FD SVM cuadrática (Baldini et al. 2023),exactitud 3 clases,0.985,0.9648,[0.9231; 0.991],0.7608,[0.6155; 0.8855],0.204,[0.0912; 0.3343],,,,
+AeroTSBoost en ALFA (Wei et al. 2026),auroc,0.9766,0.9603,[0.9437; 0.9787],0.8934,[0.8249; 0.9514],0.0669,[0.0109; 0.1404],0.9731,[0.9627; 0.991],-0.0128,[-0.0365; 0.0054]
+AeroTSBoost en ALFA (Wei et al. 2026),auprc,0.9259,0.9065,[0.8595; 0.9532],0.765,[0.6218; 0.8941],0.1415,[0.0072; 0.3102],0.9364,[0.8999; 0.9737],-0.0299,[-0.0945; 0.0269]

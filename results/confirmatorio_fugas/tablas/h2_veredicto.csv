@@ -1,0 +1,6 @@
+dataset,version,auroc_solo_atajos,auroc_completo,cociente,ic95_inf,ic95_sup,cumple,cumple_estricto_ic
+uav_sead,principal,0.8361,0.9219,0.9069,0.8772,0.9293,True,False
+alfa,principal,0.9989,0.9986,1.0003,0.9993,1.0014,True,True
+rflymad,principal,1,1,1,1,1,True,True
+rflymad,sensibilidad_sin_rfly_ctrl,0.9998,1,0.9998,0.9996,1,True,True
+uav_fd,principal,0.8991,0.9483,0.9481,0.8005,1.0318,True,False

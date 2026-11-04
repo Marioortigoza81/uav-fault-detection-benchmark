@@ -1,0 +1,7 @@
+,argmax_M1,argmax_M2,argmax_M3,argmax_M4,argmax_M5,argmax_M6
+fallo_M1,1,0,0,0,0,1
+fallo_M2,0,0,0,1,0,1
+fallo_M3,1,0,0,1,0,0
+fallo_M4,1,1,0,0,0,0
+fallo_M5,1,0,0,0,1,0
+fallo_M6,0,1,0,0,0,1

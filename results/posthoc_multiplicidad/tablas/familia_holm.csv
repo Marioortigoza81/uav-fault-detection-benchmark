@@ -1,0 +1,23 @@
+hipotesis,contraste,margen,estimacion,ic95_inf,ic95_sup,p,p_holm,metodo_p,cumple_preregistro,cumple_sin_corregir,cumple_holm,cumple_holm_alfa_0_05
+H1,H1 uav_sead,0,0.0782,0.063,0.0946,0.000999001,0.021978,aproximación normal (IC de 12; réplicas no recalculadas por coste),True,True,True,True
+H2,H2 uav_sead,0.9,0.9069,0.8772,0.9293,0.301829,1,aproximación normal (IC de 12; réplicas no recalculadas por coste),True,False,False,False
+H1,H1 alfa,0,0.255394,0.0236291,0.38793,0.000999001,0.021978,bootstrap exacto,True,True,True,True
+H2,H2 alfa,0.9,1.00034,0.999339,1.00143,0.000999001,0.021978,bootstrap exacto,True,True,True,True
+H1,H1 rflymad,0,0.0066638,0.00474017,0.00872798,0.000999001,0.021978,bootstrap exacto,True,True,True,True
+H2,H2 rflymad,0.9,1,1,1,0.000999001,0.021978,bootstrap exacto,True,True,True,True
+H1,H1 uav_fd,0,0.0502343,0.00513482,0.12447,0.001002,0.021978,bootstrap exacto,True,True,True,True
+H2,H2 uav_fd,0.9,0.948093,0.80054,1.03179,0.212425,1,bootstrap exacto,True,False,False,False
+H3,H3 uav_sead->real,0.2,0.2995,0.2771,0.3227,0.000999001,0.021978,aproximación normal (IUT),True,True,True,True
+H3,H3 real->uav_sead,0.2,0.299,0.2309,0.3692,0.00250786,0.0275865,aproximación normal (IUT),True,True,False,True
+H3,H3 uav_sead->hil,0.2,0.5424,0.533,0.5514,0.000999001,0.021978,aproximación normal (IUT),True,True,True,True
+H3,H3 hil->real,0.2,0.2408,0.2191,0.2619,0.000999001,0.021978,aproximación normal (IUT),True,True,True,True
+H3,H3 real->hil,0.2,0.3093,0.3004,0.3176,0.000999001,0.021978,aproximación normal (IUT),True,True,True,True
+H3,H3 hil_prop->real_motor,0.2,0.2399,0.2121,0.2671,0.00222944,0.0267533,aproximación normal (IUT),True,True,False,True
+H3,H3 hil_sensors->real_sensors,0.2,0.2128,0.1814,0.2473,0.223214,1,aproximación normal (IUT),True,False,False,False
+H4,H4 uav_sead->real,0.05,0.0353,0.0215,0.0489,1,1,aproximación normal (IUT),False,False,False,False
+H4,H4 real->uav_sead,0.05,0.0784,0.052,0.1075,1,1,aproximación normal (IUT),False,False,False,False
+H4,H4 uav_sead->hil,0.05,-0.0709,-0.077,-0.0642,1,1,aproximación normal (IUT),False,False,False,False
+H4,H4 hil->real,0.05,0.1086,0.0824,0.1341,1,1,aproximación normal (IUT),False,False,False,False
+H4,H4 real->hil,0.05,0.0055,-0.0002,0.0111,1,1,aproximación normal (IUT),False,False,False,False
+H4,H4 hil_prop->real_motor,0.05,0.1337,0.0978,0.1679,1,1,aproximación normal (IUT),False,False,False,False
+H4,H4 hil_sensors->real_sensors,0.05,0.029,0.005,0.0558,1,1,aproximación normal (IUT),False,False,False,False

@@ -1,0 +1,12 @@
+variable,auroc_valor,auroc_valor_simetrico,auroc_desviacion_en_fase
+imu_accel_z_g,0.560373,0.560373,0.856784
+battery_voltage_v,0.358376,0.641624,0.741057
+roll_deg,0.464348,0.535652,0.664382
+motor_rpm,0.703566,0.703566,0.643858
+battery_current_a,0.717687,0.717687,0.633706
+pitch_deg,0.438961,0.561039,0.526002
+gps_hdop,0.475004,0.524996,0.495913
+gps_satellites,0.519848,0.519848,0.461841
+ground_speed_mps,0.599805,0.599805,0.429321
+airspeed_mps,0.599108,0.599108,0.428519
+altitude_agl_m,0.760989,0.760989,0.356559

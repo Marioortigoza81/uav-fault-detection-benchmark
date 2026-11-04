@@ -1,0 +1,670 @@
+{
+ "entradas": {
+  "pickles_en_cache": 4800,
+  "vuelos_ordenados": 4800,
+  "huella_extraccion_e2": "a0ca247dfb2741fa"
+ },
+ "ventanas": 165494,
+ "placas": {
+  "rflymad_vuelos_leidos": 3549,
+  "real_contrastados_con_casos_csv": 493,
+  "real_discrepancias_con_casos_csv": 0
+ },
+ "referencias": {
+  "real": {
+   "ventanas": 12636,
+   "grupos": 428,
+   "placas": [
+    "2d004e",
+    "51002e",
+    "2c002e"
+   ],
+   "objetivo_por_placa": {
+    "2d004e": {
+     "ventanas": 12428,
+     "positivas": 6781,
+     "grupos": 422
+    },
+    "51002e": {
+     "ventanas": 5711,
+     "positivas": 2701,
+     "grupos": 164
+    },
+    "2c002e": {
+     "ventanas": 7133,
+     "positivas": 4304,
+     "grupos": 270
+    }
+   },
+   "train_pgrupo_completo_ventanas_medio": 10108.8,
+   "train_pgrupo_igualado_ventanas_medio": 7413.4559,
+   "train_pgrupo_igualado_positivas_medio": 4065.3676,
+   "train_lobo_ventanas_medio_por_ventana_de_prueba": 6440.8514,
+   "pliegues_con_tope": 18,
+   "pliegues_igualados": 68,
+   "pgrupo_completo": 0.8689,
+   "pgrupo_completo_ic95": [
+    0.8538,
+    0.8842
+   ],
+   "pgrupo_igualado": 0.8329,
+   "pgrupo_igualado_ic95": [
+    0.8153,
+    0.8497
+   ],
+   "pgrupo_igualado_por_semilla": [
+    0.8272,
+    0.834,
+    0.8316,
+    0.8371,
+    0.8347
+   ],
+   "lobo": 0.6381,
+   "lobo_ic95": [
+    0.6091,
+    0.6697
+   ],
+   "efecto_tamano": {
+    "punto": 0.0359,
+    "ic95": [
+     0.0281,
+     0.0435
+    ]
+   },
+   "efecto_vehiculo": {
+    "punto": 0.1948,
+    "ic95": [
+     0.1658,
+     0.2204
+    ]
+   },
+   "total_pgrupo_menos_lobo": {
+    "punto": 0.2307,
+    "ic95": [
+     0.1993,
+     0.2587
+    ]
+   },
+   "lobo_reproduce_25_dif": 0.0,
+   "pgrupo_completo_dif_con_25": -0.0008,
+   "dentro_de_placa": {
+    "placas_con_dos_clases": [
+     "2d004e",
+     "51002e",
+     "2c002e"
+    ],
+    "pgrupo_completo": 0.8625,
+    "pgrupo_igualado": 0.8307,
+    "lobo": 0.6808,
+    "efecto_tamano": {
+     "punto": 0.0318,
+     "ic95": [
+      0.0253,
+      0.0383
+     ]
+    },
+    "efecto_vehiculo": {
+     "punto": 0.15,
+     "ic95": [
+      0.1254,
+      0.1756
+     ]
+    }
+   }
+  },
+  "real_motor": {
+   "ventanas": 8034,
+   "grupos": 258,
+   "placas": [
+    "2d004e",
+    "51002e",
+    "2c002e"
+   ],
+   "objetivo_por_placa": {
+    "2d004e": {
+     "ventanas": 7826,
+     "positivas": 3861,
+     "grupos": 252
+    },
+    "51002e": {
+     "ventanas": 3997,
+     "positivas": 1799,
+     "grupos": 108
+    },
+    "2c002e": {
+     "ventanas": 4245,
+     "positivas": 2286,
+     "grupos": 156
+    }
+   },
+   "train_pgrupo_completo_ventanas_medio": 6427.2,
+   "train_pgrupo_igualado_ventanas_medio": 4770.3623,
+   "train_pgrupo_igualado_positivas_medio": 2363.5942,
+   "train_lobo_ventanas_medio_por_ventana_de_prueba": 4213.0946,
+   "pliegues_con_tope": 19,
+   "pliegues_igualados": 69,
+   "pgrupo_completo": 0.8939,
+   "pgrupo_completo_ic95": [
+    0.873,
+    0.9114
+   ],
+   "pgrupo_igualado": 0.8732,
+   "pgrupo_igualado_ic95": [
+    0.8516,
+    0.892
+   ],
+   "pgrupo_igualado_por_semilla": [
+    0.8744,
+    0.878,
+    0.8768,
+    0.8644,
+    0.8727
+   ],
+   "lobo": 0.7027,
+   "lobo_ic95": [
+    0.6683,
+    0.7337
+   ],
+   "efecto_tamano": {
+    "punto": 0.0207,
+    "ic95": [
+     0.0161,
+     0.0256
+    ]
+   },
+   "efecto_vehiculo": {
+    "punto": 0.1705,
+    "ic95": [
+     0.1412,
+     0.2017
+    ]
+   },
+   "total_pgrupo_menos_lobo": {
+    "punto": 0.1912,
+    "ic95": [
+     0.1607,
+     0.2242
+    ]
+   },
+   "lobo_reproduce_25_dif": 0.0,
+   "pgrupo_completo_dif_con_25": -0.002,
+   "dentro_de_placa": {
+    "placas_con_dos_clases": [
+     "2d004e",
+     "51002e",
+     "2c002e"
+    ],
+    "pgrupo_completo": 0.8945,
+    "pgrupo_igualado": 0.8755,
+    "lobo": 0.7276,
+    "efecto_tamano": {
+     "punto": 0.019,
+     "ic95": [
+      0.0149,
+      0.0236
+     ]
+    },
+    "efecto_vehiculo": {
+     "punto": 0.1479,
+     "ic95": [
+      0.1196,
+      0.1791
+     ]
+    }
+   }
+  },
+  "real_sensors": {
+   "ventanas": 6279,
+   "grupos": 220,
+   "placas": [
+    "51002e",
+    "2c002e"
+   ],
+   "objetivo_por_placa": {
+    "51002e": {
+     "ventanas": 2536,
+     "positivas": 902,
+     "grupos": 86
+    },
+    "2c002e": {
+     "ventanas": 3743,
+     "positivas": 2018,
+     "grupos": 134
+    }
+   },
+   "train_pgrupo_completo_ventanas_medio": 5023.2,
+   "train_pgrupo_igualado_ventanas_medio": 3164.92,
+   "train_pgrupo_igualado_positivas_medio": 1472.12,
+   "train_lobo_ventanas_medio_por_ventana_de_prueba": 3023.4904,
+   "pliegues_con_tope": 0,
+   "pliegues_igualados": 50,
+   "pgrupo_completo": 0.8728,
+   "pgrupo_completo_ic95": [
+    0.847,
+    0.8931
+   ],
+   "pgrupo_igualado": 0.8308,
+   "pgrupo_igualado_ic95": [
+    0.8037,
+    0.8543
+   ],
+   "pgrupo_igualado_por_semilla": [
+    0.8278,
+    0.8419,
+    0.8269,
+    0.8266,
+    0.8306
+   ],
+   "lobo": 0.5964,
+   "lobo_ic95": [
+    0.5443,
+    0.6485
+   ],
+   "efecto_tamano": {
+    "punto": 0.042,
+    "ic95": [
+     0.0305,
+     0.0532
+    ]
+   },
+   "efecto_vehiculo": {
+    "punto": 0.2344,
+    "ic95": [
+     0.1915,
+     0.2784
+    ]
+   },
+   "total_pgrupo_menos_lobo": {
+    "punto": 0.2764,
+    "ic95": [
+     0.227,
+     0.3217
+    ]
+   },
+   "lobo_reproduce_25_dif": 0.0,
+   "pgrupo_completo_dif_con_25": -0.001,
+   "dentro_de_placa": {
+    "placas_con_dos_clases": [
+     "51002e",
+     "2c002e"
+    ],
+    "pgrupo_completo": 0.8612,
+    "pgrupo_igualado": 0.8281,
+    "lobo": 0.6819,
+    "efecto_tamano": {
+     "punto": 0.0331,
+     "ic95": [
+      0.022,
+      0.0441
+     ]
+    },
+    "efecto_vehiculo": {
+     "punto": 0.1462,
+     "ic95": [
+      0.111,
+      0.1847
+     ]
+    }
+   }
+  },
+  "uav_sead": {
+   "ventanas": 57937,
+   "grupos": 1171,
+   "placas": [
+    "1e0028",
+    "3a002e",
+    "23003d",
+    "353833",
+    "353832"
+   ],
+   "objetivo_por_placa": {
+    "1e0028": {
+     "ventanas": 45751,
+     "positivas": 2466,
+     "grupos": 1015
+    },
+    "3a002e": {
+     "ventanas": 57183,
+     "positivas": 2488,
+     "grupos": 1154
+    },
+    "23003d": {
+     "ventanas": 57862,
+     "positivas": 2496,
+     "grupos": 1167
+    },
+    "353833": {
+     "ventanas": 55670,
+     "positivas": 2288,
+     "grupos": 1102
+    },
+    "353832": {
+     "ventanas": 15282,
+     "positivas": 250,
+     "grupos": 246
+    }
+   },
+   "train_pgrupo_completo_ventanas_medio": 46349.6,
+   "train_pgrupo_igualado_ventanas_medio": 39422.1754,
+   "train_pgrupo_igualado_positivas_medio": 1616.6667,
+   "train_lobo_ventanas_medio_por_ventana_de_prueba": 23871.3589,
+   "pliegues_con_tope": 64,
+   "pliegues_igualados": 114,
+   "pgrupo_completo": 0.8694,
+   "pgrupo_completo_ic95": [
+    0.8478,
+    0.894
+   ],
+   "pgrupo_igualado": 0.7775,
+   "pgrupo_igualado_ic95": [
+    0.7469,
+    0.8133
+   ],
+   "pgrupo_igualado_por_semilla": [
+    0.7866,
+    0.7509,
+    0.7977,
+    0.7941,
+    0.7581
+   ],
+   "lobo": 0.6329,
+   "lobo_ic95": [
+    0.5673,
+    0.7139
+   ],
+   "efecto_tamano": {
+    "punto": 0.0919,
+    "ic95": [
+     0.0645,
+     0.1179
+    ]
+   },
+   "efecto_vehiculo": {
+    "punto": 0.1445,
+    "ic95": [
+     0.0849,
+     0.1976
+    ]
+   },
+   "total_pgrupo_menos_lobo": {
+    "punto": 0.2364,
+    "ic95": [
+     0.1643,
+     0.3067
+    ]
+   },
+   "lobo_reproduce_25_dif": 0.0,
+   "pgrupo_completo_dif_con_25": 0.0,
+   "dentro_de_placa": {
+    "placas_con_dos_clases": [
+     "1e0028",
+     "3a002e",
+     "23003d",
+     "353833",
+     "353832"
+    ],
+    "pgrupo_completo": 0.8382,
+    "pgrupo_igualado": 0.7367,
+    "lobo": 0.6401,
+    "efecto_tamano": {
+     "punto": 0.1015,
+     "ic95": [
+      0.0694,
+      0.1319
+     ]
+    },
+    "efecto_vehiculo": {
+     "punto": 0.0967,
+     "ic95": [
+      0.0356,
+      0.1523
+     ]
+    }
+   }
+  }
+ },
+ "h3_posthoc": {
+  "criterio": "caída (P-grupo igualado al train de LOBO - transferencia de E2) >= 0,2 y AUROC de dominio de E2 > 0,95, en la mayoría de 7 pares; HIL conserva P-grupo",
+  "por_par": {
+   "uav_sead->real": {
+    "par": "uav_sead->real",
+    "adicional": false,
+    "referencia": "P-grupo igualado al train de LOBO",
+    "auroc_pgrupo_completo": 0.8689,
+    "auroc_pgrupo_igualado": 0.8329,
+    "auroc_lobo": 0.6381,
+    "auroc_transferencia": 0.568,
+    "auroc_transferencia_igualada": 0.5791,
+    "caida_e2": 0.3009,
+    "caida": 0.2649,
+    "caida_ic_lo": 0.2412,
+    "caida_ic_hi": 0.2896,
+    "auroc_dominio": 0.9979,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "caida_ambas_igualadas": 0.2538,
+    "caida_ambas_igualadas_ic_lo": 0.2301,
+    "caida_ambas_igualadas_ic_hi": 0.2783,
+    "cumple_ambas_igualadas": true,
+    "caida_lobo_menos_tr_igualada": 0.059,
+    "caida_lobo_menos_tr_igualada_ic_lo": 0.0396,
+    "caida_lobo_menos_tr_igualada_ic_hi": 0.0818,
+    "dp_caida": 0.2528,
+    "dp_caida_ic_lo": 0.2295,
+    "dp_caida_ic_hi": 0.2783,
+    "dp_cumple": true
+   },
+   "hil->real": {
+    "par": "hil->real",
+    "adicional": false,
+    "referencia": "P-grupo igualado al train de LOBO",
+    "auroc_pgrupo_completo": 0.8689,
+    "auroc_pgrupo_igualado": 0.8329,
+    "auroc_lobo": 0.6381,
+    "auroc_transferencia": 0.6309,
+    "auroc_transferencia_igualada": 0.5714,
+    "caida_e2": 0.2379,
+    "caida": 0.202,
+    "caida_ic_lo": 0.1805,
+    "caida_ic_hi": 0.2214,
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": false,
+    "caida_ambas_igualadas": 0.2616,
+    "caida_ambas_igualadas_ic_lo": 0.2379,
+    "caida_ambas_igualadas_ic_hi": 0.2846,
+    "cumple_ambas_igualadas": true,
+    "caida_lobo_menos_tr_igualada": 0.0668,
+    "caida_lobo_menos_tr_igualada_ic_lo": 0.0379,
+    "caida_lobo_menos_tr_igualada_ic_hi": 0.0933,
+    "dp_caida": 0.1905,
+    "dp_caida_ic_lo": 0.1698,
+    "dp_caida_ic_hi": 0.2105,
+    "dp_cumple": false
+   },
+   "hil_prop->real_motor": {
+    "par": "hil_prop->real_motor",
+    "adicional": false,
+    "referencia": "P-grupo igualado al train de LOBO",
+    "auroc_pgrupo_completo": 0.8939,
+    "auroc_pgrupo_igualado": 0.8732,
+    "auroc_lobo": 0.7027,
+    "auroc_transferencia": 0.6568,
+    "auroc_transferencia_igualada": 0.6423,
+    "caida_e2": 0.2371,
+    "caida": 0.2164,
+    "caida_ic_lo": 0.1897,
+    "caida_ic_hi": 0.2438,
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": false,
+    "caida_ambas_igualadas": 0.231,
+    "caida_ambas_igualadas_ic_lo": 0.2035,
+    "caida_ambas_igualadas_ic_hi": 0.2598,
+    "cumple_ambas_igualadas": true,
+    "caida_lobo_menos_tr_igualada": 0.0605,
+    "caida_lobo_menos_tr_igualada_ic_lo": 0.0385,
+    "caida_lobo_menos_tr_igualada_ic_hi": 0.0821,
+    "dp_caida": 0.2058,
+    "dp_caida_ic_lo": 0.181,
+    "dp_caida_ic_hi": 0.2326,
+    "dp_cumple": true
+   },
+   "hil_motor->real_motor": {
+    "par": "hil_motor->real_motor",
+    "adicional": true,
+    "referencia": "P-grupo igualado al train de LOBO",
+    "auroc_pgrupo_completo": 0.8939,
+    "auroc_pgrupo_igualado": 0.8732,
+    "auroc_lobo": 0.7027,
+    "auroc_transferencia": 0.6398,
+    "auroc_transferencia_igualada": 0.6683,
+    "caida_e2": 0.2541,
+    "caida": 0.2334,
+    "caida_ic_lo": 0.2081,
+    "caida_ic_hi": 0.261,
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "caida_ambas_igualadas": 0.2049,
+    "caida_ambas_igualadas_ic_lo": 0.1826,
+    "caida_ambas_igualadas_ic_hi": 0.2292,
+    "cumple_ambas_igualadas": true,
+    "caida_lobo_menos_tr_igualada": 0.0344,
+    "caida_lobo_menos_tr_igualada_ic_lo": 0.0034,
+    "caida_lobo_menos_tr_igualada_ic_hi": 0.063,
+    "dp_caida": 0.2283,
+    "dp_caida_ic_lo": 0.2037,
+    "dp_caida_ic_hi": 0.2549,
+    "dp_cumple": true
+   },
+   "hil_sensors->real_sensors": {
+    "par": "hil_sensors->real_sensors",
+    "adicional": false,
+    "referencia": "P-grupo igualado al train de LOBO",
+    "auroc_pgrupo_completo": 0.8728,
+    "auroc_pgrupo_igualado": 0.8308,
+    "auroc_lobo": 0.5964,
+    "auroc_transferencia": 0.661,
+    "auroc_transferencia_igualada": 0.575,
+    "caida_e2": 0.2117,
+    "caida": 0.1697,
+    "caida_ic_lo": 0.139,
+    "caida_ic_hi": 0.2025,
+    "auroc_dominio": 0.9999,
+    "cumple": false,
+    "cumple_con_ic": false,
+    "caida_ambas_igualadas": 0.2558,
+    "caida_ambas_igualadas_ic_lo": 0.2144,
+    "caida_ambas_igualadas_ic_hi": 0.2963,
+    "cumple_ambas_igualadas": true,
+    "caida_lobo_menos_tr_igualada": 0.0214,
+    "caida_lobo_menos_tr_igualada_ic_lo": -0.0015,
+    "caida_lobo_menos_tr_igualada_ic_hi": 0.0459,
+    "dp_caida": 0.1448,
+    "dp_caida_ic_lo": 0.1165,
+    "dp_caida_ic_hi": 0.176,
+    "dp_cumple": false
+   },
+   "real->uav_sead": {
+    "par": "real->uav_sead",
+    "adicional": false,
+    "referencia": "P-grupo igualado al train de LOBO",
+    "auroc_pgrupo_completo": 0.8694,
+    "auroc_pgrupo_igualado": 0.7775,
+    "auroc_lobo": 0.6329,
+    "auroc_transferencia": 0.5703,
+    "auroc_transferencia_igualada": 0.5703,
+    "caida_e2": 0.299,
+    "caida": 0.2071,
+    "caida_ic_lo": 0.1425,
+    "caida_ic_hi": 0.2672,
+    "auroc_dominio": 0.9979,
+    "cumple": true,
+    "cumple_con_ic": false,
+    "caida_ambas_igualadas": 0.2071,
+    "caida_ambas_igualadas_ic_lo": 0.1425,
+    "caida_ambas_igualadas_ic_hi": 0.2672,
+    "cumple_ambas_igualadas": true,
+    "caida_lobo_menos_tr_igualada": 0.0626,
+    "caida_lobo_menos_tr_igualada_ic_lo": 0.0163,
+    "caida_lobo_menos_tr_igualada_ic_hi": 0.116,
+    "dp_caida": 0.1926,
+    "dp_caida_ic_lo": 0.122,
+    "dp_caida_ic_hi": 0.2576,
+    "dp_cumple": false
+   },
+   "uav_sead->hil": {
+    "par": "uav_sead->hil",
+    "adicional": false,
+    "referencia": "P-grupo de E2 (sin placa alternativa; de 25)",
+    "auroc_pgrupo_completo": 0.9942,
+    "auroc_pgrupo_igualado": null,
+    "auroc_lobo": null,
+    "auroc_transferencia": 0.4518,
+    "auroc_transferencia_igualada": null,
+    "caida_e2": 0.5424,
+    "caida": 0.5424,
+    "caida_ic_lo": 0.533,
+    "caida_ic_hi": 0.5514,
+    "auroc_dominio": 1.0,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "caida_ambas_igualadas": null,
+    "cumple_ambas_igualadas": true,
+    "dp_caida": 0.5424,
+    "dp_cumple": true
+   },
+   "real->hil": {
+    "par": "real->hil",
+    "adicional": false,
+    "referencia": "P-grupo de E2 (sin placa alternativa; de 25)",
+    "auroc_pgrupo_completo": 0.9942,
+    "auroc_pgrupo_igualado": null,
+    "auroc_lobo": null,
+    "auroc_transferencia": 0.6849,
+    "auroc_transferencia_igualada": null,
+    "caida_e2": 0.3093,
+    "caida": 0.3093,
+    "caida_ic_lo": 0.3004,
+    "caida_ic_hi": 0.3176,
+    "auroc_dominio": 0.9999,
+    "cumple": true,
+    "cumple_con_ic": true,
+    "caida_ambas_igualadas": null,
+    "cumple_ambas_igualadas": true,
+    "dp_caida": 0.3093,
+    "dp_cumple": true
+   }
+  },
+  "pares_que_cumplen": 6,
+  "veredicto": "se mantiene",
+  "pares_que_cumplen_con_ic": 3,
+  "veredicto_con_ic": "no se mantiene",
+  "sensibilidad_transferencia_igualada": {
+   "pares_que_cumplen": 7,
+   "veredicto": "se mantiene"
+  },
+  "sensibilidad_auroc_dentro_de_placa": {
+   "pares_que_cumplen": 4,
+   "veredicto": "se mantiene"
+  }
+ },
+ "meta": {
+  "post_hoc": true,
+  "modelo": "rf de E2",
+  "conjunto": "base (F2, 17 canales)",
+  "bootstrap_reps": 1000,
+  "semilla_bootstrap": "e2.SEMILLA + 1000 + índice del destino (como 13 y 25)",
+  "procesos": 6,
+  "semillas_submuestreo": 5,
+  "submuestreo": "grupos al azar: primero con positivas hasta igualar las positivas del train de LOBO, después sin positivas hasta igualar las ventanas; si no hay bastante, todo lo disponible (tope)",
+  "semilla_submuestreo": "default_rng([SEMILLA, 26, destino, placa, asignación, pliegue]); transferencia [SEMILLA, 27, par, placa, semilla]",
+  "auroc": "puntuaciones fuera de pliegue reunidas; media de las 5 asignaciones o semillas",
+  "versiones": {
+   "numpy": "2.5.1",
+   "pandas": "3.0.3",
+   "scikit_learn": "1.9.0"
+  }
+ }
+}

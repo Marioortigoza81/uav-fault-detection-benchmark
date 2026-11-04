@@ -1,0 +1,6549 @@
+{
+ "meta": {
+  "semilla_modelos_y_particiones": 0,
+  "semilla_bootstrap": 20261103,
+  "replicas_bootstrap": 1000,
+  "unidad_bootstrap": "vuelo (UAV-FD: fichero; ALFA: bag; RflyMAD: identificador de caso)",
+  "modelos": {
+   "rf": "RandomForestClassifier(n_estimators=200, random_state=0), imputación por mediana",
+   "logreg": "LogisticRegression(max_iter=5000) tras imputación por mediana y StandardScaler"
+  },
+  "umbral_clase": "argmax de la probabilidad (0,5 en binario); sin pesos de clase",
+  "rasgos_por_canal": [
+   "media",
+   "std",
+   "min",
+   "max",
+   "rango",
+   "energia_dif"
+  ],
+  "protocolos": {
+   "P-ventana": "StratifiedKFold(5, shuffle, semilla 0) por ventana: cada pliegue es un 80/20 aleatorio estratificado",
+   "P-autores": "solo UAV-FD: train_test_split 70/30 estratificado por vuelo (réplica de cvpartition Holdout 0,3 de main.m:166)",
+   "P-vuelo": "UAV-FD LeaveOneGroupOut por vuelo (18); ALFA GroupKFold(5) por bag (vuelo); RflyMAD GroupKFold(5) por id de caso",
+   "P-sesion": "UAV-FD LeaveOneGroupOut por sesión de grabación (3); ALFA LeaveOneGroupOut por fecha (5); RflyMAD GroupKFold(5) por fecha"
+  },
+  "metricas_cv": "calculadas sobre las predicciones fuera de pliegue agrupadas",
+  "control_metricas_rapidas_vs_sklearn": {
+   "configuraciones": 90,
+   "max_dif_abs": 2.22e-16
+  }
+ },
+ "uav_fd": {
+  "datos": {
+   "ventana_s": 1.0,
+   "n_ventanas": 1240,
+   "n_positivas": 886,
+   "frac_positivas": 0.7145,
+   "n_vuelos_grupo": 18,
+   "n_sesiones_grupo": 3,
+   "n_rasgos_total": 193,
+   "n_rasgos_fisicos": 186,
+   "n_rasgos_atajo": 7,
+   "canales_fisicos": [
+    "acc_x",
+    "acc_y",
+    "acc_z",
+    "gyr_x",
+    "gyr_y",
+    "gyr_z",
+    "roll",
+    "pitch",
+    "err_roll",
+    "err_pitch",
+    "pwm_1",
+    "pwm_2",
+    "pwm_3",
+    "pwm_4",
+    "pwm_5",
+    "pwm_6",
+    "rpm_1",
+    "rpm_2",
+    "rpm_3",
+    "rpm_4",
+    "rpm_5",
+    "rpm_6",
+    "cur_1",
+    "cur_2",
+    "cur_3",
+    "cur_4",
+    "cur_5",
+    "cur_6",
+    "vibe_x",
+    "vibe_y",
+    "vibe_z"
+   ],
+   "atajos": [
+    "t_desde_arranque_s",
+    "pos_rel_en_vuelo",
+    "stat_bootcnt",
+    "cabecera_pcwin64",
+    "tiene_label_fault",
+    "vibe12_int32",
+    "bytes_fichero"
+   ]
+  },
+  "ventanas_por_clase_3": {
+   "0": 354,
+   "1": 382,
+   "2": 504
+  },
+  "sesiones": {
+   "S1_N1_y_5pct_2022-10-07": [
+    "M1_5",
+    "M2_5",
+    "M3_5",
+    "M4_5",
+    "M5_5",
+    "M6_5",
+    "N1"
+   ],
+   "S2_N2-N6_2022-10-13": [
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6"
+   ],
+   "S3_10pct_2022-10-20": [
+    "M1_10",
+    "M2_10",
+    "M3_10",
+    "M4_10",
+    "M5_10",
+    "M6_10"
+   ]
+  },
+  "resultados": {
+   "fallo_vs_sin_fallo": {
+    "completo": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9884,
+        "ic95": [
+         0.9793,
+         0.9956
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9872,
+        "ic95": [
+         0.9663,
+         0.9962
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9994,
+        "ic95": [
+         0.9983,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9998,
+        "ic95": [
+         0.999,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9868,
+        "ic95": [
+         0.9711,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9868,
+        "ic95": [
+         0.9665,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9996,
+        "ic95": [
+         0.9981,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9998,
+        "ic95": [
+         0.999,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.8469,
+        "ic95": [
+         0.692,
+         0.9745
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.8538,
+        "ic95": [
+         0.6929,
+         0.9615
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9415,
+        "ic95": [
+         0.8478,
+         0.9978
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9781,
+        "ic95": [
+         0.9254,
+         0.9993
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.2667,
+        "ic95": [
+         0.112,
+         0.4475
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.2811,
+        "ic95": [
+         0.124,
+         0.4366
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.0894,
+        "ic95": [
+         0.0,
+         0.3278
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.5234,
+        "ic95": [
+         0.3206,
+         0.7602
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1415,
+         "ic95": [
+          0.0163,
+          0.2982
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1334,
+         "ic95": [
+          0.0308,
+          0.281
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0579,
+         "ic95": [
+          0.0022,
+          0.1509
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0217,
+         "ic95": [
+          0.0007,
+          0.0734
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.7217,
+         "ic95": [
+          0.5438,
+          0.871
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.7061,
+         "ic95": [
+          0.5576,
+          0.8596
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.91,
+         "ic95": [
+          0.6714,
+          0.9999
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4763,
+         "ic95": [
+          0.2398,
+          0.6793
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.5802,
+         "ic95": [
+          0.2856,
+          0.7917
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.5727,
+         "ic95": [
+          0.3368,
+          0.7585
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.8521,
+         "ic95": [
+          0.5827,
+          0.9976
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4547,
+         "ic95": [
+          0.2339,
+          0.6404
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1452,
+         "ic95": [
+          0.0162,
+          0.3088
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1383,
+         "ic95": [
+          0.0343,
+          0.2899
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0584,
+         "ic95": [
+          0.002,
+          0.1542
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0213,
+         "ic95": [
+          0.0006,
+          0.0708
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.989,
+        "ic95": [
+         0.9814,
+         0.996
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9882,
+        "ic95": [
+         0.9723,
+         0.9961
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9995,
+        "ic95": [
+         0.9986,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9998,
+        "ic95": [
+         0.9992,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9793,
+        "ic95": [
+         0.9531,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9834,
+        "ic95": [
+         0.9636,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9988,
+        "ic95": [
+         0.9959,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9995,
+        "ic95": [
+         0.9978,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.9029,
+        "ic95": [
+         0.7637,
+         0.9829
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.8968,
+        "ic95": [
+         0.7512,
+         0.981
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9721,
+        "ic95": [
+         0.9186,
+         0.9984
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9895,
+        "ic95": [
+         0.9615,
+         0.9996
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.328,
+        "ic95": [
+         0.1536,
+         0.5146
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.3368,
+        "ic95": [
+         0.1711,
+         0.4933
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.4802,
+        "ic95": [
+         0.2236,
+         0.7177
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.7832,
+        "ic95": [
+         0.5106,
+         0.9295
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.0861,
+         "ic95": [
+          0.0103,
+          0.2158
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0914,
+         "ic95": [
+          0.0116,
+          0.2257
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0274,
+         "ic95": [
+          0.0013,
+          0.0799
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0103,
+         "ic95": [
+          0.0003,
+          0.0374
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.661,
+         "ic95": [
+          0.4745,
+          0.8337
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.6513,
+         "ic95": [
+          0.4957,
+          0.8129
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.5193,
+         "ic95": [
+          0.2822,
+          0.7756
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.2166,
+         "ic95": [
+          0.0705,
+          0.4885
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.5749,
+         "ic95": [
+          0.2765,
+          0.7782
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.56,
+         "ic95": [
+          0.3155,
+          0.7402
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.4919,
+         "ic95": [
+          0.2416,
+          0.7477
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.2062,
+         "ic95": [
+          0.0632,
+          0.4696
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.0904,
+         "ic95": [
+          0.023,
+          0.2022
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0978,
+         "ic95": [
+          0.0256,
+          0.2174
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0279,
+         "ic95": [
+          0.0015,
+          0.0802
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0103,
+         "ic95": [
+          0.0004,
+          0.0379
+         ]
+        }
+       }
+      }
+     }
+    },
+    "sin_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9622,
+        "ic95": [
+         0.9336,
+         0.9805
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9579,
+        "ic95": [
+         0.8931,
+         0.9839
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9953,
+        "ic95": [
+         0.9862,
+         0.9998
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9982,
+        "ic95": [
+         0.9919,
+         0.9999
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9661,
+        "ic95": [
+         0.9249,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9609,
+        "ic95": [
+         0.8878,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9949,
+        "ic95": [
+         0.9822,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.998,
+        "ic95": [
+         0.9904,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.8628,
+        "ic95": [
+         0.7752,
+         0.934
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.857,
+        "ic95": [
+         0.7364,
+         0.9359
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9369,
+        "ic95": [
+         0.8459,
+         0.9962
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9781,
+        "ic95": [
+         0.9283,
+         0.9985
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.4038,
+        "ic95": [
+         0.2476,
+         0.5793
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.3987,
+        "ic95": [
+         0.2519,
+         0.5624
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.2429,
+        "ic95": [
+         0.0746,
+         0.5003
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.5642,
+        "ic95": [
+         0.3465,
+         0.8027
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.0994,
+         "ic95": [
+          0.0379,
+          0.1754
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1009,
+         "ic95": [
+          0.0418,
+          0.1776
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0584,
+         "ic95": [
+          0.0036,
+          0.1425
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0201,
+         "ic95": [
+          0.0014,
+          0.0649
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.5583,
+         "ic95": [
+          0.3947,
+          0.7007
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.5591,
+         "ic95": [
+          0.3912,
+          0.7
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.7524,
+         "ic95": [
+          0.4957,
+          0.9208
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4339,
+         "ic95": [
+          0.1971,
+          0.6459
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.4589,
+         "ic95": [
+          0.2433,
+          0.6069
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.4582,
+         "ic95": [
+          0.2474,
+          0.6174
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.694,
+         "ic95": [
+          0.4286,
+          0.8813
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4139,
+         "ic95": [
+          0.1855,
+          0.6121
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.099,
+         "ic95": [
+          0.04,
+          0.1625
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0979,
+         "ic95": [
+          0.0445,
+          0.1621
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.056,
+         "ic95": [
+          0.0045,
+          0.1334
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0191,
+         "ic95": [
+          0.0013,
+          0.0611
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9703,
+        "ic95": [
+         0.9426,
+         0.9928
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9703,
+        "ic95": [
+         0.9378,
+         0.9897
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9975,
+        "ic95": [
+         0.9933,
+         0.9997
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.999,
+        "ic95": [
+         0.996,
+         0.9999
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9613,
+        "ic95": [
+         0.9158,
+         0.9965
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9666,
+        "ic95": [
+         0.9292,
+         0.9932
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9961,
+        "ic95": [
+         0.9887,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9984,
+        "ic95": [
+         0.9933,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.9243,
+        "ic95": [
+         0.8572,
+         0.9748
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9069,
+        "ic95": [
+         0.7892,
+         0.9722
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.973,
+        "ic95": [
+         0.9273,
+         0.9968
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9902,
+        "ic95": [
+         0.9624,
+         0.9991
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.4931,
+        "ic95": [
+         0.3594,
+         0.6341
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.4927,
+        "ic95": [
+         0.3564,
+         0.6172
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.6266,
+        "ic95": [
+         0.3936,
+         0.8256
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.8524,
+        "ic95": [
+         0.6291,
+         0.9583
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.046,
+         "ic95": [
+          0.0121,
+          0.094
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0634,
+         "ic95": [
+          0.0112,
+          0.1521
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0244,
+         "ic95": [
+          0.0023,
+          0.0662
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0088,
+         "ic95": [
+          0.0006,
+          0.0334
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.4772,
+         "ic95": [
+          0.3461,
+          0.6012
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.4776,
+         "ic95": [
+          0.3594,
+          0.5989
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.3708,
+         "ic95": [
+          0.1736,
+          0.6001
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1466,
+         "ic95": [
+          0.0413,
+          0.3698
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.4312,
+         "ic95": [
+          0.3047,
+          0.5451
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.4142,
+         "ic95": [
+          0.2906,
+          0.5344
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.3464,
+         "ic95": [
+          0.1638,
+          0.5616
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1378,
+         "ic95": [
+          0.0388,
+          0.3553
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.047,
+         "ic95": [
+          0.0111,
+          0.096
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0683,
+         "ic95": [
+          0.0115,
+          0.165
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0249,
+         "ic95": [
+          0.0015,
+          0.0691
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0091,
+         "ic95": [
+          0.0004,
+          0.035
+         ]
+        }
+       }
+      }
+     }
+    },
+    "solo_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.839,
+        "ic95": [
+         0.6283,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.8738,
+        "ic95": [
+         0.6363,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.8835,
+        "ic95": [
+         0.6909,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9249,
+        "ic95": [
+         0.7683,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.0551,
+        "ic95": [
+         0.0,
+         0.1921
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.0305,
+        "ic95": [
+         0.0,
+         0.0945
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.0001,
+        "ic95": [
+         0.0,
+         0.0007
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.5457,
+        "ic95": [
+         0.3471,
+         0.7694
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.161,
+         "ic95": [
+          0.0,
+          0.3717
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1262,
+         "ic95": [
+          0.0,
+          0.3637
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1165,
+         "ic95": [
+          0.0,
+          0.3091
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0751,
+         "ic95": [
+          0.0,
+          0.2317
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.9449,
+         "ic95": [
+          0.8079,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.9695,
+         "ic95": [
+          0.9055,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.9999,
+         "ic95": [
+          0.9993,
+          1.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4543,
+         "ic95": [
+          0.2306,
+          0.6529
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.7839,
+         "ic95": [
+          0.474,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.8433,
+         "ic95": [
+          0.5759,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.8833,
+         "ic95": [
+          0.6907,
+          1.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.3792,
+         "ic95": [
+          0.192,
+          0.5492
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1651,
+         "ic95": [
+          0.0,
+          0.3753
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1297,
+         "ic95": [
+          0.0,
+          0.3691
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1179,
+         "ic95": [
+          0.0,
+          0.3105
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0755,
+         "ic95": [
+          0.0,
+          0.2292
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9314,
+        "ic95": [
+         0.7852,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.9369,
+        "ic95": [
+         0.8024,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9531,
+        "ic95": [
+         0.8239,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.977,
+        "ic95": [
+         0.8994,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9359,
+        "ic95": [
+         0.7926,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.946,
+        "ic95": [
+         0.8228,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.9515,
+        "ic95": [
+         0.8177,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.9762,
+        "ic95": [
+         0.8966,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.7532,
+        "ic95": [
+         0.5139,
+         0.9494
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.745,
+        "ic95": [
+         0.5104,
+         0.9115
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.8396,
+        "ic95": [
+         0.5881,
+         1.0
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.8905,
+        "ic95": [
+         0.6732,
+         1.0
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.1081,
+        "ic95": [
+         0.0,
+         0.2844
+        ],
+        "replicas_validas": 997
+       },
+       "f1_macro": {
+        "valor": 0.1055,
+        "ic95": [
+         0.0,
+         0.2371
+        ],
+        "replicas_validas": 997
+       },
+       "auroc": {
+        "valor": 0.1823,
+        "ic95": [
+         0.0,
+         0.4742
+        ],
+        "replicas_validas": 997
+       },
+       "auprc": {
+        "valor": 0.6124,
+        "ic95": [
+         0.3384,
+         0.8477
+        ],
+        "replicas_validas": 997
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1782,
+         "ic95": [
+          0.0249,
+          0.4012
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1919,
+         "ic95": [
+          0.0421,
+          0.4031
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1136,
+         "ic95": [
+          0.0,
+          0.3004
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0865,
+         "ic95": [
+          0.0,
+          0.2595
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.8232,
+         "ic95": [
+          0.5318,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.8314,
+         "ic95": [
+          0.6162,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.7708,
+         "ic95": [
+          0.4188,
+          1.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.3646,
+         "ic95": [
+          0.1392,
+          0.6115
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.6451,
+         "ic95": [
+          0.3264,
+          0.8989
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.6395,
+         "ic95": [
+          0.3739,
+          0.8546
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.6573,
+         "ic95": [
+          0.1898,
+          1.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.2781,
+         "ic95": [
+          0.058,
+          0.523
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1856,
+         "ic95": [
+          0.0256,
+          0.4139
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.2028,
+         "ic95": [
+          0.0428,
+          0.4188
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1147,
+         "ic95": [
+          0.0,
+          0.2993
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0872,
+         "ic95": [
+          0.0,
+          0.2593
+         ]
+        }
+       }
+      }
+     }
+    }
+   },
+   "tres_clases_autores": {
+    "completo": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9973,
+        "ic95": [
+         0.9927,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9973,
+        "ic95": [
+         0.9922,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         0.9999,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         0.9998,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9937,
+        "ic95": [
+         0.9848,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9939,
+        "ic95": [
+         0.9821,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9996,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9998,
+        "ic95": [
+         0.9989,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.8554,
+        "ic95": [
+         0.712,
+         0.9775
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8557,
+        "ic95": [
+         0.6934,
+         0.9724
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9641,
+        "ic95": [
+         0.9089,
+         0.9992
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9123,
+        "ic95": [
+         0.7783,
+         0.9973
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.0367,
+        "ic95": [
+         0.0,
+         0.1281
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.0288,
+        "ic95": [
+         0.0,
+         0.0885
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.0457,
+        "ic95": [
+         0.0035,
+         0.1366
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.2957,
+        "ic95": [
+         0.2757,
+         0.3334
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1419,
+         "ic95": [
+          0.0206,
+          0.2865
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1416,
+         "ic95": [
+          0.0262,
+          0.2995
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0359,
+         "ic95": [
+          0.0008,
+          0.091
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0877,
+         "ic95": [
+          0.0027,
+          0.2217
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.9606,
+         "ic95": [
+          0.8689,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.9685,
+         "ic95": [
+          0.9088,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.9542,
+         "ic95": [
+          0.8634,
+          0.9965
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.7043,
+         "ic95": [
+          0.6665,
+          0.7243
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.8186,
+         "ic95": [
+          0.6143,
+          0.9775
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.827,
+         "ic95": [
+          0.6344,
+          0.9724
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.9184,
+         "ic95": [
+          0.8003,
+          0.9928
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.6166,
+         "ic95": [
+          0.4677,
+          0.6976
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1409,
+         "ic95": [
+          0.0142,
+          0.2857
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1409,
+         "ic95": [
+          0.0219,
+          0.3052
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0386,
+         "ic95": [
+          0.0007,
+          0.0953
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0947,
+         "ic95": [
+          0.0021,
+          0.2217
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9919,
+        "ic95": [
+         0.9855,
+         0.9977
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9918,
+        "ic95": [
+         0.9827,
+         0.9973
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9997,
+        "ic95": [
+         0.9993,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9993,
+        "ic95": [
+         0.9979,
+         0.9999
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9876,
+        "ic95": [
+         0.9717,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9879,
+        "ic95": [
+         0.9688,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9998,
+        "ic95": [
+         0.9992,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9995,
+        "ic95": [
+         0.9976,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.8461,
+        "ic95": [
+         0.6787,
+         0.9752
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8413,
+        "ic95": [
+         0.6538,
+         0.97
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9283,
+        "ic95": [
+         0.8112,
+         0.9971
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.8582,
+        "ic95": [
+         0.6925,
+         0.989
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.0499,
+        "ic95": [
+         0.0096,
+         0.1379
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.0427,
+        "ic95": [
+         0.0055,
+         0.1059
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.1698,
+        "ic95": [
+         0.0796,
+         0.257
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.3425,
+        "ic95": [
+         0.301,
+         0.4295
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1459,
+         "ic95": [
+          0.0197,
+          0.3093
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1505,
+         "ic95": [
+          0.0235,
+          0.3308
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0714,
+         "ic95": [
+          0.0027,
+          0.1885
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1411,
+         "ic95": [
+          0.0104,
+          0.3067
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.942,
+         "ic95": [
+          0.8507,
+          0.9851
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.9491,
+         "ic95": [
+          0.8824,
+          0.9867
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.8299,
+         "ic95": [
+          0.743,
+          0.9198
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.6568,
+         "ic95": [
+          0.5693,
+          0.6982
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.7962,
+         "ic95": [
+          0.5685,
+          0.9598
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.7986,
+         "ic95": [
+          0.5651,
+          0.9588
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.7585,
+         "ic95": [
+          0.607,
+          0.8977
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.5157,
+         "ic95": [
+          0.3049,
+          0.6771
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1542,
+         "ic95": [
+          0.0383,
+          0.312
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1583,
+         "ic95": [
+          0.041,
+          0.3334
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0735,
+         "ic95": [
+          0.0023,
+          0.194
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1445,
+         "ic95": [
+          0.0075,
+          0.3132
+         ]
+        }
+       }
+      }
+     }
+    },
+    "sin_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9592,
+        "ic95": [
+         0.9087,
+         0.9854
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9585,
+        "ic95": [
+         0.8979,
+         0.9847
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9968,
+        "ic95": [
+         0.992,
+         0.9995
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9929,
+        "ic95": [
+         0.9774,
+         0.9986
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.955,
+        "ic95": [
+         0.8993,
+         0.9914
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9541,
+        "ic95": [
+         0.8886,
+         0.99
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9948,
+        "ic95": [
+         0.986,
+         0.9997
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.989,
+        "ic95": [
+         0.9611,
+         0.9988
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.7733,
+        "ic95": [
+         0.6675,
+         0.8875
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.7668,
+        "ic95": [
+         0.6363,
+         0.8678
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9116,
+        "ic95": [
+         0.8258,
+         0.979
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.8169,
+        "ic95": [
+         0.6736,
+         0.9453
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.0377,
+        "ic95": [
+         0.0,
+         0.1297
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.0403,
+        "ic95": [
+         0.0,
+         0.1195
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.1082,
+        "ic95": [
+         0.0401,
+         0.2039
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.3146,
+        "ic95": [
+         0.2889,
+         0.4023
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1859,
+         "ic95": [
+          0.088,
+          0.2795
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1917,
+         "ic95": [
+          0.099,
+          0.2987
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0852,
+         "ic95": [
+          0.0199,
+          0.1666
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.176,
+         "ic95": [
+          0.0514,
+          0.3083
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.9215,
+         "ic95": [
+          0.8172,
+          0.9813
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.9182,
+         "ic95": [
+          0.8219,
+          0.9798
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.8886,
+         "ic95": [
+          0.7943,
+          0.9555
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.6783,
+         "ic95": [
+          0.5937,
+          0.7045
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.7356,
+         "ic95": [
+          0.5758,
+          0.8702
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.7265,
+         "ic95": [
+          0.5667,
+          0.8569
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.8034,
+         "ic95": [
+          0.693,
+          0.9012
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.5023,
+         "ic95": [
+          0.3347,
+          0.632
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1993,
+         "ic95": [
+          0.0949,
+          0.2969
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.2076,
+         "ic95": [
+          0.1052,
+          0.3246
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0874,
+         "ic95": [
+          0.0212,
+          0.1684
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1795,
+         "ic95": [
+          0.0584,
+          0.3028
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9782,
+        "ic95": [
+         0.9651,
+         0.9895
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9778,
+        "ic95": [
+         0.9581,
+         0.9873
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9986,
+        "ic95": [
+         0.9971,
+         0.9997
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.997,
+        "ic95": [
+         0.992,
+         0.9991
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9675,
+        "ic95": [
+         0.9351,
+         0.9913
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9664,
+        "ic95": [
+         0.9252,
+         0.9891
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9966,
+        "ic95": [
+         0.9929,
+         0.9993
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9928,
+        "ic95": [
+         0.9792,
+         0.9983
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.8562,
+        "ic95": [
+         0.7489,
+         0.9431
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8451,
+        "ic95": [
+         0.7007,
+         0.9358
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9618,
+        "ic95": [
+         0.9205,
+         0.9903
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9274,
+        "ic95": [
+         0.8298,
+         0.977
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.146,
+        "ic95": [
+         0.0695,
+         0.2182
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.1301,
+        "ic95": [
+         0.0482,
+         0.1943
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.2308,
+        "ic95": [
+         0.1535,
+         0.295
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.3762,
+        "ic95": [
+         0.322,
+         0.4654
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1219,
+         "ic95": [
+          0.0391,
+          0.2251
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1326,
+         "ic95": [
+          0.045,
+          0.2597
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0367,
+         "ic95": [
+          0.0091,
+          0.0772
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0696,
+         "ic95": [
+          0.021,
+          0.1627
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.8322,
+         "ic95": [
+          0.7643,
+          0.9034
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.8476,
+         "ic95": [
+          0.7814,
+          0.918
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.7677,
+         "ic95": [
+          0.704,
+          0.8446
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.6209,
+         "ic95": [
+          0.5305,
+          0.674
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.7103,
+         "ic95": [
+          0.5867,
+          0.8185
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.715,
+         "ic95": [
+          0.576,
+          0.8152
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.731,
+         "ic95": [
+          0.6682,
+          0.8048
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.5512,
+         "ic95": [
+          0.4221,
+          0.6277
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1056,
+         "ic95": [
+          0.0278,
+          0.2001
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1152,
+         "ic95": [
+          0.0339,
+          0.2356
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0333,
+         "ic95": [
+          0.0078,
+          0.0697
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0639,
+         "ic95": [
+          0.0188,
+          0.1508
+         ]
+        }
+       }
+      }
+     }
+    },
+    "solo_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.8927,
+        "ic95": [
+         0.7505,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8927,
+        "ic95": [
+         0.6974,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.8986,
+        "ic95": [
+         0.7663,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.8107,
+        "ic95": [
+         0.6265,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.0367,
+        "ic95": [
+         0.0,
+         0.1281
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.0203,
+        "ic95": [
+         0.0,
+         0.0632
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.1516,
+        "ic95": [
+         0.1182,
+         0.1696
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.3233,
+        "ic95": [
+         0.3111,
+         0.3326
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.1073,
+         "ic95": [
+          0.0,
+          0.2495
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1073,
+         "ic95": [
+          0.0,
+          0.3026
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1014,
+         "ic95": [
+          0.0,
+          0.2337
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1893,
+         "ic95": [
+          0.0,
+          0.3735
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.9633,
+         "ic95": [
+          0.8719,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.9797,
+         "ic95": [
+          0.9368,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.8484,
+         "ic95": [
+          0.8304,
+          0.8818
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.6767,
+         "ic95": [
+          0.6674,
+          0.6889
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.8559,
+         "ic95": [
+          0.6471,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.8724,
+         "ic95": [
+          0.6644,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.747,
+         "ic95": [
+          0.6064,
+          0.861
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4874,
+         "ic95": [
+          0.3074,
+          0.6682
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.1101,
+         "ic95": [
+          0.0,
+          0.2519
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1103,
+         "ic95": [
+          0.0,
+          0.3078
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1043,
+         "ic95": [
+          0.0,
+          0.2397
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1939,
+         "ic95": [
+          0.0,
+          0.3724
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9458,
+        "ic95": [
+         0.8401,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9463,
+        "ic95": [
+         0.8352,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9696,
+        "ic95": [
+         0.8949,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.9015,
+        "ic95": [
+         0.7644,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-autores": {
+       "n_ventanas_evaluadas": 372,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 1,
+       "balanced_accuracy": {
+        "valor": 0.9418,
+        "ic95": [
+         0.8302,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9422,
+        "ic95": [
+         0.8268,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9683,
+        "ic95": [
+         0.8915,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.8987,
+        "ic95": [
+         0.7616,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 18,
+       "balanced_accuracy": {
+        "valor": 0.7424,
+        "ic95": [
+         0.5058,
+         0.9274
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.7443,
+        "ic95": [
+         0.5024,
+         0.9179
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.8072,
+        "ic95": [
+         0.5842,
+         1.0
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.7154,
+        "ic95": [
+         0.5343,
+         1.0
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 1240,
+       "n_vuelos_evaluados": 18,
+       "n_pliegues": 3,
+       "balanced_accuracy": {
+        "valor": 0.0367,
+        "ic95": [
+         0.0,
+         0.1281
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.0219,
+        "ic95": [
+         0.0,
+         0.0685
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.0683,
+        "ic95": [
+         0.0,
+         0.175
+        ],
+        "replicas_validas": 996
+       },
+       "auprc": {
+        "valor": 0.2999,
+        "ic95": [
+         0.277,
+         0.3613
+        ],
+        "replicas_validas": 996
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.2035,
+         "ic95": [
+          0.0383,
+          0.4174
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.202,
+         "ic95": [
+          0.0448,
+          0.4133
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1625,
+         "ic95": [
+          0.0,
+          0.3925
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1861,
+         "ic95": [
+          0.0,
+          0.3892
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.9091,
+         "ic95": [
+          0.7198,
+          1.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.9244,
+         "ic95": [
+          0.7764,
+          1.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.9013,
+         "ic95": [
+          0.7384,
+          1.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.6015,
+         "ic95": [
+          0.4108,
+          0.7183
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 1240,
+        "balanced_accuracy": {
+         "diferencia": 0.7056,
+         "ic95": [
+          0.4388,
+          0.9145
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.7224,
+         "ic95": [
+          0.4702,
+          0.9099
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.7388,
+         "ic95": [
+          0.4406,
+          1.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4155,
+         "ic95": [
+          0.2025,
+          0.6761
+         ]
+        }
+       },
+       "P-autores_menos_P-vuelo": {
+        "n_ventanas_comunes": 372,
+        "balanced_accuracy": {
+         "diferencia": 0.201,
+         "ic95": [
+          0.0353,
+          0.4122
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1995,
+         "ic95": [
+          0.0411,
+          0.4093
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.162,
+         "ic95": [
+          0.0,
+          0.391
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1844,
+         "ic95": [
+          0.0,
+          0.3887
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "alfa": {
+  "datos": {
+   "ventana_s": 2.0,
+   "n_ventanas": 2290,
+   "n_positivas": 351,
+   "frac_positivas": 0.1533,
+   "n_vuelos_grupo": 30,
+   "n_sesiones_grupo": 5,
+   "n_rasgos_total": 310,
+   "n_rasgos_fisicos": 252,
+   "n_rasgos_atajo": 58,
+   "canales_fisicos": [
+    "roll_cmd",
+    "roll_meas",
+    "pitch_cmd",
+    "pitch_meas",
+    "asp_cmd",
+    "asp_meas",
+    "alt_error",
+    "aspd_error",
+    "xtrack_error",
+    "wp_dist",
+    "vfr_airspeed",
+    "vfr_groundspeed",
+    "vfr_alt",
+    "vfr_climb",
+    "rel_alt",
+    "gyro_x",
+    "gyro_y",
+    "gyro_z",
+    "acc_x",
+    "acc_y",
+    "acc_z",
+    "rcin_c0",
+    "rcin_c1",
+    "rcin_c2",
+    "rcin_c3",
+    "vel_x",
+    "vel_y",
+    "vel_z",
+    "wind_x",
+    "wind_y",
+    "pressure",
+    "ctrl_roll",
+    "ctrl_pitch",
+    "path_dev_y",
+    "path_dev_z",
+    "roll_err",
+    "pitch_err",
+    "yaw_err",
+    "asp_err",
+    "yaw_rate",
+    "turn_err",
+    "acc_norm"
+   ],
+   "atajos": [
+    "rcout_c0",
+    "rcout_c1",
+    "rcout_c2",
+    "rcout_c3",
+    "rcout_c4",
+    "rcout_c5",
+    "rcout_c6",
+    "rcout_c7",
+    "vfr_throttle",
+    "tiene_failure_status",
+    "tiene_emr_traj",
+    "t_desde_inicio_s",
+    "t_hasta_fin_s"
+   ],
+   "ventanas_excluidas_por_contener_el_fallo": 34,
+   "secuencias": 46,
+   "ventanas_positivas_por_tipo": {
+    "aleron": 166,
+    "elevador": 10,
+    "motor": 157,
+    "sin_fallo": 0,
+    "timon": 18
+   }
+  },
+  "resultados": {
+   "fallo_vs_sin_fallo": {
+    "completo": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9938,
+        "ic95": [
+         0.988,
+         0.9983
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9949,
+        "ic95": [
+         0.9908,
+         0.9983
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9997,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9995,
+        "ic95": [
+         0.9981,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9557,
+        "ic95": [
+         0.8878,
+         0.9948
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9688,
+        "ic95": [
+         0.9228,
+         0.9944
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9984,
+        "ic95": [
+         0.9967,
+         0.9997
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9902,
+        "ic95": [
+         0.9777,
+         0.9986
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.841,
+        "ic95": [
+         0.7376,
+         0.9558
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8796,
+        "ic95": [
+         0.7865,
+         0.9576
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9854,
+        "ic95": [
+         0.9711,
+         0.9966
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9394,
+        "ic95": [
+         0.8836,
+         0.9798
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0381,
+         "ic95": [
+          0.0003,
+          0.1034
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0261,
+         "ic95": [
+          0.0011,
+          0.0695
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0015,
+         "ic95": [
+          0.0002,
+          0.0031
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0093,
+         "ic95": [
+          0.0013,
+          0.0212
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1528,
+         "ic95": [
+          0.0384,
+          0.2554
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1153,
+         "ic95": [
+          0.0383,
+          0.2077
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0145,
+         "ic95": [
+          0.0034,
+          0.0287
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0601,
+         "ic95": [
+          0.0201,
+          0.1153
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1147,
+         "ic95": [
+          0.0042,
+          0.218
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0892,
+         "ic95": [
+          0.014,
+          0.1824
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.013,
+         "ic95": [
+          0.0029,
+          0.0264
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0508,
+         "ic95": [
+          0.015,
+          0.0955
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9584,
+        "ic95": [
+         0.9331,
+         0.979
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9666,
+        "ic95": [
+         0.9473,
+         0.9811
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9974,
+        "ic95": [
+         0.994,
+         0.9994
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9883,
+        "ic95": [
+         0.9734,
+         0.9965
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8221,
+        "ic95": [
+         0.7379,
+         0.9365
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8492,
+        "ic95": [
+         0.779,
+         0.9215
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9303,
+        "ic95": [
+         0.8642,
+         0.9848
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.8137,
+        "ic95": [
+         0.7144,
+         0.9167
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.6834,
+        "ic95": [
+         0.594,
+         0.8048
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.6497,
+        "ic95": [
+         0.5569,
+         0.7575
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.8021,
+        "ic95": [
+         0.7163,
+         0.9047
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.5045,
+        "ic95": [
+         0.4213,
+         0.6862
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1363,
+         "ic95": [
+          0.0251,
+          0.2091
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1174,
+         "ic95": [
+          0.051,
+          0.177
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0671,
+         "ic95": [
+          0.0146,
+          0.1295
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1746,
+         "ic95": [
+          0.0775,
+          0.263
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.2751,
+         "ic95": [
+          0.1606,
+          0.3519
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.3169,
+         "ic95": [
+          0.2108,
+          0.4058
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1953,
+         "ic95": [
+          0.0941,
+          0.2793
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.4838,
+         "ic95": [
+          0.3041,
+          0.5641
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1388,
+         "ic95": [
+          0.0768,
+          0.2069
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1994,
+         "ic95": [
+          0.0996,
+          0.3118
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1282,
+         "ic95": [
+          0.054,
+          0.1966
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.3092,
+         "ic95": [
+          0.1434,
+          0.3946
+         ]
+        }
+       }
+      }
+     }
+    },
+    "sin_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.7747,
+        "ic95": [
+         0.6998,
+         0.8697
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8286,
+        "ic95": [
+         0.7513,
+         0.9128
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9823,
+        "ic95": [
+         0.966,
+         0.9942
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9186,
+        "ic95": [
+         0.8662,
+         0.9689
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.6843,
+        "ic95": [
+         0.6013,
+         0.8208
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.7388,
+        "ic95": [
+         0.6238,
+         0.8727
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.7038,
+        "ic95": [
+         0.5452,
+         0.9598
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.5778,
+        "ic95": [
+         0.4325,
+         0.8392
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.6809,
+        "ic95": [
+         0.599,
+         0.811
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.7342,
+        "ic95": [
+         0.6203,
+         0.8622
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.6895,
+        "ic95": [
+         0.5106,
+         0.9181
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.5667,
+        "ic95": [
+         0.4183,
+         0.7952
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0904,
+         "ic95": [
+          0.0158,
+          0.1535
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0898,
+         "ic95": [
+          0.0138,
+          0.172
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.2785,
+         "ic95": [
+          0.0337,
+          0.4235
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.3408,
+         "ic95": [
+          0.126,
+          0.4558
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0938,
+         "ic95": [
+          0.0209,
+          0.1532
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0943,
+         "ic95": [
+          0.0182,
+          0.1745
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.2928,
+         "ic95": [
+          0.0729,
+          0.4632
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.3519,
+         "ic95": [
+          0.1599,
+          0.4806
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0034,
+         "ic95": [
+          -0.0046,
+          0.0142
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0046,
+         "ic95": [
+          -0.0038,
+          0.0154
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0143,
+         "ic95": [
+          -0.0919,
+          0.0984
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0111,
+         "ic95": [
+          -0.0791,
+          0.1001
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.819,
+        "ic95": [
+         0.7658,
+         0.9074
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8462,
+        "ic95": [
+         0.7995,
+         0.9079
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9396,
+        "ic95": [
+         0.9044,
+         0.9755
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.8288,
+        "ic95": [
+         0.7659,
+         0.9131
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.7187,
+        "ic95": [
+         0.6336,
+         0.8655
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.7323,
+        "ic95": [
+         0.6498,
+         0.8362
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.7977,
+        "ic95": [
+         0.7083,
+         0.9311
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.6113,
+        "ic95": [
+         0.4965,
+         0.8213
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.602,
+        "ic95": [
+         0.5124,
+         0.7333
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.5704,
+        "ic95": [
+         0.4908,
+         0.6512
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.6217,
+        "ic95": [
+         0.54,
+         0.7621
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.2494,
+        "ic95": [
+         0.1978,
+         0.3932
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1003,
+         "ic95": [
+          0.0392,
+          0.1411
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1139,
+         "ic95": [
+          0.061,
+          0.1596
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.1419,
+         "ic95": [
+          0.0379,
+          0.2118
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.2175,
+         "ic95": [
+          0.0915,
+          0.2875
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.217,
+         "ic95": [
+          0.1443,
+          0.2811
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.2759,
+         "ic95": [
+          0.1981,
+          0.359
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.3179,
+         "ic95": [
+          0.198,
+          0.3916
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.5794,
+         "ic95": [
+          0.4477,
+          0.6527
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1167,
+         "ic95": [
+          0.0642,
+          0.1787
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1619,
+         "ic95": [
+          0.0758,
+          0.2729
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.176,
+         "ic95": [
+          0.0916,
+          0.2462
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.3619,
+         "ic95": [
+          0.2234,
+          0.5284
+         ]
+        }
+       }
+      }
+     }
+    },
+    "solo_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9952,
+        "ic95": [
+         0.9907,
+         0.9995
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9958,
+        "ic95": [
+         0.9922,
+         0.999
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9998,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9996,
+        "ic95": [
+         0.9986,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9648,
+        "ic95": [
+         0.9039,
+         0.9983
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9759,
+        "ic95": [
+         0.935,
+         0.9979
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9992,
+        "ic95": [
+         0.9978,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9958,
+        "ic95": [
+         0.986,
+         0.9997
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9526,
+        "ic95": [
+         0.8866,
+         0.9912
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.959,
+        "ic95": [
+         0.9103,
+         0.9872
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9963,
+        "ic95": [
+         0.9905,
+         0.9995
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9834,
+        "ic95": [
+         0.9503,
+         0.9977
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0304,
+         "ic95": [
+          0.0,
+          0.0888
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0199,
+         "ic95": [
+          0.0,
+          0.059
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0007,
+         "ic95": [
+          0.0,
+          0.002
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0038,
+         "ic95": [
+          0.0002,
+          0.0126
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0426,
+         "ic95": [
+          0.0049,
+          0.1064
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0367,
+         "ic95": [
+          0.0098,
+          0.0828
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0036,
+         "ic95": [
+          0.0005,
+          0.0093
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0162,
+         "ic95": [
+          0.0021,
+          0.0487
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0122,
+         "ic95": [
+          0.002,
+          0.0313
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0168,
+         "ic95": [
+          0.0033,
+          0.0391
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0028,
+         "ic95": [
+          0.0002,
+          0.0077
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0124,
+         "ic95": [
+          0.0011,
+          0.0368
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9235,
+        "ic95": [
+         0.8835,
+         0.9597
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9352,
+        "ic95": [
+         0.905,
+         0.9586
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9793,
+        "ic95": [
+         0.9501,
+         0.9953
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9501,
+        "ic95": [
+         0.911,
+         0.9788
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8233,
+        "ic95": [
+         0.757,
+         0.9256
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8496,
+        "ic95": [
+         0.791,
+         0.9124
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9032,
+        "ic95": [
+         0.8421,
+         0.9797
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.809,
+        "ic95": [
+         0.731,
+         0.924
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 2290,
+       "n_vuelos_evaluados": 30,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8207,
+        "ic95": [
+         0.766,
+         0.9099
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8538,
+        "ic95": [
+         0.8057,
+         0.9166
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9217,
+        "ic95": [
+         0.8905,
+         0.9711
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.8303,
+        "ic95": [
+         0.7746,
+         0.9176
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1002,
+         "ic95": [
+          0.0256,
+          0.1611
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0856,
+         "ic95": [
+          0.0339,
+          0.138
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0761,
+         "ic95": [
+          0.013,
+          0.1271
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1411,
+         "ic95": [
+          0.0444,
+          0.2103
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.1028,
+         "ic95": [
+          0.0267,
+          0.1558
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0814,
+         "ic95": [
+          0.0289,
+          0.1279
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0576,
+         "ic95": [
+          0.0067,
+          0.0898
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.1198,
+         "ic95": [
+          0.0298,
+          0.1737
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 2290,
+        "balanced_accuracy": {
+         "diferencia": 0.0026,
+         "ic95": [
+          -0.0357,
+          0.0388
+         ]
+        },
+        "f1_macro": {
+         "diferencia": -0.0042,
+         "ic95": [
+          -0.0338,
+          0.0211
+         ]
+        },
+        "auroc": {
+         "diferencia": -0.0185,
+         "ic95": [
+          -0.0691,
+          0.0392
+         ]
+        },
+        "auprc": {
+         "diferencia": -0.0213,
+         "ic95": [
+          -0.0871,
+          0.0454
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "rflymad": {
+  "datos": {
+   "ventana_s": 5.0,
+   "n_ventanas": 7836,
+   "n_positivas": 3363,
+   "frac_positivas": 0.4292,
+   "n_vuelos_grupo": 440,
+   "n_sesiones_grupo": 18,
+   "n_rasgos_total": 229,
+   "n_rasgos_fisicos": 222,
+   "n_rasgos_atajo": 7,
+   "canales_fisicos": [
+    "gyro_ms",
+    "gyro_x_ms",
+    "gyro_y_ms",
+    "gyro_z_ms",
+    "acc_norm",
+    "acc_norm_ms",
+    "acc_z",
+    "roll",
+    "pitch",
+    "att_dev",
+    "pwm0",
+    "pwm1",
+    "pwm2",
+    "pwm3",
+    "bat_v",
+    "bat_i",
+    "bat_mah",
+    "ci_gps_hvel0",
+    "ci_gps_hvel1",
+    "ci_gps_vvel",
+    "ci_gps_hpos0",
+    "ci_gps_hpos1",
+    "ci_baro_vpos",
+    "ci_heading",
+    "ci_mag0",
+    "ci_mag1",
+    "ci_mag2",
+    "mag_test_ratio",
+    "vel_test_ratio",
+    "pos_test_ratio",
+    "hgt_test_ratio",
+    "vibe0",
+    "vibe1",
+    "vibe2",
+    "z",
+    "vh",
+    "vz"
+   ],
+   "atajos": [
+    "rfly_ctrl_activo_frac",
+    "inyeccion_testinfo_s",
+    "t_desde_inicio_s",
+    "t_hasta_fin_s",
+    "viento_vel_media",
+    "tiene_viento",
+    "n_ordenes_vuelo"
+   ],
+   "casos_leidos": 493,
+   "huella_cache_08": "bfcf46c4acb73f5f",
+   "ventanas_excluidas": {
+    "contiene_inicio_o_fin_del_fallo": 845,
+    "posterior_al_fallo": 2140,
+    "tras_desarme": 157
+   },
+   "ventanas_positivas_por_clase": {
+    "Accelerometer": 201,
+    "Barometer": 338,
+    "GPS": 302,
+    "Gyroscope": 248,
+    "Magnetometer": 259,
+    "Motor": 2015,
+    "No Fault": 0
+   },
+   "ventanas_por_clase": {
+    "Accelerometer": 486,
+    "Barometer": 679,
+    "GPS": 588,
+    "Gyroscope": 519,
+    "Magnetometer": 509,
+    "Motor": 4058,
+    "No Fault": 997
+   }
+  },
+  "resultados": {
+   "fallo_vs_sin_fallo": {
+    "completo": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9995,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9996,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9997,
+        "ic95": [
+         0.9993,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9997,
+        "ic95": [
+         0.9993,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": -0.0001,
+         "ic95": [
+          -0.0005,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": -0.0001,
+         "ic95": [
+          -0.0004,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0001,
+         "ic95": [
+          0.0,
+          0.0004
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0001,
+         "ic95": [
+          0.0,
+          0.0004
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0003,
+         "ic95": [
+          0.0,
+          0.0007
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0003,
+         "ic95": [
+          0.0,
+          0.0007
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9994,
+        "ic95": [
+         0.9987,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9995,
+        "ic95": [
+         0.9988,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9994,
+        "ic95": [
+         0.9982,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9997,
+        "ic95": [
+         0.9989,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9997,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9996,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0006,
+         "ic95": [
+          0.0,
+          0.0013
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0005,
+         "ic95": [
+          0.0,
+          0.0012
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0006,
+         "ic95": [
+          0.0,
+          0.0018
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0003,
+         "ic95": [
+          0.0,
+          0.0011
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0001,
+         "ic95": [
+          0.0,
+          0.0003
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0001,
+         "ic95": [
+          0.0,
+          0.0004
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": -0.0004,
+         "ic95": [
+          -0.0012,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": -0.0004,
+         "ic95": [
+          -0.001,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": -0.0006,
+         "ic95": [
+          -0.0018,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": -0.0003,
+         "ic95": [
+          -0.0011,
+          0.0
+         ]
+        }
+       }
+      }
+     }
+    },
+    "sin_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9419,
+        "ic95": [
+         0.9325,
+         0.9506
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9433,
+        "ic95": [
+         0.9347,
+         0.9515
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9886,
+        "ic95": [
+         0.986,
+         0.9912
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9857,
+        "ic95": [
+         0.9822,
+         0.9891
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9192,
+        "ic95": [
+         0.9079,
+         0.9301
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9213,
+        "ic95": [
+         0.9104,
+         0.9319
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9807,
+        "ic95": [
+         0.9761,
+         0.985
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9756,
+        "ic95": [
+         0.9694,
+         0.9813
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8092,
+        "ic95": [
+         0.7854,
+         0.8319
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8118,
+        "ic95": [
+         0.7874,
+         0.8345
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9201,
+        "ic95": [
+         0.9042,
+         0.9349
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9,
+        "ic95": [
+         0.8785,
+         0.9214
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0227,
+         "ic95": [
+          0.0165,
+          0.0297
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.022,
+         "ic95": [
+          0.0157,
+          0.0289
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0079,
+         "ic95": [
+          0.0055,
+          0.0106
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0101,
+         "ic95": [
+          0.0068,
+          0.0138
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.1327,
+         "ic95": [
+          0.1111,
+          0.1553
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1315,
+         "ic95": [
+          0.1095,
+          0.1542
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0686,
+         "ic95": [
+          0.0543,
+          0.0838
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0857,
+         "ic95": [
+          0.0648,
+          0.1069
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.11,
+         "ic95": [
+          0.0905,
+          0.1304
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.1095,
+         "ic95": [
+          0.0893,
+          0.1309
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0606,
+         "ic95": [
+          0.0475,
+          0.0745
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0756,
+         "ic95": [
+          0.0569,
+          0.0948
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8787,
+        "ic95": [
+         0.8639,
+         0.8914
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8829,
+        "ic95": [
+         0.8689,
+         0.8955
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9542,
+        "ic95": [
+         0.9455,
+         0.9619
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9501,
+        "ic95": [
+         0.94,
+         0.959
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8703,
+        "ic95": [
+         0.8551,
+         0.8843
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8749,
+        "ic95": [
+         0.8607,
+         0.888
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9478,
+        "ic95": [
+         0.9373,
+         0.9571
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9447,
+        "ic95": [
+         0.9329,
+         0.9548
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8311,
+        "ic95": [
+         0.8108,
+         0.8504
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8335,
+        "ic95": [
+         0.8141,
+         0.8524
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9154,
+        "ic95": [
+         0.9004,
+         0.9297
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9112,
+        "ic95": [
+         0.8939,
+         0.928
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0083,
+         "ic95": [
+          0.004,
+          0.0129
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.008,
+         "ic95": [
+          0.0038,
+          0.0127
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0064,
+         "ic95": [
+          0.0029,
+          0.0101
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0055,
+         "ic95": [
+          0.0029,
+          0.0082
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0475,
+         "ic95": [
+          0.0348,
+          0.0598
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0494,
+         "ic95": [
+          0.036,
+          0.0631
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0388,
+         "ic95": [
+          0.0302,
+          0.048
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0389,
+         "ic95": [
+          0.0303,
+          0.0486
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0392,
+         "ic95": [
+          0.028,
+          0.0496
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0414,
+         "ic95": [
+          0.0294,
+          0.0531
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0324,
+         "ic95": [
+          0.0243,
+          0.0405
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0335,
+         "ic95": [
+          0.0254,
+          0.0419
+         ]
+        }
+       }
+      }
+     }
+    },
+    "solo_atajos": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0,
+         "ic95": [
+          0.0,
+          0.0
+         ]
+        }
+       }
+      }
+     }
+    },
+    "solo_atajos_sin_rfly_ctrl": {
+     "rf": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9989,
+        "ic95": [
+         0.9978,
+         0.9997
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9988,
+        "ic95": [
+         0.9977,
+         0.9997
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 1.0,
+        "ic95": [
+         1.0,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9961,
+        "ic95": [
+         0.9932,
+         0.9982
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9956,
+        "ic95": [
+         0.9923,
+         0.998
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9999,
+        "ic95": [
+         0.9997,
+         1.0
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9998,
+        "ic95": [
+         0.9996,
+         1.0
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.9856,
+        "ic95": [
+         0.9794,
+         0.9911
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.9867,
+        "ic95": [
+         0.9809,
+         0.9918
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9993,
+        "ic95": [
+         0.9989,
+         0.9997
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9991,
+        "ic95": [
+         0.9984,
+         0.9996
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0028,
+         "ic95": [
+          0.0008,
+          0.0055
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0033,
+         "ic95": [
+          0.0009,
+          0.0064
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0001,
+         "ic95": [
+          0.0,
+          0.0003
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0002,
+         "ic95": [
+          0.0,
+          0.0004
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0132,
+         "ic95": [
+          0.0082,
+          0.0192
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0121,
+         "ic95": [
+          0.0074,
+          0.0177
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0007,
+         "ic95": [
+          0.0003,
+          0.0011
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0009,
+         "ic95": [
+          0.0004,
+          0.0016
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0104,
+         "ic95": [
+          0.0052,
+          0.0159
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0089,
+         "ic95": [
+          0.0041,
+          0.014
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0005,
+         "ic95": [
+          0.0003,
+          0.0009
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0007,
+         "ic95": [
+          0.0003,
+          0.0012
+         ]
+        }
+       }
+      }
+     },
+     "logreg": {
+      "P-ventana": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8661,
+        "ic95": [
+         0.8516,
+         0.8811
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8675,
+        "ic95": [
+         0.8523,
+         0.8827
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9343,
+        "ic95": [
+         0.9195,
+         0.9493
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.905,
+        "ic95": [
+         0.8751,
+         0.9331
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-vuelo": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8631,
+        "ic95": [
+         0.8477,
+         0.8786
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.8644,
+        "ic95": [
+         0.8488,
+         0.8803
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9326,
+        "ic95": [
+         0.9161,
+         0.9493
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.9013,
+        "ic95": [
+         0.8685,
+         0.9322
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "P-sesion": {
+       "n_ventanas_evaluadas": 7836,
+       "n_vuelos_evaluados": 440,
+       "n_pliegues": 5,
+       "balanced_accuracy": {
+        "valor": 0.8283,
+        "ic95": [
+         0.8132,
+         0.8441
+        ],
+        "replicas_validas": 1000
+       },
+       "f1_macro": {
+        "valor": 0.829,
+        "ic95": [
+         0.8136,
+         0.8452
+        ],
+        "replicas_validas": 1000
+       },
+       "auroc": {
+        "valor": 0.9027,
+        "ic95": [
+         0.8854,
+         0.9197
+        ],
+        "replicas_validas": 1000
+       },
+       "auprc": {
+        "valor": 0.8463,
+        "ic95": [
+         0.8065,
+         0.8845
+        ],
+        "replicas_validas": 1000
+       }
+      },
+      "inflacion": {
+       "P-ventana_menos_P-vuelo": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.003,
+         "ic95": [
+          0.0005,
+          0.0053
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0031,
+         "ic95": [
+          0.0006,
+          0.0055
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0017,
+         "ic95": [
+          -0.0002,
+          0.004
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0037,
+         "ic95": [
+          0.0001,
+          0.0076
+         ]
+        }
+       },
+       "P-ventana_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0378,
+         "ic95": [
+          0.0324,
+          0.0438
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0385,
+         "ic95": [
+          0.0328,
+          0.0449
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0316,
+         "ic95": [
+          0.0249,
+          0.0384
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.0587,
+         "ic95": [
+          0.0399,
+          0.0811
+         ]
+        }
+       },
+       "P-vuelo_menos_P-sesion": {
+        "n_ventanas_comunes": 7836,
+        "balanced_accuracy": {
+         "diferencia": 0.0349,
+         "ic95": [
+          0.0293,
+          0.0403
+         ]
+        },
+        "f1_macro": {
+         "diferencia": 0.0354,
+         "ic95": [
+          0.0297,
+          0.0412
+         ]
+        },
+        "auroc": {
+         "diferencia": 0.0299,
+         "ic95": [
+          0.0227,
+          0.0372
+         ]
+        },
+        "auprc": {
+         "diferencia": 0.055,
+         "ic95": [
+          0.036,
+          0.0789
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

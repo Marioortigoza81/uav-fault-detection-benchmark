@@ -1,0 +1,9 @@
+dataset,numerador,denominador,cociente,ic95_inf,ic95_sup
+uav_sead,solo_atajos,sin_atajos,0.9536,0.9091,0.9878
+alfa,solo_atajos,sin_atajos,1.3742,1.029,1.7114
+alfa,solo_posicion_en_secuencia,sin_atajos,1.2502,0.9867,1.5495
+alfa,solo_atajos,completo,1.0003,0.9993,1.0014
+rflymad,solo_atajos_informativo,sin_atajos,1.0148,1.0101,1.0197
+rflymad,solo_atajos_informativo,completo_informativo,0.9981,0.9958,1
+uav_fd,solo_atajos,sin_atajos,0.9513,0.7845,1.0602
+uav_fd,solo_atajos,completo,0.9481,0.8005,1.0318

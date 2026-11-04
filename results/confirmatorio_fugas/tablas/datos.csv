@@ -1,0 +1,5 @@
+dataset,n_ventanas,n_positivas,prevalencia,unidades_independientes,sesiones,ventana_s,paso_s,rasgos_completo,rasgos_fisicos,rasgos_atajo,eventos,horas_nominales
+uav_sead,57903,2492,0.043,1165,151,5,2.5,143,51,92,318,38.4799
+alfa,2290,351,0.1533,30,5,2,2,310,252,58,36,1.0772
+rflymad,7836,3363,0.4292,440,18,5,5,229,222,7,432,6.2125
+uav_fd,1240,886,0.7145,18,,1,1,193,186,7,,

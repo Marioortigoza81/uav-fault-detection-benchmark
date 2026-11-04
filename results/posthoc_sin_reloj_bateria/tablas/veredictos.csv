@@ -1,0 +1,4 @@
+dataset,variante,canales_retirados,rasgos_retirados,h1_dif,h1_ic_inf,h1_ic_sup,h1_cumple,auroc_pventana,auroc_pgrupo,h2_cociente,h2_ic_inf,h2_ic_sup,h2_cumple,h2_reloj_como_atajo_cociente,h2_reloj_como_atajo_cumple
+alfa,sin_reloj_ampliado,rcin_c3,6,0.2496,0.0237,0.3823,True,0.9829,0.7333,1.0002,0.9994,1.0011,True,1.0004,True
+rflymad,sin_reloj_a_priori,bat_i|bat_mah|bat_v,18,0.0050,0.0034,0.0066,True,0.9832,0.9782,1.0000,1.0000,1.0000,True,1.0000,True
+rflymad,sin_reloj_ampliado,bat_i|bat_mah|bat_v|ci_mag0|ci_mag1|ci_mag2|vh|vibe0,48,0.0050,0.0037,0.0067,True,0.9736,0.9686,1.0000,1.0000,1.0000,True,1.0000,True

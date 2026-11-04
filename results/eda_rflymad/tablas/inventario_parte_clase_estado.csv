@@ -1,0 +1,36 @@
+parte,clase,estado,casos
+Real-Motor,Motor,acce,27
+Real-Motor,Motor,circling,51
+Real-Motor,Motor,hover,41
+Real-Motor,Motor,velocity,42
+Real-Motor,Motor,waypoint,84
+Real-NoFault,No Fault,acce,10
+Real-NoFault,No Fault,circling,10
+Real-NoFault,No Fault,hover,11
+Real-NoFault,No Fault,velocity,10
+Real-NoFault,No Fault,waypoint,10
+Real-Sensors,Accelerometer,acce,5
+Real-Sensors,Accelerometer,circling,8
+Real-Sensors,Accelerometer,hover,2
+Real-Sensors,Accelerometer,velocity,6
+Real-Sensors,Accelerometer,waypoint,13
+Real-Sensors,Barometer,acce,4
+Real-Sensors,Barometer,circling,7
+Real-Sensors,Barometer,hover,14
+Real-Sensors,Barometer,velocity,6
+Real-Sensors,Barometer,waypoint,14
+Real-Sensors,GPS,acce,4
+Real-Sensors,GPS,circling,7
+Real-Sensors,GPS,hover,16
+Real-Sensors,GPS,velocity,6
+Real-Sensors,GPS,waypoint,10
+Real-Sensors,Gyroscope,acce,4
+Real-Sensors,Gyroscope,circling,6
+Real-Sensors,Gyroscope,hover,12
+Real-Sensors,Gyroscope,velocity,6
+Real-Sensors,Gyroscope,waypoint,11
+Real-Sensors,Magnetometer,acce,4
+Real-Sensors,Magnetometer,circling,6
+Real-Sensors,Magnetometer,hover,10
+Real-Sensors,Magnetometer,velocity,6
+Real-Sensors,Magnetometer,waypoint,10
